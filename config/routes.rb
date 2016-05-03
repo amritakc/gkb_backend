@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'bikes/index'
+
+  get 'bikes/new'
+
+  get 'bikes/create'
+
+  get 'bikes/show'
+
+  get 'bikes/edit'
+
+  get 'bikes/update'
+
+  get 'bikes/destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
