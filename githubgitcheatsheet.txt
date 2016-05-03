@@ -50,7 +50,13 @@ Push up your changes
 git push origin BRANCHNAME
 =========================
 Merging with Master -AMRITA ONLY, MERGING ONLY!!!
-Make sure the devbranch is up-to-date
+
+Make sure your local git devbranch is up-to-date
+git checkout devbranch
+git pull origin devbranch
+
+Change branch to master
+git checkout master
 
 Check which branch you are on/Make sure you are on the master
 git branch
