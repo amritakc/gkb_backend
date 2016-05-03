@@ -1,0 +1,72 @@
+Git/Github Cheat Sheet
+
+Create a branch on git
+git checkout -b BRANCHNAME
+
+Create a branch on github
+Branch will be created once you push to it the first time
+git push origin BRANCHNAME
+
+Check which branch you are on
+git branch
+
+Switch branch
+git checkout BRANCHNAME
+
+========================
+Made a change?
+Check which files you changed
+git status
+
+Check which branch you are on, make sure it is not master
+git branch
+
+Add your changes to your local git
+git add .
+git commit -m "Detailed message of change"
+
+Push your changes to github
+git push origin BRANCHNAME
+
+========================
+Got an error when pushing?
+
+You may need to pull first
+git pull origin BRANCHNAME
+
+Push up your changes to github
+git push origin BRANCHNAME
+
+=========================
+Have merge conflicts after pulling?
+Open files with merge conflicts and look for the sections 
+that are tagged with HEAD. Fix the merge issues.
+
+Add your changes to your local git
+git add .
+git commit -m "fixed merge conflicts"
+
+Push up your changes
+git push origin BRANCHNAME
+=========================
+Merging with Master -AMRITA ONLY, MERGING ONLY!!!
+Make sure the devbranch is up-to-date
+
+Check which branch you are on/Make sure you are on the master
+git branch
+
+Merge your devbranch into your master branch
+git merge devbranch
+
+Push up the changes
+git push origin master
+
+Yay! master is updated
+
+
+
+
+
+
+
+
