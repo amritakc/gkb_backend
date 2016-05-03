@@ -1,10 +1,32 @@
 == README
 
-Started the with project rails new gkbBackend --database=postgresql
+GKB-backend is an api server made using Ruby on Rails. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Started the project with 
+<tt>rails new gkbBackend --database=postgresql</tt>
 
+
+Technology Used
+* PostgreSQL
+* Ruby on Rails
+
+Models
+
+
+Controllers
+
+
+Steps Needed to Run Project:
+* Start PostgreSQL server
+* Create the database
+<tt>rake db:create</tt>
+* Migrate the database
+<tt>rake db:migrate</tt>
+* Start the SQL server
+<tt>rails s</tt>
+
+
+==
 Things you may want to cover:
 
 * Ruby version
@@ -23,8 +45,3 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
