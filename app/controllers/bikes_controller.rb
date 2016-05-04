@@ -6,6 +6,14 @@ class BikesController < ApplicationController
   end
 
   def create
+    bike = Bike.new(donor:params[:donor],type:params[:type_bike],brand:params[:brand],value:params[:value],barcode:params[:barcode],ebay:params[:ebay])
+    if bike.save
+
+    else
+      flash[:errors] = bike.errors.full_messages
+    end
+
+    redirect_to :back
   end
 
   def show
@@ -19,4 +27,6 @@ class BikesController < ApplicationController
 
   def destroy
   end
+
+
 end
