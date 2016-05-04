@@ -17,9 +17,12 @@ class BikesController < ApplicationController
   end
 
   def show
+    @all = Bike.all
+
   end
 
   def edit
+    @one = Bike.find
   end
 
   def update

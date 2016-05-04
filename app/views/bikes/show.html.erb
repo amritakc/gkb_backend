@@ -1,2 +1,7 @@
 <h1>Bikes#show</h1>
 <p>Find me in app/views/bikes/show.html.erb</p>
+<% @all.each do |bike|%>
+ <%= bike.id %> <%= bike.model %> <%= bike.created_at%> <br>
+
+<%end%>
+<p> <%= @x %> </p>
