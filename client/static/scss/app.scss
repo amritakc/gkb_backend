@@ -1,7 +1,12 @@
+// Imports
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 // SASS variables
-
+$main-fonts: 'Lato', sans-serif;
 // Globals
-
+html, body {
+	font-family: $main-fonts;
+}
 // Classes
 
 // IDs
