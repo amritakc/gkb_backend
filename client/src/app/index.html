@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8">   
   <title>Document</title>
-</head>
-<body>
   
-  heloo world
+  <!-- Angular -->
+  <script scr="../vendor/assets/bower_components/angular/angular.js"></script>
+  
+  <!-- Angular-ui-router -->
+  <script scr="../vendor/assets/bower_components/angular-ui-router"></script>
+  
+  <!-- Bootstrap -->
+  <script scr="../vendor/assets/bower_components/bootstrap-ui"></script>
+
+  <!-- App.js -->
+  <script scr="./app.js"></script>
+  
+</head>
+<body ng-app="adminApp">
+  <div ui-view>
+  </div>  
 </body>
 </html>

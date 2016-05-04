@@ -1,4 +1,4 @@
-angular.module('sampleApp', ['ui.router','ui.bootstrap'])
+angular.module('adminApp', ['ui.router','ui.bootstrap'])
 .config(function($stateProvider,$urlRouterProvider) {
   $stateProvider
     .state('home', {
