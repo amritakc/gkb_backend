@@ -17,6 +17,7 @@ Controllers
 
 
 Steps Needed to Run Project:
+<tt>bundle install</tt>
 * Start PostgreSQL server
 * Create the database
 <tt>rake db:create</tt>
@@ -24,6 +25,10 @@ Steps Needed to Run Project:
 <tt>rake db:migrate</tt>
 * Start the SQL server
 <tt>rails s</tt>
+
+Using gem devise:
+<tt>bundle install</tt>
+<tt>rails generate devise:install<tt>
 
 
 ==

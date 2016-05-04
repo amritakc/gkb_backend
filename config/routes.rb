@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root 'home#index'
+  
   get 'bikes/index'
 
   get 'bikes/new'
