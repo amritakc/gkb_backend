@@ -1,22 +1,26 @@
-var myApp = app.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap']);
 	
 	myApp.config(function($routeProvider) {
 		$routeProvider
 			.when('/', {
-				templateUrl: 'partials/main.html',
-				controller: 'mainCtrl'
+				templateUrl: 'static/partials/home.html',
+				controller: 'homeCtrl'
 			})
 			.when('/volunteers', {
-				templateUrl: 'partials/volunteer.html',
-				controller: 'volunteersController'
+				templateUrl: 'static/partials/volunteer.html',
+				controller: 'volunteersCtrl'
 			})
 			.when('/donations', {
-				templateUrl: 'partials/donate.html',
-				controller: 'donationsController'
+				templateUrl: 'static/partials/donate.html',
+				controller: 'donationsCtrl'
 			})
 			.when('/shop', {
-				templateUrl: 'partials/shop.html',
-				controller: 'shopCtrl'
+				templateUrl: 'static/partials/shop.html',
+				controller: 'storeCtrl'
+			})
+			.when('/news', {
+				templateUrl: 'static/partials/news.html',
+				controller: 'newsCtrl'
 			})
 			.otherwise({
 				redirectTo: '/'

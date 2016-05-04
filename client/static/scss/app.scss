@@ -5,10 +5,43 @@
 $main-fonts: 'Lato', sans-serif;
 // Globals
 html, body {
+	height: 100%;
+	width: 100%;
 	font-family: $main-fonts;
 }
-// Classes
 
+ul.topnav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	float: right;
+
+	li {
+		float: left;
+		
+		.icon {
+			display: none;
+		}
+		a {
+			display: inline-block;
+			padding: 0.825em;
+			text-decoration: none;
+			color: black;
+			text-align: center;
+			transition: 0.3s;
+
+			&:link, &:visited, &:hover, &:active {
+				text-decoration: none;
+			}
+		}
+	}
+}
+// Classes
+.navigation-bar {
+	width: 100%;
+	height: 50px;
+	background: rgba(255, 255, 255, 0.5);
+}
 // IDs
 
 // Media Queries

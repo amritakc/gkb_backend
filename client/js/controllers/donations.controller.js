@@ -1,3 +1,3 @@
-myApp.controller('donationsController', function($scope) {
+myApp.controller('donationsCtrl', function($scope) {
 	
 });
