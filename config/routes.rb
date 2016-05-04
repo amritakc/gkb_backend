@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-  root 'home#index'
-  
+  devise_for :admins
+  root to: 'admin#index'
+
   get 'bikes/index'
 
   get 'bikes/new'
