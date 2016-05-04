@@ -1,0 +1,8 @@
+{
+  "name": "Admin_login",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "~4.2.0",
+    "body-parser": "latest"
+  }
+}
