@@ -3,12 +3,14 @@ Rails.application.routes.draw do
 
   get 'bikes/new'
 
-  get 'bikes/create'
+  # get 'bikes/create'
+
+  post 'bikes/create' =>'bikes#create'
 
   get 'bikes/show'
 
   get 'bikes/edit'
-
+  post 'bikes/edit/:id' => 'bikes#edit'
   get 'bikes/update'
 
   get 'bikes/destroy'
