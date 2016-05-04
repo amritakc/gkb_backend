@@ -12,14 +12,14 @@ gulp.task('sass', function() {
 
 // Concatenate JS Files
 gulp.task('scripts', function() {
-    return gulp.src(['./client/js/app.module.js', './client/js/*.js'])
+    return gulp.src(['./client/js/config/app.module.js', './client/js/config/*.js', './client/js/models/*.js', './client/js/controllers/*.js'])
         .pipe(concat('app.js'))
         .pipe(gulp.dest('./client/js/full'));
 });
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('./client/js/*.js', ['scripts']);
+    gulp.watch(['./client/js/config/*.js', './client/js/controllers/*.js', './client/js/models/*.js'], ['scripts']);
     gulp.watch('./client/static/scss/*.scss', ['sass']);
 });
 

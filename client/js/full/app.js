@@ -22,3 +22,6 @@ var myApp = app.module('myApp', ['ngRoute', 'ngAnimate']);
 				redirectTo: '/'
 			});
 	});
+myApp.controller('donationsController', function($scope) {
+	
+});
