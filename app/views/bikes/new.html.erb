@@ -5,7 +5,7 @@
 <h2>Add a Bike</h2>
 	<form action="/bikes/create" class="form-horizontal" method="POST" role="form">
 
-  <input type="hnameden" name ="authenticity_token" value ="<%= form_authenticity_token%>">
+  <input type="hidden" name ="authenticity_token" value ="<%= form_authenticity_token%>">
 
   <div class="form-group">
     <label class="control-label col-sm-2" for="donor">Donor:</label>
