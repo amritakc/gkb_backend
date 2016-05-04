@@ -25,7 +25,8 @@ ActiveRecord::Schema.define(version: 20160503215928) do
 
   create_table "bikes", force: :cascade do |t|
     t.string   "donor"
-    t.string   "type"
+    t.string   "model"
+    t.string   "buyer"
     t.string   "brand"
     t.float    "value"
     t.datetime "date_sold"

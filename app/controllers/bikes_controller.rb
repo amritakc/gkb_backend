@@ -6,7 +6,7 @@ class BikesController < ApplicationController
   end
 
   def create
-    bike = Bike.new(donor:params[:donor],type:params[:type_bike],brand:params[:brand],value:params[:value],barcode:params[:barcode],ebay:params[:ebay])
+    bike = Bike.new(donor:params[:donor],model:params[:model],brand:params[:brand],value:params[:value],barcode:params[:barcode],ebay:params[:ebay])
     if bike.save
 
     else
