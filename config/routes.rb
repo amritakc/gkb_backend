@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :admins
-  root to: 'admin#index'
+  root to: 'admins#index'
 
   get 'bikes/index'
 
