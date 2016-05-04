@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get 'bikes/show'
 
-  get 'bikes/edit/:id'
+  get 'bikes/edit/:id' => 'bikes#edit'
   
   post 'bikes/update/:id' => 'bikes#update'
 
