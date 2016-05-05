@@ -16,65 +16,67 @@
 	<link rel="stylesheet" href="/static/css/app.css">
 </head>
 <body>
-	<nav class="navigation-bar" ng-controller="navCtrl">
-		<ul class="topnav" ng-class="{ 'responsive': small }">
-			<li class="icon">
-				<a href="javascript:void(0);" ng-click="showLinks()">&#9776;</a>
-			</li>
-			<li><a href="#/">Home</a></li>
-			<li><a href="#/shop">Shop</a></li>
-			<li><a href="#/donations">Donate</a></li>
-			<li><a href="#/volunteers">Volunteer</a></li>
-			<li><a href="#/news">News</a></li>
-		</ul>
-	</nav>
-	<div ng-view></div>
-	<footer class="footer" ng-controller="footerCtrl">
-		<div class="row">
-			<div class="col-md-3" style='padding-left: 40px;'>
-				<h4><b>Contact Information</h4>
-				<p class="text-left">Good Karma Bikes</b></p>
-				<p class="text-left">460 Lincoln Avenue Ste 15</p>
-				<p class="text-left">San Jose, California 95126</p>
-				<p class="text-left">(408) 291-0501</p>
-				<p class="text-left">goodkarma@goodkarmabikes.org</p>
+	<div id="wrapper">
+		<nav class="navigation-bar" ng-controller="navCtrl">
+			<ul class="topnav" ng-class="{ 'responsive': small }">
+				<li class="icon">
+					<a href="javascript:void(0);" ng-click="showLinks()">&#9776;</a>
+				</li>
+				<li><a href="#/">Home</a></li>
+				<li><a href="#/shop">Shop</a></li>
+				<li><a href="#/donations">Donate</a></li>
+				<li><a href="#/volunteers">Volunteer</a></li>
+				<li><a href="#/news">News</a></li>
+			</ul>
+		</nav>
+		<div ng-view></div>
+		<footer class="footer" ng-controller="footerCtrl">
+			<div class="row">
+				<div class="col-md-3" style='padding-left: 40px;'>
+					<h4><b>Contact Information</h4>
+					<p class="text-left">Good Karma Bikes</b></p>
+					<p class="text-left">460 Lincoln Avenue Ste 15</p>
+					<p class="text-left">San Jose, California 95126</p>
+					<p class="text-left">(408) 291-0501</p>
+					<p class="text-left">goodkarma@goodkarmabikes.org</p>
+				</div>
+				<div class="col-md-2">
+					<h4><b>Retail Hours</h4>
+					<p class="text-left">Tuesday-Friday</b></p>
+					<p class="text-left">2pm-6pm</p>
+					<br>
+					<p class="text-left"><b>Saturday</b></p>
+					<p class="text-left">10am-5pm</p>
+					<p class="text-left">Service closes at 4pm</p>
+					<br>
+					<p class="text-left"><b>Sunday</b></p>
+					<p class="text-left">11am-3pm</p>
+				</div>
+				<div class="col-md-3">
+					<h4><b>Subscribe to our mailing list!</b></h4>
+					<form role="form">
+					    <div class="form-group">
+					      	<label for="usr">Email:</label>
+					      	<input type="email" class="form-control" id="usr" ng-model="">
+					    </div>
+					   	<div class="form-group">
+					   		<button class="btn btn-danger" ng-click="">Submit</button>
+					   	</div>
+					</form>
+				</div>
+				<div class="col-md-3" style="margin-top: 10px;">
+					<a href=""><i class="fa fa-facebook fa-2x" aria-hidden="true" style="padding-left: 30px;"></i></a>
+					<a href=""><i class="fa fa-twitter fa-2x" aria-hidden="true" style="padding-left: 30px;"></i></a>
+					<a href=""><i class="fa fa-envelope fa-2x" aria-hidden="true" style="padding-left: 30px;"></i></a>
+					<ul class="footer-links">	
+						<li><a href="#/">About Us</a></li>
+						<li><a href="#/news">News</a></li>
+						<li><a href="#/careers">Careers</a></li>
+						<li><a href="#/faq">FAQs</a></li>
+					</ul>
+				</div>
 			</div>
-			<div class="col-md-2">
-				<h4><b>Retail Hours</h4>
-				<p class="text-left">Tuesday-Friday</b></p>
-				<p class="text-left">2pm-6pm</p>
-				<br>
-				<p class="text-left"><b>Saturday</b></p>
-				<p class="text-left">10am-5pm</p>
-				<p class="text-left">Service closes at 4pm</p>
-				<br>
-				<p class="text-left"><b>Sunday</b></p>
-				<p class="text-left">11am-3pm</p>
-			</div>
-			<div class="col-md-3">
-				<h4><b>Subscribe to our mailing list!</b></h4>
-				<form role="form">
-				    <div class="form-group">
-				      	<label for="usr">Email:</label>
-				      	<input type="email" class="form-control" id="usr" ng-model="">
-				    </div>
-				   	<div class="form-group">
-				   		<button class="btn btn-danger" ng-click="">Submit</button>
-				   	</div>
-				</form>
-			</div>
-			<div class="col-md-3" style="margin-top: 10px;">
-				<a href=""><i class="fa fa-facebook fa-2x" aria-hidden="true" style="padding-left: 30px;"></i></a>
-				<a href=""><i class="fa fa-twitter fa-2x" aria-hidden="true" style="padding-left: 30px;"></i></a>
-				<a href=""><i class="fa fa-envelope fa-2x" aria-hidden="true" style="padding-left: 30px;"></i></a>
-				<ul class="footer-links">	
-					<li><a href="#/">About Us</a></li>
-					<li><a href="#/news">News</a></li>
-					<li><a href="#/careers">Careers</a></li>
-					<li><a href="#/faq">FAQs</a></li>
-				</ul>
-			</div>
-		</div>
-	</footer>
+		</footer>
+	</div>
 </body>
 </html>
