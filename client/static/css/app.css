@@ -30,18 +30,13 @@ ul.topnav {
   text-align: right; }
 
 .social-media-bubble {
-  display: inline-block;
+  margin-bottom: 1em; }
+
+.social-media-icons {
   width: 3em;
   height: 3em;
-  margin: 1em 0;
-  border-radius: 50%;
-  background-color: black;
-  padding: 0.5em 0.5em;
-  text-align: center; }
-  .social-media-bubble .social-media-icons {
-    color: white;
-    margin: 0 auto;
-    display: block !important; }
+  margin: 0 0.3em;
+  display: inline-block !important; }
 
 .navigation-bar {
   width: 100%;
@@ -52,7 +47,8 @@ ul.topnav {
   clear: both; }
 
 .row {
-  width: 100%; }
+  width: 100%;
+  margin: 0 auto; }
 
 .container-fluid {
   padding: 0;
@@ -62,15 +58,18 @@ ul.topnav {
   list-style-type: none;
   padding: 0;
   text-align: right; }
-  .footer-list li.footer-links a {
-    color: black; }
-    .footer-list li.footer-links a:link, .footer-list li.footer-links a:visited, .footer-list li.footer-links a:hover, .footer-list li.footer-links a:active {
-      text-decoration: none; }
+  .footer-list li.footer-links {
+    line-height: 2em; }
+    .footer-list li.footer-links a {
+      color: white; }
+      .footer-list li.footer-links a:link, .footer-list li.footer-links a:visited, .footer-list li.footer-links a:hover, .footer-list li.footer-links a:active {
+        text-decoration: none; }
 
 .bike-image {
   width: 100%;
   height: 400px;
-  background: linear-gradient(rgba(76, 187, 23, 0.45), rgba(76, 187, 23, 0.45)), url("../static/img/yellow_bike.jpeg"); }
+  background: linear-gradient(rgba(0, 158, 73, 0.85), rgba(0, 158, 73, 0.85)), url("/static/img/yellow_bike.png") center center no-repeat;
+  background-size: cover; }
 
 #wrapper {
   margin: 0;
@@ -87,7 +86,7 @@ ul.topnav {
   color: white;
   padding: 2em;
   border-top: 2px solid black;
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/static/img/handlebars.jpg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("/static/img/handlebars.jpg") center center no-repeat;
   background-size: cover; }
 
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). 
