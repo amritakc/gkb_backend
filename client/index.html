@@ -16,34 +16,36 @@
 	<link rel="stylesheet" href="/static/css/app.css">
 </head>
 <body>
-	<nav class="navigation-bar" ng-controller="navCtrl">
-		<ul class="topnav" ng-class="{ 'responsive': small }">
-			<li class="icon">
-				<a href="javascript:void(0);" ng-click="showLinks()">&#9776;</a>
-			</li>
-			<li><a href="#/">Home</a></li>
-			<li><a href="#/shop">Shop</a></li>
-			<li><a href="#/donations">Donate</a></li>
-			<li><a href="#/volunteers">Volunteer</a></li>
-			<li><a href="#/news">News</a></li>
-		</ul>
-	</nav>
-	<div ng-view></div>
-	<footer class="footer" ng-controller="footerCtrl">
-		<div class="row">
-			<div class="col-md-3 text-center">
-				<h2>Contact Information</h2>
+	<div id="wrapper">
+		<nav class="navigation-bar" ng-controller="navCtrl">
+			<ul class="topnav" ng-class="{ 'responsive': small }">
+				<li class="icon">
+					<a href="javascript:void(0);" ng-click="showLinks()">&#9776;</a>
+				</li>
+				<li><a href="#/">Home</a></li>
+				<li><a href="#/shop">Shop</a></li>
+				<li><a href="#/donations">Donate</a></li>
+				<li><a href="#/volunteers">Volunteer</a></li>
+				<li><a href="#/news">News</a></li>
+			</ul>
+		</nav>
+		<div ng-view></div>
+		<footer id="footer" ng-controller="footerCtrl">
+			<div class="row">
+				<div class="col-md-3 text-center">
+					<h2>Contact Information</h2>
+				</div>
+				<div class="col-md-3 text-center">
+					<h2>Retail Hours</h2>
+				</div>
+				<div class="col-md-3 text-center">
+					
+				</div>
+				<div class="col-md-3 text-center">
+					
+				</div>
 			</div>
-			<div class="col-md-3 text-center">
-				<h2>Retail Hours</h2>
-			</div>
-			<div class="col-md-3 text-center">
-				
-			</div>
-			<div class="col-md-3 text-center">
-				
-			</div>
-		</div>
-	</footer>
+		</footer>
+	</div>
 </body>
 </html>
