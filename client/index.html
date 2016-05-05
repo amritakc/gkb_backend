@@ -57,23 +57,24 @@
 					<form role="form">
 					    <div class="form-group">
 					      	<label for="usr">Email:</label>
-					      	<input type="email" class="form-control" id="usr" ng-model="">
+					      	<input type="email" class="form-control" id="usr" ng-model="newSubscriber.email">
 					    </div>
 					   	<div class="form-group">
-					   		<button class="btn btn-danger" ng-click="">Submit</button>
+					   		<button class="btn btn-danger" ng-click="create()">Submit</button>
 					   	</div>
 					</form>
 				</div>
-				<div class="col-md-3" class="icons"style="margin-top: 15px;">
-					<a href=""><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
-					<a href=""><i class="fa fa-twitter fa-3x" aria-hidden="true" style="padding-left: 30px;"></i></a>
-					<a href=""><i class="fa fa-envelope fa-3x" aria-hidden="true" style="padding-left: 30px;"></i></a><br>
-					<div id="footerlinks" style="margin-top: 20px; font-size: 18px;">
-						<a href="#/">About Us</a><br>
-						<a href="#/news">News</a><br>
-						<a href="#/volunteers">Careers</a><br>
-						<a href="#/faq">FAQs</a><br>
-					</div>	
+
+				<div class="col-md-3 col-md-offset-1 footer-links-wrapper">
+					<p class="social-media-icons"><a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></p>
+					<p class="social-media-icons"><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></p>
+					<p class="social-media-icons"><a href="#"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></p>
+					<ul class="footer-links">	
+						<li><a href="#/">About Us</a></li>
+						<li><a href="#/news">News</a></li>
+						<li><a href="#/careers">Careers</a></li>
+						<li><a href="#/faq">FAQs</a></li>
+					</ul>
 				</div>
 			</div>
 		</footer>

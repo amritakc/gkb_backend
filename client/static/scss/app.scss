@@ -43,6 +43,23 @@ ul.topnav {
 	}
 }
 // Classes
+.footer-links-wrapper {
+	
+}
+
+.social-media-icons {
+	display: inline-block;
+	margin-top: 1em;
+
+	&:first-of-type {
+		padding: 0 0.5em 0 0;
+	}
+
+	&:not(:first-of-type) {
+		padding: 0 0.5em;
+	}
+}
+
 .navigation-bar {
 	width: 100%;
 	height: 50px;
@@ -62,6 +79,32 @@ ul.topnav {
 	min-height: 100%;
 }
 
+.footer-links {
+	list-style-type: none;
+	padding: 0;
+	
+	li {
+		text-align: left;
+	}
+}
+
+//homepage classes
+
+.bike-image {
+  
+  width: 100%;
+  height: 400px;
+  
+  background: 
+    /* top, transparent red */ 
+    linear-gradient(
+      rgba(76, 187, 23, 0.45), 
+      rgba(76, 187, 23, 0.45)
+    ),
+    /* bottom, image */
+    url("../static/img/yellow_bike.jpeg");
+}
+
 // IDs
 #wrapper {
 	margin: 0;
@@ -78,7 +121,10 @@ ul.topnav {
 	height: 45%;
 	border-top: 2px solid black;
 }
+<<<<<<< HEAD
 // IDs
+=======
+>>>>>>> 795397a76535502c95fc40d762d72304e304d9b5
 
 // Media Queries
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). 
