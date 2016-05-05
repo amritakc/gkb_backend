@@ -6,7 +6,21 @@ angular.module('adminApp', ['ui.router','ui.bootstrap'])
       templateUrl: 'login/login.html',
       controller:'loginCtrl'
     })
+    .state('dashboard', {
+      url: '/',
+      views: {
+        '@': {
+         templateUrl:'views/dashboardLayout.html'
+        },
+        'header@dashboard' : {
+          templateUrl: 'header/_header.html',
+        },
+        'main@dashboard' : {
+          templateUrl: 'dashboard/_dashboard.html',
+          controller: 'dashboardCtrl'
+        }
+      },
+    })
 
   $urlRouterProvider.otherwise('/');
 })
-
