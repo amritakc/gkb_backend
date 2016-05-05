@@ -31,17 +31,48 @@
 	<div ng-view></div>
 	<footer class="footer" ng-controller="footerCtrl">
 		<div class="row">
-			<div class="col-md-3 text-center">
-				<h2>Contact Information</h2>
+			<div class="col-md-3" style='padding-left: 40px;'>
+				<h4><b>Contact Information</h4>
+				<p class="text-left">Good Karma Bikes</b></p>
+				<p class="text-left">460 Lincoln Avenue Ste 15</p>
+				<p class="text-left">San Jose, California 95126</p>
+				<p class="text-left">(408) 291-0501</p>
+				<p class="text-left">goodkarma@goodkarmabikes.org</p>
 			</div>
-			<div class="col-md-3 text-center">
-				<h2>Retail Hours</h2>
+			<div class="col-md-2">
+				<h4><b>Retail Hours</h4>
+				<p class="text-left">Tuesday-Friday</b></p>
+				<p class="text-left">2pm-6pm</p>
+				<br>
+				<p class="text-left"><b>Saturday</b></p>
+				<p class="text-left">10am-5pm</p>
+				<p class="text-left">Service closes at 4pm</p>
+				<br>
+				<p class="text-left"><b>Sunday</b></p>
+				<p class="text-left">11am-3pm</p>
 			</div>
-			<div class="col-md-3 text-center">
-				
+			<div class="col-md-3">
+				<h4><b>Subscribe to our mailing list!</b></h4>
+				<form role="form">
+				    <div class="form-group">
+				      	<label for="usr">Email:</label>
+				      	<input type="email" class="form-control" id="usr" ng-model="">
+				    </div>
+				   	<div class="form-group">
+				   		<button class="btn btn-danger" ng-click="">Submit</button>
+				   	</div>
+				</form>
 			</div>
-			<div class="col-md-3 text-center">
-				
+			<div class="col-md-3" style="margin-top: 10px;">
+				<a href=""><i class="fa fa-facebook fa-2x" aria-hidden="true" style="padding-left: 30px;"></i></a>
+				<a href=""><i class="fa fa-twitter fa-2x" aria-hidden="true" style="padding-left: 30px;"></i></a>
+				<a href=""><i class="fa fa-envelope fa-2x" aria-hidden="true" style="padding-left: 30px;"></i></a>
+				<ul class="footer-links">	
+					<li><a href="#/">About Us</a></li>
+					<li><a href="#/news">News</a></li>
+					<li><a href="#/careers">Careers</a></li>
+					<li><a href="#/faq">FAQs</a></li>
+				</ul>
 			</div>
 		</div>
 	</footer>
