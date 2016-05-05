@@ -39,6 +39,9 @@ class BikesController < ApplicationController
   end
 
   def destroy
+    Bike.destroy(params[:id])
+
+    redirect_to '/bikes/index' 
   end
 
 end
