@@ -15,8 +15,8 @@
 	<link rel="stylesheet" href="/static/css/app.css">
 </head>
 <body>
-	<nav class="navigation-bar">
-		<ul class="topnav">
+	<nav class="navigation-bar" ng-controller="navCtrl">
+		<ul class="topnav" ng-class="{ 'responsive': small }">
 			<li><a href="#/">Home</a></li>
 			<li><a href="#/shop">Shop</a></li>
 			<li><a href="#/donations">Donate</a></li>
@@ -28,5 +28,6 @@
 		</ul>
 	</nav>
 	<div ng-view></div>
+	<footer ng-controller="footerCtrl"></footer>
 </body>
 </html>

@@ -29,8 +29,24 @@ var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap']);
 myApp.controller('donationsCtrl', function($scope) {
 	
 });
+myApp.controller('footerCtrl', function($scope) {
+
+});
 myApp.controller('homeCtrl', function($scope) {
 	
+});
+myApp.controller('navCtrl', function($scope, $location) {
+	$scope.small = false;
+	$scope.showLinks = showLinks;
+
+	function showLinks() {
+		if ($scope.small === false) {
+			$scope.small = true;
+		} else {
+			$scope.small = false;
+		}
+	}
+
 });
 myApp.controller('newsCtrl', function($scope) {
 
