@@ -30,13 +30,13 @@ ul.topnav {
   text-align: right; }
 
 .social-media-bubble {
-  margin-bottom: 1em; }
-
-.social-media-icons {
-  width: 3em;
-  height: 3em;
-  margin: 0 0.3em;
-  display: inline-block !important; }
+  margin-bottom: 1em;
+  margin-right: -0.3em; }
+  .social-media-bubble .social-media-icons {
+    margin: 0 0.3em;
+    width: 3em;
+    height: 3em;
+    display: inline-block !important; }
 
 .navigation-bar {
   width: 100%;
