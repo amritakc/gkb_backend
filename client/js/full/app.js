@@ -22,6 +22,10 @@ var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap']);
 				templateUrl: 'static/partials/news.html',
 				controller: 'newsCtrl'
 			})
+			.when('/faq', {
+				templateUrl: 'static/partials/news.html',
+				controller: 'newsCtrl'
+			})
 			.otherwise({
 				redirectTo: '/'
 			});
