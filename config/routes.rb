@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  get 'contents/index'
+
+  get 'contents/show'
+
+  get 'contents/edit'
+
+  get 'contents/new'
+
+
+
+
+
+
   get 'bikes/index'
 
   get 'bikes/new'
