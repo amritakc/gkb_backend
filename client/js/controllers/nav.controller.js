@@ -10,4 +10,8 @@ myApp.controller('navCtrl', function($scope, $location) {
 		}
 	}
 
+	angular.element(window).on('scroll', function() {
+		alert('hi');
+	});
+
 });
