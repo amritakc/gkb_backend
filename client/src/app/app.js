@@ -20,6 +20,20 @@ angular.module('adminApp', ['ui.router','ui.bootstrap'])
         }
       },
     })
+    .state('inventory', {
+      url:'/create',
+      views: {
+        '@': {
+         templateUrl:'views/inventory.html'
+        },
+        'header@inventory' : {
+          templateUrl: 'header/_header.html',
+        },
+        'addBikeForm@inventory' : {
+          templateUrl: 'addBikeForm/_addBikeForm.html',
+        }
+      }
+    })
 
-  $urlRouterProvider.otherwise('/');
-})
+  $urlRouterProvider.otherwise('/create');
+});
