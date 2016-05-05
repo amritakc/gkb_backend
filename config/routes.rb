@@ -7,10 +7,10 @@ Rails.application.routes.draw do
 
   post 'bikes/create' =>'bikes#create'
 
-  get 'bikes/show'
+  get 'bikes/show/:id' =>'bikes#show'
 
   get 'bikes/edit/:id' => 'bikes#edit'
-  
+
   post 'bikes/update/:id' => 'bikes#update'
 
   get 'bikes/destroy'

@@ -1,12 +1,13 @@
 class BikesController < ApplicationController
   def index
+    @bikes = Bike.all
   end
 
   def new
   end
 
   def create
-    bike = Bike.new(donor:params[:donor],model:params[:model],brand:params[:brand],value:params[:value],barcode:params[:barcode],ebay:params[:ebay])
+    bike = Bike.new(donor:params[:donor],model:params[:model],brand:params[:brand],value:params[:value],barcode:params[:barcode],buyer:params[:buyer],ebay:params[:ebay])
     if bike.save
 
     else
@@ -17,19 +18,27 @@ class BikesController < ApplicationController
   end
 
   def show
-    @all = Bike.all
+    @one = Bike.find(params[:id])
 
   end
 
   def edit
-    @one = Bike.find
+    @one = Bike.find(params[:id])
   end
 
   def update
+
+    # puts params
+    bike = Bike.find(params[:id])
+    # puts "bike"
+    # Bike.find(1).update(donor:'CC')
+    bike.update(donor:params[:donor],model:params[:model],brand:params[:brand],value:params[:value],buyer:params[:buyer],ebay:params[:ebay])
+
+    redirect_to '/bikes/show/%d' % params[:id]
+
   end
 
   def destroy
   end
-
 
 end

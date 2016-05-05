@@ -1,7 +1,16 @@
+
+
+
 <h1>Bikes#show</h1>
 <p>Find me in app/views/bikes/show.html.erb</p>
-<% @all.each do |bike|%>
- <%= bike.id %> <%= bike.model %> <%= bike.created_at%> <br>
 
-<%end%>
-<p> <%= @x %> </p>
+  <h3>Donor: <%=@one.donor%></h3>
+  <h3>Buyer: <%=@one.buyer%></h3>
+  <h3>Brand: <%=@one.brand%></h3>
+  <h3>Value: <%=@one.value%></h3>
+  <h3>Barcode: <%=@one.barcode%></h3>
+  <h3>Ebay: <%=@one.ebay%></h3>
+
+
+
+  <button type='submit'><a href='/bikes/edit/<%=@one.id%>'>Edit</a></button>
