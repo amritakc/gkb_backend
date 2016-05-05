@@ -32,27 +32,36 @@
 		<div ng-view></div>
 		<footer id="footer" ng-controller="footerCtrl">
 			<div class="row">
-				<div class="col-md-3">
-					<h4><b>Contact Information</h4>
-					<p class="text-left">Good Karma Bikes</b></p>
-					<p class="text-left">460 Lincoln Avenue Ste 15</p>
-					<p class="text-left">San Jose, California 95126</p>
-					<p class="text-left">(408) 291-0501</p>
-					<p class="text-left">goodkarma@goodkarmabikes.org</p>
-				</div>
-				<div class="col-md-2">
-					<h4><b>Retail Hours</h4>
-					<p class="text-left">Tuesday-Friday</b></p>
-					<p class="text-left">2pm-6pm</p>
+				<div class="col-md-6">
+					<h4><strong>Location</strong></h4>
 					<br>
-					<p class="text-left"><b>Saturday</b></p>
-					<p class="text-left">10am-5pm</p>
-					<p class="text-left">Service closes at 4pm</p>
+					<p>460 Lincoln Avenue Ste 15</p>
+					<p>San Jose, California 95126</p>
+					<p>(408) 291-0501</p>
+					<p>goodkarma@goodkarmabikes.org</p>
+					<h4><strong>Retail Hours</strong></h4>
+					<p>Tuesday-Friday</p>
+					<p>2pm-6pm</p>
 					<br>
-					<p class="text-left"><b>Sunday</b></p>
-					<p class="text-left">11am-3pm</p>
+					<p><b>Saturday</b></p>
+					<p>10am-5pm</p>
+					<p>Service closes at 4pm</p>
+					<br>
+					<p><b>Sunday</b></p>
+					<p>11am-3pm</p>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-6 footer-links-wrapper">
+					<section class="social-media-bubble"><a href="#"><i class="fa fa-facebook fa-2x social-media-icons" aria-hidden="true"></i></a></section>
+					<section class="social-media-bubble"><a href="#"><i class="fa fa-twitter fa-2x social-media-icons" aria-hidden="true"></i></a></section>
+					<section class="social-media-bubble"><a href="#"><i class="fa fa-envelope fa-2x social-media-icons" aria-hidden="true"></i></a></section>
+					<ul class="footer-list">	
+						<li class="footer-links"><a href="#/">About Us</a></li>
+						<li class="footer-links"><a href="#/careers">Careers</a></li>
+						<li class="footer-links"><a href="#/news">News</a></li>
+						<li class="footer-links"><a href="#/faq">FAQs</a></li>
+					</ul>
+				</div>
+				<div class="col-md-12">
 					<h4><b>Subscribe to our mailing list!</b></h4>
 					<form role="form">
 					    <div class="form-group">
@@ -63,18 +72,6 @@
 					   		<button class="btn btn-danger" ng-click="create()">Submit</button>
 					   	</div>
 					</form>
-				</div>
-
-				<div class="col-md-3 col-md-offset-1 footer-links-wrapper">
-					<p class="social-media-icons"><a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></p>
-					<p class="social-media-icons"><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></p>
-					<p class="social-media-icons"><a href="#"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></p>
-					<ul class="footer-links">	
-						<li><a href="#/">About Us</a></li>
-						<li><a href="#/news">News</a></li>
-						<li><a href="#/careers">Careers</a></li>
-						<li><a href="#/faq">FAQs</a></li>
-					</ul>
 				</div>
 			</div>
 		</footer>
