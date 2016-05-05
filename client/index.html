@@ -17,14 +17,14 @@
 <body>
 	<nav class="navigation-bar" ng-controller="navCtrl">
 		<ul class="topnav" ng-class="{ 'responsive': small }">
+			<li class="icon">
+				<a href="javascript:void(0);" ng-click="showLinks()">&#9776;</a>
+			</li>
 			<li><a href="#/">Home</a></li>
 			<li><a href="#/shop">Shop</a></li>
 			<li><a href="#/donations">Donate</a></li>
 			<li><a href="#/volunteers">Volunteer</a></li>
 			<li><a href="#/news">News</a></li>
-			<li class="icon">
-				<a href="javascript:void(0);" ng-click="showLinks()">&#9776;</a>
-			</li>
 		</ul>
 	</nav>
 	<div ng-view></div>

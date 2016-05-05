@@ -15,7 +15,7 @@ ul.topnav {
 	margin: 0;
 	padding: 0;
 	float: right;
-	
+	clear: both;
 	li.icon {
 		display: none;
 	}
@@ -45,6 +45,10 @@ ul.topnav {
 	height: 50px;
 	background: rgba(255, 255, 255, 0.5);
 }
+
+.clear {
+	clear: both;
+}
 // IDs
 
 // Media Queries
@@ -52,7 +56,7 @@ ul.topnav {
 Show the list item that contains the link to open and close the topnav (li.icon) */
 
 @media screen and (max-width:680px) {
-	ul.topnav li {display: none;}
+	ul.topnav li{display: none;}
 	ul.topnav li.icon {
 		float: right;
 		display: inline-block;
@@ -70,7 +74,7 @@ Show the list item that contains the link to open and close the topnav (li.icon)
 	}
 	ul.topnav.responsive li {
 		float: none;
-		display: inline;
+		display: block;
 	}
 	ul.topnav.responsive li a {
 		display: block;
