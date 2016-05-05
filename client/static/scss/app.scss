@@ -44,7 +44,7 @@ ul.topnav {
 }
 // Classes
 .footer-links-wrapper {
-	
+	text-align: right;
 }
 
 .social-media-bubble {
@@ -84,14 +84,24 @@ ul.topnav {
 	min-height: 100%;
 }
 
-.footer-links {
+.footer-list {
 	list-style-type: none;
 	padding: 0;
+	text-align: right;
 	
-	li {
-		text-align: left;
+	li.footer-links {
+
+		a {
+			color: black;
+	
+			&:link, &:visited, &:hover, &:active {
+				text-decoration: none;
+			}
+		}
 	}
 }
+
+
 
 // IDs
 #wrapper {
@@ -103,11 +113,20 @@ ul.topnav {
 }
 
 #footer {
-	position: absolute;
-	bottom: 0;
+	position: relative;
+	clear:both;
 	width: 100%;
-	height: 45%;
+	height: 100%;
+	color: white;
+	padding: 2em;
 	border-top: 2px solid black;
+	background:
+		linear-gradient(
+			rgba(0, 0, 0, 0.45), 
+			rgba(0, 0, 0, 0.45)
+	    ),
+		url('/static/img/handlebars.jpg') center center no-repeat;
+	background-size: cover;
 }
 
 // Media Queries
