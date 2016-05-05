@@ -26,13 +26,19 @@ ul.topnav {
       ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li a:active {
         text-decoration: none; }
 
-.social-media-icons {
+.social-media-bubble {
   display: inline-block;
-  margin-top: 1em; }
-  .social-media-icons:first-of-type {
-    padding: 0 0.5em 0 0; }
-  .social-media-icons:not(:first-of-type) {
-    padding: 0 0.5em; }
+  width: 3em;
+  height: 3em;
+  margin: 1em 0;
+  border-radius: 50%;
+  background-color: black;
+  padding: 0.5em 0.5em;
+  text-align: center; }
+  .social-media-bubble .social-media-icons {
+    color: white;
+    margin: 0 auto;
+    display: block !important; }
 
 .navigation-bar {
   width: 100%;

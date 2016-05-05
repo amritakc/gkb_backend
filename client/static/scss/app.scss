@@ -47,16 +47,21 @@ ul.topnav {
 	
 }
 
-.social-media-icons {
+.social-media-bubble {
 	display: inline-block;
-	margin-top: 1em;
+	width: 3em;
+	height: 3em;
+	margin: 1em 0;
+	border-radius: 50%;
+	background-color: black;
+	padding: 0.5em 0.5em;
+	text-align: center;
 
-	&:first-of-type {
-		padding: 0 0.5em 0 0;
-	}
-
-	&:not(:first-of-type) {
-		padding: 0 0.5em;
+	.social-media-icons {
+		color: white;
+		margin: 0 auto;
+		display: block !important;
+		
 	}
 }
 
