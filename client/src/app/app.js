@@ -17,7 +17,6 @@ angular.module('adminApp', ['ui.router','ui.bootstrap'])
         },
         'main@dashboard' : {
           templateUrl: 'dashboard/_dashboard.html',
-          controller: 'dashboardCtrl'
         }
       },
     })

@@ -3,5 +3,4 @@ angular.module('adminApp')
 '$scope',
 '$state', 
 function($scope,$state){
-  console.log("ddd")
 }]);
