@@ -48,20 +48,13 @@ ul.topnav {
 }
 
 .social-media-bubble {
-	display: inline-block;
-	width: 3em;
-	height: 3em;
-	margin: 1em 0;
-	border-radius: 50%;
-	background-color: black;
-	padding: 0.5em 0.5em;
-	text-align: center;
-
+	margin-bottom: 1em;
+	margin-right: -0.3em;
 	.social-media-icons {
-		color: white;
-		margin: 0 auto;
-		display: block !important;
-		
+		margin: 0 0.3em;
+		width: 3em;
+		height: 3em;
+		display: inline-block !important;
 	}
 }
 
@@ -77,6 +70,7 @@ ul.topnav {
 
 .row {
 	width: 100%;
+	margin: 0 auto;
 }
 
 .container-fluid {
@@ -90,9 +84,10 @@ ul.topnav {
 	text-align: right;
 	
 	li.footer-links {
+		line-height: 2em;
 
 		a {
-			color: black;
+			color: white;
 	
 			&:link, &:visited, &:hover, &:active {
 				text-decoration: none;
@@ -110,11 +105,14 @@ ul.topnav {
   background: 
     /* top, transparent red */ 
     linear-gradient(
-      rgba(76, 187, 23, 0.45), 
-      rgba(76, 187, 23, 0.45)
+      rgba(0, 158, 73, 0.85), 
+      rgba(0, 158, 73, 0.85)
     ),
     /* bottom, image */
-    url("/static/img/yellow_bike.jpeg");
+    url("/static/img/yellow_bike.png") center center no-repeat;
+
+   background-size: cover;
+
 }
 
 // IDs
@@ -136,8 +134,8 @@ ul.topnav {
 	border-top: 2px solid black;
 	background:
 		linear-gradient(
-			rgba(0, 0, 0, 0.45), 
-			rgba(0, 0, 0, 0.45)
+			rgba(0, 0, 0, 0.75), 
+			rgba(0, 0, 0, 0.75)
 	    ),
 		url('/static/img/handlebars.jpg') center center no-repeat;
 	background-size: cover;
