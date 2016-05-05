@@ -1,9 +1,12 @@
 angular.module('adminApp', ['ui.router','ui.bootstrap'])
 .config(function($stateProvider,$urlRouterProvider) {
   $stateProvider
-    .state('dashboard', {
-      url: '/',
-      templateUrl: '_login.html'
+    .state('login', {
+      url: '/login',
+      templateUrl: 'login/login.html',
+      controller:'loginCtrl'
     })
-  $urlRouterProvider.otherwise('/')
+
+  $urlRouterProvider.otherwise('/');
 })
+
