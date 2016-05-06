@@ -102,7 +102,9 @@ height: 150px;
   text-decoration: none;
   color: black; 
 }
-
+.iam:not(:first-of-type) {
+  border-left: 2px solid black;
+}
 #iamgroup {
   height: 230px;
   width: 100%;
