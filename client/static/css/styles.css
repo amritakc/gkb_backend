@@ -34,11 +34,23 @@ ul.topnav {
 .social-media-bubble {
   margin-bottom: 1em;
   margin-right: -0.3em; }
+  
   .social-media-bubble .social-media-icons {
     margin: 0 0.3em;
     width: 3em;
     height: 3em;
     display: inline-block !important; }
+  .social-media-icons:hover {
+    transform: rotate(360deg);
+  }
+
+.rotate {
+  transition: all 0.5s ease-in-out;
+}
+
+.rotate:hover {
+  transition: all 0.8s ease-in-out;
+}
 
 .navigation-bar {
   width: 100%;
