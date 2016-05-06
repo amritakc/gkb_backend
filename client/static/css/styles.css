@@ -24,6 +24,7 @@ ul.topnav li {
 
 ul.topnav li a {
   display: inline-block;
+  font-size: 1.2em;
   padding: 0.825em;
   text-decoration: none;
   color: white;
