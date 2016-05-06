@@ -59,6 +59,27 @@ ul.topnav {
   height: 150px;
  }
 
+.iam {
+  height: 200px;
+  width: 300px;
+  display: inline-block;
+  font-size: 30px;
+}
+
+.iam a {
+        text-decoration: none;
+        color: black; 
+      }
+
+#iamgroup {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.iamicons {
+  margin-top: 10px;
+}
+
 .clear {
   clear: both; }
 
@@ -109,7 +130,7 @@ header p {
   border-bottom: 100px solid white;
   position: absolute;
   bottom: 0;
-  left: 45%;
+  left: 43%;
 }
 
 #wrapper {
