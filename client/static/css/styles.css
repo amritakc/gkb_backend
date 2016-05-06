@@ -106,7 +106,7 @@ height: 150px;
   color: #000035; 
 }
 .iam:not(:first-of-type) {
-  border-left: 2px #000035;
+  border-left: 2px solid #000035;
 }
 #iamgroup {
   height: 230px;
