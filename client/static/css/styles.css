@@ -5,7 +5,8 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: "Lato", sans-serif;
-  overflow: auto; }
+  overflow: auto; 
+}
 
 ul.topnav {
   list-style-type: none;
@@ -13,32 +14,43 @@ ul.topnav {
   padding: 0;
   float: right;
 }
-  ul.topnav li.icon {
-    display: none; }
-  ul.topnav li {
-    float: left; }
-    ul.topnav li a {
-      display: inline-block;
-      padding: 0.825em;
-      text-decoration: none;
-      color: white;
-      text-align: center;
-      transition: 0.3s; }
-      ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li a:active {
-        text-decoration: none;
-        color: white; }
+
+ul.topnav li.icon {
+  display: none; }
+
+ul.topnav li {
+  float: left; 
+}
+
+ul.topnav li a {
+  display: inline-block;
+  padding: 0.825em;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  transition: 0.3s; 
+}
+
+ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li a:active {
+  text-decoration: none;
+  color: white; 
+}
 
 .footer-links-wrapper {
-  text-align: right; }
+  text-align: right; 
+}
 
 .social-media-bubble {
   margin-bottom: 1em;
-  margin-right: -0.3em; }
-  .social-media-bubble .social-media-icons {
-    margin: 0 0.3em;
-    width: 3em;
-    height: 3em;
-    display: inline-block !important; }
+  margin-right: -0.3em; 
+}
+
+.social-media-bubble .social-media-icons {
+  margin: 0 0.3em;
+  width: 3em;
+  height: 3em;
+  display: inline-block !important; 
+}
 
 .navigation-bar {
   width: 100%;
@@ -53,11 +65,11 @@ ul.topnav {
   background: rgba(255, 255, 255, 0.6);
 }
 
- .logo {
-  margin-left: 50px;
-  width: 150px;
-  height: 150px;
- }
+.logo {
+margin-left: 50px;
+width: 150px;
+height: 150px;
+}
 
 .iam {
   height: 200px;
@@ -67,13 +79,15 @@ ul.topnav {
 }
 
 .iam a {
-        text-decoration: none;
-        color: black; 
-      }
+  text-decoration: none;
+  color: black; 
+}
 
 #iamgroup {
-  margin-bottom: 30px;
+  height: 230px;
+  width: 100%;
   text-align: center;
+  display: block;
 }
 
 .iamicons {
@@ -81,26 +95,33 @@ ul.topnav {
 }
 
 .clear {
-  clear: both; }
+  clear: both; 
+}
 
 .row {
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto; 
+}
 
 .container-fluid {
   padding: 0;
-  min-height: 100%; }
+  min-height: 100%; 
+}
 
 .footer-list {
   list-style-type: none;
   padding: 0;
-  text-align: right; }
-  .footer-list li.footer-links {
-    line-height: 2em; }
-    .footer-list li.footer-links a {
-      color: white; }
-      .footer-list li.footer-links a:link, .footer-list li.footer-links a:visited, .footer-list li.footer-links a:hover, .footer-list li.footer-links a:active {
-        text-decoration: none; }
+  text-align: right; 
+}
+
+.footer-list li.footer-links {
+  line-height: 2em; }
+
+.footer-list li.footer-links a {
+  color: white; }
+
+.footer-list li.footer-links a:link, .footer-list li.footer-links a:visited, .footer-list li.footer-links a:hover, .footer-list li.footer-links a:active {
+  text-decoration: none; }
 
 .bike-image {
   width: 100%;
@@ -108,7 +129,30 @@ ul.topnav {
   background: linear-gradient(rgba(0, 158, 73, 0.85), rgba(0, 158, 73, 0.85)), url("/static/img/yellow_bike.png") center center no-repeat;
   background-size: cover;
   position: relative;
-  }
+}
+
+.announcements {
+  width: 100%;
+  height: 750px;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("/static/img/row.jpg");
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+
+.announcements-paragraph {
+  margin: auto;
+  width: 50%;
+}
+
+.announcements-paragraph h1 {
+  margin-left: 30%;
+}
+
+.announcements-paragraph p {
+  font-size: 35px;
+  text-align: justify;
+}
 
 header h3 {
   margin: 0;
