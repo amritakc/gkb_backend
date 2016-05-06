@@ -1,4 +1,4 @@
-@import url("https:/<link href='https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,300,300italic,400italic,900italic' rel='stylesheet' type='text/css'>");
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,300,300italic,900italic');
 html, body {
   margin: 0;
   padding: 0;
@@ -160,7 +160,7 @@ height: 150px;
 .announcements {
 
   width: 100%;
-  height: 750px;
+  height: 100%;
   padding-top: 20%;
   padding-bottom: 20%;
   background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("/static/img/row.jpg");
