@@ -47,6 +47,10 @@ ul.topnav {
   z-index: 9999;
 }
 
+.navigation-bar.solidify {
+  background: rgba(255, 255, 255, 0.6);
+}
+
 .clear {
   clear: both; }
 
