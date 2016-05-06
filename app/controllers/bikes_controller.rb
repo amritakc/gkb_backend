@@ -1,6 +1,7 @@
 class BikesController < ApplicationController
   def index
     @bikes = Bike.all
+    render :json =>@bikes
   end
 
   def new
@@ -12,6 +13,8 @@ class BikesController < ApplicationController
 
     else
       flash[:errors] = bike.errors.full_messages
+      @errors = flash[:errors]
+      render :json => @errors
     end
 
     redirect_to :back
@@ -19,11 +22,14 @@ class BikesController < ApplicationController
 
   def show
     @one = Bike.find(params[:id])
+    render :json =>@one
 
   end
 
   def edit
     @one = Bike.find(params[:id])
+    # response json data
+     render :json =>@one
   end
 
   def update
