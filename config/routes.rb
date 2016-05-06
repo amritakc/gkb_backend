@@ -1,21 +1,38 @@
 Rails.application.routes.draw do
 
+
   devise_for :admins
   root to: 'admins#index'
+
+  get 'contents/index'
+
+  get 'contents/show'
+
+  get 'contents/edit'
+
+  get 'contents/new'
+
+
+
+
+
+
 
   get 'bikes/index'
 
   get 'bikes/new'
 
-  get 'bikes/create'
+  # get 'bikes/create'
 
-  get 'bikes/show'
+  post 'bikes/create' =>'bikes#create'
 
-  get 'bikes/edit'
+  get 'bikes/show/:id' =>'bikes#show'
 
-  get 'bikes/update'
+  get 'bikes/edit/:id' => 'bikes#edit'
 
-  get 'bikes/destroy'
+  post 'bikes/update/:id' => 'bikes#update'
+
+  delete 'bikes/destroy/:id' => 'bikes#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

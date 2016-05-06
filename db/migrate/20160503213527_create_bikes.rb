@@ -2,7 +2,8 @@ class CreateBikes < ActiveRecord::Migration
   def change
     create_table :bikes do |t|
       t.string :donor
-      t.string :type
+      t.string :model
+      t.string :buyer
       t.string :brand
       t.float :value
       t.datetime :date_sold

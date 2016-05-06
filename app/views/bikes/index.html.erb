@@ -1,2 +1,12 @@
 <h1>Bikes#index</h1>
 <p>Find me in app/views/bikes/index.html.erb</p>
+
+<% @bikes.each do | bike |%>
+	<h3>Donor: <%=bike.donor%></h3>
+	<h3>Buyer: <%=bike.buyer%></h3>
+	<h3>Brand: <%=bike.brand%></h3>
+	<h3>Value: <%=bike.value%></h3>
+	<h3>Barcode: <%=bike.barcode%></h3>
+	<h3>Ebay: <%=bike.ebay%></h3>
+	<hr>
+<% end %> 

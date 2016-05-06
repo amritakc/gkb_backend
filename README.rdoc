@@ -29,6 +29,7 @@ Steps Needed to Run Project:
 Using gem devise:
 <tt>bundle install</tt>
 <tt>rails generate devise:install<tt>
+* May need to update ruby version to 2.1 to use devise
 
 
 ==
