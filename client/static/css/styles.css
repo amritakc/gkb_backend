@@ -91,24 +91,31 @@ height: 150px;
 }
 
 .iam {
-  height: 200px;
-  width: 300px;
+  height: 7em;
+  width: 10em;
   display: inline-block;
-  font-size: 30px;
+  font-size: 1.8em;
 }
+
 #iamh1 {
   color: #000035; 
   padding-top: 10%;
+  font-size: 2.3em;
+  margin-top: 0;
+  margin-bottom: 0.8em;
 }
+
 .iam a {
   text-decoration: none;
   color: #000035; 
 }
+
 .iam:not(:first-of-type) {
   border-left: 2px solid #000035;
 }
+
 #iamgroup {
-  height: 230px;
+  height: 10%;
   width: 100%;
   text-align: center;
   display: block;
@@ -203,13 +210,16 @@ header h3 {
   margin: 0;
   color: white;
   margin-top: 1em;
+  text-align: center;
 }
 
 header p {
+  width: 60%;
   color: white;
   font-size: 1.1em;
-  margin: 1em 0;
-  padding: 1em 0;
+  margin: 1em auto;
+  padding-bottom: 2em;
+  text-align: justify;
 }
 
 .triangle-up {
@@ -292,7 +302,22 @@ header p {
     display: block; }
   ul.topnav.responsive li a {
     display: block;
-    text-align: left; } }
+    text-align: left; } 
+  .logo {
+    margin: 0 auto;
+    display: block;
+  }
+
+}
+
+/* When screen is 1032px or less */
+@media screen and (max-width: 1032px) {
+  .iam {
+    width: 50%;
+    display: inline-block;
+    border: none;
+  }
+}
 
 /* When screen is 1210px or less */
 @media screen and (max-width: 1210px) {
