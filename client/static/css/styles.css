@@ -86,7 +86,6 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 }
 
 .logo {
-margin-left: 50px;
 width: 150px;
 height: 150px;
 }
@@ -152,6 +151,7 @@ height: 150px;
 .bike-image {
   width: 100%;
   height: 100%;
+  padding: 3em 2em;
   background: linear-gradient(rgba(0, 158, 73, 0.85), rgba(0, 158, 73, 0.85)), url("/static/img/yellow_bike.png") center center no-repeat;
   background-size: cover;
   position: relative;
@@ -191,27 +191,36 @@ height: 150px;
 
 }
 
+.footer-email-input {
+  width: 88%;
+  display: inline-block;
+  margin-right: 0.40em;
+}
+
 header h3 {
   margin: 0;
   color: white;
-  padding: 50px 30px 0 30px;
+  margin-top: 1em;
 }
 
 header p {
   color: white;
-  font-size: 18px;
-  padding: 0 30px 100px 30px;
+  font-size: 1.1em;
+  margin: 1em 0;
+  padding: 1em 0;
 }
 
-#triangle-up {
+.triangle-up {
   width: 0;
   height: 0;
-  border-left: 90px solid transparent;
-  border-right: 90px solid transparent;
-  border-bottom: 100px solid white;
+  border-left: 4.5em solid transparent;
+  border-right: 4.5em solid transparent;
+  border-bottom: 5em solid white;
   position: absolute;
   bottom: 0;
-  left: 43%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 #wrapper {
@@ -233,17 +242,16 @@ header p {
   background-size: cover; }
 
   #subscribe {
-    width: 80%;
+    display: block;
+    float: none;
+    padding: 1em;
+    border-radius: 1em;
+    width: 60%;
+    margin: 0 auto;
     background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
   }
-  #usr {
-     width: 70%;
-     display: inline-block;
-  }
 
-  #subscribe button {
-    display: inline-block;
-  }
+  
 
 
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). 
@@ -270,3 +278,18 @@ header p {
   ul.topnav.responsive li a {
     display: block;
     text-align: left; } }
+
+/* When screen is 1210px or less */
+@media screen and (max-width: 1210px) {
+  .footer-email-input {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1em;
+
+  }
+
+  #subscribe {
+    width: 100%;
+    margin: 0;
+  }
+}

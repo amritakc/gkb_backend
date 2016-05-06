@@ -33,7 +33,7 @@
 			<img class="logo" src="/static/img/logo.jpg">
 			<h3>Mission Statement</h3>
 			<p>Brian is an awesome human being.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed euismod augue. Ut sit amet quam diam. Duis auctor turpis sit amet nulla porta congue. Quisque a consequat dolor. Nam urna leo, efficitur sed eleifend vel, malesuada vitae felis. Sed in pulvinar arcu. Etiam sit amet augue nunc. Fusce accumsan sed dui id hendrerit. Ut sit amet consectetur mi. Etiam quis velit at ligula pharetra facilisis sed eu sapien. Donec ac posuere velit. Donec mollis libero orci, ut rutrum ipsum blandit quis. Mauris vitae arcu lorem. Aliquam at sodales lacus. In lorem tortor, varius eu laoreet at, mollis in eros. Vestibulum vel ex in diam venenatis scelerisque euismod eu enim.</p>
-			<div id="triangle-up"></div>
+			<div class="triangle-up"></div>
 		</header>
 		<div ng-view></div>
 		<footer id="footer" ng-controller="footerCtrl">
@@ -70,16 +70,15 @@
 						<li class="footer-links"><a href="#/faq">FAQ</a></li>
 					</ul>
 				</div>
+			</div>
+			<div class="row">
 				<div class="col-xs-12" id="subscribe">
-					<h4><b>SUBSCRIBE TO OUR MAILING LIST</b></h4>
+					<h4><strong>SUBSCRIBE TO OUR MAILING LIST</strong></h4>
 					<form role="form">
 					    <div class="form-group">
-					      	<label for="usr">Email:</label>
-					      	<input type="email" class="form-control" id="usr" ng-model="newSubscriber.email">
+					      	<input type="email" class="form-control footer-email-input" ng-model="newSubscriber.email" placeholder="Email Address">
+					      	<button class="btn btn-danger" ng-click="create()">Submit</button>
 					    </div>
-					   	<div class="form-group">
-					   		<button class="btn btn-danger" ng-click="create()">Submit</button>
-					   	</div>
 					</form>
 				</div>
 			</div>
