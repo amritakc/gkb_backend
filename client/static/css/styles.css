@@ -103,11 +103,14 @@ height: 150px;
   font-size: 2em;
   margin-top: 0;
   margin-bottom: 0.5em;
+  font-weight: 300;
+  padding-bottom: 2em;
 }
 
 .iam a {
   text-decoration: none;
   color: #000035; 
+  font-weight: 300;
 }
 
 .iam:not(:first-of-type) {
@@ -119,11 +122,15 @@ height: 150px;
   width: 100%;
   text-align: center;
   display: block;
-  padding-bottom: 5%
+  padding-bottom: 5%;
 }
 
 .iamicons {
   margin-top: 10px;
+}
+
+.iam i {
+  padding-bottom: .2em;
 }
 
 .clear {
@@ -147,6 +154,20 @@ height: 150px;
   background: linear-gradient(rgba(0, 158, 73, 0.85), rgba(0, 158, 73, 0.85)), url("/static/img/yellow_bike.png") center center no-repeat;
   background-size: cover;
   position: relative;
+}
+
+.bike-image h3 {
+  font-weight: 200;
+}
+
+.mission-text {
+  font-style: italic;
+  font-weight: 100;
+  padding-bottom: 5em;
+}
+
+.triangle-up {
+  padding-top: 5em;
 }
 
 .announcements {
