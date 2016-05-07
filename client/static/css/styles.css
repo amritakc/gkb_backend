@@ -99,7 +99,7 @@ height: 150px;
 
 #iamh1 {
   color: #000035; 
-  padding-top: 10%;
+  padding-top: 5%;
   font-size: 2.3em;
   margin-top: 0;
   margin-bottom: 0.8em;
@@ -119,7 +119,7 @@ height: 150px;
   width: 100%;
   text-align: center;
   display: block;
-  padding-bottom: 10%
+  padding-bottom: 5%
 }
 
 .iamicons {
@@ -165,11 +165,12 @@ height: 150px;
   width: 50%;
 }
 
-.announcements-paragraph h1, #newsgroup h1 {
+.announcements-paragraph h1 {
   padding-bottom: 5%;
   font-size: 2em;
   font-weight: 200;
   letter-spacing: .16em;
+  text-align: center;
 }
 
 .announcements-paragraph p {
@@ -184,18 +185,28 @@ height: 150px;
   width: 100%;
   text-align: center;
   display: inline-block;
-  padding-bottom: 10%
+  padding: 10% 0;
+}
+
+#newsgroup h1 {
+  text-align: center;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+.newsboxes:nth-of-type(2) {
+  margin-left: 11em;
 }
 
 .newsboxes {
-width: 400px;
-height: 400px;
+width: 28.5em;
+height: 28.5em;
 display: inline-block;
 }
 
 .newsboxes img {
-width: 400px;
-height: 300px;
+width: 28.5em;
+height: 21.5em;
 display: inline-block;
 }
 
@@ -328,6 +339,30 @@ header p {
     display: inline-block;
     font-size: 0.4em;
   }
+
+  #iamh1 {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+  }
+
+  .newsboxes {
+    width: 100%;
+    height: 25%;
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  .newsboxes p {
+    height: 10em;
+    font-size: 1.1em;
+  }
+
+  .newsboxes img {
+    width: 100%;
+    height: 11em;
+    display: block;
+  }
 }
 
 @media screen and (min-width: 586px) {
@@ -335,17 +370,17 @@ header p {
     height: 7em;
     width: 10em;
     display: inline-block;
-    font-size: 0.9em;
+    font-size: 1.15em;
   }
 }
 
-/* When screen is 1032px or less */
+/* When screen is 1000px or more */
 @media screen and (min-width: 1000px) {
   .iam {
     height: 7em;
     width: 10em;
     display: inline-block;
-    font-size: 1.5em;
+    font-size: 1.7em;
   }
 
   .announcements {
@@ -391,5 +426,11 @@ header p {
   #subscribe {
     width: 100%;
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .newsboxes:nth-of-type(2) {
+    margin-left: 0;
   }
 }
