@@ -94,7 +94,7 @@ height: 150px;
   height: 7em;
   width: 10em;
   display: inline-block;
-  font-size: 0.9em;
+  font-size: 0.6em;
 }
 
 #iamh1 {
@@ -161,20 +161,19 @@ height: 150px;
 }
 
 .announcements-paragraph {
-  margin: auto;
+  margin: 0 auto;
   width: 50%;
 }
 
 .announcements-paragraph h1, #newsgroup h1 {
-  margin-left: auto;
   padding-bottom: 5%;
-  font-size: 4em;
+  font-size: 2em;
   font-weight: 200;
   letter-spacing: .16em;
 }
 
 .announcements-paragraph p {
-  font-size: 35px;
+  font-size: 1.5em;
   text-align: justify;
   text-transform: uppercase;
   font-weight: 200;
@@ -281,16 +280,15 @@ header p {
 
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). 
    Show the list item that contains the link to open and close the topnav (li.icon) */
+
+/* The "responsive" class is added to the topnav with AngularJS when the user clicks on the icon. 
+   This class makes the topnav look good on small screens */
 @media screen and (max-width: 680px) {
   ul.topnav li {
     display: none; }
   ul.topnav li.icon {
     float: right;
-    display: inline-block; } }
-
-/* The "responsive" class is added to the topnav with AngularJS when the user clicks on the icon. 
-   This class makes the topnav look good on small screens */
-@media screen and (max-width: 680px) {
+    display: inline-block; }
   ul.topnav.responsive {
     position: relative; }
   ul.topnav.responsive li.icon {
@@ -308,24 +306,76 @@ header p {
     display: block;
   }
 
-}
+  .announcements-paragraph h1, #newsgroup h1 {
+    padding-bottom: 5%;
+    font-size: 1em;
+    font-weight: 200;
+    letter-spacing: .16em;
+  }
 
-@media screen and (max-width: 586px) {
+  .announcements-paragraph p {
+    font-size: 1em;
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+
+}
+@media screen and (max-width: 430px) {
   .iam {
     height: 7em;
     width: 10em;
     display: inline-block;
-    font-size: 0.7em;
+    font-size: 0.4em;
+  }
+}
+
+@media screen and (min-width: 586px) {
+  .iam {
+    height: 7em;
+    width: 10em;
+    display: inline-block;
+    font-size: 0.9em;
   }
 }
 
 /* When screen is 1032px or less */
-@media screen and (min-width: 1032px) {
+@media screen and (min-width: 1000px) {
   .iam {
     height: 7em;
     width: 10em;
     display: inline-block;
     font-size: 1.5em;
+  }
+
+  .announcements {
+    width: 100%;
+    height: 100%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("/static/img/row.jpg");
+    background-size: cover;
+    position: relative;
+    color: white;
+  }
+
+  .announcements-paragraph {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .announcements-paragraph h1, #newsgroup h1 {
+    padding-bottom: 5%;
+    font-size: 3.2em;
+    font-weight: 200;
+    letter-spacing: .16em;
+  }
+
+  .announcements-paragraph p {
+    font-size: 2em;
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 200;
   }
 }
 
