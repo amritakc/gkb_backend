@@ -488,7 +488,29 @@ header p {
     text-transform: uppercase;
     font-weight: 200;
   }
+
+  .donateboxes {
+    margin: 3em;
+    width: 20em;
+    height: 20em;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    display: inline-block;
+    vertical-align: top;
+    padding: 1em;
+
+  }
+
+  .donateboxes p {
+    text-align: center;
+  }
+
+.donateboxes h3 {
+    text-align: center;
+  }
+
 }
+
+
 
 /* When screen is 1210px or less */
 @media screen and (max-width: 1210px) {
