@@ -172,6 +172,14 @@ height: 150px;
   letter-spacing: .16em;
 }
 
+.community h1 {
+  font-size: 3em;
+  color: white;
+  font-weight: 200;
+  letter-spacing: .16em;
+  text-align: center;
+}
+
 .announcements-paragraph p {
   font-size: 1.5em;
   text-align: justify;
@@ -192,10 +200,47 @@ height: 400px;
 display: inline-block;
 }
 
+.community {
+  width: 100%;
+  height: 500px;
+}
+
+.communitycontent {
+  margin-left: 75px;
+}
+
+.communityboxes {
+width: 300px;
+height: 500px;
+display: inline-block;
+text-align: left;
+vertical-align: top;
+color: white;
+margin-left: 50px;
+}
+
+.communityboxes img {
+  width: 300px;
+  height: 300px;
+}
+.community h3 {
+  color: white;
+  text-align: center;
+}
+
 .newsboxes img {
 width: 400px;
 height: 300px;
 display: inline-block;
+}
+
+.community {
+  width: 100%;
+  height: 100%;
+  padding: 3em 2em;
+  background: linear-gradient(rgba(0, 158, 73, 0.85), rgba(0, 158, 73, 0.85)), url("/static/img/cray.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .footer-email-input {
