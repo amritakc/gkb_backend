@@ -100,9 +100,9 @@ height: 150px;
 #iamh1 {
   color: #000035; 
   padding-top: 5%;
-  font-size: 2.3em;
+  font-size: 2em;
   margin-top: 0;
-  margin-bottom: 0.8em;
+  margin-bottom: 0.5em;
 }
 
 .iam a {
@@ -142,8 +142,8 @@ height: 150px;
 
 .bike-image {
   width: 100%;
-  height: 100%;
-  padding: 3em 2em;
+  max-height: 60%;
+  padding: 2em 2em;
   background: linear-gradient(rgba(0, 158, 73, 0.85), rgba(0, 158, 73, 0.85)), url("/static/img/yellow_bike.png") center center no-repeat;
   background-size: cover;
   position: relative;
