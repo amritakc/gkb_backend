@@ -94,7 +94,7 @@ height: 150px;
   height: 7em;
   width: 10em;
   display: inline-block;
-  font-size: 1.8em;
+  font-size: 0.9em;
 }
 
 #iamh1 {
@@ -310,12 +310,22 @@ header p {
 
 }
 
-/* When screen is 1032px or less */
-@media screen and (max-width: 1032px) {
+@media screen and (max-width: 586px) {
   .iam {
-    width: 50%;
+    height: 7em;
+    width: 10em;
     display: inline-block;
-    border: none;
+    font-size: 0.7em;
+  }
+}
+
+/* When screen is 1032px or less */
+@media screen and (min-width: 1032px) {
+  .iam {
+    height: 7em;
+    width: 10em;
+    display: inline-block;
+    font-size: 1.5em;
   }
 }
 
