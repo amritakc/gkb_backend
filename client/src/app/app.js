@@ -1,5 +1,11 @@
-angular.module('adminApp', ['ui.router','ui.bootstrap','ngQuill','uiRouterStyles'])
+angular.module('adminApp', [
+'ui.router',
+'ui.bootstrap',
+'ngAnimate',
+'ngQuill',
+'uiRouterStyles'])
 .config(function($stateProvider,$urlRouterProvider,ngQuillConfigProvider) {
+
   $stateProvider
     .state('login', {
       url: '/login',
@@ -40,6 +46,7 @@ angular.module('adminApp', ['ui.router','ui.bootstrap','ngQuill','uiRouterStyles
     })
 
   $urlRouterProvider.otherwise('/');
+
   ngQuillConfigProvider.set([{
       alias: '10',
       size: '10px'
