@@ -30,9 +30,11 @@ var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap']);
 				redirectTo: '/'
 			});
 	});
+
 myApp.controller('donationsCtrl', function($scope) {
 	
 });
+
 myApp.controller('footerCtrl', function($scope) {
 	$scope.newSubscriber = {};
 	$scope.create = create;
@@ -43,9 +45,11 @@ myApp.controller('footerCtrl', function($scope) {
 		return true;
 	}
 });
+
 myApp.controller('homeCtrl', function($scope) {
 	
 });
+
 myApp.controller('navCtrl', function($scope, $location, $window) {
 	$scope.small = false;
 	$scope.showLinks = showLinks;
@@ -66,6 +70,7 @@ myApp.controller('navCtrl', function($scope, $location, $window) {
 	}
 
 });
+
 myApp.directive("scroll", function ($window) {
     return function(scope, element, attrs) {
         angular.element($window).bind("scroll", function() {
@@ -80,12 +85,15 @@ myApp.directive("scroll", function ($window) {
         });
     };
 });
+
 myApp.controller('newsCtrl', function($scope) {
 
 });
+
 myApp.controller('storeCtrl', function($scope) {
 
 });
+
 myApp.controller('volunteersCtrl', function($scope) {
 	
 });
