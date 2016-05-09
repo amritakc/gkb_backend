@@ -1,0 +1,28 @@
+{
+  "name": "GoodKarmaBikes-Admin-Dashboard",
+  "homepage": "https://github.com/StephenPopovich/GoodKarmaBikes-Admin-Dashboard",
+  "authors": [
+    "NA"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./client/vendor/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ckeditor": "^1.0.3",
+    "angular-ui-router": "^0.2.18",
+    "bootstrap-ui": "^1.3.2",
+    "angular": "^1.5.5",
+    "angular-bootstrap": "^1.3.2",
+    "ckeditor": "^4.5.8",
+    "ngQuill": "ng-quill#^1.4.4",
+    "angular-ui-router-styles": "^1.1.0"
+  }
+}
