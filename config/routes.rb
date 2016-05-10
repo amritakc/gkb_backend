@@ -14,7 +14,9 @@ Rails.application.routes.draw do
 
   post 'contents/create' => 'contents#create'
 
+  post 'contents/update/:id' => 'contents#update'
 
+  delete 'contents/destroy/:id' => 'contents#destroy'
 
 
 
