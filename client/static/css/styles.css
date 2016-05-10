@@ -390,13 +390,26 @@ header p {
 
 /* The "responsive" class is added to the topnav with AngularJS when the user clicks on the icon. 
    This class makes the topnav look good on small screens */
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 786px) {
   ul.topnav li {
     display: none; }
-  ul.topnav li.icon {
-    float: right;
-    display: inline-block; }
   
+  ul.topnav li.icon {
+    text-align: center;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+  }
+  
+  ul.topnav li.icon > a {
+    width: 100%;
+  }
+
+  ul.topnav {
+    width: 100%;
+    margin: 0;
+  }
+
   ul.topnav.responsive li.icon {
     float: right;
     width: 100%;
@@ -421,6 +434,7 @@ header p {
   }
   nav.navigation-bar {
     padding: 0;
+    margin: 0;
   }
 
   .logo {
@@ -428,18 +442,25 @@ header p {
     display: block;
   }
 
+  .announcements-paragraph {
+    width: 100%;
+  }
+
   .announcements-paragraph h1, .newsgroup h1 {
     padding-bottom: 5%;
-    font-size: 1em;
+    font-size: 1.4em;
     font-weight: 200;
     letter-spacing: .16em;
   }
 
-  .announcements-paragraph p {
-    font-size: 1em;
+  .announcements-paragraph > p {
+    font-size: 1.5em;
     text-align: justify;
     text-transform: uppercase;
     font-weight: 200;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 2.5em;
   }
 
   .community h1 {
@@ -480,13 +501,18 @@ header p {
     text-align: left;
   }
 
+  .mission-text > p {
+    width: 100%;
+    font-size: 1.5em;
+  }
+
 }
 @media screen and (max-width: 430px) {
   .iam {
     height: 7em;
     width: 10em;
     display: inline-block;
-    font-size: 0.4em;
+    font-size: 0.5em;
   }
 
   #iamh1 {
@@ -591,8 +617,6 @@ header p {
   }
 
 }
-
-
 
 /* When screen is 1210px or less */
 @media screen and (max-width: 1210px) {
