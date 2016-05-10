@@ -243,30 +243,47 @@ height: 50%;
 display: inline-block;
 }
 
+.newsboxes h4 {
+  margin-top: 0.5em;
+}
+
 .community {
   width: 100%;
-  height: 500px;
+  height: 100%;
 }
 
 .communitycontent {
-  margin-left: 75px;
+  width: 100%;
+  height: 50%;
 }
 
 .communityboxes {
-width: 300px;
-height: 500px;
-display: inline-block;
-text-align: left;
-vertical-align: top;
-color: white;
-margin-left: 50px;
+  width: 45%;
+  height: 100%;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  color: white;
+}
+
+.communityboxes:nth-child(2n) {
+  margin-left: 5.52em;
 }
 
 .communityboxes img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 18em;
 }
-.community h3 {
+
+.community > p {
+  margin: 0.5em auto;
+  color: white;
+  width: 50%;
+  text-align: center;
+}
+
+.community > h3 {
+  margin: 0.5em 0;
   color: white;
   text-align: center;
 }
@@ -422,6 +439,35 @@ header p {
     font-weight: 200;
   }
 
+  .community h1 {
+    font-size: 0.9em;
+  }
+
+  .communityboxes {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: left;
+    vertical-align: top;
+    color: white;
+  }
+
+  .communityboxes:nth-child(2n) {
+    margin-left: 0;
+  }
+
+  .communityboxes img {
+    width: 100%;
+    height: 18em;
+  }
+
+  .community > p {
+    margin: 0.5em auto;
+    color: white;
+    width: 80%;
+    text-align: center;
+  }
+
 }
 @media screen and (max-width: 430px) {
   .iam {
@@ -439,9 +485,13 @@ header p {
 
   .newsboxes {
     width: 100%;
-    height: 25%;
+    height: 100%;
     display: block;
     margin-bottom: 1em;
+  }
+
+  .newsboxes h4 {
+    margin-top: 1.5em;
   }
 
   .newsboxes p {
