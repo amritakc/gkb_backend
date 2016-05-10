@@ -10,7 +10,7 @@ html, body {
 
 ul.topnav {
   list-style-type: none;
-  margin: 0;
+  margin: 0 1em;
   padding: 0;
   float: right;
 }
@@ -75,7 +75,6 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 .navigation-bar {
   width: 100%;
   height: 50px;
-  padding-right: 2em;
   background: rgba(255, 255, 255, 0.0);
   position: fixed;
   z-index: 9999;
@@ -381,7 +380,11 @@ header p {
 .footer-list li.footer-links a:link, .footer-list li.footer-links a:visited, .footer-list li.footer-links a:hover, .footer-list li.footer-links a:active {
   text-decoration: none; }
 
-
+.btn-subscribe {
+  color: #fff;
+  background-color: #179F59;
+  border-color: #189f59;
+}
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). 
    Show the list item that contains the link to open and close the topnav (li.icon) */
 
@@ -466,6 +469,15 @@ header p {
     color: white;
     width: 80%;
     text-align: center;
+  }
+
+  .footer-list {
+    text-align: left; 
+  }
+
+  .social-media-bubble {
+    margin-top: 1em;
+    text-align: left;
   }
 
 }
