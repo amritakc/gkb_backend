@@ -8,13 +8,13 @@ class ContentsController < ApplicationController
 
     content = Content.new(title:params[:title],text:params[:text],section:Section.find_by_name(params[:section]))
     if content.save
-
+      render :json => {success: "created content in the backend"}
     else
-      flash[:errors] = content.errors.full_messages
-      @errors = flash[:errors]
+      # flash[:errors] = content.errors.full_messages
+      @errors = content.errors.full_messages
       render :json => @errors
     end
-    render :json => {success: "created content in the backend"}
+    # render :json => {success: "created content in the backend"}
     # redirect_to :back
 
   end
@@ -36,7 +36,7 @@ class ContentsController < ApplicationController
 
     @inform = Content.find(params[:id])
     # response json data
-    render :json =>@inform
+    # render :json =>@inform
   end
   def destroy
 
