@@ -55,10 +55,9 @@ ActiveRecord::Schema.define(version: 20160510002233) do
   create_table "contents", force: :cascade do |t|
     t.string   "title"
     t.string   "text"
-    t.boolean  "current",    default: true
     t.integer  "section_id"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "contents", ["section_id"], name: "index_contents_on_section_id", using: :btree
