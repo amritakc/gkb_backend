@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,300,300italic,900italic');
+/* Styling for html, body */
 html, body {
   margin: 0;
   padding: 0;
@@ -8,6 +9,7 @@ html, body {
   overflow: auto; 
 }
 
+/* This is styling for the navigation bar */
 ul.topnav {
   list-style-type: none;
   margin: 0 1em;
@@ -32,13 +34,21 @@ ul.topnav li a {
   transition: 0.3s; 
 }
 
+/* Here we have code for the different anchor tag states, this complete removes all instances of text-decoration */
 ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li a:active {
   text-decoration: none;
   color: white; 
 }
 
+/* These are stylings for the footer */
 .footer-links-wrapper {
   text-align: right; 
+}
+
+.footer-email-input {
+  width: 88%;
+  display: inline-block;
+  margin-right: 0.40em;
 }
 
 .social-media-bubble {
@@ -72,6 +82,52 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
   transition: all 0.8s ease-in-out;
 }
 
+.footer-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: right; 
+}
+
+.footer-list li.footer-links {
+  line-height: 2em; }
+
+.footer-list li.footer-links a {
+  color: white; }
+
+.footer-list li.footer-links a:link, .footer-list li.footer-links a:visited, .footer-list li.footer-links a:hover, .footer-list li.footer-links a:active {
+  text-decoration: none; }
+
+/* This is the styling for the wrapper around the footer section */
+#footer {
+  position: relative;
+  clear: both;
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 2.5em;
+  border-top: 2px solid black;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("/static/img/handlebars.jpg") center center no-repeat;
+  background-size: cover; }
+
+/* This is the styling for the 'subscribe to mailing list' section */
+#subscribe {
+  display: block;
+  float: none;
+  padding: 1em;
+  border-radius: 1em;
+  width: 60%;
+  margin: 0 auto;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+}
+
+.btn-subscribe {
+  color: #fff;
+  background-color: #179F59;
+  border-color: #189f59;
+}
+
+/* Stylings for the navigation bar, including a class meant for making the bar 
+   solid. However, JavaScript is refusing to cooperate. */
 .navigation-bar {
   width: 100%;
   height: 50px;
@@ -84,6 +140,7 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
   background: rgba(255, 255, 255, 0.6);
 }
 
+/* This is styling for the header and the navigation icons for the 'Learn How To' section */
 .logo {
 width: 150px;
 height: 150px;
@@ -135,6 +192,23 @@ height: 150px;
   clear: both; 
 }
 
+header h3 {
+  margin: 0;
+  color: white;
+  margin-top: 1em;
+  text-align: center;
+}
+
+header p {
+  width: 60%;
+  color: white;
+  font-size: 1.1em;
+  margin: 1em auto;
+  padding-bottom: 2em;
+  text-align: justify;
+}
+
+/*  Some overrides for bootstrap stylings */
 .row {
   width: 100%;
   margin: 0 auto; 
@@ -146,6 +220,7 @@ height: 150px;
   min-height: 100%; 
 }
 
+/* Stylings for the mission statement */
 .bike-image {
   width: 100%;
   max-height: 60%;
@@ -165,10 +240,22 @@ height: 150px;
   padding-bottom: 2em;
 }
 
+/* Styling for the little triangles on the homepage */
 .triangle-up {
   padding-top: 5em;
+  width: 0;
+  height: 0;
+  border-left: 4.5em solid transparent;
+  border-right: 4.5em solid transparent;
+  border-bottom: 5em solid white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
+/* Stylings for the announcements section */
 .announcements {
   width: 100%;
   height: 100%;
@@ -193,14 +280,6 @@ height: 150px;
   text-align: center;
 }
 
-.community h1 {
-  font-size: 3em;
-  color: white;
-  font-weight: 200;
-  letter-spacing: .16em;
-  text-align: center;
-}
-
 .announcements-paragraph p {
   font-size: 1.5em;
   text-align: justify;
@@ -208,6 +287,7 @@ height: 150px;
   font-weight: 200;
 }
 
+/* Styling for the news section on the homepage */
 #news-wrapper {
   height: 100%;
   width: 100%;
@@ -246,9 +326,24 @@ display: inline-block;
   margin-top: 0.5em;
 }
 
+.newsboxes img {
+width: 100%;
+height: 21.5em;
+display: inline-block;
+}
+
+/* Styling for the community programs section */
 .community {
   width: 100%;
   height: 100%;
+}
+
+.community h1 {
+  font-size: 3em;
+  color: white;
+  font-weight: 200;
+  letter-spacing: .16em;
+  text-align: center;
 }
 
 .communitycontent {
@@ -287,12 +382,6 @@ display: inline-block;
   text-align: center;
 }
 
-.newsboxes img {
-width: 100%;
-height: 21.5em;
-display: inline-block;
-}
-
 .community {
   width: 100%;
   height: 100%;
@@ -302,41 +391,6 @@ display: inline-block;
   position: relative;
 }
 
-.footer-email-input {
-  width: 88%;
-  display: inline-block;
-  margin-right: 0.40em;
-}
-
-header h3 {
-  margin: 0;
-  color: white;
-  margin-top: 1em;
-  text-align: center;
-}
-
-header p {
-  width: 60%;
-  color: white;
-  font-size: 1.1em;
-  margin: 1em auto;
-  padding-bottom: 2em;
-  text-align: justify;
-}
-
-.triangle-up {
-  width: 0;
-  height: 0;
-  border-left: 4.5em solid transparent;
-  border-right: 4.5em solid transparent;
-  border-bottom: 5em solid white;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-}
-
 #wrapper {
   margin: 0;
   padding: 0;
@@ -344,49 +398,8 @@ header p {
   min-width: 100%;
   position: relative; }
 
-#footer {
-  position: relative;
-  clear: both;
-  width: 100%;
-  height: 100%;
-  color: white;
-  padding: 2.5em;
-  border-top: 2px solid black;
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("/static/img/handlebars.jpg") center center no-repeat;
-  background-size: cover; }
-
-  #subscribe {
-    display: block;
-    float: none;
-    padding: 1em;
-    border-radius: 1em;
-    width: 60%;
-    margin: 0 auto;
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
-  }
-
-.footer-list {
-  list-style-type: none;
-  padding: 0;
-  text-align: right; 
-}
-
-.footer-list li.footer-links {
-  line-height: 2em; }
-
-.footer-list li.footer-links a {
-  color: white; }
-
-.footer-list li.footer-links a:link, .footer-list li.footer-links a:visited, .footer-list li.footer-links a:hover, .footer-list li.footer-links a:active {
-  text-decoration: none; }
-
-.btn-subscribe {
-  color: #fff;
-  background-color: #179F59;
-  border-color: #189f59;
-}
-
-
+/* For when the screen is between 586 and 870px, this should be changed at a later date.
+   It's not the best range. */
 @media only screen and (min-width: 586px) and (max-width: 870px) {
   .iam {
     height: 7em;
@@ -583,7 +596,7 @@ header p {
 
 }
 
-/* When screen is 1210px or less */
+/* When screen is 1210px or less, this should be changed too. */
 @media screen and (max-width: 1210px) {
   .footer-email-input {
     width: 100%;
@@ -598,7 +611,8 @@ header p {
   }
 }
 
-/* When the screen is less than 430 pixels wide, apply these stylings */
+/* When the screen is less than 430 pixels wide and 300px or greater, apply these stylings.
+   Honestly, this range could be changed to something better. */
 @media only screen and (min-width: 300px) and (max-width: 430px) {
   .iam {
     height: 7em;
