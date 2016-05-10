@@ -308,6 +308,26 @@ display: inline-block;
   margin-right: 0.40em;
 }
 
+/* Volunteer  Start */
+.volgilistcs {
+  display: inline;
+  padding-right: 11%;
+  padding-left: 11%;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  float: right;
+}
+
+d-expand-collapse {
+  display: inline-block;
+  float: left;
+  padding: 2%;
+  word-wrap: break-word;
+  width: 45%;
+}
+
+/* Volunteer  End*/
+
 header h3 {
   margin: 0;
   color: white;
