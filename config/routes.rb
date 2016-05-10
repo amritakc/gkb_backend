@@ -6,11 +6,13 @@ Rails.application.routes.draw do
 
   get 'contents/index'
 
-  get 'contents/show'
+  get 'contents/show/:id' => 'contents#show'
 
-  get 'contents/edit'
+  get 'contents/edit/:id' => 'contents#edit'
 
-  get 'contents/new'
+  get 'contents/new' => 'contents#new'
+
+  post 'contents/create' => 'contents#create'
 
 
 

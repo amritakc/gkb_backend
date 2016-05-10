@@ -1,2 +1,10 @@
 <h1>Contents#show</h1>
 <p>Find me in app/views/contents/show.html.erb</p>
+
+  <h3>Event: <%=@inform.event%></h3>
+  <h3>Message: <%=@inform.message%></h3>
+
+
+
+  <button type='submit'><a href='/contents/edit/<%=@inform.id%>'>Edit</a></button>
+  <br>
