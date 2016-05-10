@@ -1,7 +1,7 @@
 angular.module('adminApp', [
 'ui.router',
-'ui.bootstrap',
 'ngAnimate',
+'ui.bootstrap',
 'ngQuill',
 'uiRouterStyles'])
 .config(function($stateProvider,$urlRouterProvider,ngQuillConfigProvider) {
@@ -9,7 +9,7 @@ angular.module('adminApp', [
   $stateProvider
     .state('login', {
       url: '/login',
-      templateUrl: 'login/login.html',
+      templateUrl: 'login/_login.html',
       controller:'loginCtrl'
     })
     .state('dashboard', {
