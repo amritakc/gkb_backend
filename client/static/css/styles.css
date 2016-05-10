@@ -102,9 +102,8 @@ height: 150px;
   padding-top: 5%;
   font-size: 2em;
   margin-top: 0;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   font-weight: 300;
-  padding-bottom: 2em;
 }
 
 .iam a {
@@ -144,6 +143,7 @@ height: 150px;
 
 .container-fluid {
   padding: 0;
+  width: 100%;
   min-height: 100%; 
 }
 
@@ -163,7 +163,7 @@ height: 150px;
 .mission-text {
   font-style: italic;
   font-weight: 100;
-  padding-bottom: 5em;
+  padding-bottom: 2em;
 }
 
 .triangle-up {
@@ -226,6 +226,11 @@ height: 150px;
   text-align: center;
   margin-bottom: 0.5em;
   margin-top: 2em;
+}
+
+.all-news {
+  margin-bottom: 2em !important;
+  margin-top: 0.5em !important;
 }
 
 .newsboxes:nth-of-type(2) {
@@ -371,18 +376,33 @@ header p {
   ul.topnav li.icon {
     float: right;
     display: inline-block; }
-  ul.topnav.responsive {
-    position: relative; }
+  
   ul.topnav.responsive li.icon {
-    position: absolute;
-    right: 0;
-    top: 0; }
+    float: right;
+    width: 100%;
+    display: block;
+  }
+  ul.topnav.responsive li.icon > a {
+    float: right;
+    color: white;
+  }
+
   ul.topnav.responsive li {
     float: none;
-    display: block; }
+    display: block;
+  }
   ul.topnav.responsive li a {
     display: block;
-    text-align: left; } 
+    width: 100%;
+    text-align: center; 
+    float: left;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  nav.navigation-bar {
+    padding: 0;
+  }
+
   .logo {
     margin: 0 auto;
     display: block;
