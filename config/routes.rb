@@ -12,9 +12,15 @@ Rails.application.routes.draw do
 
   get 'contents/new' => 'contents#new'
 
-  post 'contents/create' => 'contents#create'
+  # post 'contents/create' => 'contents#create'
+  get 'contents/create/:title/:text/:current/:section' => 'contents#create'
 
-  post 'contents/update/:id' => 'contents#update'
+  get 'contents/update/:id/:title/:text/:current/:section' => 'contents#update'
+
+
+  # post 'contents/update/:id' => 'contents#update'
+  get 'contents/destroy/:id' => 'contents#destroy'
+
 
   delete 'contents/destroy/:id' => 'contents#destroy'
 

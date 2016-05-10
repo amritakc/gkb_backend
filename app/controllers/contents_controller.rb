@@ -13,8 +13,8 @@ class ContentsController < ApplicationController
       @errors = flash[:errors]
       render :json => @errors
     end
-
-    redirect_to :back
+    render :json => {mes: "created obj"}
+    # redirect_to :back
 
   end
   def update
@@ -27,7 +27,7 @@ class ContentsController < ApplicationController
   end
   def show
   	@inform = Content.find(params[:id])
-    # render :json =>@inform
+    render :json =>@inform
   end
 
   def edit
@@ -35,12 +35,13 @@ class ContentsController < ApplicationController
 
     @inform = Content.find(params[:id])
     # response json data
-     # render :json =>@inform
+     render :json =>@inform
   end
   def destroy
 
     Content.destroy(params[:id])
 
+    #change redirects to messages
     redirect_to '/contents/index' 
 
   end
