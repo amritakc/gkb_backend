@@ -1,16 +1,18 @@
 angular.module('adminApp', [
 'ui.router',
-'ui.bootstrap',
 'ngAnimate',
+'ui.bootstrap',
+'ngQuill',
 'textAngular',
 'ngSanitize',
+
 'uiRouterStyles'])
 .config(function($stateProvider,$urlRouterProvider) {
 
   $stateProvider
     .state('login', {
       url: '/login',
-      templateUrl: 'login/login.html',
+      templateUrl: 'login/_login.html',
       controller:'loginCtrl'
     })
     .state('dashboard', {
