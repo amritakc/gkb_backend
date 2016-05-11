@@ -58,9 +58,5 @@ class ContentsController < ApplicationController
    #  redirect_to :back
   end
 
-  def section
-    # will find contents for requested section and return json object
-    @sec = Section.find_by_name(params[:section]).contents
-    render :json => @sec
-  end
+  
 end
