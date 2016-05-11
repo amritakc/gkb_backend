@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
 
 
-  get 'sections/index'
+  get 'sections/:section' => 'sections#show'
 
-  get 'sections/show/:id' => 'sections#show'
+  # get 'sections/show/:id' => 'sections#show'
 
-  get 'sections/edit/:id' => 'sections#edit'
+  # get 'sections/edit/:id' => 'sections#edit'
 
-  get 'sections/new' => 'sections#new'
+  # get 'sections/new' => 'sections#new'
 
-  post 'sections/create' => 'sections#create'
+  # post 'sections/create' => 'sections#create'
 
 
 
