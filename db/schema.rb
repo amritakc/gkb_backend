@@ -53,21 +53,25 @@ ActiveRecord::Schema.define(version: 20160510043932) do
   add_index "bikes", ["status_id"], name: "index_bikes_on_status_id", using: :btree
 
   create_table "contents", force: :cascade do |t|
-    t.string   "content"
-    t.string   "htmlpage"
-    t.string   "section"
+    t.string   "title"
+    t.string   "text"
+    t.integer  "section_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_index "contents", ["section_id"], name: "index_contents_on_section_id", using: :btree
+
   create_table "imgs", force: :cascade do |t|
     t.string   "url"
+    t.integer  "content_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "bike_id"
   end
 
   add_index "imgs", ["bike_id"], name: "index_imgs_on_bike_id", using: :btree
+  add_index "imgs", ["content_id"], name: "index_imgs_on_content_id", using: :btree
 
   create_table "sections", force: :cascade do |t|
     t.string   "name"
