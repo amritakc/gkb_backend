@@ -80,23 +80,6 @@ angular.module('adminApp', [
         css: ['news/newsStyle.css']
       }
     })
-    .state('bikePage', {
-      url:'/announcements',
-      views: {
-        '@': {
-         templateUrl:'views/newsLayout.html'
-        },
-        'header@bikePage' : {
-          templateUrl: 'header/_header.html',
-        },
-        'news@bikePage' : {
-          templateUrl: 'announcements/_announcements.html',
-        }
-      },
-      data: {
-        css: ['news/newsStyle.css']
-      }
-    })
 
   $urlRouterProvider.otherwise('/');
 

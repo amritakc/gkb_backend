@@ -1,20 +1,0 @@
-{:uriI"‡file://app/assets/javascripts/auth/_register.html?type=text/ng-html&id=04cee63a01d18d92ee5600700e72295399cf7ca6c5e240cee3ae4d57989eed97:ET:load_pathI"app/assets/javascripts;T:filenameI"/app/assets/javascripts/auth/_register.html;T:	nameI"auth/_register;T:logical_pathI"auth/_register.html;T:content_typeI"text/ng-html;T:sourceI"!<div class="page-header">
-  <h1>Register</h1>
-</div>
-
-<form ng-submit="register()">
-  <div class="input-group">
-    <input type="email" class="form-control" placeholder="Email" ng-model="user.email">
-  </div>
-  <div class="input-group">
-    <input type="text" class="form-control" placeholder="Username" ng-model="user.username">
-  </div>
-  <div class="input-group">
-    <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
-  </div>
-  <input type="submit" class="btn btn-default" value="Register">
-</form>;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"=file-digest://app/assets/javascripts/auth/_register.html;TTF:charsetI"
-utf-8;F:digest"%Z:Æ´¾CCÒ½ƒI³Şí.dìF ëuEç~‘Oº¥:lengthi!:dependencies_digest"%s¹À7øe··yù%ú¡ü^×tåeİgfT:—k+! „V:idI"E04cee63a01d18d92ee5600700e72295399cf7ca6c5e240cee3ae4d57989eed97;F:
-mtimel+ğ™2W

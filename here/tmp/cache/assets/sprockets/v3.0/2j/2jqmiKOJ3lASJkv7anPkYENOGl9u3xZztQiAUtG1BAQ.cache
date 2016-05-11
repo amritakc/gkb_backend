@@ -1,22 +1,0 @@
-{:uriI"‘file://app/assets/javascripts/addBikeForm/_addBikeForm.html?type=text/ng-html&id=31b2fd656e2911a1b1e15afccc0a014df50443bb4e362dab5647415965896f81:ET:load_pathI"app/assets/javascripts;T:filenameI"9app/assets/javascripts/addBikeForm/_addBikeForm.html;T:	nameI"addBikeForm/_addBikeForm;T:logical_pathI""addBikeForm/_addBikeForm.html;T:content_typeI"text/ng-html;T:sourceI"b<label>Donor</label>
-<input type="text" ng-model="bike.donor" /></p>
-<label>Model</label>
-<input type="text" ng-model="bike.model" /></p>
-<label>Brand</label>
-<input type="text" ng-model="bike.brand" /></p>
-<label>Buyer</label>
-<input type="text" ng-model="bike.buyer" /></p>
-<label>Value</label>
-<input type="text" ng-model="bike.value" /></p>
-<label>Date Sold</label>
-<input type="date" ng-model="bike.dateSold" /></p>
-<label>Bar code</label>
-<input type="text" ng-model="bike.barCode" /></p>
-<label>Ebay</label>
-<input type="text" ng-model="bike.ebay" /></p>
-<button ng-click="createBike()">Create</button>
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Gfile-digest://app/assets/javascripts/addBikeForm/_addBikeForm.html;TTF:charsetI"
-utf-8;F:digest"%Ai¬³ˆÊ2Ss,Kù]ôÕÔòj_ÛO™†‹:lengthib:dependencies_digest"%äĞAú¡(ÏÔG	³”('i03ÂØL²Z9úv:idI"E31b2fd656e2911a1b1e15afccc0a014df50443bb4e362dab5647415965896f81;F:
-mtimel+’›2W

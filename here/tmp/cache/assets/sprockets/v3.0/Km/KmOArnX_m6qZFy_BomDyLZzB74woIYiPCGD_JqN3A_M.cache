@@ -1,11 +1,0 @@
-{:uriI"file://app/assets/javascripts/views/dashboardLayout.html?type=text/ng-html&id=88bc1ed31c3ecb0513c200446e5c6fb29cc7c038cdb0aa0029b8caae52771094:ET:load_pathI"app/assets/javascripts;T:filenameI"6app/assets/javascripts/views/dashboardLayout.html;T:	nameI"views/dashboardLayout;T:logical_pathI"views/dashboardLayout.html;T:content_typeI"text/ng-html;T:sourceI"¯<div ui-view="header" layout="column"></div>
-<section layout="row" class="container">
-  <div layout="row" layout-padding>
-      <div ui-view="main"></div>
-  </div>
-</section>
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Dfile-digest://app/assets/javascripts/views/dashboardLayout.html;TTF:charsetI"
-utf-8;F:digest"%Í¾Ù’i|æ?E)ÇáÕQµ€X[l‡Vñğ#¹”ë¨™3:lengthi¯:dependencies_digest"%ôİ¢º'k®q/Ì”œiÁO}P	ª5©|Pî¶:idI"E88bc1ed31c3ecb0513c200446e5c6fb29cc7c038cdb0aa0029b8caae52771094;F:
-mtimel+’›2W

@@ -1,29 +1,0 @@
-{:uriI"‡file://app/assets/javascripts/header/_header.html?type=text/ng-html&id=d9c9961d7ce2dca0d413068d0d9b35f0dbbf68252b919ffd3ab88858a2cec582:ET:load_pathI"app/assets/javascripts;T:filenameI"/app/assets/javascripts/header/_header.html;T:	nameI"header/_header;T:logical_pathI"header/_header.html;T:content_typeI"text/ng-html;T:sourceI"c<nav class="navbar navbar-default" role="navigation">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-
-    <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#">Admin Dashboard</a>
-  </div>
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
-
-    <ul class="nav navbar-nav">
-      <li><a href="#">Dashboard</a></li>
-      <li><a href="#">Announcements</a></li>
-      <li><a href="#">News</a></li>
-    </ul>
-  </div><!-- /.navbar-collapse -->
-</nav>
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"=file-digest://app/assets/javascripts/header/_header.html;TTF:charsetI"
-utf-8;F:digest"%®Efâ´¸n¹Ü$…¿[Ë­,tž|&ô8—±§£Ô<ú:lengthic:dependencies_digest"%Fù;L2c£È‡ÛS6
-ØI‹ûë‡ðyJ:
-^Üøê‡¨:idI"Ed9c9961d7ce2dca0d413068d0d9b35f0dbbf68252b919ffd3ab88858a2cec582;F:
-mtimel+’›2W

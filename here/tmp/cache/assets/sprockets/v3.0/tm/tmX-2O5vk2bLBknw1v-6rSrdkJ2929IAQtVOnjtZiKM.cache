@@ -1,32 +1,0 @@
-{:uriI"…file://app/assets/javascripts/login/_login.html?type=text/ng-html&id=8b4fb24536eeaa338da7ffc38364fc8dcbb4fc95279d96909415ee4d5be4762e:ET:load_pathI"app/assets/javascripts;T:filenameI"-app/assets/javascripts/login/_login.html;T:	nameI"login/_login;T:logical_pathI"login/_login.html;T:content_typeI"text/ng-html;T:sourceI"Ý<div class="container vertical-center">
-  <div class="jumbotron" id="login-box">
-    
-    <div class="container">
-      <h2>Login</h2>
-      <form name="form" role="form">
-          <div class="form-group">
-              <label for="username">Username</label>
-              <input type="text" name="username" id="username" class="form-control" />
-              <span  class="help-block">Username is required</span>
-          </div>
-          <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" name="password" id="password" class="form-control"/>
-              <span class="help-block">Password is required</span>
-          </div>
-          <div class="form-actions">
-              <button type="submit"  class="btn btn-primary">Login</button>
-             
-          </div>
-      </form>
-      <div class="forgot-password">
-        <button ng-click='open()'>Forgot Password</button>
-      </div>
-
-    </div>  
-  </div>
-</div>;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI";file-digest://app/assets/javascripts/login/_login.html;TTF:charsetI"
-utf-8;F:digest"%‹RŠ©GÝéÔ×Îýœ$u&×D"¤™Ÿs8HÊ˜¼xZ§4:lengthiÝ:dependencies_digest"%&óžoïpìÙ§|Ñ<¯W©—‰¥Í>²îðÕQ†}:idI"E8b4fb24536eeaa338da7ffc38364fc8dcbb4fc95279d96909415ee4d5be4762e;F:
-mtimel+’›2W

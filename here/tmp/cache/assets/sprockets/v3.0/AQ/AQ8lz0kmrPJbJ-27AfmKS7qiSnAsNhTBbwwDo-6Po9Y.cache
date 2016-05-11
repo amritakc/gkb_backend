@@ -1,36 +1,0 @@
-{:uriI"“file://app/assets/javascripts/login/_forgotPasswordModal.html?type=text/ng-html&id=898a012ffa1ad7e5ca0e3ce79f72d4135ea5e967f70886fa8e4592d33ffdd4ec:ET:load_pathI"app/assets/javascripts;T:filenameI";app/assets/javascripts/login/_forgotPasswordModal.html;T:	nameI"login/_forgotPasswordModal;T:logical_pathI"$login/_forgotPasswordModal.html;T:content_typeI"text/ng-html;T:sourceI"9
-<div class="modal-content">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="cancel()">Ã—</button>
-        <h1 class="text-center">What's My Password?</h1>
-    </div>
-    <div class="modal-body">
-        <div class="col-md-12">
-              <div class="panel panel-default">
-                  <div class="panel-body">
-                      <div class="text-center">
-                        
-                        <p>If you have forgotten your password you can reset it here.</p>
-                          <div class="panel-body">
-                              <form>
-                                  <div class="form-group">
-                                      <input class="form-control input-lg" placeholder="E-mail Address" name="email" type="email">
-                                  </div>
-                                  <input class="btn btn-lg btn-primary btn-block" value="Send My Password" type="submit">
-                              </form>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-    </div>
-    <div class="modal-footer">
-        <div class="col-md-12">
-        <button class="btn" ng-click="cancel()">Cancel</button>
-        </div>    
-    </div>
-</div>;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Ifile-digest://app/assets/javascripts/login/_forgotPasswordModal.html;TTF:charsetI"
-utf-8;F:digest"%ùLGkáÖ4ïÍQ?/fÎ	ÓÏì;ÚlødFÝˆ‹iX:lengthi9:dependencies_digest"%<­`äË—œÃ¼Kîk}§ÕL‰è¹'TÏîT+»#È:idI"E898a012ffa1ad7e5ca0e3ce79f72d4135ea5e967f70886fa8e4592d33ffdd4ec;F:
-mtimel+’›2W

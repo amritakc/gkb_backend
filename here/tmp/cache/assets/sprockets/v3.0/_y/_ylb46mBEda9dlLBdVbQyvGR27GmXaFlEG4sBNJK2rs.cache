@@ -1,11 +1,0 @@
-{:uriI"ˆfile://app/assets/javascripts/views/inventory.html?type=text/ng-html&id=d0bd03651d29c1a13462d8208690b56cce053a7ab946c9503fcd8026b3a6cc11:ET:load_pathI"app/assets/javascripts;T:filenameI"0app/assets/javascripts/views/inventory.html;T:	nameI"views/inventory;T:logical_pathI"views/inventory.html;T:content_typeI"text/ng-html;T:sourceI"¶<div ui-view="header" layout="column"></div>
-<section layout="row" class="container">
-  <div layout="row" layout-padding>
-      <div ui-view="addBikeForm"></div>
-  </div>
-</section>
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI">file-digest://app/assets/javascripts/views/inventory.html;TTF:charsetI"
-utf-8;F:digest"%h%o‘…¼ü	I©˜cñxÌÁé™P;‘#4–XÅ:lengthi¶:dependencies_digest"%@Ê¯n¡§÷(`¾Ìä“}2Æ9LC¬‰$Ä¹I"ú(:idI"Ed0bd03651d29c1a13462d8208690b56cce053a7ab946c9503fcd8026b3a6cc11;F:
-mtimel+’›2W
