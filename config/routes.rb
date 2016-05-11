@@ -8,15 +8,25 @@ root to: 'application#angular'
 
   get 'contents/index'
 
-  get 'contents/show'
+  get 'contents/show/:id' => 'contents#show'
 
-  get 'contents/edit'
+  get 'contents/edit/:id' => 'contents#edit'
 
-  get 'contents/new'
+  get 'contents/new' => 'contents#new'
+
+  post 'contents/create' => 'contents#create'
+  # get 'contents/create/:title/:text/:section' => 'contents#create'
+
+  # get 'contents/update/:id/:title/:text/:section' => 'contents#update'
 
 
+  patch 'contents/update/:id' => 'contents#update'
+  # get 'contents/destroy/:id' => 'contents#destroy'
 
 
+  delete 'contents/destroy/:id' => 'contents#destroy'
+
+  get 'contents/section/:section' => 'contents#section'
 
 
 

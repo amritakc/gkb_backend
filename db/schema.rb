@@ -69,6 +69,12 @@ ActiveRecord::Schema.define(version: 20160510043932) do
 
   add_index "imgs", ["bike_id"], name: "index_imgs_on_bike_id", using: :btree
 
+  create_table "sections", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "statuses", force: :cascade do |t|
     t.string   "state"
     t.datetime "created_at"

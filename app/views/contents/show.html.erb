@@ -1,2 +1,19 @@
 <h1>Contents#show</h1>
 <p>Find me in app/views/contents/show.html.erb</p>
+
+  <h3>Title: <%=@inform.title%></h3>
+  <h3>Text: <%=@inform.text%></h3>
+  <h3>Section: <%=@inform.section.name%></h3>
+
+
+
+  <button type='submit'><a href='/contents/edit/<%=@inform.id%>'>Edit</a></button>
+  <br>
+
+  <form action="/contents/destroy/<%=@inform.id%>" method="POST">
+  	<br>
+
+    <input type="hidden" name ="authenticity_token" value ="<%= form_authenticity_token%>">
+    <input type="hidden" name="_method" value="delete">
+  	<button type="submit" > Delete </button>
+  </form>
