@@ -6,6 +6,18 @@ Rails.application.routes.draw do
   # root to: 'admins#index'
 root to: 'application#angular'
 
+  get 'sections/:section' => 'sections#show'
+
+  # get 'sections/show/:id' => 'sections#show'
+
+  # get 'sections/edit/:id' => 'sections#edit'
+
+  # get 'sections/new' => 'sections#new'
+
+  # post 'sections/create' => 'sections#create'
+
+
+
   get 'contents/index'
 
   get 'contents/show/:id' => 'contents#show'
@@ -24,7 +36,7 @@ root to: 'application#angular'
   # get 'contents/destroy/:id' => 'contents#destroy'
 
 
-  delete 'contents/destroy/:id' => 'contents#destroy'
+  # delete 'contents/destroy/:id' => 'contents#destroy'
 
   get 'contents/section/:section' => 'contents#section'
 
