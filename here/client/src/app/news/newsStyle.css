@@ -1,0 +1,20 @@
+.toolbar {
+  border-bottom: 1px solid black;
+}
+
+.input {
+  width: 20em;
+}
+
+.btn-container {
+  overflow: hidden;
+  padding-top: 1em;
+}
+
+.btn-lg {
+  min-width: 6em;
+}
+
+.new-content-btn {
+  margin-bottom: 1em;
+}

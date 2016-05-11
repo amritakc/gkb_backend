@@ -1,0 +1,47 @@
+{:uriI"ïfile://app/assets/javascripts/announcements/_announcements.html?type=text/ng-html&id=79b0fb06525344dc2d6d70daf875c9ceeded0bd531bc36264127aedb2c869226:ET:load_pathI"app/assets/javascripts;T:filenameI"=app/assets/javascripts/announcements/_announcements.html;T:	nameI"!announcements/_announcements;T:logical_pathI"&announcements/_announcements.html;T:content_typeI"text/ng-html;T:sourceI"D<div class="col-sm-offset-9 new-content-btn">
+  <button type="button" class="btn btn-primary">Add New Content</button>
+</div>
+
+<uib-accordion close-others="oneAtATime">
+  <uib-accordion-group is-open="true">
+    <uib-accordion-heading>
+      1/2/15 - Example Heading <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
+    </uib-accordion-heading>
+    <div class="form-group">
+      <label>Title:</label>
+      <input type="text" class="input form-control">
+    </div>
+    
+    <text-angular ng-model="htmlVariable"></text-angular>
+
+      <div class="btn-container row">
+        <div class="col-sm-7 col-sm-offset-1">
+          <button type="button" class="btn btn-danger btn-lg">Remove</button>
+        </div>
+        <div class="col-sm-1">
+          <button type="button" class="btn btn-primary btn-lg">Update</button>
+        </div>
+        <div class="col-sm-1 col-sm-offset-1">
+          <button type="button" class="btn btn-primary btn-lg">Save</button>
+        </div>
+    </div>
+
+
+
+  </uib-accordion-group>
+    
+  <uib-accordion-group>
+    <uib-accordion-heading>
+      header 1 <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
+    </uib-accordion-heading>
+
+  </uib-accordion-group>
+
+  </uib-accordion>
+
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Kfile-digest://app/assets/javascripts/announcements/_announcements.html;TTF:charsetI"
+utf-8;F:digest"%¢‘vC∂≤Ì›$–ó÷)k ‡±ê é•’‘H<:lengthiD:dependencies_digest"%dˆº
+Å8ªÊ=+™à»Õƒ¨L0I¿¢´´ÑñπÀ:idI"E79b0fb06525344dc2d6d70daf875c9ceeded0bd531bc36264127aedb2c869226;F:
+mtimel+íõ2W
