@@ -1,4 +1,4 @@
-<div class="container" id="volunteer" ng-controller="volunteersCtrl">
+<div class="container" id="volunteer">
 	<br><br>
 	<table style="margin: 0 auto;">
 		<tr>
@@ -17,8 +17,8 @@
 		
 	<div>
 		<d-expand-collapse>
-			<div><span class="faqplus"></span><a href="javascript:void(0)" class="position ui-link" ng-click="showHidePos1()" >Experienced Bike Mechanic</a></div>
-			<div class="voldetails" ng-show="position1 = !position1">
+			<div><span class="faqplus"></span><a href="javascript:void(0)" class="position ui-link" ng-click="showHidePos1()">Experienced Bike Mechanic</a></div>
+			<div class="voldetails" ng-show="position1 == !position1">
 				I have experience working on bicycles. I can independently tune up or over-haul a bicycle. 
 				<ul>
 					<li><a href="http://portal.govoluntr.com/328">Tue - Fri 10:30 - 2:30</a></li>
@@ -31,7 +31,7 @@
 
 		<d-expand-collapse>
 			<div><span class="faqplus" ></span><a href="javascript:void(0)" class="position ui-link" ng-click="showHidePos2()">Free Repair Clinic Mechanic</a></div>
-			<div class="voldetails" ng-show="position2 = !position2">
+			<div class="voldetails" ng-show="position2 == !position2">
 			Duties include bike repair, client check in, writing service tags, and loading/unloading the van. <em>Meets at the Free Clinic location</em> at 1898 Senter Road in the parking garage of Paseo Center at Coyote Creek. This is an outdoor location, so dress accordingly. 
 			<ul>
 				<li><a href="http://portal.govoluntr.com/328">Saturday 10:00-2:00</a></li>
