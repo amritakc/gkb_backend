@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
 
 
+  get 'sections/index'
+
+  get 'sections/show/:id' => 'sections#show'
+
+  get 'sections/edit/:id' => 'sections#edit'
+
+  get 'sections/new' => 'sections#new'
+
+  post 'sections/create' => 'sections#create'
+
+
+
   devise_for :admins
   root to: 'admins#index'
 
@@ -22,7 +34,7 @@ Rails.application.routes.draw do
   get 'contents/destroy/:id' => 'contents#destroy'
 
 
-  delete 'contents/destroy/:id' => 'contents#destroy'
+  # delete 'contents/destroy/:id' => 'contents#destroy'
 
 
 

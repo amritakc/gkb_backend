@@ -1,0 +1,15 @@
+<h1>Sections#show</h1>
+<p>Find me in app/views/sections/show.html.erb</p>
+
+  <h3>Name: <%=@two.name%></h3>
+
+  <button type='submit'><a href='/sections/edit/<%=@two.id%>'>Edit</a></button>
+  <br>
+
+  <form action="/sections/destroy/<%=@two.id%>" method="POST">
+  	<br>
+
+    <input type="hidden" name ="authenticity_token" value ="<%= form_authenticity_token%>">
+    <input type="hidden" name="_method" value="delete">
+  	<button type="submit" > Delete </button>
+  </form>
