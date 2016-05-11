@@ -6,25 +6,25 @@ class ContentsController < ApplicationController
 
   def create
 
-    content = Content.new(title:params[:title],text:params[:text],current:params[:current],section:Section.find_by_name(params[:section]))
+    content = Content.new(title:params[:title],text:params[:text],section:Section.find_by_name(params[:section]))
     if content.save
-
+      render :json => {success: "created content in the backend"}
     else
-      flash[:errors] = content.errors.full_messages
-      @errors = flash[:errors]
+      # flash[:errors] = content.errors.full_messages
+      @errors = content.errors.full_messages
       render :json => @errors
     end
-    render :json => {mes: "created obj"}
+    # render :json => {success: "created content in the backend"}
     # redirect_to :back
 
   end
   def update
 
     content = Content.find(params[:id])
-
-    content.update(title:params[:title],text:params[:text],current:params[:current],section:Section.find_by_name(params[:section]))
-
-    redirect_to '/contents/show/%d' % params[:id]
+    
+    content.update(title:params[:title],text:params[:text],section:Section.find_by_name(params[:section]))
+    render :json => {success: "updated object in the backend"}
+    # redirect_to '/contents/show/%d' % params[:id]
   end
   def show
   	@inform = Content.find(params[:id])
@@ -36,15 +36,15 @@ class ContentsController < ApplicationController
 
     @inform = Content.find(params[:id])
     # response json data
-     render :json =>@inform
+    # render :json =>@inform
   end
   def destroy
 
     Content.destroy(params[:id])
 
+    render :json => {success: "Destroyed content"}
     #change redirects to messages
-    redirect_to '/contents/index' 
-
+    # redirect_to '/contents/index' 
   end
 
   def new
@@ -56,5 +56,11 @@ class ContentsController < ApplicationController
    #  end
 
    #  redirect_to :back
+  end
+
+  def section
+    # will find contents for requested section and return json object
+    @sec = Section.find_by_name(params[:section]).contents
+    render :json => @sec
   end
 end
