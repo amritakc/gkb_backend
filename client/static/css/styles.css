@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,300,300italic,900italic');
+/* Styling for html, body */
 html, body {
   margin: 0;
   padding: 0;
@@ -8,9 +9,10 @@ html, body {
   overflow: auto; 
 }
 
+/* This is styling for the navigation bar */
 ul.topnav {
   list-style-type: none;
-  margin: 0;
+  margin: 0 1em;
   padding: 0;
   float: right;
 }
@@ -32,13 +34,21 @@ ul.topnav li a {
   transition: 0.3s; 
 }
 
+/* Here we have code for the different anchor tag states, this complete removes all instances of text-decoration */
 ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li a:active {
   text-decoration: none;
   color: white; 
 }
 
+/* These are stylings for the footer */
 .footer-links-wrapper {
   text-align: right; 
+}
+
+.footer-email-input {
+  width: 88%;
+  display: inline-block;
+  margin-right: 0.40em;
 }
 
 .social-media-bubble {
@@ -72,10 +82,56 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
   transition: all 0.8s ease-in-out;
 }
 
+.footer-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: right; 
+}
+
+.footer-list li.footer-links {
+  line-height: 2em; }
+
+.footer-list li.footer-links a {
+  color: white; }
+
+.footer-list li.footer-links a:link, .footer-list li.footer-links a:visited, .footer-list li.footer-links a:hover, .footer-list li.footer-links a:active {
+  text-decoration: none; }
+
+/* This is the styling for the wrapper around the footer section */
+#footer {
+  position: relative;
+  clear: both;
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 2.5em;
+  border-top: 2px solid black;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("/static/img/handlebars.jpg") center center no-repeat;
+  background-size: cover; }
+
+/* This is the styling for the 'subscribe to mailing list' section */
+#subscribe {
+  display: block;
+  float: none;
+  padding: 1em;
+  border-radius: 1em;
+  width: 60%;
+  margin: 0 auto;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+}
+
+.btn-subscribe {
+  color: #fff;
+  background-color: #179F59;
+  border-color: #189f59;
+}
+/* End Subscribe To Mailing List Stylings */
+
+/* Stylings for the navigation bar, including a class meant for making the bar 
+   solid. However, JavaScript is refusing to cooperate. */
 .navigation-bar {
   width: 100%;
   height: 50px;
-  padding-right: 2em;
   background: rgba(255, 255, 255, 0.0);
   position: fixed;
   z-index: 9999;
@@ -84,7 +140,9 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 .navigation-bar.solidify {
   background: rgba(255, 255, 255, 0.6);
 }
+/* End Navigation Bar Stylings */
 
+/* This is styling for the header and the navigation icons for the 'Learn How To' section */
 .logo {
 width: 150px;
 height: 150px;
@@ -102,9 +160,8 @@ height: 150px;
   padding-top: 5%;
   font-size: 2em;
   margin-top: 0;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   font-weight: 300;
-  padding-bottom: 2em;
 }
 
 .iam a {
@@ -137,6 +194,24 @@ height: 150px;
   clear: both; 
 }
 
+header h3 {
+  margin: 0;
+  color: white;
+  margin-top: 1em;
+  text-align: center;
+}
+
+header p {
+  width: 60%;
+  color: white;
+  font-size: 1.1em;
+  margin: 1em auto;
+  padding-bottom: 2em;
+  text-align: justify;
+}
+/* End Header Section */
+
+/*  Some overrides for bootstrap stylings */
 .row {
   width: 100%;
   margin: 0 auto; 
@@ -144,9 +219,12 @@ height: 150px;
 
 .container-fluid {
   padding: 0;
+  width: 100%;
   min-height: 100%; 
 }
+/* End Bootstrap Overrides */
 
+/* Stylings for the mission statement */
 .bike-image {
   width: 100%;
   max-height: 60%;
@@ -163,13 +241,27 @@ height: 150px;
 .mission-text {
   font-style: italic;
   font-weight: 100;
-  padding-bottom: 5em;
+  padding-bottom: 2em;
 }
+/* End Mission Statement Styling */
 
+/* Styling for the little triangles on the homepage */
 .triangle-up {
   padding-top: 5em;
+  width: 0;
+  height: 0;
+  border-left: 4.5em solid transparent;
+  border-right: 4.5em solid transparent;
+  border-bottom: 5em solid white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
+/* End Triangle Styling */
 
+/* Stylings for the announcements section */
 .announcements {
   width: 100%;
   height: 100%;
@@ -194,21 +286,15 @@ height: 150px;
   text-align: center;
 }
 
-.community h1 {
-  font-size: 3em;
-  color: white;
-  font-weight: 200;
-  letter-spacing: .16em;
-  text-align: center;
-}
-
 .announcements-paragraph p {
   font-size: 1.5em;
   text-align: justify;
   text-transform: uppercase;
   font-weight: 200;
 }
+/* End Announcements Section */
 
+/* Styling for the news section on the homepage */
 #news-wrapper {
   height: 100%;
   width: 100%;
@@ -228,6 +314,11 @@ height: 150px;
   margin-top: 2em;
 }
 
+.all-news {
+  margin-bottom: 2em !important;
+  margin-top: 0.5em !important;
+}
+
 .newsboxes:nth-of-type(2) {
   margin-left: 5em;
 }
@@ -238,38 +329,65 @@ height: 50%;
 display: inline-block;
 }
 
-.community {
-  width: 100%;
-  height: 500px;
-}
-
-.communitycontent {
-  margin-left: 75px;
-}
-
-.communityboxes {
-width: 300px;
-height: 500px;
-display: inline-block;
-text-align: left;
-vertical-align: top;
-color: white;
-margin-left: 50px;
-}
-
-.communityboxes img {
-  width: 300px;
-  height: 300px;
-}
-.community h3 {
-  color: white;
-  text-align: center;
+.newsboxes h4 {
+  margin-top: 0.5em;
 }
 
 .newsboxes img {
 width: 100%;
 height: 21.5em;
 display: inline-block;
+}
+/* End News Section */
+
+/* Styling for the community programs section */
+.community {
+  width: 100%;
+  height: 100%;
+}
+
+.community h1 {
+  font-size: 3em;
+  color: white;
+  font-weight: 200;
+  letter-spacing: .16em;
+  text-align: center;
+}
+
+.communitycontent {
+  width: 100%;
+  height: 50%;
+}
+
+.communityboxes {
+  width: 45%;
+  height: 100%;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  color: white;
+}
+
+.communityboxes:nth-child(2n) {
+  margin-left: 5.52em;
+}
+
+.communityboxes img {
+  width: 100%;
+  height: 18em;
+}
+
+.community > p {
+  margin: 0.5em auto;
+  color: white;
+  width: 50%;
+  text-align: center;
+}
+
+.community > h3 {
+  margin: 0.5em 0;
+  color: white;
+  text-align: center;
 }
 
 .community {
@@ -280,41 +398,27 @@ display: inline-block;
   background-size: cover;
   position: relative;
 }
+/* End Community Section */
 
-.footer-email-input {
-  width: 88%;
+/* Volunteer  Start */
+.volgilistcs {
+  display: inline;
+  padding-right: 11%;
+  padding-left: 11%;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  float: right;
+}
+
+d-expand-collapse {
   display: inline-block;
-  margin-right: 0.40em;
+  float: left;
+  padding: 2%;
+  word-wrap: break-word;
+  width: 45%;
 }
 
-header h3 {
-  margin: 0;
-  color: white;
-  margin-top: 1em;
-  text-align: center;
-}
-
-header p {
-  width: 60%;
-  color: white;
-  font-size: 1.1em;
-  margin: 1em auto;
-  padding-bottom: 2em;
-  text-align: justify;
-}
-
-.triangle-up {
-  width: 0;
-  height: 0;
-  border-left: 4.5em solid transparent;
-  border-right: 4.5em solid transparent;
-  border-bottom: 5em solid white;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-}
+/* Volunteer  End*/
 
 #wrapper {
   margin: 0;
@@ -323,131 +427,142 @@ header p {
   min-width: 100%;
   position: relative; }
 
-#footer {
-  position: relative;
-  clear: both;
-  width: 100%;
-  height: 100%;
-  color: white;
-  padding: 2.5em;
-  border-top: 2px solid black;
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("/static/img/handlebars.jpg") center center no-repeat;
-  background-size: cover; }
-
-  #subscribe {
-    display: block;
-    float: none;
-    padding: 1em;
-    border-radius: 1em;
-    width: 60%;
-    margin: 0 auto;
-    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
-  }
-
-.footer-list {
-  list-style-type: none;
-  padding: 0;
-  text-align: right; 
-}
-
-.footer-list li.footer-links {
-  line-height: 2em; }
-
-.footer-list li.footer-links a {
-  color: white; }
-
-.footer-list li.footer-links a:link, .footer-list li.footer-links a:visited, .footer-list li.footer-links a:hover, .footer-list li.footer-links a:active {
-  text-decoration: none; }
-
-
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). 
-   Show the list item that contains the link to open and close the topnav (li.icon) */
-
-/* The "responsive" class is added to the topnav with AngularJS when the user clicks on the icon. 
-   This class makes the topnav look good on small screens */
-@media screen and (max-width: 680px) {
-  ul.topnav li {
-    display: none; }
-  ul.topnav li.icon {
-    float: right;
-    display: inline-block; }
-  ul.topnav.responsive {
-    position: relative; }
-  ul.topnav.responsive li.icon {
-    position: absolute;
-    right: 0;
-    top: 0; }
-  ul.topnav.responsive li {
-    float: none;
-    display: block; }
-  ul.topnav.responsive li a {
-    display: block;
-    text-align: left; } 
-  .logo {
-    margin: 0 auto;
-    display: block;
-  }
-
-  .announcements-paragraph h1, .newsgroup h1 {
-    padding-bottom: 5%;
-    font-size: 1em;
-    font-weight: 200;
-    letter-spacing: .16em;
-  }
-
-  .announcements-paragraph p {
-    font-size: 1em;
-    text-align: justify;
-    text-transform: uppercase;
-    font-weight: 200;
-  }
-
-}
-@media screen and (max-width: 430px) {
+/* For when the screen is between 586 and 870px, this should be changed at a later date.
+   It's not the best range. */
+@media only screen and (min-width: 586px) and (max-width: 870px) {
   .iam {
     height: 7em;
     width: 10em;
     display: inline-block;
-    font-size: 0.4em;
-  }
-
-  #iamh1 {
-    font-size: 1.8em;
-    margin-top: 0;
-    margin-bottom: 0.8em;
-  }
-
-  .newsboxes {
-    width: 100%;
-    height: 25%;
-    display: block;
-    margin-bottom: 1em;
-  }
-
-  .newsboxes p {
-    height: 10em;
-    font-size: 1.1em;
-  }
-
-  .newsboxes img {
-    width: 100%;
-    height: 11em;
-    display: block;
+    font-size: 0.7em;
   }
 
   .newsboxes:nth-of-type(2) {
     margin-left: 0;
   }
 
-}
-
-@media screen and (min-width: 586px) {
-  .iam {
-    height: 7em;
-    width: 10em;
-    display: inline-block;
-    font-size: 1.15em;
+  .newsboxes {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-bottom: 1em;
   }
+
+  ul.topnav li {
+    display: none; }
+  
+  ul.topnav li.icon {
+    text-align: center;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+  }
+  
+  ul.topnav li.icon > a {
+    width: 100%;
+  }
+
+  ul.topnav {
+    width: 100%;
+    margin: 0;
+  }
+
+  ul.topnav.responsive li.icon {
+    float: right;
+    width: 100%;
+    display: block;
+  }
+  ul.topnav.responsive li.icon > a {
+    float: right;
+    color: white;
+  }
+
+  ul.topnav.responsive li {
+    float: none;
+    display: block;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    width: 100%;
+    text-align: center; 
+    float: left;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  nav.navigation-bar {
+    padding: 0;
+    margin: 0;
+  }
+
+  .logo {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .announcements-paragraph {
+    width: 100%;
+  }
+
+  .announcements-paragraph h1, .newsgroup h1 {
+    padding-bottom: 5%;
+    font-size: 1.4em;
+    font-weight: 200;
+    letter-spacing: .16em;
+  }
+
+  .announcements-paragraph > p {
+    font-size: 1.5em;
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 200;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 2.5em;
+  }
+
+  .community h1 {
+    font-size: 0.9em;
+  }
+
+  .communityboxes {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: left;
+    vertical-align: top;
+    color: white;
+  }
+
+  .communityboxes:nth-child(2n) {
+    margin-left: 0;
+  }
+
+  .communityboxes img {
+    width: 100%;
+    height: 18em;
+  }
+
+  .community > p {
+    margin: 0.5em auto;
+    color: white;
+    width: 80%;
+    text-align: center;
+  }
+
+  .footer-list {
+    text-align: left; 
+  }
+
+  .social-media-bubble {
+    margin-top: 1em;
+    text-align: left;
+  }
+
+  .mission-text > p {
+    width: 100%;
+    font-size: 1.5em;
+  }
+
 }
 
 /* When screen is 1000px or more */
@@ -510,9 +625,7 @@ header p {
 
 }
 
-
-
-/* When screen is 1210px or less */
+/* When screen is 1210px or less, this should be changed too. */
 @media screen and (max-width: 1210px) {
   .footer-email-input {
     width: 100%;
@@ -525,4 +638,154 @@ header p {
     width: 100%;
     margin: 0;
   }
+}
+
+/* When the screen is less than 430 pixels wide and 300px or greater, apply these stylings.
+   Honestly, this range could be changed to something better. */
+@media only screen and (min-width: 300px) and (max-width: 430px) {
+  .iam {
+    height: 7em;
+    width: 10em;
+    display: inline-block;
+    font-size: 0.5em;
+  }
+
+  #iamh1 {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+  }
+
+  .newsboxes {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  .newsboxes h4 {
+    margin-top: 1.5em;
+  }
+
+  .newsboxes p {
+    height: 10em;
+    font-size: 1.1em;
+  }
+
+  .newsboxes img {
+    width: 100%;
+    height: 11em;
+    display: block;
+  }
+
+  .newsboxes:nth-of-type(2) {
+    margin-left: 0;
+  }
+
+  ul.topnav li {
+    display: none; }
+  
+  ul.topnav li.icon {
+    text-align: center;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+  }
+  
+  ul.topnav li.icon > a {
+    width: 100%;
+  }
+
+  ul.topnav {
+    width: 100%;
+    margin: 0;
+  }
+
+  ul.topnav.responsive li.icon {
+    float: right;
+    width: 100%;
+    display: block;
+  }
+  ul.topnav.responsive li.icon > a {
+    float: right;
+    color: white;
+  }
+
+  ul.topnav.responsive li {
+    float: none;
+    display: block;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    width: 100%;
+    text-align: center; 
+    float: left;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .announcements-paragraph {
+    width: 100%;
+  }
+
+  .announcements-paragraph h1, .newsgroup h1 {
+    padding-bottom: 5%;
+    font-size: 1.4em;
+    font-weight: 200;
+    letter-spacing: .16em;
+  }
+
+  .announcements-paragraph > p {
+    font-size: 1.5em;
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 200;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 2.5em;
+  }
+
+  .community h1 {
+    font-size: 0.9em;
+  }
+
+  .communityboxes {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: left;
+    vertical-align: top;
+    color: white;
+  }
+
+  .communityboxes:nth-child(2n) {
+    margin-left: 0;
+  }
+
+  .communityboxes img {
+    width: 100%;
+    height: 18em;
+  }
+
+  .community > p {
+    margin: 0.5em auto;
+    color: white;
+    width: 80%;
+    text-align: center;
+  }
+
+  .footer-list {
+    text-align: left; 
+  }
+
+  .social-media-bubble {
+    margin-top: 1em;
+    text-align: left;
+  }
+
+  .logo {
+    margin: 0 auto;
+    display: block;
+  }
+
 }

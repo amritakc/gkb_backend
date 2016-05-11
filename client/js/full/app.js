@@ -53,13 +53,6 @@ myApp.controller('homeCtrl', function($scope) {
 myApp.controller('navCtrl', function($scope, $location, $window) {
 	$scope.small = false;
 	$scope.showLinks = showLinks;
-	$window.onscroll = testScroll;
-
-	function testScroll() {
-		if ($window.pageYOffset > 400) {
-			console.log('HIi!');
-		}
-	}
 
 	function showLinks() {
 		if ($scope.small === false) {
@@ -96,4 +89,23 @@ myApp.controller('storeCtrl', function($scope) {
 
 myApp.controller('volunteersCtrl', function($scope) {
 	
+	$scope.isCollapsed = false;
+
+	$scope.position1 = false;
+  	$scope.position2 = false;
+  	//$scope.position3 = false;
+
+  	$scope.showHidePos1 = function() {
+		console.log("position1: " + position1);
+		$scope.position1 = !$scope.position1;
+		$scope.position2 = false;
+	  	
+	  	console.log("position1: " + position1);
+	}
+
+	  $scope.showHidePos2 = function() {
+	  	console.log("position2: " + position2);
+	  	$scope.position2 = !$scope.position2;
+	  	$scope.position1 = false;
+	  }
 });

@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container-fluid" scroll>
 		<nav class="navigation-bar" ng-controller="navCtrl">
 			<ul class="topnav" ng-class="{ 'responsive': small }">
 				<li class="icon">
@@ -81,7 +81,7 @@
 					<form role="form">
 					    <div class="form-group">
 					      	<input type="email" class="form-control footer-email-input" ng-model="newSubscriber.email" placeholder="Email Address">
-					      	<button class="btn btn-danger" ng-click="create()">Submit</button>
+					      	<button class="btn btn-subscribe" ng-click="create()">Submit</button>
 					    </div>
 					</form>
 				</div>
