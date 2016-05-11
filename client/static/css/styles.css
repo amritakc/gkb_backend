@@ -125,6 +125,7 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
   background-color: #179F59;
   border-color: #189f59;
 }
+/* End Subscribe To Mailing List Stylings */
 
 /* Stylings for the navigation bar, including a class meant for making the bar 
    solid. However, JavaScript is refusing to cooperate. */
@@ -139,6 +140,7 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 .navigation-bar.solidify {
   background: rgba(255, 255, 255, 0.6);
 }
+/* End Navigation Bar Stylings */
 
 /* This is styling for the header and the navigation icons for the 'Learn How To' section */
 .logo {
@@ -207,6 +209,7 @@ header p {
   padding-bottom: 2em;
   text-align: justify;
 }
+/* End Header Section */
 
 /*  Some overrides for bootstrap stylings */
 .row {
@@ -219,6 +222,7 @@ header p {
   width: 100%;
   min-height: 100%; 
 }
+/* End Bootstrap Overrides */
 
 /* Stylings for the mission statement */
 .bike-image {
@@ -239,6 +243,7 @@ header p {
   font-weight: 100;
   padding-bottom: 2em;
 }
+/* End Mission Statement Styling */
 
 /* Styling for the little triangles on the homepage */
 .triangle-up {
@@ -254,6 +259,7 @@ header p {
   right: 0;
   margin: 0 auto;
 }
+/* End Triangle Styling */
 
 /* Stylings for the announcements section */
 .announcements {
@@ -286,6 +292,7 @@ header p {
   text-transform: uppercase;
   font-weight: 200;
 }
+/* End Announcements Section */
 
 /* Styling for the news section on the homepage */
 #news-wrapper {
@@ -331,6 +338,7 @@ width: 100%;
 height: 21.5em;
 display: inline-block;
 }
+/* End News Section */
 
 /* Styling for the community programs section */
 .community {
@@ -390,6 +398,27 @@ display: inline-block;
   background-size: cover;
   position: relative;
 }
+/* End Community Section */
+
+/* Volunteer  Start */
+.volgilistcs {
+  display: inline;
+  padding-right: 11%;
+  padding-left: 11%;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  float: right;
+}
+
+d-expand-collapse {
+  display: inline-block;
+  float: left;
+  padding: 2%;
+  word-wrap: break-word;
+  width: 45%;
+}
+
+/* Volunteer  End*/
 
 #wrapper {
   margin: 0;
