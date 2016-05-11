@@ -2,10 +2,8 @@ angular.module('adminApp', [
 'ui.router',
 'ngAnimate',
 'ui.bootstrap',
-'ngQuill',
 'textAngular',
 'ngSanitize',
-
 'uiRouterStyles'])
 .config(function($stateProvider,$urlRouterProvider) {
 
