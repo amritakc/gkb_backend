@@ -715,6 +715,9 @@ display: inline-block;
     font-weight: 200;
   }
 
+
+/*Styling for Donation Page*/
+
   .donateboxes {
     margin: 3em;
     width: 20em;
@@ -733,7 +736,7 @@ display: inline-block;
 .donateboxes h3 {
     text-align: center;
   }
-
+/*End styling for Donation Page*/
 }
 
 /* When screen is 1210px or less, this should be changed too. */
