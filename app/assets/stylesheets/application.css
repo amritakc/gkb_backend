@@ -13,6 +13,39 @@
 
 
 /*
-//=require text-angular
+//= require text-angular
 *= require_tree .
 */
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+#login-box {
+  width: 30em;
+  margin: auto;
+}
+
+.toolbar {
+  border-bottom: 1px solid black;
+}
+
+.input {
+  width: 20em;
+}
+
+.btn-container {
+  overflow: hidden;
+  padding-top: 1em;
+}
+
+.btn-lg {
+  min-width: 6em;
+}
+
+.new-content-btn {
+  margin-bottom: 1em;
+}
