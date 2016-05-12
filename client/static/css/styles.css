@@ -414,10 +414,13 @@ display: inline-block;
 
 d-expand-collapse {
   display: inline-block;
-  float: left;
+  vertical-align: top;
   padding: 2%;
   word-wrap: break-word;
   width: 45%;
+}
+.exp_col_title {
+  text-align: center;
 }
 
 /* Volunteer  End*/
