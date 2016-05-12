@@ -5,12 +5,11 @@ angular.module('adminApp')
   var factory = {};
   var news = [];
 
-  factory.create = function(title, text, section_id, callback){
-    console.log("the data from the controller is ", title, text, section_id)
+  factory.create = function(title, text, section, callback){
     content = {
       title: title,
       text: text,
-      section_id: section_id
+      section: section
     }
     $http.post('/contents/create', content).success(function(output){
       console.log('return value from create request is', output)

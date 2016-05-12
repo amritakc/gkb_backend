@@ -1,11 +1,10 @@
 class ContentsController < ApplicationController
   def index
-  	@contents = Content.all
+    @contents = Content.all
     render :json => @contents
   end
 
   def create
-
     content = Content.new(title:params[:title],text:params[:text],section:Section.find_by_name(params[:section]))
     if content.save
       render :json => {success: "created content in the backend"}
@@ -27,12 +26,12 @@ class ContentsController < ApplicationController
     # redirect_to '/contents/show/%d' % params[:id]
   end
   def show
-  	@inform = Content.find(params[:id])
+    @inform = Content.find(params[:id])
     render :json =>@inform
   end
 
   def edit
-  	# @inform = Content.find(params[:id])
+    # @inform = Content.find(params[:id])
 
     @inform = Content.find(params[:id])
     # response json data
@@ -48,7 +47,7 @@ class ContentsController < ApplicationController
   end
 
   def new
-  	# content = Content.new(event:params[:event],message:params[:message])
+    # content = Content.new(event:params[:event],message:params[:message])
    #  if Content.save
 
    #  else
