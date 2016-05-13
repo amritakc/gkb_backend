@@ -13,19 +13,35 @@ function($scope,$state,DataService,$uibModal){
   })
 
   //Modal
-  $scope.openNewContentForm = function(){
-    modalInstance = $uibModal.open({
-      templateUrl:'news/_newNewsContent.html',
-      controller: 'newsCtrl'
-    });
+  var modalController = function ($scope, $uibModalInstance) {
+    $scope.ok = function () {
+      $uibModalInstance.close($scope.newsPost);
+    }
+    $scope.cancel = function () {                
+      $uibModalInstance.dismiss();
+    }
   }
 
-  $scope.remove = function() {
-    console.log('getting in remove function')
+  $scope.openNewContentForm = function(){
+    var modalInstance = $uibModal.open({
+      templateUrl:'news/_newNewsContent.html',
+      controller: modalController
+    });
+    
+    modalInstance.result.then(function (contentInfo) {
+      contentInfo.section = 'news'
+      DataService.create(contentInfo, function(result){
+        $scope.newsPosts = result['newContent'];
+      });
+    });
   };
+  
+
+  //$scope.remove = function() {
+    //DataService.remove()
+  //};
 
   $scope.save = function(title, text, section) {
-    $scope.$dismiss('cancel');
     DataService.create(title, text, section, function(result){
       $scope.newsPosts = result;
     });
@@ -36,5 +52,5 @@ function($scope,$state,DataService,$uibModal){
       $scope.newsPosts = result;
     })
   }
-
+ 
 }]);

@@ -14,7 +14,6 @@ function($scope, $state, Auth){
 
   };
 
-
   $scope.register = function() {
         console.log("in auth register controller")
         console.log(Auth)

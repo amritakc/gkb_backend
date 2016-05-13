@@ -28,7 +28,8 @@ angular.module('adminApp', [
          templateUrl:'views/dashboardLayout.html'
         },
         'header@dashboard' : {
-          templateUrl: 'header/_header.html'
+          templateUrl: 'header/_header.html',
+          controller: 'headerCtrl'
         },
         'main@dashboard' : {
           templateUrl: 'dashboard/_dashboard.html',
@@ -67,6 +68,7 @@ angular.module('adminApp', [
         },
         'header@newsPage' : {
           templateUrl: 'header/_header.html',
+          controller: 'headerCtrl'
         },
         'news@newsPage' : {
           templateUrl: 'news/_news.html',
@@ -75,7 +77,13 @@ angular.module('adminApp', [
       },
       data: {
         css: ['news/newsStyle.css']
-      }
+      },
+      onEnter: ['$state','Auth', function($state, Auth) {
+        Auth.currentUser().then(function(){
+        }, function(){
+          $state.go('login')
+        })
+      }]
     })
     .state('announcementsPage', {
       url:'/announcements',
@@ -85,6 +93,7 @@ angular.module('adminApp', [
         },
         'header@announcementsPage' : {
           templateUrl: 'header/_header.html',
+          controller: 'headerCtrl'
         },
         'news@announcementsPage' : {
           templateUrl: 'bAnnouncements/_announcements.html'
@@ -92,7 +101,13 @@ angular.module('adminApp', [
       },
       data: {
         css: ['news/newsStyle.css']
-      }
+      },
+      onEnter: ['$state','Auth', function($state, Auth) {
+        Auth.currentUser().then(function(){
+        }, function(){
+          $state.go('login')
+        })
+      }]
     })
 
   $urlRouterProvider.otherwise('/');

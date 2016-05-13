@@ -5,13 +5,8 @@ angular.module('adminApp')
   var factory = {};
   var news = [];
 
-  factory.create = function(title, text, section, callback){
-    content = {
-      title: title,
-      text: text,
-      section: section
-    }
-    $http.post('/contents/create', content).success(function(output){
+  factory.create = function(contentInfo,callback){
+    $http.post('/contents/create', contentInfo).success(function(output){
       callback(output)
     });
   }
@@ -29,11 +24,15 @@ angular.module('adminApp')
   }
 
   factory.getNews = function(section, callback){
-    console.log("getting to getNews service from the controller")
     $http.get('/sections/' + section).success(function(output){
-      console.log('return value from getNews is', output)
-      callback(output)
+      callback(output);
     });
+  }
+
+  factory.remove = function(contentId, callback){
+    $http.delete('/contents/destroy/' + contentId).success(function(output){
+      callback(output);
+    })
   }
 
   return factory;
