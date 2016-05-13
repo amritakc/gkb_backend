@@ -243,6 +243,14 @@ header p {
   font-size: 1.5em;
   padding: 0;
   margin: 0;
+  color: #000035; 
+  width: 100%
+}
+
+.mission-text h3 {
+  text-align: center;
+  color: #000035; 
+  margin-top: 10%;
 }
 
 .mission-text {
@@ -250,11 +258,11 @@ header p {
   right: 0;
   margin: 0 auto;
 
-  width: 1000px;
+  width: 80%;
   font-style: italic;
   font-weight: 100;
 
-  width: 600px;
+  width: 80%;
   font-style: italic;
   font-weight: 100;
   text-align: justify;
@@ -340,9 +348,10 @@ header p {
 }
 
 .newsboxes {
-width: 45%;
+width: 35%;
 height: 50%;
 display: inline-block;
+margin-bottom: 5%;
 }
 
 .newsboxes h4 {
@@ -362,14 +371,35 @@ display: inline-block;
   height: 100%;
 }
 
-.community p {
+.community h4 {
   font-weight: 200;
+/*  font-style: italic;*/
+  color: white;
+  width: 75%;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+
+}
+
+.community h3 {
+  color: white;
+  font-weight: 200;
+  margin-top: 2%;
+  text-align: center;
+  font-size: 1.5em;
+
 }
 .community h1 {
   font-size: 3em;
   color: white;
   font-weight: 200;
   letter-spacing: .16em;
+  text-align: center;
+}
+
+.community h2 {
+  color: white;
   text-align: center;
 }
 
@@ -387,6 +417,7 @@ display: inline-block;
   text-align: left;
   vertical-align: top;
   color: white;
+  margin:1%;
 
 }
 
@@ -400,8 +431,7 @@ display: inline-block;
   margin: auto;
   font-weight: 200;
   text-align: justify;
-  margin-bottom: 2%
-
+  margin-bottom: 4%;
 }
 
 .communityboxes:nth-child(2n) {
@@ -418,12 +448,10 @@ display: inline-block;
   height: 24em;
   margin: auto;
   border-radius: 50%;
-
-
 }
 
 #transport {
-  background: url("/static/img/tattooed_rider.jpeg") center center no-repeat;
+  background: url("/static/img/commute.jpeg") center center no-repeat;
   background-size: auto 100%;
 }
 
@@ -433,12 +461,12 @@ display: inline-block;
 }
 
 #sponsor-bike {
-  background: url("/static/img/tour.jpg") center center no-repeat;
+  background: url("/static/img/bike5.jpg") center center no-repeat;
   background-size: auto 100%;
 }
 
 #saturday-clinic {
-  background: url("/static/img/sat-clinic.jpeg") center center no-repeat;
+  background: url("/static/img/gears.jpeg") center center no-repeat;
   background-size: auto 100%;
 }
 
@@ -792,6 +820,12 @@ display: inline-block;
     font-weight: 200;
   }
 
+  .announcements-paragraph img {
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+  }
+
 
 /*Styling for Donation Page*/
 
@@ -865,6 +899,7 @@ display: inline-block;
     border-radius: 1em;
     background-color: #189e56;
     border: none;
+    margin-left: 45%;
 
 
   }
