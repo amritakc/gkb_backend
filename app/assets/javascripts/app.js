@@ -24,8 +24,7 @@ angular.module('adminApp', [
           templateUrl: 'header/_header.html'
         },
         'main@dashboard' : {
-          templateUrl: 'dashboard/_dashboard.html',
-          controller: 'dashboardCtrl'
+          templateUrl: 'dashboard/_dashboard.html'
         }
       },
       data: {
