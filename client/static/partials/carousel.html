@@ -1,0 +1,11 @@
+<div ng-controller="HomeController">
+  <div id="slides_control">
+    <div>
+      <carousel interval="myInterval">
+        <slide ng-repeat="slide in slides" active="slide.active">
+          <img ng-src="{{slide.image}}">
+        </slide>
+      </carousel>
+    </div>
+  </div>
+</div>
