@@ -44,11 +44,12 @@ html, body {
 
 }
 .navbar-default .navbar-brand {
-  color: black;
+  color: white;
   font-family: timesnewroman;
   font-size: 23px;
 
 }
+
 .navbar-default .navbar-brand:hover {
   color: white;
   font-family: timesnewroman;
@@ -92,8 +93,15 @@ html, body {
   border-color: rgb(24, 158, 86);
 }
 .btn-default{
-  border-color: lightgrey;
+  border: none;
 }
+.btn-danger{
+  border: none;
+}
+.btn-success{
+
+}
+
 /*Buttons !!!!!! -Stephen*/
 
 
@@ -194,6 +202,10 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 
 .btn-lg {
   min-width: 6em;
+}
+
+.btn-primary{
+
 }
 
 .new-content-btn {
