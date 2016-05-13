@@ -2,7 +2,7 @@
   <button type="button" class="btn btn-primary" ng-click="openNewContentForm()">Add New News Content</button>
 </div>
 <uib-accordion close-others="oneAtATime">
-  <uib-accordion-group ng-repeat="newsPost in newsPosts">
+  <uib-accordion-group ng-repeat="newsPost in newsPosts.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))">
     <uib-accordion-heading>
       {{newsPost.created_at | date : format : timezone}} - {{newsPost.title}}<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
     </uib-accordion-heading>
@@ -24,3 +24,4 @@
 
   </uib-accordion-group>
 </uib-accordion>
+<uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" class="pagination-sm" items-per-page="itemsPerPage"></uib-pagination>

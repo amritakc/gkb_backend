@@ -10,6 +10,7 @@ function($scope,$state,DataService,$uibModal){
   
   DataService.getNews('news',function(result){
     $scope.newsPosts = result;
+    $scope.totalItems = $scope.newsPosts.length;
   })
 
   //Modal
@@ -60,5 +61,14 @@ function($scope,$state,DataService,$uibModal){
       $scope.newsPosts = result;
     })
   }
+  //Pagination 
+  $scope.viewby = 15;
+  $scope.currentPage = 1;
+  $scope.itemsPerPage = $scope.viewby;
+  $scope.maxSize = 15;
+
+  $scope.setPage = function (pageNo) {
+    $scope.currentPage = pageNo;
+  };
 
 }]);
