@@ -130,10 +130,8 @@ gapi.analytics.ready(function() {
     query: {
       'start-date': '30daysAgo',
       'end-date': 'yesterday',
-      'metrics': 'ga:pageviews',
-      'dimensions': 'ga:pagePathLevel1',
-      'sort': '-ga:pageviews',
-      'filters': 'ga:pagePathLevel1!=/',
+      'metrics': 'ga:newUsers',
+      'dimensions': 'ga:userType',
       'max-results': 7
     },
     chart: {
@@ -141,7 +139,8 @@ gapi.analytics.ready(function() {
       'type': 'PIE',
       'options': {
         'width': '100%',
-        'pieHole': 4/9,
+        'pieHole': 9/9,
+        title: '% of new users in 30days'
       }
     }
   });
