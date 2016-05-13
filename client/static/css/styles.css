@@ -755,6 +755,11 @@ display: inline-block;
     color: #fff;
     font-weight: 200;
   }
+  #sponsor_bicycle {
+    width: 20em;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/static/img/bike5.jpg");
+    background-size: auto 100%;
+  }
 
   #sponsor_workstation {
     width: 20em;
@@ -784,10 +789,19 @@ display: inline-block;
   }
 
   #btn-donate {
-    margin: auto;
+    margin-bottom: 3em;
+    margin-top: 3em;
     width: 13em;
     height: 4em;
     border-radius: 1em;
+    background-color: #189e56;
+    border: none;
+
+
+  }
+
+  #btn-donate a {
+    color: #fff;
   }
 /*End styling for Donation Page*/
 }
