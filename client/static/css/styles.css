@@ -735,6 +735,7 @@ display: inline-block;
     display: inline-block;
     vertical-align: top;
     padding: 1em;
+    border-radius: 50%;
 
   }
 
