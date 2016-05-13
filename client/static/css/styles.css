@@ -823,6 +823,12 @@ display: inline-block;
     font-weight: 200;
   }
 
+  .announcements-paragraph img {
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+  }
+
 
 /*Styling for Donation Page*/
 
