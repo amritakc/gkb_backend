@@ -55,7 +55,11 @@ html, body {
   border-width: 2px;
   border-color: rgb(24, 158, 86);
 }
+.panel-default{
+  border-width: 2px;
+  border-color: rgb(24, 158, 86);
 
+}
 /*Navbar!!!!!!!!! - Stephen*/
 
 .row {
