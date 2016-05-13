@@ -453,7 +453,7 @@ display: inline-block;
 }
 
 #transport {
-  background: url("/static/img/tattooed_rider.jpeg") center center no-repeat;
+  background: url("/static/img/commute.jpeg") center center no-repeat;
   background-size: auto 100%;
 }
 
@@ -463,12 +463,12 @@ display: inline-block;
 }
 
 #sponsor-bike {
-  background: url("/static/img/tour.jpg") center center no-repeat;
+  background: url("/static/img/bike5.jpg") center center no-repeat;
   background-size: auto 100%;
 }
 
 #saturday-clinic {
-  background: url("/static/img/sat-clinic.jpeg") center center no-repeat;
+  background: url("/static/img/gears.jpeg") center center no-repeat;
   background-size: auto 100%;
 }
 
