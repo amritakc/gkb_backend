@@ -5,6 +5,7 @@ angular.module('adminApp', [
 'ui.bootstrap',
 'textAngular',
 'ngSanitize',
+'angularModalService',
 'uiRouterStyles'])
 .config(function($stateProvider,$urlRouterProvider) {
 
