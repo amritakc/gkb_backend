@@ -590,15 +590,16 @@ display: inline-block;
 }
 
 .shopboxeslogo {
-width: 25%;
+width: 45%;
 height: 50%;  /*height 50%*/
+text-align: center;
 display: inline-block;
 }
 
+
 .shopboxeslogo img{
 width: 100%;
-height: auto;  /*height 15.5em*/
-text-align: center;
+height: auto; /*height 15.5em*/
 display: inline-block;
 
 
@@ -606,6 +607,7 @@ display: inline-block;
 
 #ebaylogo {
 
+padding:0em 7em 0em 7em;
 text-align: center;
 }
 
@@ -613,7 +615,7 @@ text-align: center;
 width: auto;
 height: 11em;  /*height 15.5em*/
 text-align: center;
-margin-top: 0.2em;
+
 display: inline-block;
 }
 
