@@ -1,7 +1,7 @@
 class ContentsController < ApplicationController
   def index
-    @contents = Content.all
-    render :json => @contents
+    contents = Content.all.sort_by{|x| x.created_at}
+    render :json => contents
   end
 
   def create
@@ -18,11 +18,11 @@ class ContentsController < ApplicationController
 
   end
   def update
-
     content = Content.find(params[:id])
-    
+    contents = content.section.contents.sort_by{|x| x.created_at}
+    p contents
     content.update(title:params[:title],text:params[:text],section:Section.find_by_name(params[:section]))
-    render :json => {success: "updated object in the backend"}
+    render :json => {content: contents}
     # redirect_to '/contents/show/%d' % params[:id]
   end
   def show
@@ -42,7 +42,8 @@ class ContentsController < ApplicationController
 
     Content.destroy(params[:id])
 
-    render :json => {content: section.contents}
+    render :json => {content: section.contents.sort_by{|x| x.created_at}
+}
     #change redirects to messages
     # redirect_to '/contents/index' 
   end
