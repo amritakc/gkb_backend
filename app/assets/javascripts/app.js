@@ -1,6 +1,7 @@
 angular.module('adminApp', [
 'templates',
 'ngAnimate',
+'Devise',
 'ui.router',
 'ui.bootstrap',
 'textAngular',
@@ -13,8 +14,13 @@ angular.module('adminApp', [
     .state('login', {
       url: '/login',
       templateUrl: 'login/_login.html',
-      controller:'loginCtrl'
-    })
+      controller:'loginCtrl',
+      onEnter: ['$state', 'Auth', function($state, Auth) {
+          Auth.currentUser().then(function (){
+            $state.go('dashboard');
+          })
+        }]
+      })
     .state('dashboard', {
       url: '/',
       views: {
@@ -31,7 +37,13 @@ angular.module('adminApp', [
       },
       data: {
         css: ['dashboard/editor.css']
-      }
+      },
+      onEnter: ['$state','Auth', function($state, Auth) {
+        Auth.currentUser().then(function(){
+        }, function(){
+          $state.go('login')
+        })
+      }]
     })
     .state('inventory', {
       url:'/create',
@@ -75,7 +87,7 @@ angular.module('adminApp', [
           templateUrl: 'header/_header.html',
         },
         'news@announcementsPage' : {
-          templateUrl: 'announcements/_announcements.html',
+          templateUrl: 'bAnnouncements/_announcements.html'
         }
       },
       data: {

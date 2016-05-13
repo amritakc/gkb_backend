@@ -2,5 +2,6 @@ angular.module('adminApp')
 .controller('dashboardCtrl', [
 '$scope',
 '$state',
-function($scope,$state){
+'Auth',
+function($scope,$state,Auth){
 }]);
