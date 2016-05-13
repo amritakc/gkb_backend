@@ -85,10 +85,16 @@ html, body {
 
 }
 /*Panels!!!!!! -Stephen*/
+
+/*Buttons !!!!!! -Stephen*/
 .btn {
   border-width: 2px;
   border-color: rgb(24, 158, 86);
 }
+.btn-default{
+  border-color: lightgrey;
+}
+/*Buttons !!!!!! -Stephen*/
 
 
 .row {
@@ -132,6 +138,17 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
   position: fixed;
   z-index: 9999;
 }
+.navbar-toggle{
+  background: rgba(255, 255, 255, 0.0);
+}
+
+.navbar-collapse{
+  background-color: seagreen;
+  border-width: 2px;
+  border-color: lightgreen;
+
+}
+
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one :-)       */
