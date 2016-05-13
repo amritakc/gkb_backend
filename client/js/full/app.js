@@ -30,11 +30,18 @@ var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap']);
 				redirectTo: '/'
 			});
 	});
+myApp.factory('locFactory', locFactory);
+// locFactory function
+function locFactory($location) {
+	var factory = {
+		currentUrl: '/'
+	};
 
+	return factory;
+}
 myApp.controller('donationsCtrl', function($scope) {
 	
 });
-
 myApp.controller('footerCtrl', function($scope) {
 	$scope.newSubscriber = {};
 	$scope.create = create;
@@ -45,14 +52,37 @@ myApp.controller('footerCtrl', function($scope) {
 		return true;
 	}
 });
+myApp.controller('headerCtrl', headerCtrl);
+// Controller Implementation
+function headerCtrl($scope, $location, $interval, locFactory) {
+	var vm = this;
+	$scope.currentUrl = locFactory.currentUrl;
+	
+	$scope.checkUrl = checkUrl;
 
+	function checkUrl() {
+		$scope.currentUrl = locFactory.currentUrl
+	}
+
+	$interval($scope.checkUrl, 500);
+}
 myApp.controller('homeCtrl', function($scope) {
 	
 });
-
-myApp.controller('navCtrl', function($scope, $location, $window) {
+myApp.controller('navCtrl', function($scope, $location, $window, locFactory) {
 	$scope.small = false;
 	$scope.showLinks = showLinks;
+	$scope.changePage = changePage;
+	$scope.currentUrl = locFactory.currentUrl;
+
+	$scope.$watch('currentUrl', function() {
+		locFactory.currentUrl = $scope.currentUrl;
+	});
+
+	function changePage(place) {
+		$scope.currentUrl = place;
+		return true;
+	}
 
 	function showLinks() {
 		if ($scope.small === false) {
@@ -63,7 +93,6 @@ myApp.controller('navCtrl', function($scope, $location, $window) {
 	}
 
 });
-
 myApp.directive("scroll", function ($window) {
     return function(scope, element, attrs) {
         angular.element($window).bind("scroll", function() {
@@ -78,34 +107,12 @@ myApp.directive("scroll", function ($window) {
         });
     };
 });
-
 myApp.controller('newsCtrl', function($scope) {
 
 });
-
 myApp.controller('storeCtrl', function($scope) {
 
 });
-
 myApp.controller('volunteersCtrl', function($scope) {
-	
-	$scope.isCollapsed = false;
 
-	$scope.position1 = false;
-  	$scope.position2 = false;
-  	//$scope.position3 = false;
-
-  	$scope.showHidePos1 = function() {
-		console.log("position1: " + position1);
-		$scope.position1 = !$scope.position1;
-		$scope.position2 = false;
-	  	
-	  	console.log("position1: " + position1);
-	}
-
-	  $scope.showHidePos2 = function() {
-	  	console.log("position2: " + position2);
-	  	$scope.position2 = !$scope.position2;
-	  	$scope.position1 = false;
-	  }
 });
