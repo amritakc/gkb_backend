@@ -52,7 +52,7 @@ class ContentsController < ApplicationController
     #destroy the content
     Content.destroy(params[:id])
 
-    render :json => @sec
+    render :json =>{content:@sec} 
 #   
     #change redirects to messages
     # redirect_to '/contents/index' 
