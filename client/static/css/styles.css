@@ -205,10 +205,15 @@ header h3 {
 header p {
   width: 60%;
   color: white;
-  font-size: 1.1em;
+  font-size: 1.3em;
   margin: 1em auto;
   padding-bottom: 2em;
   text-align: justify;
+}
+
+.header-wrapper {
+  width: 100%;
+  height: 100%;
 }
 /* End Header Section */
 
@@ -239,16 +244,11 @@ header p {
   font-weight: 200;
 }
 
-.mission-text p {
-  font-size: 1.5em;
-  padding: 0;
-  margin: 0;
-}
-
 .mission-text {
   left: 0;
   right: 0;
   margin: 0 auto;
+  text-align: center;
 
   width: 1000px;
   font-style: italic;
@@ -258,8 +258,9 @@ header p {
   font-style: italic;
   font-weight: 100;
   text-align: justify;
-
+  padding-bottom: 1.5em;
 }
+
 /* End Mission Statement Styling */
 
 /* Styling for the little triangles on the homepage */
