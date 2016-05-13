@@ -1,0 +1,748 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,300,300italic,900italic');
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  overflow: auto; 
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0 1em;
+  padding: 0;
+  float: right;
+}
+
+ul.topnav li.icon {
+  display: none; }
+
+ul.topnav li {
+  float: left; 
+}
+
+ul.topnav li a {
+  display: inline-block;
+  font-size: 1.2em;
+  padding: 0.825em;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  transition: 0.3s; 
+}
+
+ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li a:active {
+  text-decoration: none;
+  color: white; 
+}
+
+.footer-links-wrapper {
+  text-align: right; 
+}
+
+.social-media-bubble {
+  margin-bottom: 1em;
+  margin-right: -0.3em; 
+}
+
+.social-media-bubble .social-media-icons {
+  margin: 0 0.3em;
+  width: 3em;
+  height: 3em;
+  display: inline-block !important; 
+  margin-right: -0.3em; }
+  
+.social-media-bubble .social-media-icons {
+  margin: 0 0.3em;
+  width: 3em;
+  height: 3em;
+  display: inline-block !important; 
+}
+
+.social-media-icons:hover {
+  transform: rotate(360deg);
+}
+
+.rotate {
+  transition: all 0.5s ease-in-out;
+}
+
+.rotate:hover {
+  transition: all 0.8s ease-in-out;
+}
+
+.navigation-bar {
+  width: 100%;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.0);
+  position: fixed;
+  z-index: 9999;
+}
+
+.navigation-bar.solidify {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.logo {
+width: 150px;
+height: 150px;
+}
+
+.iam {
+  height: 7em;
+  width: 10em;
+  display: inline-block;
+  font-size: 0.6em;
+}
+
+#iamh1 {
+  color: #000035; 
+  padding-top: 5%;
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-weight: 300;
+}
+
+.iam a {
+  text-decoration: none;
+  color: #000035; 
+  font-weight: 300;
+}
+
+.iam:not(:first-of-type) {
+  border-left: 2px solid #000035;
+}
+
+#iamgroup {
+  height: 10%;
+  width: 100%;
+  text-align: center;
+  display: block;
+  padding-bottom: 5%;
+}
+
+.iamicons {
+  margin-top: 10px;
+}
+
+.iam i {
+  padding-bottom: .2em;
+}
+
+.clear {
+  clear: both; 
+}
+
+.row {
+  width: 100%;
+  margin: 0 auto; 
+}
+
+.container-fluid {
+  padding: 0;
+  width: 100%;
+  min-height: 100%; 
+}
+
+.bike-image {
+  width: 100%;
+  max-height: 60%;
+  padding: 2em 2em;
+  background: linear-gradient(rgba(0, 158, 73, 0.85), rgba(0, 158, 73, 0.85)), url("/static/img/yellow_bike.png") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.bike-image h3 {
+  font-weight: 200;
+}
+
+.mission-text {
+  font-style: italic;
+  font-weight: 100;
+  padding-bottom: 2em;
+}
+
+.triangle-up {
+  padding-top: 5em;
+}
+
+.announcements {
+  width: 100%;
+  height: 100%;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("/static/img/row.jpg");
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+
+.announcements-paragraph {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.announcements-paragraph h1 {
+  padding-bottom: 5%;
+  font-size: 2em;
+  font-weight: 200;
+  letter-spacing: .16em;
+  text-align: center;
+}
+
+.community h1 {
+  font-size: 3em;
+  color: white;
+  font-weight: 200;
+  letter-spacing: .16em;
+  text-align: center;
+}
+
+.announcements-paragraph p {
+  font-size: 1.5em;
+  text-align: justify;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+#news-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.newsgroup {
+  height: 50%;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  padding-top: 2em;
+}
+
+.newsgroup h1 {
+  text-align: center;
+  margin-bottom: 0.5em;
+  margin-top: 2em;
+}
+
+.all-news {
+  margin-bottom: 2em !important;
+  margin-top: 0.5em !important;
+}
+
+.newsboxes:nth-of-type(2) {
+  margin-left: 5em;
+}
+
+.newsboxes {
+width: 45%;
+height: 50%;
+display: inline-block;
+}
+
+.newsboxes h4 {
+  margin-top: 0.5em;
+}
+
+.community {
+  width: 100%;
+  height: 100%;
+}
+
+.communitycontent {
+  width: 100%;
+  height: 50%;
+}
+
+.communityboxes {
+  width: 45%;
+  height: 100%;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  color: white;
+}
+
+.communityboxes:nth-child(2n) {
+  margin-left: 5.52em;
+}
+
+.communityboxes img {
+  width: 100%;
+  height: 18em;
+}
+
+.community > p {
+  margin: 0.5em auto;
+  color: white;
+  width: 50%;
+  text-align: center;
+}
+
+.community > h3 {
+  margin: 0.5em 0;
+  color: white;
+  text-align: center;
+}
+
+.newsboxes img {
+width: 100%;
+height: 21.5em;
+display: inline-block;
+}
+
+.community {
+  width: 100%;
+  height: 100%;
+  padding: 3em 2em;
+  background: linear-gradient(rgba(0, 158, 73, 0.85), rgba(0, 158, 73, 0.85)), url("/static/img/cray.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.footer-email-input {
+  width: 88%;
+  display: inline-block;
+  margin-right: 0.40em;
+}
+
+header h3 {
+  margin: 0;
+  color: white;
+  margin-top: 1em;
+  text-align: center;
+}
+
+header p {
+  width: 60%;
+  color: white;
+  font-size: 1.1em;
+  margin: 1em auto;
+  padding-bottom: 2em;
+  text-align: justify;
+}
+
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 4.5em solid transparent;
+  border-right: 4.5em solid transparent;
+  border-bottom: 5em solid white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+#wrapper {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  min-width: 100%;
+  position: relative; }
+
+#footer {
+  position: relative;
+  clear: both;
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 2.5em;
+  border-top: 2px solid black;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("/static/img/handlebars.jpg") center center no-repeat;
+  background-size: cover; }
+
+  #subscribe {
+    display: block;
+    float: none;
+    padding: 1em;
+    border-radius: 1em;
+    width: 60%;
+    margin: 0 auto;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+  }
+
+.footer-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: right; 
+}
+
+.footer-list li.footer-links {
+  line-height: 2em; }
+
+.footer-list li.footer-links a {
+  color: white; }
+
+.footer-list li.footer-links a:link, .footer-list li.footer-links a:visited, .footer-list li.footer-links a:hover, .footer-list li.footer-links a:active {
+  text-decoration: none; }
+
+.btn-subscribe {
+  color: #fff;
+  background-color: #179F59;
+  border-color: #189f59;
+}
+
+
+@media only screen and (min-width: 586px) and (max-width: 870px) {
+  .iam {
+    height: 7em;
+    width: 10em;
+    display: inline-block;
+    font-size: 0.7em;
+  }
+
+  .newsboxes:nth-of-type(2) {
+    margin-left: 0;
+  }
+
+  .newsboxes {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  ul.topnav li {
+    display: none; }
+  
+  ul.topnav li.icon {
+    text-align: center;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+  }
+  
+  ul.topnav li.icon > a {
+    width: 100%;
+  }
+
+  ul.topnav {
+    width: 100%;
+    margin: 0;
+  }
+
+  ul.topnav.responsive li.icon {
+    float: right;
+    width: 100%;
+    display: block;
+  }
+  ul.topnav.responsive li.icon > a {
+    float: right;
+    color: white;
+  }
+
+  ul.topnav.responsive li {
+    float: none;
+    display: block;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    width: 100%;
+    text-align: center; 
+    float: left;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  nav.navigation-bar {
+    padding: 0;
+    margin: 0;
+  }
+
+  .logo {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .announcements-paragraph {
+    width: 100%;
+  }
+
+  .announcements-paragraph h1, .newsgroup h1 {
+    padding-bottom: 5%;
+    font-size: 1.4em;
+    font-weight: 200;
+    letter-spacing: .16em;
+  }
+
+  .announcements-paragraph > p {
+    font-size: 1.5em;
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 200;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 2.5em;
+  }
+
+  .community h1 {
+    font-size: 0.9em;
+  }
+
+  .communityboxes {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: left;
+    vertical-align: top;
+    color: white;
+  }
+
+  .communityboxes:nth-child(2n) {
+    margin-left: 0;
+  }
+
+  .communityboxes img {
+    width: 100%;
+    height: 18em;
+  }
+
+  .community > p {
+    margin: 0.5em auto;
+    color: white;
+    width: 80%;
+    text-align: center;
+  }
+
+  .footer-list {
+    text-align: left; 
+  }
+
+  .social-media-bubble {
+    margin-top: 1em;
+    text-align: left;
+  }
+
+  .mission-text > p {
+    width: 100%;
+    font-size: 1.5em;
+  }
+
+}
+
+/* When screen is 1000px or more */
+@media screen and (min-width: 1000px) {
+  .iam {
+    height: 7em;
+    width: 10em;
+    display: inline-block;
+    font-size: 1.7em;
+  }
+
+  .announcements {
+    width: 100%;
+    height: 100%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("/static/img/row.jpg");
+    background-size: cover;
+    position: relative;
+    color: white;
+  }
+
+  .announcements-paragraph {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .announcements-paragraph h1, .newsgroup h1 {
+    padding-bottom: 5%;
+    font-size: 3.2em;
+    font-weight: 200;
+    letter-spacing: .16em;
+  }
+
+  .announcements-paragraph p {
+    font-size: 2em;
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+
+  .donateboxes {
+    margin: 3em;
+    width: 20em;
+    height: 20em;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    display: inline-block;
+    vertical-align: top;
+    padding: 1em;
+
+  }
+
+  .donateboxes p {
+    text-align: center;
+  }
+
+.donateboxes h3 {
+    text-align: center;
+  }
+
+}
+
+/* When screen is 1210px or less */
+@media screen and (max-width: 1210px) {
+  .footer-email-input {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1em;
+
+  }
+
+  #subscribe {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* When the screen is less than 430 pixels wide, apply these stylings */
+@media only screen and (min-width: 300px) and (max-width: 430px) {
+  .iam {
+    height: 7em;
+    width: 10em;
+    display: inline-block;
+    font-size: 0.5em;
+  }
+
+  #iamh1 {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+  }
+
+  .newsboxes {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  .newsboxes h4 {
+    margin-top: 1.5em;
+  }
+
+  .newsboxes p {
+    height: 10em;
+    font-size: 1.1em;
+  }
+
+  .newsboxes img {
+    width: 100%;
+    height: 11em;
+    display: block;
+  }
+
+  .newsboxes:nth-of-type(2) {
+    margin-left: 0;
+  }
+
+  ul.topnav li {
+    display: none; }
+  
+  ul.topnav li.icon {
+    text-align: center;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+  }
+  
+  ul.topnav li.icon > a {
+    width: 100%;
+  }
+
+  ul.topnav {
+    width: 100%;
+    margin: 0;
+  }
+
+  ul.topnav.responsive li.icon {
+    float: right;
+    width: 100%;
+    display: block;
+  }
+  ul.topnav.responsive li.icon > a {
+    float: right;
+    color: white;
+  }
+
+  ul.topnav.responsive li {
+    float: none;
+    display: block;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    width: 100%;
+    text-align: center; 
+    float: left;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .announcements-paragraph {
+    width: 100%;
+  }
+
+  .announcements-paragraph h1, .newsgroup h1 {
+    padding-bottom: 5%;
+    font-size: 1.4em;
+    font-weight: 200;
+    letter-spacing: .16em;
+  }
+
+  .announcements-paragraph > p {
+    font-size: 1.5em;
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 200;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 2.5em;
+  }
+
+  .community h1 {
+    font-size: 0.9em;
+  }
+
+  .communityboxes {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: left;
+    vertical-align: top;
+    color: white;
+  }
+
+  .communityboxes:nth-child(2n) {
+    margin-left: 0;
+  }
+
+  .communityboxes img {
+    width: 100%;
+    height: 18em;
+  }
+
+  .community > p {
+    margin: 0.5em auto;
+    color: white;
+    width: 80%;
+    text-align: center;
+  }
+
+  .footer-list {
+    text-align: left; 
+  }
+
+  .social-media-bubble {
+    margin-top: 1em;
+    text-align: left;
+  }
+
+  .logo {
+    margin: 0 auto;
+    display: block;
+  }
+
+}
