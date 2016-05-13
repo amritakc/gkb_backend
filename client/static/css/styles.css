@@ -362,6 +362,9 @@ display: inline-block;
   height: 100%;
 }
 
+.community p {
+  font-weight: 200;
+}
 .community h1 {
   font-size: 3em;
   color: white;
@@ -372,7 +375,9 @@ display: inline-block;
 
 .communitycontent {
   width: 100%;
-  height: 50%;
+/*  height: 50%;*/
+  margin-top: 5%;
+
 }
 
 .communityboxes {
@@ -382,15 +387,68 @@ display: inline-block;
   text-align: left;
   vertical-align: top;
   color: white;
+
+}
+
+.communityboxes h3 {
+  text-align: center;
+  font-weight: 300;
+}
+
+.communityboxes p {
+  width: 60%;
+  margin: auto;
+  font-weight: 200;
+  text-align: justify;
+  margin-bottom: 2%
+
 }
 
 .communityboxes:nth-child(2n) {
   margin-left: 5.52em;
 }
 
-.communityboxes img {
+/*.communityboxes img {
   width: 100%;
-  height: 18em;
+  height: auto;
+}*/
+
+.img-community {
+  width: 60%;
+  height: 24em;
+  margin: auto;
+  border-radius: 50%;
+
+
+}
+
+#transport {
+  background: url("/static/img/tattooed_rider.jpeg") center center no-repeat;
+  background-size: auto 100%;
+}
+
+#work4bikes {
+  background: url("/static/img/smile.jpeg") center center no-repeat;
+  background-size: auto 100%;
+}
+
+#sponsor-bike {
+  background: url("/static/img/tour.jpg") center center no-repeat;
+  background-size: auto 100%;
+}
+
+#saturday-clinic {
+  background: url("/static/img/sat-clinic.jpeg") center center no-repeat;
+  background-size: auto 100%;
+}
+
+#tools {
+  background: url("/static/img/tools.jpg") center center no-repeat;
+  background-size: auto 100%;
+}
+
+#karmakids {
+  background: url("/static/img/kids.jpg") center center no-repeat;
 }
 
 .community > p {
