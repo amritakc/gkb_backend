@@ -762,6 +762,12 @@ display: inline-block;
     background-size: 100% 100%;
   }
 
+  #sponsor_mechanic {
+    width: 20em;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/img/thankyou.jpg");
+    background-size: auto 100%;
+  }
+
   .donations_accepted h3 {
     text-align: center;
     text-transform: uppercase;
