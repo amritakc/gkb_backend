@@ -7,8 +7,6 @@ class ContentsController < ApplicationController
   def create
     content = Content.new(title:params[:title],text:params[:text],section:Section.find_by_name(params[:section]))
     if content.save
-      p Section.find_by_name(params[:section]).contents
-      #p Content.find(section: Section.find_by_name("news").id)
       render :json => {newContent: Section.find_by_name(params[:section]).contents}
     else
       # flash[:errors] = content.errors.full_messages
@@ -40,10 +38,11 @@ class ContentsController < ApplicationController
     # render :json =>@inform
   end
   def destroy
+    section= Content.find(params[:id]).section
 
     Content.destroy(params[:id])
 
-    render :json => {success: "Destroyed content"}
+    render :json => {content: section.contents}
     #change redirects to messages
     # redirect_to '/contents/index' 
   end
