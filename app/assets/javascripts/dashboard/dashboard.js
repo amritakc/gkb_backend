@@ -138,7 +138,7 @@ gapi.analytics.ready(function() {
       'container': 'chart-container5',
       'type': 'PIE',
       'options': {
-        'width': '100%',
+        'width': '50%',
         'pieHole': 9/9,
         title: '% of new users in 30days'
       }
