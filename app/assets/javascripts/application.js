@@ -21,4 +21,5 @@
 //= require text-angular
 //= require text-angular-sanitize
 //= require text-angular-rangy
+//= require angular-modal-service
 //= require_tree .

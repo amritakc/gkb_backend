@@ -12,7 +12,19 @@ angular.module('adminApp')
       section: section
     }
     $http.post('/contents/create', content).success(function(output){
-      console.log('return value from create request is', output)
+      callback(output)
+    });
+  }
+
+  factory.update = function(title, text, section,contentId, callback){
+    content = {
+      title: title,
+      text: text,
+      section: section,
+      contentId: contentId
+    }
+    $http.patch('/contents/update/' + contentId, content).success(function(output){
+      callback(output)
     });
   }
 
