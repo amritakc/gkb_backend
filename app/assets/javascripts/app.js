@@ -1,10 +1,12 @@
 angular.module('adminApp', [
 'templates',
 'ngAnimate',
+'Devise',
 'ui.router',
 'ui.bootstrap',
 'textAngular',
 'ngSanitize',
+'angularModalService',
 'uiRouterStyles'])
 .config(function($stateProvider,$urlRouterProvider) {
 
@@ -12,8 +14,13 @@ angular.module('adminApp', [
     .state('login', {
       url: '/login',
       templateUrl: 'login/_login.html',
-      controller:'loginCtrl'
-    })
+      controller:'loginCtrl',
+      onEnter: ['$state', 'Auth', function($state, Auth) {
+          Auth.currentUser().then(function (){
+            $state.go('dashboard');
+          })
+        }]
+      })
     .state('dashboard', {
       url: '/',
       views: {
@@ -21,7 +28,8 @@ angular.module('adminApp', [
          templateUrl:'views/dashboardLayout.html'
         },
         'header@dashboard' : {
-          templateUrl: 'header/_header.html'
+          templateUrl: 'header/_header.html',
+          controller: 'headerCtrl'
         },
         'main@dashboard' : {
           templateUrl: 'dashboard/_dashboard.html'
@@ -29,7 +37,13 @@ angular.module('adminApp', [
       },
       data: {
         css: ['dashboard/editor.css']
-      }
+      },
+      onEnter: ['$state','Auth', function($state, Auth) {
+        Auth.currentUser().then(function(){
+        }, function(){
+          $state.go('login')
+        })
+      }]
     })
     .state('inventory', {
       url:'/create',
@@ -53,15 +67,22 @@ angular.module('adminApp', [
         },
         'header@newsPage' : {
           templateUrl: 'header/_header.html',
+          controller: 'headerCtrl'
         },
         'news@newsPage' : {
           templateUrl: 'news/_news.html',
-          controller: 'dashboardCtrl'
+          controller: 'newsCtrl'
         }
       },
       data: {
         css: ['news/newsStyle.css']
-      }
+      },
+      onEnter: ['$state','Auth', function($state, Auth) {
+        Auth.currentUser().then(function(){
+        }, function(){
+          $state.go('login')
+        })
+      }]
     })
     .state('announcementsPage', {
       url:'/announcements',
@@ -71,14 +92,45 @@ angular.module('adminApp', [
         },
         'header@announcementsPage' : {
           templateUrl: 'header/_header.html',
+          controller: 'headerCtrl'
         },
         'news@announcementsPage' : {
-          templateUrl: 'announcements/_announcements.html',
+          templateUrl: 'bAnnouncements/_announcements.html'
         }
       },
       data: {
         css: ['news/newsStyle.css']
-      }
+      },
+      onEnter: ['$state','Auth', function($state, Auth) {
+        Auth.currentUser().then(function(){
+        }, function(){
+          $state.go('login')
+        })
+      }]
+    })
+    .state('bikePage', {
+      url:'/bikes',
+      views: {
+        '@': {
+         templateUrl:'views/newsLayout.html'
+        },
+        'header@bikePage' : {
+          templateUrl: 'header/_header.html',
+          controller: 'headerCtrl'
+        },
+        'news@bikePage' : {
+          templateUrl: 'addBikeForm/_addBikeForm.html',
+        }
+      },
+      data: {
+        css: ['news/newsStyle.css']
+      },
+      onEnter: ['$state','Auth', function($state, Auth) {
+        Auth.currentUser().then(function(){
+        }, function(){
+          $state.go('login')
+        })
+      }]
     })
 
   $urlRouterProvider.otherwise('/');

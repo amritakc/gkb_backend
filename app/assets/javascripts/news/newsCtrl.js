@@ -2,29 +2,73 @@ angular.module('adminApp')
 .controller('newsCtrl', [
 '$scope',
 '$state',
-function($scope,$state){
+'DataService',
+'$uibModal',
+function($scope,$state,DataService,$uibModal){
   //Accordian config
   $scope.oneAtATime = true;
+  
+  DataService.getNews('news',function(result){
+    $scope.newsPosts = result;
+    $scope.totalItems = $scope.newsPosts.length;
+  })
 
-  $scope.groups = [
-    {
-      title: "Dynamic Group Header - 1",
-      content: "Dynamic Group Body - 1"
-    },
-    {
-      title: "Dynamic Group Header - 2",
-      content: "Dynamic Group Body - 2"
+  //Modal
+  var modalController = function ($scope, $uibModalInstance) {
+    $scope.ok = function () {
+      $uibModalInstance.close($scope.newsPost);
     }
-  ];
+    $scope.cancel = function () {                
+      $uibModalInstance.dismiss();
+    }
+    $scope.accept = function(){
+      $uibModalInstance.close();
+    }
+  }
 
-  $scope.items = ['Item 1', 'Item 2', 'Item 3'];
-
-  $scope.addItem = function() {
-    var newItemNo = $scope.items.length + 1;
-    $scope.items.push('Item ' + newItemNo);
+  $scope.openNewContentForm = function(){
+    var modalInstance = $uibModal.open({
+      templateUrl:'news/_newNewsContent.html',
+      controller: modalController
+    });
+    
+    modalInstance.result.then(function (contentInfo) {
+      contentInfo.section = 'news'
+      DataService.create(contentInfo, function(result){
+        $scope.newsPosts = result['newContent'];
+      });
+    });
   };
   
-  $scope.callMeWhenCompiled = function () {
-    console.log("----->>>>> Called");
+
+  $scope.openRemoveConfirm = function(selected){
+    var modalInstance = $uibModal.open({
+      templateUrl:'news/_removeModal.html',
+      controller: modalController
+    });
+    
+    modalInstance.result.then(function () {
+      DataService.remove(selected, function(result){
+        console.log(result)
+        $scope.newsPosts = result['content'];
+      });
+    });
   };
+
+
+  $scope.update = function(title, text, section,contentId) {
+    DataService.update(title, text, section,contentId, function(result){
+      $scope.newsPosts = result;
+    })
+  }
+  //Pagination 
+  $scope.viewby = 15;
+  $scope.currentPage = 1;
+  $scope.itemsPerPage = $scope.viewby;
+  $scope.maxSize = 15;
+
+  $scope.setPage = function (pageNo) {
+    $scope.currentPage = pageNo;
+  };
+
 }]);

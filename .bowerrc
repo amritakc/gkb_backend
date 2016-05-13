@@ -1,8 +1,3 @@
 {
-<<<<<<< HEAD
   "directory":"vendor/assets/bower_components"
 }
-=======
-  "directory": "server/bower_components"
-}
->>>>>>> admin_repo/master

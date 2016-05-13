@@ -1,12 +1,28 @@
-angular.module('adminApp').controller('loginCtrl', function ($scope, $uibModal, $log) {
-
-  $scope.items = ['kkk'];
+angular.module('adminApp')
+.controller('loginCtrl', [
+'$scope',
+'$state',
+'Auth',
+function ($scope, $state, Auth) {
+        var credentials = {
+            email: 'user@domain.com',
+            password: 'password1',
+            password_confirmation: 'password1'
+        };
+  $scope.login = function() {
+    console.log($scope.user)
+    Auth.login($scope.user).then(function(){
+      $state.go('dashboard');
+    },function(yo){
+      console.log(yo)
+    });
+  };
 
   $scope.animationsEnabled = true;
 
   $scope.open = function () {
 
-//create an instance of the modal 
+  //create an instance of the modal 
     var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
       templateUrl: 'login/_forgotPasswordModal.html',
@@ -29,23 +45,4 @@ angular.module('adminApp').controller('loginCtrl', function ($scope, $uibModal, 
     $scope.animationsEnabled = !$scope.animationsEnabled;
   };
 
-});
-
-// Please note that $uibModalInstance represents a modal window (instance) dependency.
-// It is not the same as the $uibModal service used above.
-
-angular.module('adminApp').controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
-
-  $scope.items = items;
-  $scope.selected = {
-    item: $scope.items[0]
-  };
-
-  $scope.ok = function () {
-    $uibModalInstance.close($scope.selected.item);
-  };
-
-  $scope.cancel = function () {
-    $uibModalInstance.dismiss('cancel');
-  };
-});
+}]);
