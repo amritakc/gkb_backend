@@ -139,11 +139,28 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
   display: flex;
   align-items: center;
 }
+/*LOGIN!!!!!!! -Stephen*/
 
+.login{
+  border-color: rgb(24, 158, 86);
+  border-radius: 0px;
+  border: 1px;
+
+}
+.jumbotron {
+  background-color: lightgreen;
+  box-shadow: 10px 10px 5px 3px #888888;
+
+}
 #login-box {
   width: 30em;
   margin: auto;
 }
+.login input:focus {
+    background-color: #95FFFF;
+}
+
+/*LOGIN!!!!!!! -Stephen*/
 
 .toolbar {
   border-bottom: 1px solid black;
