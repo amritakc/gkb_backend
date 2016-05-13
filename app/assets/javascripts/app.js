@@ -109,6 +109,30 @@ angular.module('adminApp', [
         })
       }]
     })
+    .state('bikePage', {
+      url:'/bikes',
+      views: {
+        '@': {
+         templateUrl:'views/newsLayout.html'
+        },
+        'header@bikePage' : {
+          templateUrl: 'header/_header.html',
+          controller: 'headerCtrl'
+        },
+        'news@bikePage' : {
+          templateUrl: 'addBikeForm/_addBikeForm.html',
+        }
+      },
+      data: {
+        css: ['news/newsStyle.css']
+      },
+      onEnter: ['$state','Auth', function($state, Auth) {
+        Auth.currentUser().then(function(){
+        }, function(){
+          $state.go('login')
+        })
+      }]
+    })
 
   $urlRouterProvider.otherwise('/');
 
