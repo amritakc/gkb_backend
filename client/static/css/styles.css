@@ -448,8 +448,6 @@ display: inline-block;
   height: 24em;
   margin: auto;
   border-radius: 50%;
-
-
 }
 
 #transport {
@@ -902,6 +900,7 @@ display: inline-block;
     border-radius: 1em;
     background-color: #189e56;
     border: none;
+    margin-left: 45%;
 
 
   }
