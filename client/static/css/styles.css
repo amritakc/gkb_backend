@@ -132,14 +132,11 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 .navigation-bar {
   width: 100%;
   height: 50px;
-  background: rgba(255, 255, 255, 0.0);
+  background: rgba(0, 0, 0, 0.4);
   position: fixed;
   z-index: 9999;
 }
 
-.navigation-bar.solidify {
-  background: rgba(255, 255, 255, 0.6);
-}
 /* End Navigation Bar Stylings */
 
 /* This is styling for the header and the navigation icons for the 'Learn How To' section */
@@ -180,15 +177,15 @@ height: 150px;
   width: 100%;
   text-align: center;
   display: block;
-  padding-bottom: 5%;
 }
 
 .iamicons {
   margin-top: 10px;
 }
 
-.iam i {
-  padding-bottom: .2em;
+.iam img {
+  padding-bottom: .5em;
+  width: 5em;
 }
 
 .clear {
@@ -197,14 +194,15 @@ height: 150px;
 
 header h3 {
   margin: 0;
-  color: white;
+  color: #000035;
   margin-top: 1em;
   text-align: center;
+  
 }
 
 header p {
   width: 60%;
-  color: white;
+  color: #000035;
   font-size: 1.3em;
   margin: 1em auto;
   padding-bottom: 2em;
@@ -244,9 +242,29 @@ header p {
   font-weight: 200;
 }
 
+.mission-wrapper {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  color: #000035;
+  height: 100%;
+  width: 100%;
+}
+
+.mission-wrapper .mission-text > h3 {
+  margin: 0 auto;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.mission-wrapper .mission-text > p {
+  text-align: justify;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+
 .mission-text {
-  left: 0;
-  right: 0;
   margin: 0 auto;
   text-align: center;
 

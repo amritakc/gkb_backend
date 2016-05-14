@@ -10,5 +10,5 @@ function headerCtrl($scope, $location, $interval, locFactory) {
 		$scope.currentUrl = locFactory.currentUrl
 	}
 
-	$interval($scope.checkUrl, 500);
+	$interval($scope.checkUrl, 700);
 }
