@@ -184,8 +184,9 @@ height: 150px;
   margin-top: 10px;
 }
 
-.iam i {
-  padding-bottom: .2em;
+.iam img {
+  padding-bottom: .5em;
+  width: 5em;
 }
 
 .clear {
