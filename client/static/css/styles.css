@@ -183,8 +183,9 @@ height: 150px;
   margin-top: 10px;
 }
 
-.iam i {
-  padding-bottom: .2em;
+.iam img {
+  padding-bottom: .5em;
+  width: 5em;
 }
 
 .clear {
@@ -193,14 +194,15 @@ height: 150px;
 
 header h3 {
   margin: 0;
-  color: white;
+  color: #000035;
   margin-top: 1em;
   text-align: center;
+  
 }
 
 header p {
   width: 60%;
-  color: white;
+  color: #000035;
   font-size: 1.3em;
   margin: 1em auto;
   padding-bottom: 2em;
