@@ -177,7 +177,6 @@ height: 150px;
   width: 100%;
   text-align: center;
   display: block;
-  padding-bottom: 5%;
 }
 
 .iamicons {
@@ -243,9 +242,29 @@ header p {
   font-weight: 200;
 }
 
+.mission-wrapper {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  color: #000035;
+  height: 100%;
+  width: 100%;
+}
+
+.mission-wrapper .mission-text > h3 {
+  margin: 0 auto;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.mission-wrapper .mission-text > p {
+  text-align: justify;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+
 .mission-text {
-  left: 0;
-  right: 0;
   margin: 0 auto;
   text-align: center;
 
