@@ -7,6 +7,7 @@ angular.module('adminApp')
 
   factory.create = function(contentInfo,callback){
     $http.post('/contents/create', contentInfo).success(function(output){
+      console.log(output['newContent'])
       callback(output)
     });
   }

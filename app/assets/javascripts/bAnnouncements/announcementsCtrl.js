@@ -9,7 +9,7 @@ angular.module('adminApp')
 function($scope,$state,DataService, ModalService, $uibModal){
   //Accordian config
   $scope.oneAtATime = true;
-  
+  var self = $scope
   DataService.getNews('annoucements',function(result){
     $scope.newsPosts = result;
     $scope.totalItems = $scope.newsPosts.length;
@@ -37,10 +37,11 @@ function($scope,$state,DataService, ModalService, $uibModal){
         }
       ]
     });
+
     modalInstance.result.then(function (contentInfo) {
       contentInfo.section = 'annoucements';
       DataService.create(contentInfo, function(result){
-        $scope.newPost = result['newContent'];
+        self.newsPosts.push(result['newContent']);
       });
     });
   };

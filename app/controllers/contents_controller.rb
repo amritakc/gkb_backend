@@ -7,7 +7,7 @@ class ContentsController < ApplicationController
   def create
     content = Content.new(title:params[:title],text:params[:text],section:Section.find_by_name(params[:section]))
     if content.save
-      render :json => {newContent: Section.find_by_name(params[:section]).contents}
+      render :json => {newContent: Section.find_by_name(params[:section]).contents.last}
     else
       # flash[:errors] = content.errors.full_messages
       @errors = content.errors.full_messages
