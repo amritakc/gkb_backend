@@ -620,12 +620,11 @@ display: inline-block;
 }
 
 #ebaylogo {
-
 padding:0em 7em 0em 7em;
 text-align: center;
 }
 
-#craigslistlogo img {
+#craigslistlogo img{
 width: auto;
 height: 11em;  /*height 15.5em*/
 text-align: center;
