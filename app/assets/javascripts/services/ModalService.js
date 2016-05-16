@@ -1,12 +1,13 @@
 angular.module('adminApp')
 .service('ModalService',
   function () {
-        var property = 'First';
 
         return {
+            //returns value
             getProperty: function () {
                 return property;
             },
+            //sets property
             setProperty: function(value) {
                 property = value;
             },
