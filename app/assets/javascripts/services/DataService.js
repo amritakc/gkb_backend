@@ -37,3 +37,4 @@ angular.module('adminApp')
 
   return factory;
 });
+

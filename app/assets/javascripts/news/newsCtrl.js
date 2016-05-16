@@ -48,6 +48,7 @@ function($scope,$state,DataService,$uibModal){
     });
     
     modalInstance.result.then(function () {
+      console.log(selected)
       DataService.remove(selected, function(result){
         console.log(result)
         $scope.newsPosts = result['content'];

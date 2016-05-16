@@ -95,7 +95,8 @@ angular.module('adminApp', [
           controller: 'headerCtrl'
         },
         'news@announcementsPage' : {
-          templateUrl: 'bAnnouncements/_announcements.html'
+          templateUrl: 'bAnnouncements/_announcements.html',
+          controller: 'announeCtrl'
         }
       },
       data: {
