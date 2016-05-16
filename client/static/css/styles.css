@@ -170,7 +170,7 @@ height: 150px;
 }
 
 .iam:not(:first-of-type) {
-  border-left: 2px solid #000035;
+  border-left: .1em solid #000035;
 }
 
 #iamgroup {
@@ -180,9 +180,6 @@ height: 150px;
   display: block;
 }
 
-.iamicons {
-  margin-top: 10px;
-}
 
 .iam img {
   padding-bottom: .5em;
@@ -410,6 +407,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   font-weight: 200;
   letter-spacing: .16em;
   text-align: center;
+  margin-bottom: 5%;
 }
 
 .community h2 {
@@ -422,17 +420,18 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   width: 100%;
 /*  height: 50%;*/
   margin-top: 5%;
+  margin-left: 6%;
 
 }
 
 .communityboxes {
-  width: 30em;
-  height: 30em;
+  width: 40em;
+  height: 40em;
   display: inline-block;
   text-align: left;
   vertical-align: top;
   color: white;
-  margin:1%;
+  margin: auto;
 
 }
 
@@ -455,8 +454,8 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 */
 
 .img-community {
-  width: 50%;
-  height: 50%;
+  width: 60%;
+  height: 60%;
   margin: auto;
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
