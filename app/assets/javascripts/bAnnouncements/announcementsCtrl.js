@@ -73,7 +73,21 @@ function($scope,$state,DataService, ModalService, $uibModal){
     })
     modalInstance.result.then(function () { 
       DataService.remove(selected.id, function(result){
-        $scope.newsPosts = result['content'];
+
+
+       for(var i in  self.newsPosts){
+          console.log(self.newsPosts[i])
+          if( self.newsPosts[i].id=== result['content'].id){
+            
+            console.log('found', result['content'].id, i.id)            
+            self.newsPosts.splice(i,1);
+          }
+       }
+
+
+        // if (idx != -1) {
+        //     self.newPost.splice(idx, 1); // The second parameter is the number of elements to remove.
+        // }
       });
     });
   };

@@ -50,9 +50,9 @@ class ContentsController < ApplicationController
     @sec = Section.find_by_name(part.name).contents.order(created_at: :desc)
     
     #destroy the content
-    Content.destroy(params[:id])
+    @deleted = Content.destroy(params[:id])
 
-    render :json =>{content:@sec} 
+    render :json =>{content:@deleted} 
 #   
     #change redirects to messages
     # redirect_to '/contents/index' 
