@@ -869,11 +869,11 @@ display: inline-block;
   }
 
   .donateboxes h3 {
-    font-size:  1.5em;
+    font-size:  2.1em;
     color: #fff;
     font-weight: 300;
     padding-top: .5em;
-    margin-top: 2em;
+    margin-top: 19%;
     text-align: center;
     vertical-align: middle;
   }
@@ -886,7 +886,7 @@ display: inline-block;
      text-align: center;
     vertical-align: middle;
     overflow-wrap: normal;
-    margin-top: 25%;
+    margin-top: 20%;
 
   }
   #donor_decides {
