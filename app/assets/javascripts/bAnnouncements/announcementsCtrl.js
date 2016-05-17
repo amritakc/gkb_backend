@@ -16,7 +16,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
   })
 
 
-  $scope.openNewContentFor = function(){
+  $scope.openNewContentForm = function(){
     
     var modalInstance = $uibModal.open({
       templateUrl: 'modals/_addContentModal.html',
@@ -99,6 +99,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
             
             console.log('found', result['content'].id)            
             $scope.newsPosts[i] = result['content']
+
           }
        }
     })
