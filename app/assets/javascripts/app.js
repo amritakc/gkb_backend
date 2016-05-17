@@ -1,45 +1,139 @@
-angular.module('flapperNews', ['ui.router', 'Devise','templates'])
-.config([
-'$stateProvider',
-'$urlRouterProvider',
-function($stateProvider, $urlRouterProvider) {
+angular.module('adminApp', [
+'templates',
+'ngAnimate',
+'Devise',
+'ui.router',
+'ui.bootstrap',
+'textAngular',
+'ngSanitize',
+'angularModalService',
+'uiRouterStyles'])
+.config(function($stateProvider,$urlRouterProvider) {
 
   $stateProvider
-    .state('home', {
-      url: '/home',
-      templateUrl: 'home/_home.html',
-      controller: 'MainCtrl'
-    })
-    .state('posts', {
-      url: '/posts/{id}',
-      templateUrl: 'posts/_posts.html',
-      controller: 'PostsCtrl'
-    })
     .state('login', {
       url: '/login',
-      templateUrl: 'auth/_login.html',
-      controller: 'AuthCtrl',
+      templateUrl: 'login/_login.html',
+      controller:'loginCtrl',
       onEnter: ['$state', 'Auth', function($state, Auth) {
-        Auth.currentUser().then(function (){
-          $state.go('home');
+          Auth.currentUser().then(function (){
+            $state.go('dashboard');
+          })
+        }]
+      })
+    .state('dashboard', {
+      url: '/',
+      views: {
+        '@': {
+         templateUrl:'views/dashboardLayout.html'
+        },
+        'header@dashboard' : {
+          templateUrl: 'header/_header.html',
+          controller: 'headerCtrl'
+        },
+        'main@dashboard' : {
+          templateUrl: 'dashboard/_dashboard.html'
+        }
+      },
+      data: {
+        css: ['dashboard/editor.css']
+      },
+      onEnter: ['$state','Auth', function($state, Auth) {
+        Auth.currentUser().then(function(){
+        }, function(){
+          $state.go('login')
         })
       }]
-
     })
-     .state('register', {
-      url: '/register',
-      templateUrl: 'auth/_register.html',
-      controller: 'AuthCtrl',
-      onEnter: ['$state', 'Auth', function($state, Auth) {
-        Auth.currentUser().then(function (){
-          $state.go('home');
+    .state('inventory', {
+      url:'/create',
+      views: {
+        '@': {
+         templateUrl:'views/inventory.html'
+        },
+        'header@inventory' : {
+          templateUrl: 'header/_header.html',
+        },
+        'addBikeForm@inventory' : {
+          templateUrl: 'addBikeForm/_addBikeForm.html',
+        }
+      }
+    })
+    .state('newsPage', {
+      url:'/news',
+      views: {
+        '@': {
+         templateUrl:'views/newsLayout.html'
+        },
+        'header@newsPage' : {
+          templateUrl: 'header/_header.html',
+          controller: 'headerCtrl'
+        },
+        'news@newsPage' : {
+          templateUrl: 'news/_news.html',
+          controller: 'newsCtrl'
+        }
+      },
+      data: {
+        css: ['news/newsStyle.css']
+      },
+      onEnter: ['$state','Auth', function($state, Auth) {
+        Auth.currentUser().then(function(){
+        }, function(){
+          $state.go('login')
         })
       }]
+    })
+    .state('announcementsPage', {
+      url:'/announcements',
+      views: {
+        '@': {
+         templateUrl:'views/newsLayout.html'
+        },
+        'header@announcementsPage' : {
+          templateUrl: 'header/_header.html',
+          controller: 'headerCtrl'
+        },
+        'news@announcementsPage' : {
+          templateUrl: 'bAnnouncements/_announcements.html',
+          controller: 'announeCtrl'
+        }
+      },
+      data: {
+        css: ['news/newsStyle.css']
+      },
+      onEnter: ['$state','Auth', function($state, Auth) {
+        Auth.currentUser().then(function(){
+        }, function(){
+          $state.go('login')
+        })
+      }]
+    })
+    .state('bikePage', {
+      url:'/bikes',
+      views: {
+        '@': {
+         templateUrl:'views/newsLayout.html'
+        },
+        'header@bikePage' : {
+          templateUrl: 'header/_header.html',
+          controller: 'headerCtrl'
+        },
+        'news@bikePage' : {
+          templateUrl: 'addBikeForm/_addBikeForm.html',
+        }
+      },
+      data: {
+        css: ['news/newsStyle.css']
+      },
+      onEnter: ['$state','Auth', function($state, Auth) {
+        Auth.currentUser().then(function(){
+        }, function(){
+          $state.go('login')
+        })
+      }]
+    })
 
-    });
+  $urlRouterProvider.otherwise('/');
 
-  $urlRouterProvider.otherwise('home');
-}])
-
-
-
+});

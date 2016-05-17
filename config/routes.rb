@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
 
-
- devise_for :users, :controllers => {sessions: 'sessions'} 
+  devise_for :users#, :controllers => {sessions: 'sessions'} 
   # devise_for :admins
   # root to: 'admins#index'
-root to: 'application#angular'
+  root to: 'application#angular'
 
   get 'sections/:section' => 'sections#show'
 
@@ -36,7 +35,7 @@ root to: 'application#angular'
   # get 'contents/destroy/:id' => 'contents#destroy'
 
 
-  # delete 'contents/destroy/:id' => 'contents#destroy'
+  delete 'contents/destroy/:id' => 'contents#destroy'
 
   get 'contents/section/:section' => 'contents#section'
 

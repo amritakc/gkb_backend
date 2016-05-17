@@ -1,14 +1,13 @@
 class ContentsController < ApplicationController
   def index
-  	@contents = Content.all
-    render :json => @contents
+    contents = Content.order(created_at: :desc)
+    render :json => contents
   end
 
   def create
-
     content = Content.new(title:params[:title],text:params[:text],section:Section.find_by_name(params[:section]))
     if content.save
-      render :json => {success: "created content in the backend"}
+      render :json => {newContent: Section.find_by_name(params[:section]).contents.last}
     else
       # flash[:errors] = content.errors.full_messages
       @errors = content.errors.full_messages
@@ -19,36 +18,49 @@ class ContentsController < ApplicationController
 
   end
   def update
-
-    content = Content.find(params[:id])
     
+    content = Content.find(params[:id])
     content.update(title:params[:title],text:params[:text],section:Section.find_by_name(params[:section]))
-    render :json => {success: "updated object in the backend"}
+    
+    @sec = Section.find_by_name(content.section.name).contents.order(created_at: :desc)
+    
+    render :json => {content: content}
+
+    # contents = content.section.contents.sort_by{|x| x.created_at}
+    # p contents
+    # render :json => {content: contents}
     # redirect_to '/contents/show/%d' % params[:id]
   end
   def show
-  	@inform = Content.find(params[:id])
+    @inform = Content.find(params[:id])
     render :json =>@inform
   end
 
   def edit
-  	# @inform = Content.find(params[:id])
+    # @inform = Content.find(params[:id])
 
     @inform = Content.find(params[:id])
     # response json data
     # render :json =>@inform
   end
   def destroy
+    #find the section for that particular section
+    part = Content.find(params[:id]).section   
 
-    Content.destroy(params[:id])
+    #find the contents of the section from the content that is about to be deleted
+    @sec = Section.find_by_name(part.name).contents.order(created_at: :desc)
+    
+    #destroy the content
+    @deleted = Content.destroy(params[:id])
 
-    render :json => {success: "Destroyed content"}
+    render :json =>{content:@deleted} 
+#   
     #change redirects to messages
     # redirect_to '/contents/index' 
   end
 
   def new
-  	# content = Content.new(event:params[:event],message:params[:message])
+    # content = Content.new(event:params[:event],message:params[:message])
    #  if Content.save
 
    #  else

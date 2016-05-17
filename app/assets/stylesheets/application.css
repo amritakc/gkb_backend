@@ -13,6 +13,201 @@
 
 
 /*
+//= require text-angular
+*= require font-awesome
 *= require_tree .
-*= require_tree ../../../vendor/assets/bower_components/.
 */
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,300,300italic,900italic');
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  overflow: auto;
+}
+
+/*Navbar!!!!!!!!! - Stephen*/
+.navbar{
+  width: 100%;
+  height: 50px;
+  background-color: rgb(24, 158, 86);
+  border-radius: 0px;
+  border: 1px;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+    color: black;
+    background-color: green;
+    border-color: rgb(24, 158, 86);
+    border-radius: 0px;
+    border: 1px;
+
+}
+.navbar-default .navbar-brand {
+  color: white;
+  font-family: timesnewroman;
+  font-size: 23px;
+
+}
+
+.navbar-default .navbar-brand:hover {
+  color: white;
+  font-family: timesnewroman;
+  font-size: 23px;
+
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: white;
+
+}
+
+.navbar-default .navbar-toggle {
+    border-color: lightgreen;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: lightgreen;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: green;
+}
+
+
+/*Navbar!!!!!!!!! - Stephen*/
+
+
+/*Panels!!!!!! -Stephen*/
+
+.panel-default{
+  border-width: 2px;
+  border-color: rgb(24, 158, 86);
+
+}
+/*Panels!!!!!! -Stephen*/
+
+/*Buttons !!!!!! -Stephen*/
+.btn {
+  border-width: 2px;
+  border-color: rgb(24, 158, 86);
+}
+.btn-default{
+  border: none;
+}
+.btn-danger{
+  border: none;
+}
+.btn-success{
+
+}
+
+/*Buttons !!!!!! -Stephen*/
+
+
+.row {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0 1em;
+  padding: 0;
+  float: right;
+}
+
+ul.topnav li.icon {
+  display: none; }
+
+ul.topnav li {
+  float: left;
+}
+
+ul.topnav li a {
+  display: inline-block;
+  font-size: 1.2em;
+  padding: 0.825em;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  transition: 0.3s;
+}
+
+ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li a:active {
+  text-decoration: none;
+  color: white;
+}
+.navigation-bar {
+  width: 100%;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.0);
+  position: fixed;
+  z-index: 9999;
+}
+.navbar-toggle{
+  background: rgba(255, 255, 255, 0.0);
+}
+
+.navbar-collapse{
+  background-color: seagreen;
+  border-width: 2px;
+  border-color: lightgreen;
+
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+/*LOGIN!!!!!!! -Stephen*/
+
+.login{
+  border-color: rgb(24, 158, 86);
+  border-radius: 0px;
+  border: 1px;
+
+}
+.jumbotron {
+  background-color: lightgreen;
+  box-shadow: 10px 10px 5px 3px #888888;
+
+}
+#login-box {
+  width: 30em;
+  margin: auto;
+}
+.login input:focus {
+    background-color: #95FFFF;
+}
+
+/*LOGIN!!!!!!! -Stephen*/
+
+.toolbar {
+  border-bottom: 1px solid black;
+}
+
+.input {
+  width: 20em;
+}
+
+.btn-container {
+  overflow: hidden;
+  padding-top: 1em;
+}
+
+.btn-lg {
+  min-width: 6em;
+}
+
+.btn-primary{
+
+}
+
+.new-content-btn {
+  margin-bottom: 1em;
+}

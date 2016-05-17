@@ -13,8 +13,13 @@
 
 //= require angular
 //= require angular-rails-templates
-//= require AngularDevise
+//= require angular-ui-router-styles
 //= require angular-ui-router
+//= require AngularDevise
+//= require angular-bootstrap
+//= require angular-animate
+//= require text-angular
+//= require text-angular-sanitize
+//= require text-angular-rangy
+//= require angular-modal-service
 //= require_tree .
-
-

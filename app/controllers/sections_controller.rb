@@ -5,9 +5,9 @@ class SectionsController < ApplicationController
   end
 
   def show
+    print params
   	@sec = Section.find_by_name(params[:section]).contents
-    render :json => @sec@inform
-
+    render :json => @sec
   end
 
   def edit

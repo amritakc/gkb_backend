@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'text-angular-rails'
+
+gem "font-awesome-rails"
+
 gem 'angular-rails-templates'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
