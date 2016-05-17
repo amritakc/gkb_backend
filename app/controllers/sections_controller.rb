@@ -5,7 +5,7 @@ class SectionsController < ApplicationController
   end
 
   def show
-    print params
+    #returns contents for a particular section
   	@sec = Section.find_by_name(params[:section]).contents
     render :json => @sec
   end
