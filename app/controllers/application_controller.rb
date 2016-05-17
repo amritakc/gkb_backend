@@ -5,8 +5,7 @@ class ApplicationController < ActionController::Base
 
   respond_to :json
 
-  #before_action :configure_permitted_parameters, if: :devise_controller?
-
+  # angular action to ApplicationController that renders the layout
   def angular
     render 'layouts/application'
   end
