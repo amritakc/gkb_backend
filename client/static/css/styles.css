@@ -15,6 +15,7 @@ ul.topnav {
   margin: 0 1em;
   padding: 0;
   float: right;
+  margin-right: 5%;
 }
 
 ul.topnav li.icon {
@@ -32,12 +33,14 @@ ul.topnav li a {
   color: white;
   text-align: center;
   transition: 0.3s; 
+
 }
 
 /* Here we have code for the different anchor tag states, this complete removes all instances of text-decoration */
 ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li a:active {
   text-decoration: none;
   color: white; 
+
 }
 
 /* These are stylings for the footer */
@@ -144,6 +147,8 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 display: inline;
 width: 8em;
 height: auto;
+margin-top: 2%;
+margin-left: 5%;
 }
 
 .iam {
@@ -159,7 +164,7 @@ height: auto;
   padding-top: 5%;
   font-size: 2em;
   margin-top: 0;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   font-weight: 300;
 }
 
@@ -240,6 +245,42 @@ header p {
   font-weight: 200;
 }
 
+.thankyou-image {
+  width: 100%;
+  max-height: 60%;
+  padding: 2em;
+  background: linear-gradient(rgba(0, 0, 128, 0.35), rgba(0, 0, 128, 0.35)), url("/static/img/thankyou.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.test-flyer {
+  width: 30em;
+  height: auto;
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-bottom: 15%;
+}
+
+/*Begin Mission Statement Styling*/
+#tagline {
+  margin-left: 10%;
+}
+
+hr {
+    width: 20%;
+    display: inline-block;
+}
+
+#tagline h3 {
+  font-style: italic;
+  color: #000035;
+  margin-bottom: 7%;
+  font-size: 3em;
+  font: Normal 400 italic;
+}
+
+
 .mission-wrapper {
   padding-top: 5%;
   padding-bottom: 5%;
@@ -278,6 +319,8 @@ header p {
 }
 
 /* End Mission Statement Styling */
+
+
 
 /* Styling for the little triangles on the homepage */
 .triangle-up {

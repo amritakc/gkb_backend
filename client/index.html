@@ -18,6 +18,7 @@
 <body>
 	<div class="container-fluid">
 		<nav class="navigation-bar" ng-controller="navCtrl">
+			<img class="logo" src="/static/img/logo.jpg">
 			<ul class="topnav" ng-class="{ 'responsive': small }">
 				<li class="icon">
 					<a href="javascript:void(0);" ng-click="showLinks()">&#9776;</a>
@@ -31,13 +32,13 @@
 		</nav>
 		<div class="header-wrapper" ng-controller="headerCtrl">
 			<header class="bike-image" ng-if="currentUrl == '/'">
-				<img class="logo" src="/static/img/logo.jpg">
-				<div class="triangle-up" id=tri-index></div>
+				<!-- <img class="logo" src="/static/img/logo.jpg"> -->
+				<div class="triangle-up" id="tri-index"></div>
 			</header>
 			<header ng-if="currentUrl == '/shop'" class="bike-image">
 				
 			</header>
-			<header ng-if="currentUrl == '/donations'" class="bike-image">
+			<header ng-if="currentUrl == '/donations'" class="thankyou-image">
 				
 			</header>
 			<header ng-if="currentUrl == '/volunteers'" class="bike-image">
