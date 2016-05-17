@@ -23,7 +23,8 @@ class ContentsController < ApplicationController
     content.update(title:params[:title],text:params[:text],section:Section.find_by_name(params[:section]))
     
     @sec = Section.find_by_name(content.section.name).contents.order(created_at: :desc)
-    render :json => {content: @sec}
+    
+    render :json => {content: content}
 
     # contents = content.section.contents.sort_by{|x| x.created_at}
     # p contents

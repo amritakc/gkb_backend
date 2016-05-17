@@ -19,7 +19,8 @@ angular.module('adminApp')
       contentId: contentId
     }
     $http.patch('/contents/update/' + contentId, content).success(function(output){
-      callback(output['content'])
+      console.log(output, "patch")
+      callback(output)
     });
   }
 

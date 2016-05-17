@@ -41,7 +41,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
     modalInstance.result.then(function (contentInfo) {
       contentInfo.section = 'annoucements';
       DataService.create(contentInfo, function(result){
-        self.newsPosts.push(result['newContent']);
+        self.newsPosts.unshift(result['newContent']);
       });
     });
   };
@@ -79,15 +79,11 @@ function($scope,$state,DataService, ModalService, $uibModal){
           console.log(self.newsPosts[i])
           if( self.newsPosts[i].id=== result['content'].id){
             
-            console.log('found', result['content'].id, i.id)            
+            console.log('found', result['content'].id)            
             self.newsPosts.splice(i,1);
           }
        }
 
-
-        // if (idx != -1) {
-        //     self.newPost.splice(idx, 1); // The second parameter is the number of elements to remove.
-        // }
       });
     });
   };
@@ -95,9 +91,20 @@ function($scope,$state,DataService, ModalService, $uibModal){
 
   $scope.update = function(title, text, section,contentId) {
     DataService.update(title, text, section,contentId, function(result){
-      $scope.newsPosts = result;
+      console.log(result['content'])
+       
+       for(var i in  $scope.newsPosts){
+          console.log($scope.newsPosts[i])
+          if( $scope.newsPosts[i].id === result['content'].id){
+            
+            console.log('found', result['content'].id)            
+            $scope.newsPosts[i] = result['content']
+          }
+       }
     })
   }
+
+
   //Pagination 
   $scope.viewby = 15;
   $scope.currentPage = 1;
