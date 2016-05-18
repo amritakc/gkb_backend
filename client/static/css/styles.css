@@ -16,6 +16,7 @@ ul.topnav {
   padding: 0;
   float: right;
   margin-right: 5%;
+  margin-top: 1%;
 }
 
 ul.topnav li.icon {
@@ -134,7 +135,7 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
    solid. However, JavaScript is refusing to cooperate. */
 .navigation-bar {
   width: 100%;
-  height: 10%;
+  height: 20%;
   background: rgba(0, 0, 0, 0.4);
   position: fixed;
   z-index: 9999;
@@ -145,7 +146,7 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 /* This is styling for the header and the navigation icons for the 'Learn How To' section */
 .logo {
 display: inline;
-width: 7em;
+width: 5em;
 height: auto;
 margin-top: 2%;
 margin-left: 5%;
