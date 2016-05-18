@@ -25,13 +25,13 @@ angular.module('adminApp')
     });
   }
   
-  factory.change = function(title, price, caption, color, type, section, contentId, callback){
+  factory.change = function(title, price, caption, color, brand, section, contentId, callback){
     content = {
       title: title,
       price: price,
       caption: caption,
       color: color,
-      type: type,
+      brand: brand,
       section: section,
       contentId: contentId
     }

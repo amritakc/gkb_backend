@@ -89,8 +89,8 @@ function($scope,$state,DataService, ModalService, $uibModal){
   };
 
 
-  $scope.change = function(title, price, caption, color, type, section, contentId) {
-    DataService.change(title, price, caption, color, type, section, contentId, function(result){
+  $scope.change = function(title, price, caption, color, brand, section, contentId) {
+    DataService.change(title, price, caption, color, brand, section, contentId, function(result){
       console.log(result['content'])
        
        for(var i in  $scope.bikesPosts){
