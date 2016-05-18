@@ -25,13 +25,26 @@ angular.module('adminApp')
     });
   }
   
-  factory.change = function(title, price, caption, color, type, section, contentId, callback){
+  factory.change = function(title, price, caption, color, brand, section, contentId, callback){
     content = {
       title: title,
       price: price,
       caption: caption,
       color: color,
-      type: type,
+      brand: brand,
+      section: section,
+      contentId: contentId
+    }
+    $http.patch('/contents/update/' + contentId, content).success(function(output){
+      console.log(output, "patch")
+      callback(output)
+    });
+  }
+
+  factory.updatePrograms = function(title, caption, section, contentId, callback){
+    content = {
+      title: title,
+      caption: caption,
       section: section,
       contentId: contentId
     }
@@ -49,6 +62,12 @@ angular.module('adminApp')
   }
 
   factory.getBikes = function(section, callback){
+    $http.get('/sections/' + section).success(function(output){
+      callback(output);
+    });
+  }
+
+  factory.getPrograms = function(section, callback){
     $http.get('/sections/' + section).success(function(output){
       callback(output);
     });
