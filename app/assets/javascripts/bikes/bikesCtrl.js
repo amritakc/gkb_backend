@@ -16,7 +16,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
   })
 
 
-  $scope.openNewContentForm = function(){
+  $scope.openNewBikeForm = function(){
     
     var modalInstance = $uibModal.open({
       templateUrl: 'modals/_addBikeModal.html',
@@ -89,8 +89,8 @@ function($scope,$state,DataService, ModalService, $uibModal){
   };
 
 
-  $scope.updateBike = function(title, price, caption, color, type, section,contentId) {
-    DataService.update(title, price, caption, color, type, section,contentId, function(result){
+  $scope.change = function(title, price, caption, color, type, section, contentId) {
+    DataService.change(title, price, caption, color, type, section, contentId, function(result){
       console.log(result['content'])
        
        for(var i in  $scope.bikesPosts){

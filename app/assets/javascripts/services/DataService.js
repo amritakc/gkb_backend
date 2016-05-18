@@ -4,10 +4,10 @@ angular.module('adminApp')
 
   var factory = {};
   var news = [];
-  var bikes = [];
 
   factory.create = function(contentInfo,callback){
     $http.post('/contents/create', contentInfo).success(function(output){
+      console.log(output);
       callback(output)
     });
   }
@@ -24,7 +24,8 @@ angular.module('adminApp')
       callback(output)
     });
   }
-  factory.updateBike = function(title, price, caption, color, type, section, contentId, callback){
+  
+  factory.change = function(title, price, caption, color, type, section, contentId, callback){
     content = {
       title: title,
       price: price,
