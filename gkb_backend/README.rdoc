@@ -1,0 +1,65 @@
+== README
+
+GKB-backend is an api server made using Ruby on Rails. 
+
+Started the project with 
+<tt>rails new gkbBackend --database=postgresql</tt>
+
+
+Technology Used
+* PostgreSQL
+* Ruby on Rails
+
+Models
+
+
+Controllers
+
+
+Steps Needed to Run Project:
+<tt>bundle install</tt>
+* Start PostgreSQL server
+* Create the database
+<tt>rake db:create</tt>
+* Migrate the database
+<tt>rake db:migrate</tt>
+* Start the SQL server
+<tt>rails s</tt>
+
+Using gem devise:
+<tt>bundle install</tt>
+<tt>rails generate devise:install<tt>
+* May need to update ruby version to 2.1 to use devise
+
+Using angular with rails:
+Install bower module:
+<tt>npm install -g bower<tt> 
+To generate initial bower.json file:
+<tt>bower init<tt>
+Create a .bowerrc file in root of the rails project with 
+{
+  "directory":"vendor/assets/bower_components"
+}
+Install frontend dependencies:
+<tt>bower install angular angular-ui-router bootstrap --save<tt>
+Added gem 'angular-rails-templates' to gem file that will take html templates and compile them into javascript files that insert our templates into Angular's $templateChache.
+<tt>bundle install<tt>
+==
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
