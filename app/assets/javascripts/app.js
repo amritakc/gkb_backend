@@ -120,6 +120,31 @@ angular.module('adminApp', [
         })
       }]
     })
+    .state('programsPage', {
+      url:'/programs',
+      views: {
+        '@': {
+         templateUrl:'views/programsLayout.html'
+        },
+        'header@programsPage' : {
+          templateUrl: 'header/_header.html',
+          controller: 'headerCtrl'
+        },
+        'programs@programsPage' : {
+          templateUrl: 'programs/_programs.html',
+          controller: 'programsCtrl'
+        }
+      },
+      data: {
+        css: ['news/newsStyle.css']
+      },
+      onEnter: ['$state','Auth', function($state, Auth) {
+        Auth.currentUser().then(function(){
+        }, function(){
+          $state.go('login')
+        })
+      }]
+    })
 
   $urlRouterProvider.otherwise('/');
 
