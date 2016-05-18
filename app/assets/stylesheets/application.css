@@ -81,6 +81,12 @@ html, body {
   padding-right: 3px;
 }
 
+#login_logo{
+  width: 55%;
+  height: 55%;
+  box-shadow: 2px 2px 4px 1px;
+}
+
 
 /*Navbar!!!!!!!!! - Stephen*/
 
