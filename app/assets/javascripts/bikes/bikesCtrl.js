@@ -1,5 +1,5 @@
 angular.module('adminApp')
-.controller('newsCtrl', [
+.controller('bikeCtrl', [
 '$scope',
 '$state',
 'DataService',
@@ -9,24 +9,24 @@ angular.module('adminApp')
 function($scope,$state,DataService, ModalService, $uibModal){
   //Accordian config
   $scope.oneAtATime = true;
-  var self = $scope; 
-  DataService.getNews('news',function(result){
-    $scope.newsPosts = result;
-    $scope.totalItems = $scope.newsPosts.length;
+  var self = $scope
+  DataService.getBikes('bikes',function(result){
+    $scope.bikesPosts = result;
+    $scope.totalItems = $scope.bikesPosts.length;
   })
 
 
   $scope.openNewContentForm = function(){
-    console.log("hi")
+    
     var modalInstance = $uibModal.open({
-      templateUrl: 'modals/_addContentModal.html',
+      templateUrl: 'modals/_addBikeModal.html',
       controller: [
         '$scope', '$uibModalInstance',  function($scope, $uibModalInstance) {
       
           // added data to change the dynamic html 
-          $scope.data = {title: "News" };
+          $scope.data = {title: "Bikes" };
           $scope.ok = function() {
-            $uibModalInstance.close($scope.newsPost);
+            $uibModalInstance.close($scope.bikesPost);
           };
           $scope.cancel = function () {                
             $uibModalInstance.dismiss();
@@ -39,9 +39,9 @@ function($scope,$state,DataService, ModalService, $uibModal){
     });
 
     modalInstance.result.then(function (contentInfo) {
-      contentInfo.section = 'news';
+      contentInfo.section = 'bikes';
       DataService.create(contentInfo, function(result){
-        self.newsPosts.unshift(result['newContent']);
+        self.bikesPosts.unshift(result['newContent']);
       });
     });
   };
@@ -58,12 +58,9 @@ function($scope,$state,DataService, ModalService, $uibModal){
           
           //call it here 
           $scope.data = ModalService.getProperty();
-            
-          console.log($scope.data)
-
-
+              
           $scope.ok = function() {
-            $uibModalInstance.close($scope.newsPost);
+            $uibModalInstance.close($scope.bikesPost);
           };
           $scope.cancel = function () {                
             $uibModalInstance.dismiss();
@@ -78,12 +75,12 @@ function($scope,$state,DataService, ModalService, $uibModal){
       DataService.remove(selected.id, function(result){
 
 
-       for(var i in  self.newsPosts){
-          console.log(self.newsPosts[i])
-          if( self.newsPosts[i].id=== result['content'].id){
+       for(var i in  self.bikesPosts){
+          console.log(self.bikesPosts[i])
+          if( self.bikesPosts[i].id=== result['content'].id){
             
             console.log('found', result['content'].id)            
-            self.newsPosts.splice(i,1);
+            self.bikesPosts.splice(i,1);
           }
        }
 
@@ -92,17 +89,17 @@ function($scope,$state,DataService, ModalService, $uibModal){
   };
 
 
-  $scope.update = function(title, text, section,contentId) {
-    DataService.update(title, text, section,contentId, function(result){
+  $scope.updateBike = function(title, price, caption, color, type, section,contentId) {
+    DataService.update(title, price, caption, color, type, section,contentId, function(result){
       console.log(result['content'])
        
-       for(var i in  $scope.newsPosts){
-          console.log($scope.newsPosts[i])
-          if( $scope.newsPosts[i].id === result['content'].id){
+       for(var i in  $scope.bikesPosts){
+          console.log($scope.bikesPosts[i])
+          if( $scope.bikesPosts[i].id === result['content'].id){
             
             console.log('found', result['content'].id)            
-            $scope.newsPosts[i] = result['content']
-            
+            $scope.bikesPosts[i] = result['content']
+
           }
        }
     })
@@ -120,3 +117,4 @@ function($scope,$state,DataService, ModalService, $uibModal){
   };
 
 }]);
+

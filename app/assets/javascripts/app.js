@@ -45,20 +45,6 @@ angular.module('adminApp', [
         })
       }]
     })
-    .state('inventory', {
-      url:'/create',
-      views: {
-        '@': {
-         templateUrl:'views/inventory.html'
-        },
-        'header@inventory' : {
-          templateUrl: 'header/_header.html',
-        },
-        'bikes@inventory' : {
-          templateUrl: 'bikes/_bikes.html',
-        }
-      }
-    })
     .state('newsPage', {
       url:'/news',
       views: {
@@ -113,14 +99,15 @@ angular.module('adminApp', [
       url:'/bikes',
       views: {
         '@': {
-         templateUrl:'views/newsLayout.html'
+         templateUrl:'views/bikesLayout.html'
         },
         'header@bikePage' : {
           templateUrl: 'header/_header.html',
           controller: 'headerCtrl'
         },
-        'news@bikePage' : {
+        'bikes@bikePage' : {
           templateUrl: 'bikes/_bikes.html',
+          controller: 'bikeCtrl'
         }
       },
       data: {
