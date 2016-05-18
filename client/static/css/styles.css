@@ -146,9 +146,9 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 /* This is styling for the header and the navigation icons for the 'Learn How To' section */
 .logo {
 display: inline;
-width: 5em;
+width: 8em;
 height: auto;
-margin-top: 2%;
+margin-top: 1%;
 margin-left: 5%;
 }
 
