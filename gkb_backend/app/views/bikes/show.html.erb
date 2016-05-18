@@ -1,0 +1,26 @@
+
+
+
+<h1>Bikes#show</h1>
+<p>Find me in app/views/bikes/show.html.erb</p>
+
+  <h3>Donor: <%=@one.donor%></h3>
+  <h3>Buyer: <%=@one.buyer%></h3>
+  <h3>Brand: <%=@one.brand%></h3>
+  <h3>Value: <%=@one.value%></h3>
+  <h3>Barcode: <%=@one.barcode%></h3>
+  <h3>Ebay: <%=@one.ebay%></h3>
+
+
+
+  <button type='submit'><a href='/bikes/edit/<%=@one.id%>'>Edit</a></button>
+  <br>
+
+
+  <form action="/bikes/destroy/<%=@one.id%>" method="POST">
+  	<br>
+
+    <input type="hidden" name ="authenticity_token" value ="<%= form_authenticity_token%>">
+    <input type="hidden" name="_method" value="delete">
+  	<button type="submit" > Delete </button>
+  </form>

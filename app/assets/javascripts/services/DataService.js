@@ -7,6 +7,7 @@ angular.module('adminApp')
 
   factory.create = function(contentInfo,callback){
     $http.post('/contents/create', contentInfo).success(function(output){
+      console.log(output);
       callback(output)
     });
   }
@@ -23,8 +24,31 @@ angular.module('adminApp')
       callback(output)
     });
   }
+  
+  factory.change = function(title, price, caption, color, type, section, contentId, callback){
+    content = {
+      title: title,
+      price: price,
+      caption: caption,
+      color: color,
+      type: type,
+      section: section,
+      contentId: contentId
+    }
+    $http.patch('/contents/update/' + contentId, content).success(function(output){
+      console.log(output, "patch")
+      callback(output)
+    });
+  }
+
 
   factory.getNews = function(section, callback){
+    $http.get('/sections/' + section).success(function(output){
+      callback(output);
+    });
+  }
+
+  factory.getBikes = function(section, callback){
     $http.get('/sections/' + section).success(function(output){
       callback(output);
     });
