@@ -34,13 +34,14 @@ html, body {
   background-color: rgb(24, 158, 86);
   border-radius: 0px;
   border: 1px;
+  box-shadow: 2px 2px 4px 1px;
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
     color: black;
     background-color: green;
     border-color: rgb(24, 158, 86);
-    border-radius: 0px;
-    border: 1px;
+    border-radius: 5px;
+
 
 }
 .navbar-default .navbar-brand {
@@ -72,6 +73,12 @@ html, body {
 
 .navbar-default .navbar-toggle .icon-bar {
     background-color: green;
+}
+
+#minilogo{
+  width: 70px;
+  height: 100%;
+  padding-right: 3px;
 }
 
 
