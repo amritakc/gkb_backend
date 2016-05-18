@@ -54,8 +54,8 @@ angular.module('adminApp', [
         'header@inventory' : {
           templateUrl: 'header/_header.html',
         },
-        'addBikeForm@inventory' : {
-          templateUrl: 'addBikeForm/_addBikeForm.html',
+        'bikes@inventory' : {
+          templateUrl: 'bikes/_bikes.html',
         }
       }
     })
@@ -120,7 +120,7 @@ angular.module('adminApp', [
           controller: 'headerCtrl'
         },
         'news@bikePage' : {
-          templateUrl: 'addBikeForm/_addBikeForm.html',
+          templateUrl: 'bikes/_bikes.html',
         }
       },
       data: {
