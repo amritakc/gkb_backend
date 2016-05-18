@@ -489,7 +489,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   text-align: left;
   vertical-align: top;
   color: white; 
-  margin-bottom: 10%; 
+  margin-bottom: 15%; 
 
 }
 
@@ -512,11 +512,12 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 */
 
 .img-community {
-  width: 60%;
-  height: 60%;
+  width: 80%;
+  height: 80%;
   margin: auto;
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
+
 }
 
 #transport {
@@ -1047,16 +1048,19 @@ display: inline-block;
   .donations_accepted h3 {
     text-align: center;
     text-transform: uppercase;
-    font-size: 2.4em;
+    font-size: 2.2em;
+    margin-bottom: 2%;
 
   }
 
   .donations_accepted ul {
     margin-left: 24%;
+    margin-bottom: 2%;
   }
 
-  .donations_accepted p {
-
+  .donations_accepted li {
+    font-size: 1.5em;
+    margin-top: 1%;
   }
 
   #btn-donate {
