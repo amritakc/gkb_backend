@@ -7,6 +7,7 @@ angular.module('adminApp', [
 'textAngular',
 'ngSanitize',
 'angularModalService',
+'ngFileUpload',
 'uiRouterStyles'])
 .config(function($stateProvider,$urlRouterProvider) {
 
@@ -44,20 +45,6 @@ angular.module('adminApp', [
           $state.go('login')
         })
       }]
-    })
-    .state('inventory', {
-      url:'/create',
-      views: {
-        '@': {
-         templateUrl:'views/inventory.html'
-        },
-        'header@inventory' : {
-          templateUrl: 'header/_header.html',
-        },
-        'addBikeForm@inventory' : {
-          templateUrl: 'addBikeForm/_addBikeForm.html',
-        }
-      }
     })
     .state('newsPage', {
       url:'/news',
@@ -120,7 +107,8 @@ angular.module('adminApp', [
           controller: 'headerCtrl'
         },
         'news@bikePage' : {
-          templateUrl: 'addBikeForm/_addBikeForm.html',
+          templateUrl: 'baddBikeForm/_addBikeForm.html',
+          controller: 'bikeCtrl'
         }
       },
       data: {

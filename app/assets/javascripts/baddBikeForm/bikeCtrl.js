@@ -1,16 +1,18 @@
 angular.module('adminApp')
-.controller('announeCtrl', [
+.controller('bikeCtrl', [
 '$scope',
 '$state',
 'DataService',
 'ModalService',
 '$uibModal',
+'Upload',
+'$timeout',
 //injected the modal service  into controller 
-function($scope,$state,DataService, ModalService, $uibModal){
+function($scope,$state,DataService, ModalService, $uibModal, Upload, $timeout){
   //Accordian config
   $scope.oneAtATime = true;
   var self = $scope
-  DataService.getNews('annoucements',function(result){
+  DataService.getNews('bikes',function(result){
     $scope.newsPosts = result;
     $scope.totalItems = $scope.newsPosts.length;
   })
@@ -21,17 +23,11 @@ function($scope,$state,DataService, ModalService, $uibModal){
     var modalInstance = $uibModal.open({
       templateUrl: 'modals/_addContentModal.html',
       controller: [
-        '$scope', '$uibModalInstance',  function($scope, $uibModalInstance, Upload) {
+        '$scope', '$uibModalInstance',  function($scope, $uibModalInstance) {
       
           // added data to change the dynamic html 
-          $scope.data = {title: "Annoucments" };
-          $scope.test =0
           
-
-          $scope.uploadPic = function(file, newPost){
-            console.log(file, newPost)
-          }
-
+          $scope.data = {title: "Annoucments" };
           $scope.ok = function() {
             $uibModalInstance.close($scope.newsPost);
           };
@@ -112,8 +108,30 @@ function($scope,$state,DataService, ModalService, $uibModal){
     })
   }
 
-
-  //Pagination 
+     $scope.uploadFiles = function (files) {
+        $scope.files = files;
+        if (files && files.length) {
+            Upload.upload({
+                url: 'https://angular-file-upload-cors-srv.appspot.com/upload',
+                data: {
+                    files: files
+                }
+            }).then(function (response) {
+                $timeout(function () {
+                    $scope.result = response.data;
+                });
+            }, function (response) {
+                if (response.status > 0) {
+                    $scope.errorMsg = response.status + ': ' + response.data;
+                }
+            }, function (evt) {
+                $scope.progress = 
+                    Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
+                    console.log($scope.progress)
+            });
+        }
+    };
+  //Pagination  
   $scope.viewby = 15;
   $scope.currentPage = 1;
   $scope.itemsPerPage = $scope.viewby;

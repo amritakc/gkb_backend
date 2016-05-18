@@ -1,14 +1,48 @@
 <div> 
   <div class="modal-content">
     <div class="modal-header">
-        <h4>{{data.title}}</h4>
+        <h4>Annoucments</h4>
     </div>
     <div class="modal-body">
+       Text 
+       <button ng-click="test= 2"> Text</button>
+       <button ng-click="test= 1">Image</button>
+
+
+       <span ng-show="test==1">
+       
+        <form name="myForm">
+
+        <div class="form-group">
+        <label>Title:</label>
+        <input name="newsPost" ng-model="newsPost.title" required>
+        
+        <h1>{{myForm.newsPost.$valid}}</h1>
+
+        </div>
+
+        <div>
+        <input type="file" ngf-select ng-model='file' name="file" required>
+        <button ng-disabled="!myForm.$valid" ng-click="uploadPic(file, newsPost)">Submit</button>
+
+
+      <br>
+      <br>
+      <br>
+      </div>  
+      </form>
+    </div>     
+    </span>
+
+
+
+      <span ng-show="test==2">
       <div class="form-group">
         <label>Title:</label>
         <input type="text" class="input form-control" ng-model='newsPost.title'>
       </div>
-
+     
+      
       <text-angular ng-model="newsPost.text"></text-angular>
 
       <div class="btn-container row">
@@ -16,8 +50,17 @@
           <button type="button" class="btn btn-danger btn-lg" ng-click='cancel()'>Cancel</button>
         </div>
         <div class="col-sm-1 col-sm-offset-1">
-          <button type="button" class="btn btn-primary btn-lg" ng-click="ok()">Save</button>
+          <button type="button" class="btn btn-primary btn-lg" ng-click="ok()">Save</button>     
         </div>
+       </span>
+        
+
+       
+
+
+
+
+
       </div>
     </div>
   </div>

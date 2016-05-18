@@ -1,0 +1,82 @@
+ <h4>Upload on file select</h4>
+
+    <button ngf-select="uploadFiles($files)" multiple 
+            accept="image/*">Select Files</button>
+    <br>
+    <br>Files:
+    <ul>
+        <li ng-repeat="f in files" style="font:smaller">
+            {{f.name}}
+        </li>
+    </ul>
+    <span class="progress" ng-show="progress >= 0">
+        <div style="width:{{progress}}%" ng-bind="progress + '%'"></div>
+    </span>
+    {{errorMsg}}
+
+    <!-- to send it with one model-->
+    <form>
+        <h2>Blah Blah Blah</h2>
+        <input type="text" ng-model="picFile.data0" >
+        <h2>Blah blah blah</h2>
+        <input type="text" ng-model="picFile.data1">
+        <h2>Add Photo</h2>
+        <input type="file" ngf-select ng-model="picFile.pic" ngf-max-size="2MB">
+        <img ng-show="picFile.pic" class="thumb">
+            
+    <span class="progress" ng-show="picFile.progress >= 0">
+        <div style="width:{{progress}}%" ng-bind="progress + '%'"></div>
+    </span>
+ 
+        <button ng-click="picFile.pic = null" ng-show="picFile.pic"> Remove</button>
+        
+    <span ng-show="picFile.result">Upload Successful</span>
+    <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+
+        <button ng-click=-></button>
+
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+  .thumb {
+    width: 24px;
+    height: 24px;
+    float: none;
+    position: relative;
+    top: 7px;
+}
+form .progress {
+    line-height: 15px;
+}
+}
+.progress {
+    display: inline-block;
+    width: 100px;
+    border: 3px groove #CCC;
+}
+.progress div {
+    font-size: smaller;
+    background: orange;
+    width: 0;
+}
+    </style>
+        
