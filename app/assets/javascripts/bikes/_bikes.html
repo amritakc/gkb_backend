@@ -16,7 +16,7 @@
 <input type="text" ng-model="bike.ebay" /></p>
 <button ng-click="createBike()">Create</button>
 <div class="col-sm-offset-9 new-content-btn">
-  <button type="button" class="btn btn-primary" ng-click="openNewBikeForm()">Add Bikes</button>
+  <button type="button" class="btn btn-success" ng-click="openNewBikeForm()">Add Bikes</button>
 </div>
 <uib-accordion close-others="oneAtATime">
   <uib-accordion-group ng-repeat="bikesPost in bikesPosts.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))| orderBy: 'created_at':true">

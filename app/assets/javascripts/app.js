@@ -8,7 +8,7 @@ angular.module('adminApp', [
 'ngSanitize',
 'angularModalService',
 'uiRouterStyles'])
-.config(function($stateProvider,$urlRouterProvider) {
+.config(function($stateProvider,$urlRouterProvider, AuthProvider) {
 
   $stateProvider
     .state('login', {
