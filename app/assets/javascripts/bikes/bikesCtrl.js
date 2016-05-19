@@ -24,7 +24,6 @@ function($scope,$state,DataService, ModalService, $uibModal){
         '$scope', '$uibModalInstance',  function($scope, $uibModalInstance) {
       
           // added data to change the dynamic html 
-          $scope.data = {title: "Bikes" };
           $scope.ok = function() {
             $uibModalInstance.close($scope.bikesPost);
           };

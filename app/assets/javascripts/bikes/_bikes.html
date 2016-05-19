@@ -1,20 +1,5 @@
-<label>Donor</label>
-<input type="text" ng-model="bike.donor" /></p>
-<label>Model</label>
-<input type="text" ng-model="bike.model" /></p>
-<label>Brand</label>
-<input type="text" ng-model="bike.brand" /></p>
-<label>Buyer</label>
-<input type="text" ng-model="bike.buyer" /></p>
-<label>Value</label>
-<input type="text" ng-model="bike.value" /></p>
-<label>Date Sold</label>
-<input type="date" ng-model="bike.dateSold" /></p>
-<label>Bar code</label>
-<input type="text" ng-model="bike.barCode" /></p>
-<label>Ebay</label>
-<input type="text" ng-model="bike.ebay" /></p>
-<button ng-click="createBike()">Create</button>
+
+
 <div class="col-sm-offset-9 new-content-btn">
   <button type="button" class="btn btn-primary" ng-click="openNewBikeForm()">Add Bikes</button>
 </div>
@@ -23,27 +8,6 @@
     <uib-accordion-heading>
       {{bikesPost.created_at | date : 'dd/M/yyyy - hh:mm a' : timezone}} &nbsp&nbsp - &nbsp&nbsp <b>{{bikesPost.title}}</b><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
     </uib-accordion-heading>
-    <div class="form-group">
-      <label>Title:</label>
-      <input type="text" class="input form-control" ng-model='bikesPost.title'>
-    </div>
-    <div class="form-group">
-      <label>Price:</label>
-      <input type="text" class="input form-control" ng-model='bikesPost.price'>
-    </div>
-    <div class="form-group">
-      <label>Caption:</label>
-      <input type="text" class="input form-control" ng-model='bikesPost.caption'>
-    </div>
-    <div class="form-group">
-      <label>Color:</label>
-      <input type="text" class="input form-control" ng-model='bikesPost.color'>
-    </div>
-    <div class="form-group">
-      <label>Brand:</label>
-      <input type="text" class="input form-control" ng-model='bikesPost.brand'>
-    </div>
-
     <div class="btn-container row">
         <div class="col-sm-7 col-sm-offset-1">
           <button type="button" class="btn btn-danger" ng-click='openRemoveConfirm(bikesPost)'>Remove</button>

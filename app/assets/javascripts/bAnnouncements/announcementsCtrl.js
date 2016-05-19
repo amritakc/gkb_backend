@@ -17,57 +17,55 @@ function($scope,$state,DataService, ModalService, $uibModal){
 
 
   $scope.openNewContentForm = function(){
-    
-    var modalInstance = $uibModal.open({
-      templateUrl: 'modals/_addContentModal.html',
-      controller: [
-        '$scope', '$uibModalInstance', 'Upload', '$timeout',   function($scope, $uibModalInstance, Upload, $timeout) {
-      
-          // added data to change the dynamic html 
-          $scope.test =0
-          
-          $scope.ok = function(file) {
-            console.log($scope.newsPost, file)
-            $scope.file = file 
-            if(file){
-              file.upload = Upload.upload({
-                url: "https://angular-file-upload-cors-srv.appspot.com/upload",
-                data: {
-                  file: file, title: $scope.newsPost.title, section: "annoucements"
-                }
-              }).then(function (response){
-                console.log(response.data)
-                $timeout(function () {
-                  $scope.result = response.data 
-                });
-              }, function(response){
-                if(respone.status < 0){
-                  $uibModalInstance.close($scope.resut);
-                }
-                else if(response.status > 0){
-                  $scope.errorMsg = response.status + ':' + response.data;
-                }
-              }, function (evt){
-                $scope.progress = Math.min(100, parseInt(100.0 *evt.loaded / evt.total));
-                console.log($scope.progress)
 
-              })
-            }
-          };
-          $scope.cancel = function () {                
+  var modalInstance = $uibModal.open({
+    templateUrl: 'modals/_addAnnouncementsModal.html',
+    controller: [
+      '$scope', '$uibModalInstance', 'Upload', '$timeout',   function($scope, $uibModalInstance, Upload, $timeout) {
+
+        // added data to change the dynamic html 
+        $scope.test =0
+
+        $scope.ok = function(file) {
+          console.log($scope.newsPost, file)
+          $scope.file = file 
+          file.upload = Upload.upload({
+            //this needs to change 
+            url: "https://angular-file-upload-cors-srv.appspot.com/upload",
+            data: {
+            file: file, title: $scope.newsPost.title, section: "annoucements"
+          }
+        }).then(function (response){
+            console.log(response.data)
+            //$timeout() function in AngularJS returns a promise a
+            $timeout(function () {
+            $scope.result = response.data 
+          })
+        }, function(response){
+            console.log('accepted', Date.now())
+
+            if(response.status > 0){
+            $scope.errorMsg = response.status + ':' + response.data;
+          }
+        }, function (evt){
+            $scope.progress = Math.min(100, parseInt(100.0 *evt.loaded / evt.total));
+            console.log($scope.progress)
+          })
+        };
+        
+        $scope.cancel = function () {                
             $uibModalInstance.dismiss();
           }
-          $scope.accept = function(){
-            $uibModalInstance.close();
+        $scope.accept = function(){
+          $uibModalInstance.close();
           }
-        }
-      ]
+        }]
     });
 
-    modalInstance.result.then(function (contentInfo) {
-      contentInfo.section = 'announcements';
-      DataService.create(contentInfo, function(result){
-        self.newsPosts.unshift(result['newContent']);
+modalInstance.result.then(function (contentInfo) {
+  contentInfo.section = 'announcements';
+  DataService.create(contentInfo, function(result){
+    self.newsPosts.unshift(result['newContent']);
       });
     });
   };
@@ -98,20 +96,17 @@ function($scope,$state,DataService, ModalService, $uibModal){
       ]
     })
     modalInstance.result.then(function () { 
-      DataService.remove(selected.id, function(result){
-
-
-       for(var i in  self.newsPosts){
-          console.log(self.newsPosts[i])
-          if( self.newsPosts[i].id=== result['content'].id){
-            
-            console.log('found', result['content'].id)            
-            self.newsPosts.splice(i,1);
+        DataService.remove(selected.id, function(result){
+          for(var i in  self.newsPosts){
+            console.log(self.newsPosts[i])
+            if( self.newsPosts[i].id=== result['content'].id){
+              console.log('found', result['content'].id)            
+              self.newsPosts.splice(i,1);
           }
-       }
+        }
 
       });
-    });
+    }); 
   };
 
 
