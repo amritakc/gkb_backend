@@ -17,13 +17,26 @@
         <label>Title:</label>
         <input name="newsPost" ng-model="newsPost.title" required>
         
-        <h1>{{myForm.newsPost.$valid}}</h1>
-
+        <i  ng-show='myForm.newsPost.$error.required'>Tilte is required </i>        
         </div>
 
         <div>
+
+
+
         <input type="file" ngf-select ng-model='file' name="file" required>
-        <button ng-disabled="!myForm.$valid" ng-click="uploadPic(file, newsPost)">Submit</button>
+          {{progresss}}
+        <span class="progress" ng-show="progress >= 0">
+          <div style="width:{{progresss}}%" ng-bind="progress +'%' ">
+          <span ng-show="file.result">Upload Successful</span>
+          <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+
+          </div>
+          
+        </span>
+        
+
+        <button ng-disabled="!myForm.$valid" ng-click="ok(file)">Submit</button>
 
 
       <br>
