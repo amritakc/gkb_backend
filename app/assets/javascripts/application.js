@@ -22,4 +22,5 @@
 //= require text-angular-sanitize
 //= require text-angular-rangy
 //= require angular-modal-service
+//= require ng-file-upload
 //= require_tree .

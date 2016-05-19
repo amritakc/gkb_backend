@@ -7,6 +7,7 @@ angular.module('adminApp', [
 'textAngular',
 'ngSanitize',
 'angularModalService',
+'ngFileUpload',
 'uiRouterStyles'])
 .config(function($stateProvider,$urlRouterProvider) {
 

@@ -21,12 +21,38 @@ function($scope,$state,DataService, ModalService, $uibModal){
     var modalInstance = $uibModal.open({
       templateUrl: 'modals/_addContentModal.html',
       controller: [
-        '$scope', '$uibModalInstance',  function($scope, $uibModalInstance) {
+        '$scope', '$uibModalInstance', 'Upload', '$timeout',   function($scope, $uibModalInstance, Upload, $timeout) {
       
           // added data to change the dynamic html 
-          $scope.data = {title: "Annoucments" };
-          $scope.ok = function() {
-            $uibModalInstance.close($scope.newsPost);
+          $scope.test =0
+          
+          $scope.ok = function(file) {
+            console.log($scope.newsPost, file)
+            $scope.file = file 
+            if(file){
+              file.upload = Upload.upload({
+                url: "https://angular-file-upload-cors-srv.appspot.com/upload",
+                data: {
+                  file: file, title: $scope.newsPost.title, section: "annoucements"
+                }
+              }).then(function (response){
+                console.log(response.data)
+                $timeout(function () {
+                  $scope.result = response.data 
+                });
+              }, function(response){
+                if(respone.status < 0){
+                  $uibModalInstance.close($scope.resut);
+                }
+                else if(response.status > 0){
+                  $scope.errorMsg = response.status + ':' + response.data;
+                }
+              }, function (evt){
+                $scope.progress = Math.min(100, parseInt(100.0 *evt.loaded / evt.total));
+                console.log($scope.progress)
+
+              })
+            }
           };
           $scope.cancel = function () {                
             $uibModalInstance.dismiss();
