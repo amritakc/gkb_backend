@@ -17,14 +17,11 @@ function($scope,$state,DataService, ModalService, $uibModal){
 
 
   $scope.openNewContentForm = function(){
-    console.log("hi")
     var modalInstance = $uibModal.open({
       templateUrl: 'modals/_addNewsModal.html',
       controller: [
         '$scope', '$uibModalInstance',  function($scope, $uibModalInstance) {
       
-          // added data to change the dynamic html 
-          $scope.data = {title: "News" };
           $scope.ok = function() {
             $uibModalInstance.close($scope.newsPost);
           };
@@ -48,20 +45,15 @@ function($scope,$state,DataService, ModalService, $uibModal){
 
 
   $scope.openRemoveConfirm = function(selected){
-    // used a serivce to pass selected data into remove modal controller
-    ModalService.setProperty(selected); 
 
+    $scope.data = selected
     var modalInstance = $uibModal.open({
       templateUrl:'modals/_removeModal.html',
       controller: [
         '$scope', '$uibModalInstance','ModalService', function($scope, $uibModalInstance, ModalService) {
           
-          //call it here 
-          $scope.data = ModalService.getProperty();
+          $scope.data = self.data
             
-          console.log($scope.data)
-
-
           $scope.ok = function() {
             $uibModalInstance.close($scope.newsPost);
           };
@@ -74,6 +66,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
         }
       ]
     })
+
     modalInstance.result.then(function () { 
       DataService.remove(selected.id, function(result){
 
@@ -90,7 +83,6 @@ function($scope,$state,DataService, ModalService, $uibModal){
       });
     });
   };
-
 
   $scope.update = function(title, text, section,contentId) {
     DataService.update(title, text, section,contentId, function(result){

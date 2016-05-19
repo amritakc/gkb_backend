@@ -72,8 +72,8 @@ modalInstance.result.then(function (contentInfo) {
 
 
   $scope.openRemoveConfirm = function(selected){
-    // used a serivce to pass selected data into remove modal controller
-    ModalService.setProperty(selected); 
+
+    $scope.data = selected ; 
 
     var modalInstance = $uibModal.open({
       templateUrl:'modals/_removeModal.html',
@@ -81,7 +81,7 @@ modalInstance.result.then(function (contentInfo) {
         '$scope', '$uibModalInstance','ModalService', function($scope, $uibModalInstance, ModalService) {
           
           //call it here 
-          $scope.data = ModalService.getProperty();
+          $scope.data = self.data; 
               
           $scope.ok = function() {
             $uibModalInstance.close($scope.newsPost);
@@ -95,6 +95,7 @@ modalInstance.result.then(function (contentInfo) {
         }
       ]
     })
+    
     modalInstance.result.then(function () { 
         DataService.remove(selected.id, function(result){
           for(var i in  self.newsPosts){

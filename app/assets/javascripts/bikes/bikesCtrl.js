@@ -23,7 +23,6 @@ function($scope,$state,DataService, ModalService, $uibModal){
       controller: [
         '$scope', '$uibModalInstance',  function($scope, $uibModalInstance) {
       
-          // added data to change the dynamic html 
           $scope.ok = function() {
             $uibModalInstance.close($scope.bikesPost);
           };
@@ -47,8 +46,8 @@ function($scope,$state,DataService, ModalService, $uibModal){
 
 
   $scope.openRemoveConfirm = function(selected){
-    // used a serivce to pass selected data into remove modal controller
-    ModalService.setProperty(selected); 
+
+    $scope.data = selected 
 
     var modalInstance = $uibModal.open({
       templateUrl:'modals/_removeModal.html',
@@ -56,7 +55,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
         '$scope', '$uibModalInstance','ModalService', function($scope, $uibModalInstance, ModalService) {
           
           //call it here 
-          $scope.data = ModalService.getProperty();
+          $scope.data = self.data
               
           $scope.ok = function() {
             $uibModalInstance.close($scope.bikesPost);
