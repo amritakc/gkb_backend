@@ -1,50 +1,50 @@
-<div> 
+<div>
   <div class="modal-content">
     <div class="modal-header">
         <h4>Annoucments</h4>
     </div>
     <div class="modal-body">
-       Text 
-       <button ng-click="test= 2"> Text</button>
-       <button ng-click="test= 1">Image</button>
+       Text
+       <button class='btn btn-primary' ng-click="test= 2"> Text</button>
+       <button class='btn btn-success' ng-click="test= 1">Image</button>
 
 
        <span ng-show="test==1">
-       
+
         <form name="myForm">
 
         <div class="form-group">
         <label>Title:</label>
-        <input name="newsPost" ng-model="newsPost.title" required>
-        
-        <i  ng-show='myForm.newsPost.$error.required'>Tilte is required </i>        
+        <input class='form-control' name="newsPost" ng-model="newsPost.title" required>
+
+        <i  ng-show='myForm.newsPost.$error.required'>Tilte is required </i>
         </div>
 
         <div>
 
 
 
-        <input type="file" ngf-select ng-model='file' name="file" required>
-          {{progresss}}
-        <span class="progress" ng-show="progress >= 0">
-          <div style="width:{{progresss}}%" ng-bind="progress +'%' ">
+        <input class='btn btn-default' type="file" ngf-select ng-model='file' name="file" required>
+          <!-- {{progress}} -->
+          <span class="progress" ng-show="progress >= 0">
+          <div style="width:{{progress}}%; border-radius: 10px; background-color: green; text-align: center" ng-bind="progress +'%' ">
           <span ng-show="file.result">Upload Successful</span>
           <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
 
           </div>
-          
+
         </span>
-        
 
-        <button ng-disabled="!myForm.$valid" ng-click="ok(file)">Submit</button>
+
+        <button class='btn btn-warning' ng-disabled="!myForm.$valid" ng-click="ok(file)">Submit</button>
 
 
       <br>
       <br>
       <br>
-      </div>  
+      </div>
       </form>
-    </div>     
+    </div>
     </span>
 
 
@@ -54,7 +54,7 @@
         <label>Title:</label>
         <input type="text" class="input form-control" ng-model='newsPost.title'>
       </div>
-      
+
       <text-angular ng-model="newsPost.text"></text-angular>
 
       <div class="btn-container row">
@@ -62,12 +62,12 @@
           <button type="button" class="btn btn-danger btn-lg" ng-click='cancel()'>Cancel</button>
         </div>
         <div class="col-sm-1 col-sm-offset-1">
-          <button type="button" class="btn btn-primary btn-lg" ng-click="ok()">Save</button>     
+          <button type="button" class="btn btn-primary btn-lg" ng-click="ok()">Save</button>
         </div>
        </span>
-        
 
-       
+
+
 
 
 
