@@ -10,6 +10,10 @@ var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate']);
 				templateUrl: 'static/partials/volunteer.html',
 				controller: 'volunteersCtrl'
 			})
+			.when('/community', {
+				templateUrl: 'static/partials/community.html',
+				controller: 'communityCtrl'
+			})
 			.when('/donations', {
 				templateUrl: 'static/partials/donate.html',
 				controller: 'donationsCtrl'
