@@ -104,8 +104,12 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
     overflow: hidden;
     position: relative;
     background: #e6e6e6;
-    border: 20px solid #FFF;
-    margin-top: 20px;
+    border: 10px solid #FFF;
+}
+
+.slider > a {
+  height: 30%;
+  width: 10%;
 }
 
 .slide {
@@ -124,31 +128,31 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
     height: 71px;
     outline: none;
     cursor: pointer;
-    background: url(../assets/img/blank.gif) no-repeat;
+    background: no-repeat;
 }
 
 .arrow.prev {
     opacity: 0.2;
     left: 20px;
-    background-image: url(../assets/img/paddle_prev_999.png);
+    background-image: url(http://www.thechildrensplayground.com/resources/images/carousel/left-arrow.png);
     transition: 0.2s linear all;
 }
 
 .arrow.next {
     opacity: 0.2;
     right: 20px;
-    background-image: url(../assets/img/paddle_next_999.png);
+    background-image: url(http://www.thechildrensplayground.com/resources/images/carousel/right-arrow.png);
     transition: 0.2s linear all;
 }
 
 .arrow.prev:hover {
     opacity: 1;
-    background-image: url(../assets/img/paddle_prev_fff.png);
+    background-image: url(http://www.thechildrensplayground.com/resources/images/carousel/left-arrow.png);
 }
 
 .arrow.next:hover {
     opacity: 1;
-    background-image: url(../assets/img/paddle_next_fff.png);
+    background-image: url(http://www.thechildrensplayground.com/resources/images/carousel/right-arrow.png);
 }
 
 
