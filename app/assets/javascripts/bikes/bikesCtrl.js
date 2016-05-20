@@ -22,7 +22,9 @@ function($scope,$state,DataService, ModalService, $uibModal){
       templateUrl: 'modals/_addBikeModal.html',
       controller: [
         '$scope', '$uibModalInstance',  function($scope, $uibModalInstance) {
-      
+        
+          // added data to change the dynamic html 
+          $scope.data = {title: "Bikes" };
           $scope.ok = function() {
             $uibModalInstance.close($scope.bikesPost);
           };
@@ -35,7 +37,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
         }
       ]
     });
-
+    
     modalInstance.result.then(function (contentInfo) {
       contentInfo.section = 'bikes';
       DataService.create(contentInfo, function(result){
@@ -43,7 +45,6 @@ function($scope,$state,DataService, ModalService, $uibModal){
       });
     });
   };
-
 
   $scope.openRemoveConfirm = function(selected){
 

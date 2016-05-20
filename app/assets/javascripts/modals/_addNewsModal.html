@@ -1,3 +1,5 @@
+<!-- stylesheet linked to for the picture size -->
+<link rel="stylesheet" type="text/css" href="../stylesheets/news.css">
 <div> 
   <div class="modal-content">
     <div class="modal-header">
@@ -5,7 +7,9 @@
     </div>
     <div class="modal-body">
    
-     <input type="file" ngf-select ng-model="file" name="file" required>
+      <!-- file upload here, added picture preview -->
+      <input type="file" ngf-select ng-model="picFile" name="file" required> 
+      <img id="thumb" ng-show="myForm.file.$valid" ngf-thumbnail="picFile">
 
       <div class="form-group">
         <label>Title:</label>

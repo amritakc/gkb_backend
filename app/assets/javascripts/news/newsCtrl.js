@@ -22,7 +22,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
       controller: [
         '$scope', '$uibModalInstance','Upload', '$timeout',  function($scope, $uibModalInstance) {
       
-         $scope.ok = function(file) {
+        $scope.ok = function(file) {
           console.log($scope.newsPost, file)
           $scope.file = file 
           file.upload = Upload.upload({
@@ -33,14 +33,11 @@ function($scope,$state,DataService, ModalService, $uibModal){
              }
             }).then(function (response){
               //$timeout() function in AngularJS returns a promise a
-              $timeout(function () {
-                
+              $timeout(function () {          
                 $scope.result = response.data 
-
             })
           }, function(response){
               console.log('accepted', Date.now())
-
               if(response.status > 0){
                 $scope.errorMsg = response.status + ':' + response.data;
               }
@@ -49,7 +46,6 @@ function($scope,$state,DataService, ModalService, $uibModal){
                 console.log($scope.progress)
               })
            };
-
           $scope.cancel = function () {                
             $uibModalInstance.dismiss();
           }

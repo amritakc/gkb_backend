@@ -1,0 +1,12 @@
+/*Place all the styles related to the bikes controller here.
+They will automatically be included in application.css.
+You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+#thumb {
+    width: 150px;
+    height: 150px;
+    float: none;
+    position: relative;
+    top: 7px;
+    margin-bottom:10px;
+}
