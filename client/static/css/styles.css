@@ -474,11 +474,13 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 .communitycontent {
+
   width: 90%;
   margin: auto;
   margin-top: 5%;
   margin-bottom: 5%;
   padding: 1%;
+
 
 }
 
