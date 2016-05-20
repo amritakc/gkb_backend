@@ -552,7 +552,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 #tools {
-  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("/static/img/tools.jpg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url("/static/img/tools.jpg") center center no-repeat;
   background-size: auto 100%;
 
 }
