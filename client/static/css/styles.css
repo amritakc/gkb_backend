@@ -474,38 +474,42 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 .communitycontent {
-  width: 70%;
+  width: 90%;
   margin: auto;
-  margin-left: 15%;
   margin-top: 5%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
+  padding: 1%;
 
 }
 
 .communityboxes {
   width: 20em;
-  height: 20em;
+  height: 100%;
   display: inline-block;
   vertical-align: top;
   color: white; 
-  margin-left: 3%;
+  margin-left: 4%;
   margin-right: 3%;
-  margin-bottom: 
+  margin-bottom: 2%;
 
 
 }
 
-.communityboxes h3 {
+.img-community h3 {
   text-align: center;
-  font-weight: 300;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 40%;
+  position: inherit;
 }
 
 .communityboxes p {
-  width: 60%;
+  width: 80%;
   margin: auto;
   font-weight: 200;
   text-align: justify;
   margin-bottom: 4%;
+  margin-top: 2%;
 }
 
 /*.communityboxes:nth-child(2n) {
@@ -523,36 +527,36 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 #transport {
-  background: url("/static/img/commute.jpeg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("/static/img/commute.jpeg") center center no-repeat;
   background-size: auto 100%;
   
 }
 
 #work4bikes {
-  background: url("/static/img/smile.jpeg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("/static/img/smile.jpeg") center center no-repeat;
   background-size: auto 100%;
 
 }
 
 #sponsor-bike {
-  background: url("/static/img/bike5.jpg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("/static/img/bike5.jpg") center center no-repeat;
   background-size: auto 100%;
 }
 
 #saturday-clinic {
-  background: url("/static/img/gears.jpeg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("/static/img/gears.jpeg") center center no-repeat;
   background-size: auto 100%;
 
 }
 
 #tools {
-  background: url("/static/img/tools.jpg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("/static/img/tools.jpg") center center no-repeat;
   background-size: auto 100%;
 
 }
 
 #karmakids {
-  background: url("/static/img/kids.jpg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("/static/img/kids.jpg") center center no-repeat;
 
 }
 
