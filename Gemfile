@@ -33,7 +33,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
  gem 'bcrypt', '~> 3.1.7'
 
  gem 'hirb'
-
+ gem 'aws-sdk', '~>2'
+ gem 'aws-sdk-rails'
+ gem 's3-authorize'
+ gem 'figaro'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
