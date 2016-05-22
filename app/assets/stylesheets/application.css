@@ -200,10 +200,6 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
   box-shadow: 10px 10px 5px 3px #888888;
 
 }
-#login-box {
-  width: 30em;
-  margin: auto;
-}
 .login input:focus {
     background-color: #95FFFF;
 }
@@ -237,4 +233,9 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 
 .ng-toast__list {
   list-style: none;
+  padding:0px 2em 0px 2em;
+}
+
+.row-centered {
+  text-align:center;
 }

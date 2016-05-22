@@ -8,6 +8,6 @@ function($scope,$state,Auth){
 
   $scope.$on('devise:logout', function (e, user){
     $scope.user = {};
-    $state.go('login')
+    location.reload();
   });
 }]);
