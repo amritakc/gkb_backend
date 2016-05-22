@@ -9,7 +9,8 @@
 
       <div class="form-group">
         <label>Title:</label>
-        <input type="text" class="input form-control" ng-model='newsPost.title'>
+        <input type="text" class="input form-control" ng-model='newsPost.title' required>
+        <span ng-show="form-group.test.$invalid">Required</span>
       </div>
 
       <text-angular ng-model="newsPost.text"></text-angular>

@@ -6,19 +6,21 @@
     <div class="modal-body">
       <div class="form-group">
         <label>Title:</label>
-        <input type="text" class="input form-control" ng-model='bikesPost.title'>
+        <input class="form-control" name="bikesPost" minlength="1" ng-model='bikesPost.title' required>
+        <i  ng-show='form-group.bikesPost.$error.required'>Tilte is required </i>
+      </div>
       </div>
       <div class="form-group">
         <label>Price:</label>
-        <input type="text" class="input form-control" ng-model='bikesPost.price'>
+        <input type="text" class="input form-control" ng-model='bikesPost.price' required>
       </div>
       <div class="form-group">
         <label>Caption:</label>
-        <input type="text" class="input form-control" ng-model='bikesPost.caption'>
+        <input type="text" class="input form-control" ng-model='bikesPost.caption' required>
       </div>
       <div class="form-group">
         <label>Color:</label>
-        <input type="text" class="input form-control" ng-model='bikesPost.color'>
+        <input type="text" class="input form-control" ng-model='bikesPost.color' required>
       </div>
       <div class="form-group">
         <label>Brand:</label>
