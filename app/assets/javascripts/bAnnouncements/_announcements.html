@@ -1,5 +1,5 @@
 <div class="col-sm-offset-9 new-content-btn">
-  <button type="button" class="btn btn-primary" ng-click="openNewContentForm()">Add Annoucements</button>
+  <button type="button" class="btn btn-success" ng-click="openNewContentForm()">Add Annoucements</button>
 </div>
 <uib-accordion close-others="oneAtATime">
   <uib-accordion-group ng-repeat="newsPost in newsPosts.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))| orderBy: 'created_at':true">
