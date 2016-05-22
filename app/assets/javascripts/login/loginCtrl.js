@@ -3,18 +3,18 @@ angular.module('adminApp')
 '$scope',
 '$state',
 'Auth',
-function ($scope, $state, Auth) {
+'ngToast',
+function ($scope, $state,Auth,ngToast) {
         var credentials = {
             email: 'user@domain.com',
             password: 'password1',
             password_confirmation: 'password1'
         };
   $scope.login = function() {
-    console.log($scope.user)
     Auth.login($scope.user).then(function(){
       $state.go('dashboard');
-    },function(yo){
-      console.log(yo)
+    },function(err){
+      ngToast.danger(err.data.error)
     });
   };
 

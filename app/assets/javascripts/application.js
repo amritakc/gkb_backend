@@ -23,4 +23,5 @@
 //= require text-angular-rangy
 //= require angular-modal-service
 //= require ng-file-upload
+//= require ngToast
 //= require_tree .

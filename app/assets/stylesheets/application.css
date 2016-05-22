@@ -234,3 +234,7 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 .new-content-btn {
   margin-bottom: 1em;
 }
+
+.ng-toast__list {
+  list-style: none;
+}

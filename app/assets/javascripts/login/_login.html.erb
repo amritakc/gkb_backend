@@ -7,30 +7,32 @@
       <h2>Welcome, Admin! Please Login.</h2>
     </div>
   </div>
-  <div class="jumbotron" id="login-box">
-
-    <div class="container">
-      <div class="login">
-            <h2>Login</h2>
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username" ng-model="user.email" class="form-control" />
-                <span  class="help-block">Username is required</span>
+  <div class="col-md-12">
+    <toast></toast>
+    <div class="jumbotron" id="login-box">
+      <div class="container">
+        <div class="login">
+          <h2>Login</h2>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" ng-model="user.email" class="form-control" />
+            <span  class="help-block">Username is required</span>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" ng-model="user.password"/>
+            <span class="help-block">Password is required</span>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <button ng-click='open()' class="btn btn-success">Forgot Password</button>
             </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" name="password" id="password" class="form-control" ng-model="user.password"/>
-              <span class="help-block">Password is required</span>
+            <div class="col-md-4">
+              <button ng-click="login()" class="btn btn-success">Login</button>
             </div>
-            <div class="row">
-              <div class="col-md-8">
-                <button ng-click='open()' class="btn btn-success">Forgot Password</button>
-              </div>
-              <div class="col-md-4">
-                <button ng-click="login()" class="btn btn-success">Login</button>
-              </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
   </div>
 </div>
