@@ -10,7 +10,7 @@ class ContentsController < ApplicationController
     puts S3_BUCKET
     content = Content.new(title:params[:title],text:params[:text],section:Section.find_by_name(params[:section]))
     if content.save
-      obj = S3_BUCKET.object('/params[:file].original_filename')
+      obj = S3_BUCKET.object('/' + params[:file].original_filename)
       if obj.upload_file(params[:file].path, acl: 'public-read')
         content.update_attribute(:url, obj.public_url)
       end
