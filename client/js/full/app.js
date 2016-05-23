@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate']);
 	
 	myApp.config(function($routeProvider) {
 		$routeProvider
@@ -9,6 +9,10 @@ var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap']);
 			.when('/volunteers', {
 				templateUrl: 'static/partials/volunteer.html',
 				controller: 'volunteersCtrl'
+			})
+			.when('/community', {
+				templateUrl: 'static/partials/community.html',
+				controller: 'communityCtrl'
 			})
 			.when('/donations', {
 				templateUrl: 'static/partials/donate.html',
@@ -47,6 +51,48 @@ function locFactory($location) {
 
 	return factory;
 }
+myApp.factory('picFactory', picFactory);
+
+function picFactory() {
+	var factory = {
+		slides: [
+			{ image: '/static/img/bike1a.jpg', description: 'Image' },
+			{ image: '/static/img/bike1b.jpg', description: 'Image' },
+			{ image: '/static/img/bike1c.jpg', description: 'Image' },
+			{ image: '/static/img/bike1d.jpg', description: 'Image' },
+			{ image: '/static/img/bike1e.jpg', description: 'Image' }
+		],
+	};
+
+	return factory;
+}
+myApp.animation('.slide-animation', function() {
+	return {
+		addClass: function (element, className, done) {
+			if (className == 'ng-hide') {
+				TweenMax.to(element, 0.5, {left: -element.parent().width(), onComplete: done });
+			}
+			else {
+				done();
+			}
+		},
+		removeClass: function (element, className, done) {
+			if (className == 'ng-hide') {
+				element.removeClass('ng-hide');
+				TweenMax.set(element, { left: element.parent().width() });
+                TweenMax.to(element, 0.5, {left: 0, onComplete: done });
+			}
+			else {
+				done();
+			}
+		}
+	};
+});
+myApp.controller('communityCtrl', communityCtrl);
+
+function communityCtrl($scope) {
+	var vm = this;
+}
 myApp.controller('donationsCtrl', function($scope) {
 	
 });
@@ -77,6 +123,35 @@ function headerCtrl($scope, $location, $interval, locFactory) {
 myApp.controller('homeCtrl', function($scope) {
 	
 });
+myApp.controller('mainCtrl', mainCtrl);
+
+function mainCtrl($scope, picFactory) {
+	var vm = this;
+
+	$scope.slides = picFactory.slides;
+	$scope.currentSlideIdx = 0;
+	$scope.setCurrentSlideIdx = setCurrentSlideIdx;
+	$scope.isCurrentSlideIdx = isCurrentSlideIdx;
+	$scope.prevSlide = prevSlide;
+	$scope.nextSlide = nextSlide;
+
+	// Function implementations
+	function setCurrentSlideIdx(index) {
+		$scope.currentSlideIdx = index;
+	}
+
+	function isCurrentSlideIdx(index) {
+		return $scope.currentSlideIdx === index;
+	}
+
+	function prevSlide() {
+		$scope.currentSlideIdx = ($scope.currentSlideIdx < $scope.slides.length - 1) ? ++$scope.currentSlideIdx : 0;
+	}
+
+	function nextSlide() {
+		$scope.currentSlideIdx = ($scope.currentSlideIdx > 0) ? --$scope.currentSlideIdx : $scope.slides.length - 1;
+	}
+}
 myApp.controller('navCtrl', function($scope, $location, $window, locFactory) {
 	$scope.small = false;
 	$scope.showLinks = showLinks;

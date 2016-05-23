@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate']);
 	
 	myApp.config(function($routeProvider) {
 		$routeProvider
@@ -9,6 +9,10 @@ var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap']);
 			.when('/volunteers', {
 				templateUrl: 'static/partials/volunteer.html',
 				controller: 'volunteersCtrl'
+			})
+			.when('/community', {
+				templateUrl: 'static/partials/community.html',
+				controller: 'communityCtrl'
 			})
 			.when('/donations', {
 				templateUrl: 'static/partials/donate.html',
