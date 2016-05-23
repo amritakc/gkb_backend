@@ -18,9 +18,13 @@ angular.module('adminApp', [
       templateUrl: 'login/_login.html',
       controller:'loginCtrl',
       onEnter: ['$state', 'Auth', function($state, Auth) {
-          Auth.currentUser().then(function (){
+        if(Auth.isAuthenticated()){
+          if ($state.current.url != '/'){
             $state.go('dashboard');
-          })
+          } else {
+            $state.go('newsPage');
+          }
+        }
         }]
       })
     .state('dashboard', {

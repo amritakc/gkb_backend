@@ -10,4 +10,5 @@ function($scope,$state,Auth){
     $scope.user = {};
     location.reload();
   });
+
 }]);
