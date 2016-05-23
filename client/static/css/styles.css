@@ -1040,16 +1040,15 @@ background-repeat: no-repeat;
 background-position: center;
 }
 #warranty h1{
-
     border: 0;
     color: #FFF;
     cursor: pointer;
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 200;
-    margin-top:.1em; /*needed. to override previously set margin*/
+    margin-top:.3em; /*needed. to override previously set margin*/
 }
 
 #policy img{
@@ -1088,7 +1087,7 @@ display: inline-block;
 /*GKB warranty and Policy page starts*/
 #gkbwarranty h3{
     color: #38812d;
-    font-size:  3.3em;
+    font-size: 3.3em;
     font-weight: 50;
     text-transform: uppercase;
     padding-top: .7em;
