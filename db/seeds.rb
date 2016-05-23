@@ -8,3 +8,5 @@
 
 #User.create(email:'user@gmail.com', encrypted_password:'#$taawktljasktlw4aaglj')
 User.create(:email => 'user@gmail.com', :password => 'password', :password_confirmation => 'password')
+Section.create(:name => 'announcements')
+Section.create(:name => 'news')
