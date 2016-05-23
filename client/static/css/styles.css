@@ -939,6 +939,7 @@ d-expand-collapse {
 .shop-wrapper {
   height: 100%;
   width: 100%;
+  margin-bottom: 5%;
 }
 
 .shopgroup {
@@ -1080,11 +1081,10 @@ width: 100%;
 height: 15.5em;
 display: inline-block;
 }
-/****/
+/*CLASSES section starts*/
 .classes {
   width: 100%;
   height: 100%;
-/*  padding: 3em 2em;*/
   background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("/static/img/thankyou.jpg") center center no-repeat;
   background-size: cover;
   position: relative;
@@ -1097,7 +1097,6 @@ display: inline-block;
   font-size: 3em;
   font-weight: 200;
   margin-bottom: 2em;
-/*  font-style: italic;*/
 }
 .parktool {
   width: 50%;
@@ -1108,12 +1107,21 @@ display: inline-block;
   background-size:cover;
   margin-bottom: 5em;
 }
-/*****/
-/*.parktool img{
-  width: 100%;
-  height: 100%;
-}*/
-
+.parktool h2{
+  color: white;
+  font-weight: 200;
+  padding-top: 1em;
+  font-size: 3em;
+  font-weight: 200;
+}
+.parktool img{
+width: auto;
+height: 13em;
+text-align: center;
+display: inline-block;
+margin-top: 1.5em;
+}
+/*CLASSES section ends*/
 /* Shop Page Ends*/
 
 /*GKB warranty and Policy page starts*/
