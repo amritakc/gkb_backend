@@ -18,6 +18,14 @@ var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap']);
 				templateUrl: 'static/partials/shop.html',
 				controller: 'storeCtrl'
 			})
+			.when('/gkbwarranty', {
+				templateUrl: 'static/partials/gkbwarranty.html',
+				controller: 'warrantyCtrl'
+			})
+			.when('/gkbpolicy', {
+				templateUrl: 'static/partials/gkbpolicy.html',
+				controller: 'policyCtrl'
+			})
 			.when('/news', {
 				templateUrl: 'static/partials/news.html',
 				controller: 'newsCtrl'
@@ -111,6 +119,12 @@ myApp.controller('newsCtrl', function($scope) {
 
 });
 myApp.controller('storeCtrl', function($scope) {
+
+});
+myApp.controller('warrantyCtrl', function($scope) {
+
+});
+myApp.controller('policyCtrl', function($scope) {
 
 });
 myApp.controller('volunteersCtrl', function($scope) {

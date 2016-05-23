@@ -600,126 +600,6 @@ d-expand-collapse {
 
 /* Volunteer  End*/
 
-/* Shop  page Starts*/
-#shop-wrapper {
-  height: 100%;
-  width: 100%;
-}
-
-.shopgroup {
-  height: 50%;
-  width: 100%;
-  text-align: center;
-  display: inline-block;
-  padding-top: 2em;
-}
-
-.shopgroup h1 {
-  text-align: center;
-  margin-bottom: 0.5em;
-  margin-top: 2em;
-}
-.shopgroup h3 {
-  text-align: center;
-  margin-bottom: 2em;
-  margin-top: 2em;
-}
-.shopgroup h4 {
-  font-style: italic;
-  text-align: center;
-  margin-bottom: 2em;
-  margin-top: 2em;
-}
-
-.shopboxes:nth-of-type(2) {
-  margin-left: 5em;
-
-}
-.shopboxes:nth-of-type(3) {
-  margin-left: 5em;
-  margin-right: 5em;
-}
-
-.shopboxes {
-width: 20%;  /*changing  45%*/
-height: 50%;
-display: inline-block;
-}
-
-.shopboxes h4 {
-  margin-top: 0.5em;
-}
-
-.shopboxes img {
-width: 100%;
-height: 12.5em;  /*changing from 21.5, 15.5%*/
-display: inline-block;
-}
-
-/*  start boxes for logos*/
-
-.shopboxeslogo:nth-of-type(2) {
-  margin-left: 5em;
-}
-
-.shopboxeslogo {
-width: 45%;
-height: 50%;  /*height 50%*/
-text-align: center;
-display: inline-block;
-}
-
-
-.shopboxeslogo img{
-width: 100%;
-height: auto; /*height 15.5em*/
-display: inline-block;
-
-
-}
-
-#ebaylogo {
-padding:0em 7em 0em 7em;
-text-align: center;
-}
-
-#craigslistlogo img{
-width: auto;
-height: 11em;  /*height 15.5em*/
-text-align: center;
-
-display: inline-block;
-}
-
-/*end boxes for logos*/
-
-.shopboxesinfo h3 {
-  text-align: center;
-  margin-bottom: 2em;
-  margin-top: 2em;
-}
-.shopboxesinfo img {
-  text-align: center;
-  margin-top: 0.2em;
-}
-
-.shopboxesinfo:nth-of-type(2) {
-  margin-left: 5em;
-}
-
-.shopboxesinfo {
-width: 45%;
-height: 50%;
-display: inline-block;
-}
-
-.shopboxesinfo img {
-width: 100%;
-height: 15.5em;
-display: inline-block;
-}
-
-/* Shop Ends*/
 
 #wrapper {
   margin: 0;
@@ -900,6 +780,227 @@ display: inline-block;
     height: auto;
     margin-left: 25%;
   }
+
+/* Shop  page Starts*/
+
+
+.shop-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.shopgroup {
+  height: 50%;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  padding-top: 2em;
+  padding-bottom: 2em;
+ /* background-color: grey;*/
+}
+
+.shopgroup h1 {
+  text-align: center;
+  margin-bottom: 0.5em;
+  margin-top: 2em;
+}
+.shopgroup h3 {
+  text-align: center;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+.shopgroup h4 {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+.shopboxes:nth-of-type(2) {
+  margin-left: 5em;
+
+}
+.shopboxes:nth-of-type(3) {
+  margin-left: 5em;
+  margin-right: 5em;
+}
+
+.shopboxes {
+width: 20%;  /*changing  45%*/
+height: 50%;
+display: inline-block;
+}
+
+.shopboxes h4 {
+  margin-top: 0.5em;
+}
+
+.shopboxes img {
+width: 100%;
+height: 12.5em;  /*changing from 21.5, 15.5%*/
+display: inline-block;
+}
+
+/*  start boxes for logos*/
+
+.shopboxeslogo:nth-of-type(2) {
+  margin-left: 5em;
+}
+
+.shopboxeslogo {
+width: 45%;
+height: 50%;  /*height 50%*/
+text-align: center;
+display: inline-block;
+}
+
+
+.shopboxeslogo img{
+width: 100%;
+height: auto; /*height 15.5em*/
+display: inline-block;
+
+
+}
+
+#ebaylogo {
+padding:0em 7em 0em 7em;
+text-align: center;
+}
+
+#craigslistlogo img{
+width: auto;
+height: 11em; /* height 15.5em*/
+text-align: center;
+
+display: inline-block;
+}
+
+/*end boxes for logos*/
+
+#warranty{
+height: 4em;
+background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("/static/img/pricebike.jpg");
+background-size: auto 100%;
+background-size: cover;
+overflow: hidden;
+background-repeat: no-repeat;
+background-position: center;
+}
+#warranty h1{
+
+    border: 0;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font-size: 3em;
+    font-weight: 200;
+    margin-top:.1em; /*needed. to override previously set margin*/
+}
+
+#policy img{
+height: 5em;
+}
+.shopboxesinfo {
+width: 45%;
+height: 50%;
+display: inline-block;
+}
+
+.shopboxesinfo h3 {
+  text-align: center;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+.shopboxesinfo img {
+  text-align: center;
+  margin-top: 0.2em;
+}
+
+.shopboxesinfo:nth-of-type(2) {
+  margin-left: 5em;
+}
+
+
+.shopboxesinfo img {
+width: 100%;
+height: 15.5em;
+display: inline-block;
+}
+/****/
+
+/* Shop Page Ends*/
+
+/*GKB warranty and Policy page starts*/
+#gkbwarranty h3{
+    color: #38812d;
+    font-size:  3.3em;
+    font-weight: 50;
+    text-transform: uppercase;
+    padding-top: .7em;
+    text-align: center;
+    vertical-align: middle;
+}
+#gkbwarranty img{
+  padding-bottom: .7em;
+  margin-left: 11em;
+}
+#gkbwarranty h5{
+  font-size:  1.8em;
+}
+#gkbwarranty h4{
+  color: #38812d;
+  padding-top: 2em;
+  font-size:  2.7em;
+  text-align: center;
+}
+#gkbwarranty p{
+  padding-top: 2em;
+  font-size:  1.7em;
+  text-align: center;
+}
+#gkbwarranty ul{
+font-size:  1.5em;
+display: inline-block;
+vertical-align: top;
+padding-left: 2em;
+margin-left: 3.5em;
+}
+
+#gkbpolicy h3{
+    color: #38812d;
+    font-size:  3.3em;
+    font-weight: 50;
+    text-transform: uppercase;
+    padding-top: .7em;
+    text-align: center;
+    vertical-align: middle;
+}
+#gkbpolicy img{
+  padding-bottom: .7em;
+  margin-left: 11em;
+}
+#gkbpolicy h5{
+  color: #38812d;
+  padding-top: 2em;
+  font-size:  1.8em;
+  font-weight: bold;
+}
+#gkbpolicy p{
+  font-size:  1.7em;
+
+}
+#gkbpolicy ol{
+font-size:  1.5em;
+display: inline-block;
+vertical-align: top;
+padding-left: 2em;
+margin-left: 3.5em;
+}
+
+/*GKB warranty and Policy page ends*/
 
 
 /*Styling for Donation Page*/
