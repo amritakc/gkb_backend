@@ -5,9 +5,16 @@ class ContentsController < ApplicationController
   end
 
   def create
+    puts "****************"
+    # puts params[:file].original_filename
+    puts S3_BUCKET
     content = Content.new(title:params[:title],text:params[:text],section:Section.find_by_name(params[:section]))
     if content.save
-      render :json => {newContent: Section.find_by_name(params[:section]).contents.last}
+      obj = S3_BUCKET.object('/params[:file].original_filename')
+      if obj.upload_file(params[:file].path, acl: 'public-read')
+        content.update_attribute(:url, obj.public_url)
+      end
+      render :json => {content: Section.find_by_name(params[:section]).contents.last}
     else
       # flash[:errors] = content.errors.full_messages
       @errors = content.errors.full_messages
@@ -15,7 +22,9 @@ class ContentsController < ApplicationController
     end
     # render :json => {success: "created content in the backend"}
     # redirect_to :back
-
+    # puts '******************'
+    # puts params
+    # redirect_to :back
   end
   def update
     

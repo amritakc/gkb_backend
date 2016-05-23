@@ -7,7 +7,7 @@
 # s3_signature = s3_authorize.signature(s3_policy)
 
 s3 = Aws::S3::Resource.new(
-	credentials: Aws::Credentials.new(ENV['AWS_ACCESS_KEY_ID'], ENV['AWS_SECRET_ACCESS_KEY']),
+	credentials: Aws::Credentials.new(ENV['AWS_Access_Key_ID'], ENV['AWS_Secret_Access_Key']),
 	region: 'us-west-1'
 	)
 S3_BUCKET = s3.bucket(ENV['S3_BUCKET'])

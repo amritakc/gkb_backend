@@ -6,6 +6,10 @@
     <div class="modal-body">
       <form name="myForm">
         <div class="form-group">
+          <label>Image:</label>
+          <input class='btn btn-default' type="file" ngf-select ng-model='file' name="file" required>
+        </div>
+        <div class="form-group">
           <label>Title:</label>
           <input class="form-control" name="bikesPost" ng-model='bikesPost.title' required>
         </div>

@@ -5,6 +5,7 @@ angular.module('adminApp')
 'DataService',
 'ModalService',
 '$uibModal',
+'Upload',
 //injected the modal service  into controller 
 function($scope,$state,DataService, ModalService, $uibModal){
   //Accordian config
@@ -20,16 +21,19 @@ function($scope,$state,DataService, ModalService, $uibModal){
     var modalInstance = $uibModal.open({
       templateUrl: 'modals/_addNewsModal.html',
       controller: [
-        '$scope', '$uibModalInstance','Upload', '$timeout',  function($scope, $uibModalInstance) {
+        '$scope', '$uibModalInstance','Upload', '$timeout',  function($scope, $uibModalInstance, Upload, $timeout) {
       
          $scope.ok = function(file) {
           console.log($scope.newsPost, file)
           $scope.file = file 
+          console.log(Upload)
+
           file.upload = Upload.upload({
             //this needs to change 
-            url: "https://angular-file-upload-cors-srv.appspot.com/upload",
+            url: '/contents/create',
+            // url: "https://angular-file-upload-cors-srv.appspot.com/upload",
             data: {
-            file: file, title: $scope.newsPost.title, section: "annoucements"
+            file: file, title: $scope.newsPost.title, section: "news", text: $scope.newsPost.text
              }
             }).then(function (response){
               //$timeout() function in AngularJS returns a promise a
