@@ -225,6 +225,7 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 
 .login h2, .login label {
   text-shadow: .5px .5px grey;
+  color:white;
 }
 
 .login-btn-group {
@@ -232,7 +233,7 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
   text-align: center;
 }
 
-.login-btn-group button {
+.login-btn-group button, .login-btn-group input[type="submit"] {
   min-width:10em;
 }
 
@@ -319,3 +320,11 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
 }
+/*end modal*/
+
+/*Change password form*/
+.change-password-form button{
+  margin-top: 20px;
+  margin-left: 140px;
+}
+/*end change password*/

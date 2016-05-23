@@ -1,13 +1,13 @@
 <div class="col-md-9">
   <toast></toast>
   <h1>Change Password</h1>
-  <form ng-submit="changePassword()">
+  <form ng-submit="changePassword()" class="change-password-form">
     <label for="">Current Password</label>
-    <input type="text" class="input form-control" ng-model='userPassword.user.current_password' required>
+    <input type="password" class="input form-control" ng-model='userPassword.user.current_password'>
     <label for="">New Password</label>
-    <input type="text" class="input form-control" ng-model='userPassword.user.password' required>
+    <input type="password" class="input form-control" ng-model='userPassword.user.password'>
     <label for="">Confirm Password</label>
-    <input type="text" class="input form-control" ng-model='userPassword.user.password_confirmation' required>
+    <input type="password" class="input form-control" ng-model='userPassword.user.password_confirmation'>
     <button type="submit" class="btn btn-success">Change Password</button>
   </form>
 </div>

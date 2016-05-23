@@ -5,13 +5,13 @@
     </div>
     <div class="modal-body">
        Please Select:
-       <div class='btn-group'>
-         <button class='btn btn-success' ng-model="checkModel.left" ng-click="test= 2" uib-btn-checkbox> Text</button>
-         <button class='btn btn-success' ng-model="checkModel.right" ng-click="test= 1" uib-btn-checkbox>Image</button>
-       </div>
+       <form class='btn-group' ng-init="checkOption = 'text'">
+         <label><input type="radio" class='radio-inline' ng-model="checkOption" value="text"> Text</label>
+         <label><input type="radio" class='radio-inline' ng-model="checkOption" value="image"> Image</label>
+       </form>
 
 
-       <span ng-show="test==1">
+       <span ng-show="checkOption == 'image'">
 
         <form name="myForm">
 
@@ -69,7 +69,7 @@
 
 
 
-      <span ng-show="test==2">
+      <div ng-show="checkOption == 'text'">
       <div class="form-group">
         <label>Title:</label>
         <input type="text" class="input form-control" ng-model='newsPost.title' required>

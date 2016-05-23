@@ -3,8 +3,11 @@ class AdminsController < ApplicationController
 
   def change_password
     @user = User.find(params["id"])
-    p params["user"]
-    if @user.valid_password?(params["user"]["current_password"])
+    if params["user"] == nil
+      render:json => {errors: ["Fields cannot be blank"]}
+      return
+    end
+    if @user.valid_password?(params["user"]["current_password"]) 
       if @user.update(user_params)
         sign_in @user, :bypass => true
         render:json => {success: ["Password successfully changed!"]}
