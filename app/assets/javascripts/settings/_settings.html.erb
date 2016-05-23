@@ -1,0 +1,12 @@
+<div>
+  <h1>Change Password</h1>
+  <form ng-submit="changePassword()">
+    <label for="">Current Password</label>
+    <input type="text" class="input form-control" ng-model='userPassword.currentPass' required>
+    <label for="">New Password</label>
+    <input type="text" class="input form-control" ng-model='userPassword.password' required>
+    <label for="">Confirm Password</label>
+    <input type="text" class="input form-control" ng-model='userPassword.password_confirmation' required>
+    <button type="submit" class="btn btn-success">Change Password</button>
+  </form>
+</div>

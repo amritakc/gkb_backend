@@ -1,0 +1,29 @@
+angular.module('adminApp')
+.controller('settingsCtrl', [
+'$scope',
+'$state',
+'Auth',
+function($scope,$state,Auth){
+  $scope.userPassword = {
+      reset_password_token: 'reset_token',
+  };
+
+  Auth.currentUser().then(function(user) {
+      // User was logged in, or Devise returned
+      // previously authenticated session.
+      console.log(user); // => {id: 1, ect: '...'}
+  }, function(error) {
+      // unauthenticated error
+  });
+
+  $scope.changePassword = function(){
+    console.log($scope.userPassword)
+  Auth.resetPassword($scope.userPassword).then(function(new_data) {
+      console.log(new_data); // => {id: 1, ect: '...'}
+  }, function(error) {
+    console.log(error)
+      // Reset password failed...
+  });
+  }
+
+}])

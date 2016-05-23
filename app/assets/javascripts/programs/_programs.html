@@ -4,7 +4,7 @@
 <uib-accordion close-others="oneAtATime">
   <uib-accordion-group ng-repeat="programsPost in programsPosts.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))| orderBy: 'created_at':true">
     <uib-accordion-heading>
-      {{programsPost.created_at | date : 'dd/M/yyyy - hh:mm a' : timezone}} &nbsp&nbsp - &nbsp&nbsp <b>{{programsPost.title}}</b><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
+      {{programsPost.created_at | date : 'M/dd/yyyy - hh:mm a' : timezone}} &nbsp&nbsp - &nbsp&nbsp <b>{{programsPost.title}}</b><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
     </uib-accordion-heading>
     <div class="form-group">
       <label>Title:</label>

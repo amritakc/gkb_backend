@@ -9,7 +9,8 @@ angular.module('adminApp', [
 'angularModalService',
 'ngFileUpload',
 'ngToast',
-'uiRouterStyles'])
+'ngResource',
+'ng-rails-csrf'])
 .config(function($stateProvider,$urlRouterProvider) {
 
   $stateProvider
@@ -139,7 +140,30 @@ angular.module('adminApp', [
         })
       }]
     })
+    .state('settingsPage', {
+      url:'/settings',
+      views: {
+        '@': {
+          templateUrl:'views/settingsLayout.html'
+        },
+        'header@settingsPage' : {
+          templateUrl: 'header/_header.html',
+          controller: 'headerCtrl'
+        },
+        'settings@settingsPage' : {
+          templateUrl: 'settings/_settings.html',
+          controller: 'settingsCtrl'
+        }
+      },
+      onEnter: ['$state','Auth', function($state, Auth) {
+        Auth.currentUser().then(function(){
+        }, function(){
+          $state.go('login')
+        })
+      }]
+    })
 
   $urlRouterProvider.otherwise('/');
+
 
 });

@@ -1,7 +1,7 @@
 class AdminsController < ApplicationController
 
-	def index
-    	render 'devise/sessions/new'
-	end
+  def change_password user
+    console.log(User.find(user.userId))
+  end
 
 end
