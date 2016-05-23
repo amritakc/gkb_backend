@@ -1099,6 +1099,15 @@ display: inline-block;
   margin-bottom: 2em;
 /*  font-style: italic;*/
 }
+.parktool {
+  width: 50%;
+  height: 25em;
+  margin-left: 25%;
+  background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url("/static/img/tools.jpg") center center no-repeat;
+  background-size: auto 100%;
+  background-size:cover;
+  margin-bottom: 5em;
+}
 /*****/
 /*.parktool img{
   width: 100%;
