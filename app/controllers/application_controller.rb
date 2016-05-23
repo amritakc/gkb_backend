@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   respond_to :json
 
-  #before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   def angular
     render 'layouts/application'
@@ -18,6 +18,9 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     #added_attrs = [:email, :password]
     #devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
-    devise_parameter_sanitizer.permit :change_password, keys: added_attrs
+    #devise_parameter_sanitizer.permit :change_password, keys: added_attrs
+    #devise_parameter_sanitizer.for(:account_update) { |u| 
+      #u.permit(:password, :password_confirmation, :current_password)
+    #}
   end
 end

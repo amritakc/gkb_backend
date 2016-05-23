@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  patch 'users/edit/:id' => 'admins#change_password'
 
-  patch 'users' => 'admins_controller#change_password'
   devise_for :users#, :controllers => {sessions: 'sessions'} 
   # devise_for :admins
   # root to: 'admins#index'

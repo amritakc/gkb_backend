@@ -211,6 +211,11 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
   border-radius: 0px;
   border: 1px;
 }
+
+.login-container {
+  min-width: 90em;
+}
+
 .login h2 {
   font-size:3em;
   text-align:center;
@@ -224,12 +229,15 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 
 .login-btn-group {
   margin-top: 50px;
-  text-align: right;
+  text-align: center;
 }
 
 .login-btn-group button {
-  margin-left:30px;
   min-width:10em;
+}
+
+.form-group {
+  text-align: left;
 }
 
 .jumbotron {
