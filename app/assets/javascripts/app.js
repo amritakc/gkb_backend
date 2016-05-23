@@ -9,8 +9,8 @@ angular.module('adminApp', [
 'angularModalService',
 'ngFileUpload',
 'ngToast',
-'ngResource',
-'ng-rails-csrf'])
+'ngResource'
+])
 .config(function($stateProvider,$urlRouterProvider) {
 
   $stateProvider

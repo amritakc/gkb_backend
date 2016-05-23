@@ -25,5 +25,4 @@
 //= require ng-file-upload
 //= require ngToast
 //= require angular-resource
-//= require ng-rails-csrf
 //= require_tree .

@@ -17,8 +17,10 @@ function($scope,$state,Auth,UserService,ngToast){
         } else {
           ngToast.danger(result.errors[0])
         }
+        $scope.userPassword = {}
       })
     }, function(error) {
+      $scope.userPassword = {}
       console.log(error)
         // unauthenticated error
     });

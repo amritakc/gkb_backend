@@ -8,6 +8,7 @@ function ($scope, $state,Auth,ngToast) {
   $scope.login = function() {
     Auth.login($scope.user).then(function(){
       $state.go('dashboard');
+      location.reload()
     },function(err){
       ngToast.danger(err.data.error)
     });
