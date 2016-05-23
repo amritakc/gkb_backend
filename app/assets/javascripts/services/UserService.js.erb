@@ -1,0 +1,11 @@
+angular.module('adminApp')
+.service('UserService',
+function ($http) {
+  return {
+    changePassword: function(userId, userInfo,callback){
+      $http.patch('/users/edit/' + userId,userInfo).success(function(output){
+        callback(output);
+      })
+    }
+  }
+})

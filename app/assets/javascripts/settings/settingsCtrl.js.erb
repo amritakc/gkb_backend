@@ -1,0 +1,27 @@
+angular.module('adminApp')
+.controller('settingsCtrl', [
+'$scope',
+'$state',
+'Auth',
+'UserService',
+'ngToast',
+function($scope,$state,Auth,UserService,ngToast){
+
+  $scope.changePassword = function(){
+    Auth.currentUser().then(function(user) {
+        // User was logged in, or Devise returned
+        // previously authenticated session.
+      UserService.changePassword(user.id,$scope.userPassword, function(result){
+        if(result.success){
+          ngToast.create(result.success[0])
+        } else {
+          ngToast.danger(result.errors[0])
+        }
+      })
+    }, function(error) {
+      console.log(error)
+        // unauthenticated error
+    });
+  }
+
+}])

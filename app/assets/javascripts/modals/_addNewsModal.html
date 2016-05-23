@@ -1,0 +1,28 @@
+<div>
+  <div class="modal-content">
+    <div class="modal-header">
+        <h4>Add News Content</h4>
+    </div>
+    <div class="modal-body">
+
+     <input type="file" ngf-select ng-model="file" name="file" required>
+
+      <div class="form-group">
+        <label>Title:</label>
+        <input type="text" class="input form-control" ng-model='newsPost.title' required>
+        <span ng-show="form-group.test.$invalid">Required</span>
+      </div>
+
+      <text-angular ng-model="newsPost.text"></text-angular>
+
+      <div class="btn-container row">
+        <div class="col-sm-7 col-sm-offset-1">
+          <button type="button" class="btn btn-danger btn-lg" ng-click='cancel()'>Cancel</button>
+        </div>
+        <div class="col-sm-1 col-sm-offset-1">
+          <button type="button" class="btn btn-success btn-lg" ng-click="ok(file)">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

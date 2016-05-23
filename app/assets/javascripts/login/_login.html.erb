@@ -1,0 +1,40 @@
+<div class="login-container container-fluid">
+  <div class="col-md-6 vertical-center row-centered">
+    <div class="col-md-12">
+      <div class="row">
+        <img id="login_logo" src="<%= image_url("login_logo.png") %>" alt="" />
+      </div>
+      <div class="row">
+        <h2 style="display:inline-block">Welcome, Admin! Please Login.</h2>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 vertical-center">
+    <div class="col-md-9 col-md-offset-1">
+        <toast></toast>
+      <div class="login jumbotron">
+        <h2>Login</h2>
+        <div class="row-centered">
+          <div class="form-group">
+            <label for="username">Email</label>
+            <input type="text" name="username" id="username" ng-model="user.email" class="form-control" />
+            <%#<span  class="help-block">Username is required</span>%>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" ng-model="user.password"/>
+            <%#<span class="help-block">Password is required</span>%>
+          </div>
+        </div>
+        <div class="login-btn-group">
+          <div class="col-md-6">
+            <button ng-click='open()' class="btn btn-default">Forgot Password</button>
+          </div>
+          <div class="col-md-6">
+            <button ng-click="login()" class="btn btn-default">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

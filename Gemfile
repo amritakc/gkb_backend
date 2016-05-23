@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'ng-rails-csrf'
+
 gem 'text-angular-rails'
 
 gem "font-awesome-rails"

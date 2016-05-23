@@ -10,3 +10,5 @@
 User.create(:email => 'user@gmail.com', :password => 'password', :password_confirmation => 'password')
 Section.create(:name => 'announcements')
 Section.create(:name => 'news')
+Section.create(:name => 'bikes')
+Section.create(:name => 'programs')

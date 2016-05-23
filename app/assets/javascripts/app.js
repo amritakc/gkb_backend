@@ -7,7 +7,10 @@ angular.module('adminApp', [
 'textAngular',
 'ngSanitize',
 'angularModalService',
-'uiRouterStyles'])
+'ngFileUpload',
+'ngToast',
+'ngResource',
+'ng-rails-csrf'])
 .config(function($stateProvider,$urlRouterProvider) {
 
   $stateProvider
@@ -16,9 +19,13 @@ angular.module('adminApp', [
       templateUrl: 'login/_login.html',
       controller:'loginCtrl',
       onEnter: ['$state', 'Auth', function($state, Auth) {
-          Auth.currentUser().then(function (){
+        if(Auth.isAuthenticated()){
+          if ($state.current.url != '/'){
             $state.go('dashboard');
-          })
+          } else {
+            $state.go('newsPage');
+          }
+        }
         }]
       })
     .state('dashboard', {
@@ -35,29 +42,12 @@ angular.module('adminApp', [
           templateUrl: 'dashboard/_dashboard.html'
         }
       },
-      data: {
-        css: ['dashboard/editor.css']
-      },
       onEnter: ['$state','Auth', function($state, Auth) {
         Auth.currentUser().then(function(){
         }, function(){
           $state.go('login')
         })
       }]
-    })
-    .state('inventory', {
-      url:'/create',
-      views: {
-        '@': {
-         templateUrl:'views/inventory.html'
-        },
-        'header@inventory' : {
-          templateUrl: 'header/_header.html',
-        },
-        'bikes@inventory' : {
-          templateUrl: 'bikes/_bikes.html',
-        }
-      }
     })
     .state('newsPage', {
       url:'/news',
@@ -99,9 +89,6 @@ angular.module('adminApp', [
           controller: 'announeCtrl'
         }
       },
-      data: {
-        css: ['news/newsStyle.css']
-      },
       onEnter: ['$state','Auth', function($state, Auth) {
         Auth.currentUser().then(function(){
         }, function(){
@@ -113,18 +100,60 @@ angular.module('adminApp', [
       url:'/bikes',
       views: {
         '@': {
-         templateUrl:'views/newsLayout.html'
+         templateUrl:'views/bikesLayout.html'
         },
         'header@bikePage' : {
           templateUrl: 'header/_header.html',
           controller: 'headerCtrl'
         },
-        'news@bikePage' : {
+        'bikes@bikePage' : {
           templateUrl: 'bikes/_bikes.html',
+          controller: 'bikeCtrl'
         }
       },
-      data: {
-        css: ['news/newsStyle.css']
+      onEnter: ['$state','Auth', function($state, Auth) {
+        Auth.currentUser().then(function(){
+        }, function(){
+          $state.go('login')
+        })
+      }]
+    })
+    .state('programsPage', {
+      url:'/programs',
+      views: {
+        '@': {
+         templateUrl:'views/programsLayout.html'
+        },
+        'header@programsPage' : {
+          templateUrl: 'header/_header.html',
+          controller: 'headerCtrl'
+        },
+        'programs@programsPage' : {
+          templateUrl: 'programs/_programs.html',
+          controller: 'programsCtrl'
+        }
+      },
+      onEnter: ['$state','Auth', function($state, Auth) {
+        Auth.currentUser().then(function(){
+        }, function(){
+          $state.go('login')
+        })
+      }]
+    })
+    .state('settingsPage', {
+      url:'/settings',
+      views: {
+        '@': {
+          templateUrl:'views/settingsLayout.html'
+        },
+        'header@settingsPage' : {
+          templateUrl: 'header/_header.html',
+          controller: 'headerCtrl'
+        },
+        'settings@settingsPage' : {
+          templateUrl: 'settings/_settings.html',
+          controller: 'settingsCtrl'
+        }
       },
       onEnter: ['$state','Auth', function($state, Auth) {
         Auth.currentUser().then(function(){
@@ -135,5 +164,6 @@ angular.module('adminApp', [
     })
 
   $urlRouterProvider.otherwise('/');
+
 
 });

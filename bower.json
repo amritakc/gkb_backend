@@ -27,6 +27,8 @@
     "angular-touch": "^1.5.5",
     "textAngular": "^1.5.1",
     "angular-sanitize": "^1.5.5",
-    "angular-modal-service": "^0.9.10"
+    "angular-modal-service": "^0.9.10",
+    "ngToast": "ngtoast#^2.0.0",
+    "angular-resource": "^1.5.5"
   }
 }
