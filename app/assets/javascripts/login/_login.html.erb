@@ -10,22 +10,24 @@
     </div>
   </div>
   <div class="col-md-6 vertical-center">
-    <div class="col-md-10">
+    <div class="col-md-9 col-md-offset-1">
         <toast></toast>
       <div class="login jumbotron">
         <h2>Login</h2>
         <div class="form-group">
-          <label for="username">Username</label>
+          <label for="username">Email</label>
           <input type="text" name="username" id="username" ng-model="user.email" class="form-control" />
-          <span  class="help-block">Username is required</span>
+          <%#<span  class="help-block">Username is required</span>%>
         </div>
         <div class="form-group">
           <label for="password">Password</label>
           <input type="password" name="password" id="password" class="form-control" ng-model="user.password"/>
-          <span class="help-block">Password is required</span>
+          <%#<span class="help-block">Password is required</span>%>
         </div>
-        <button ng-click='open()' class="btn btn-success">Forgot Password</button>
-        <button ng-click="login()" class="btn btn-success">Login</button>
+        <div class="login-btn-group">
+          <button ng-click='open()' class="btn btn-default">Forgot Password</button>
+          <button ng-click="login()" class="btn btn-default">Login</button>
+        </div>
       </div>
     </div>
   </div>

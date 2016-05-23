@@ -37,7 +37,7 @@ html, body {
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
-    color: black;
+    color: white;
     background-color: green;
     /*border-color: rgb(24, 158, 86);*/
     border-radius: 0px;
@@ -104,7 +104,7 @@ html, body {
 
 .panel-default{
   border-width: 2px;
-  border-color: rgb(24, 158, 86);
+  border-color: lightslategrey;
 
 }
 
@@ -113,7 +113,7 @@ input.ng-invalid{
   border: 1px solid red;
 }
 input.ng-valid{
-  border: 1px solid green;
+  /*border: 1px solid green;*/
 }
 /*Panels!!!!!! -Stephen*/
 
@@ -130,7 +130,19 @@ input.ng-valid{
 }
 .btn-success{
   background-color: #52a552;
+}
 
+.btn-success:active:focus, .btn-success:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  outline-color: #5cb85c;
+}
+.btn:active:focus, .btn:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  outline-color: #5cb85c;
 }
 
 /*Buttons !!!!!! -Stephen*/
@@ -198,15 +210,46 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
   border-color: rgb(24, 158, 86);
   border-radius: 0px;
   border: 1px;
-
 }
+.login h2 {
+  font-size:3em;
+  text-align:center;
+  margin-bottom: 30px;
+  margin-top:0px;
+}
+
+.login h2, .login label {
+  text-shadow: .5px .5px grey;
+}
+
+.login-btn-group {
+  margin-top: 50px;
+  text-align: right;
+}
+
+.login-btn-group button {
+  margin-left:30px;
+  min-width:10em;
+}
+
 .jumbotron {
-  background-color: lightgreen;
+  background-color: silver;
   box-shadow: 10px 10px 5px 3px #888888;
 
 }
 .login input:focus {
-    background-color: #95FFFF;
+    /*background-color: #eafeea;*/
+}
+
+.login input:active:focus, .login input:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  outline-color: #5cb85c;
+}
+
+.help-block {
+  color: white;
 }
 
 /*LOGIN!!!!!!! -Stephen*/

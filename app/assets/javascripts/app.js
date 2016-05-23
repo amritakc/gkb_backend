@@ -41,9 +41,6 @@ angular.module('adminApp', [
           templateUrl: 'dashboard/_dashboard.html'
         }
       },
-      data: {
-        css: ['dashboard/editor.css']
-      },
       onEnter: ['$state','Auth', function($state, Auth) {
         Auth.currentUser().then(function(){
         }, function(){
@@ -91,9 +88,6 @@ angular.module('adminApp', [
           controller: 'announeCtrl'
         }
       },
-      data: {
-        css: ['news/newsStyle.css']
-      },
       onEnter: ['$state','Auth', function($state, Auth) {
         Auth.currentUser().then(function(){
         }, function(){
@@ -116,9 +110,6 @@ angular.module('adminApp', [
           controller: 'bikeCtrl'
         }
       },
-      data: {
-        css: ['news/newsStyle.css']
-      },
       onEnter: ['$state','Auth', function($state, Auth) {
         Auth.currentUser().then(function(){
         }, function(){
@@ -140,9 +131,6 @@ angular.module('adminApp', [
           templateUrl: 'programs/_programs.html',
           controller: 'programsCtrl'
         }
-      },
-      data: {
-        css: ['news/newsStyle.css']
       },
       onEnter: ['$state','Auth', function($state, Auth) {
         Auth.currentUser().then(function(){
