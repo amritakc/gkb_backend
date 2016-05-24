@@ -7,7 +7,7 @@ class ContentsController < ApplicationController
 
   def img
     # Create an object for S3 to send over the image    
-    obj = S3_BUCKET.object(params[:file].original_filename)
+    obj = S3_BUCKET.object('/admin/'+params[:file].original_filename)
 
     if obj.upload_file(params[:file].path, acl: 'public-read')
       render :json => {status: 0, data: obj.public_url}
