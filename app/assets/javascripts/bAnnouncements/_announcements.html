@@ -4,11 +4,11 @@
 <uib-accordion close-others="oneAtATime">
   <uib-accordion-group ng-repeat="newsPost in newsPosts.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))| orderBy: 'created_at':true">
     <uib-accordion-heading>
-      {{newsPost.created_at | date : 'dd/M/yyyy - hh:mm a' : timezone}} &nbsp&nbsp - &nbsp&nbsp <b>{{newsPost.title}}</b><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
+      {{newsPost.created_at | date : 'M/dd/yyyy - hh:mm a' : timezone}} &nbsp&nbsp - &nbsp&nbsp <b>{{newsPost.title}}</b><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
     </uib-accordion-heading>
     <div class="form-group">
       <label>Title:</label>
-      <input type="text" class="input form-control" ng-model='newsPost.title'>
+      <input type="text" class="input form-control " ng-model='newsPost.title'>
     </div>
 
     <text-angular ng-model="newsPost.text"></text-angular>
@@ -24,4 +24,4 @@
 
   </uib-accordion-group>
 </uib-accordion>
-<uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" class="pagination-sm" items-per-page="itemsPerPage"></uib-pagination>
+<uib-pagination class="pagination" total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" class="pagination-sm" items-per-page="itemsPerPage"></uib-pagination>

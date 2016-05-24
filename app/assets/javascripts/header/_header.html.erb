@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#/"><img src="<%= image_url("gkb-logo.png") %>" alt="" id='minilogo' /></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+
+        <ul class="nav navbar-nav">
+          <li ui-sref-active="active"><a ui-sref="announcementsPage">Announcements</a></li>
+          <li ui-sref-active="active"><a ui-sref="newsPage">News</a></li>
+          <li ui-sref-active="active"><a ui-sref="bikePage">Bikes</a></li>
+          <li ui-sref-active="active"><a ui-sref="programsPage">Programs</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li ui-sref-active="active"><a href ui-sref="settingsPage">Settings</a></li>
+          <li><a href ng-click="logout()">Logout</a></li>
+        </ul>
+
+    </div><!-- /.navbar-collapse -->
+</nav>

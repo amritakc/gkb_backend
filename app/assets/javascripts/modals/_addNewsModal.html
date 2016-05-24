@@ -1,19 +1,17 @@
-<!-- stylesheet linked to for the picture size -->
-<link rel="stylesheet" type="text/css" href="../stylesheets/news.css">
-<div> 
+<div>
   <div class="modal-content">
     <div class="modal-header">
         <h4>Add News Content</h4>
     </div>
     <div class="modal-body">
-   
       <!-- file upload here, added picture preview -->
       <input type="file" ngf-select ng-model="picFile" name="file" required> 
       <img id="thumb" ng-show="myForm.file.$valid" ngf-thumbnail="picFile">
 
       <div class="form-group">
         <label>Title:</label>
-        <input type="text" class="input form-control" ng-model='newsPost.title'>
+        <input type="text" class="input form-control" ng-model='newsPost.title' required>
+        <span ng-show="form-group.test.$invalid">Required</span>
       </div>
 
       <text-angular ng-model="newsPost.text"></text-angular>
@@ -23,7 +21,7 @@
           <button type="button" class="btn btn-danger btn-lg" ng-click='cancel()'>Cancel</button>
         </div>
         <div class="col-sm-1 col-sm-offset-1">
-          <button type="button" class="btn btn-primary btn-lg" ng-click="ok(file)">Save</button>
+          <button type="button" class="btn btn-success btn-lg" ng-click="ok(file)">Save</button>
         </div>
       </div>
     </div>

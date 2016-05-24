@@ -1,5 +1,3 @@
-<!-- stylesheet linked to for the picture size -->
-<link rel="stylesheet" type="text/css" href="../stylesheets/programs.css">
 <div>
   <div class="modal-content">
     <div class="modal-header">
@@ -18,14 +16,15 @@
         <input type="text" class="input form-control" ng-model='programsPost.caption'> 
       </div>
 
-      <div class="btn-container row">
-        <div class="col-sm-7 col-sm-offset-1">
-          <button type="button" class="btn btn-danger btn-lg" ng-click='cancel()'>Cancel</button>
+        <div class="btn-container row">
+          <div class="col-sm-7 col-sm-offset-1">
+            <button type="button" class="btn btn-danger btn-lg" ng-click='cancel()'>Cancel</button>
+          </div>
+          <div class="col-sm-1 col-sm-offset-1">
+            <button type="button" class="btn btn-success btn-lg" ng-disabled="myForm.$invalid" ng-click="ok()">Save</button>
+          </div>
         </div>
-        <div class="col-sm-1 col-sm-offset-1">
-          <button type="button" class="btn btn-success btn-lg" ng-click="ok()">Save</button>
-        </div>
+       </form>
       </div>
-    </div>
   </div>
 </div>

@@ -8,7 +8,9 @@ angular.module('adminApp', [
 'ngSanitize',
 'angularModalService',
 'ngFileUpload',
-'uiRouterStyles'])
+'ngToast',
+'ngResource'
+])
 .config(function($stateProvider,$urlRouterProvider) {
 
   $stateProvider
@@ -17,9 +19,13 @@ angular.module('adminApp', [
       templateUrl: 'login/_login.html',
       controller:'loginCtrl',
       onEnter: ['$state', 'Auth', function($state, Auth) {
-          Auth.currentUser().then(function (){
+        if(Auth.isAuthenticated()){
+          if ($state.current.url != '/'){
             $state.go('dashboard');
-          })
+          } else {
+            $state.go('newsPage');
+          }
+        }
         }]
       })
     .state('dashboard', {
@@ -35,9 +41,6 @@ angular.module('adminApp', [
         'main@dashboard' : {
           templateUrl: 'dashboard/_dashboard.html'
         }
-      },
-      data: {
-        css: ['dashboard/editor.css']
       },
       onEnter: ['$state','Auth', function($state, Auth) {
         Auth.currentUser().then(function(){
@@ -86,9 +89,6 @@ angular.module('adminApp', [
           controller: 'announeCtrl'
         }
       },
-      data: {
-        css: ['news/newsStyle.css']
-      },
       onEnter: ['$state','Auth', function($state, Auth) {
         Auth.currentUser().then(function(){
         }, function(){
@@ -110,9 +110,6 @@ angular.module('adminApp', [
           templateUrl: 'bikes/_bikes.html',
           controller: 'bikeCtrl'
         }
-      },
-      data: {
-        css: ['news/newsStyle.css']
       },
       onEnter: ['$state','Auth', function($state, Auth) {
         Auth.currentUser().then(function(){
@@ -136,8 +133,27 @@ angular.module('adminApp', [
           controller: 'programsCtrl'
         }
       },
-      data: {
-        css: ['news/newsStyle.css']
+      onEnter: ['$state','Auth', function($state, Auth) {
+        Auth.currentUser().then(function(){
+        }, function(){
+          $state.go('login')
+        })
+      }]
+    })
+    .state('settingsPage', {
+      url:'/settings',
+      views: {
+        '@': {
+          templateUrl:'views/settingsLayout.html'
+        },
+        'header@settingsPage' : {
+          templateUrl: 'header/_header.html',
+          controller: 'headerCtrl'
+        },
+        'settings@settingsPage' : {
+          templateUrl: 'settings/_settings.html',
+          controller: 'settingsCtrl'
+        }
       },
       onEnter: ['$state','Auth', function($state, Auth) {
         Auth.currentUser().then(function(){
@@ -148,5 +164,6 @@ angular.module('adminApp', [
     })
 
   $urlRouterProvider.otherwise('/');
+
 
 });

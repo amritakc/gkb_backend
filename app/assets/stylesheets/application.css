@@ -25,20 +25,21 @@ html, body {
   width: 100%;
   font-family: "Lato", sans-serif;
   overflow: auto;
+  background-color: #FEFDFB;
 }
 
 /*Navbar!!!!!!!!! - Stephen*/
 .navbar{
   width: 100%;
   height: 50px;
-  background-color: rgb(24, 158, 86);
-  border-radius: 0px;
-  border: 1px;
+  border-bottom: 51px solid green;
+  border-color: green;
 }
+
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
-    color: black;
+    color: white;
     background-color: green;
-    border-color: rgb(24, 158, 86);
+    /*border-color: rgb(24, 158, 86);*/
     border-radius: 0px;
     border: 1px;
 
@@ -67,30 +68,59 @@ html, body {
 }
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-    background-color: lightgreen;
+  background-color: #169b4d;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
     background-color: green;
 }
 
+.navbar-header {
+  background-color: #169b4d;
+}
 
 /*Navbar!!!!!!!!! - Stephen*/
+
+/*Logos!!!!!!!!! - Stephen*/
+#minilogo{
+  height: 50px;
+  padding-right: 3px;
+}
+
+#minilogo:hover {
+  cursor:pointer;
+}
+
+#login_logo{
+  width: 55%;
+  height: 55%;
+  box-shadow: 2px 2px 4px 1px;
+}
+
+/*Logos!!!!!!!!! - Stephen*/
 
 
 /*Panels!!!!!! -Stephen*/
 
 .panel-default{
   border-width: 2px;
-  border-color: rgb(24, 158, 86);
+  border-color: lightslategrey;
 
+}
+
+input.ng-invalid{
+  background-color: lightred;
+  border: 1px solid red;
+}
+input.ng-valid{
+  /*border: 1px solid green;*/
 }
 /*Panels!!!!!! -Stephen*/
 
 /*Buttons !!!!!! -Stephen*/
 .btn {
   border-width: 2px;
-  border-color: rgb(24, 158, 86);
+  /*border-color: rgb(24, 158, 86);*/
 }
 .btn-default{
   border: none;
@@ -99,7 +129,20 @@ html, body {
   border: none;
 }
 .btn-success{
+  background-color: #52a552;
+}
 
+.btn-success:active:focus, .btn-success:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  outline-color: #5cb85c;
+}
+.btn:active:focus, .btn:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  outline-color: #5cb85c;
 }
 
 /*Buttons !!!!!! -Stephen*/
@@ -151,10 +194,7 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 }
 
 .navbar-collapse{
-  background-color: seagreen;
-  border-width: 2px;
-  border-color: lightgreen;
-
+  background-color: #169b4d;
 }
 
 .vertical-center {
@@ -170,19 +210,55 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
   border-color: rgb(24, 158, 86);
   border-radius: 0px;
   border: 1px;
-
 }
+
+.login-container {
+  min-width: 90em;
+}
+
+.login h2 {
+  font-size:3em;
+  text-align:center;
+  margin-bottom: 30px;
+  margin-top:0px;
+}
+
+.login h2, .login label {
+  text-shadow: .5px .5px grey;
+  color:white;
+}
+
+.login-btn-group {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.login-btn-group button, .login-btn-group input[type="submit"] {
+  min-width:10em;
+}
+
+.form-group {
+  text-align: left;
+}
+
 .jumbotron {
-  background-color: lightgreen;
+  background-color: #26A349;
   box-shadow: 10px 10px 5px 3px #888888;
 
 }
-#login-box {
-  width: 30em;
-  margin: auto;
-}
 .login input:focus {
-    background-color: #95FFFF;
+    /*background-color: #eafeea;*/
+}
+
+.login input:active:focus, .login input:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  outline-color: #5cb85c;
+}
+
+.help-block {
+  color: white;
 }
 
 /*LOGIN!!!!!!! -Stephen*/
@@ -212,11 +288,53 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
   margin-bottom: 1em;
 }
 
-/*.thumb {
-    width: 50px;
-    height: 50px;
+#thumb {
+    width: 5em;
+    height: 5em;
     float: none;
     position: relative;
-    top: 7px;
-    margin-bottom:2px;
-}*/
+    top: 0.5em;
+    margin-bottom:0.5em;
+}
+
+/*toast for login*/
+.ng-toast__list {
+  list-style: none;
+  padding:0px 2em 0px 2em;
+}
+
+/*end toast*/
+.row-centered {
+  text-align:center;
+}
+/*Pagination*/
+.pagination {
+  position: absolute;
+  bottom: 0;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+  z-index: 3;
+  color: #fff;
+  cursor: default;
+  background-color: #52a552;
+  border-color: rgb(24, 158, 86);
+}
+/*end pagination*/
+
+/*Modal*/
+.modal-header {
+  background-color:#376e37;
+  color:white;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+/*end modal*/
+
+/*Change password form*/
+.change-password-form button{
+  margin-top: 20px;
+  margin-left: 140px;
+}
+/*end change password*/
+>>>>>>> development-admin

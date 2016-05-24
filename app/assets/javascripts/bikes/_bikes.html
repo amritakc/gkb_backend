@@ -1,10 +1,10 @@
 <div class="col-sm-offset-9 new-content-btn">
-  <button type="button" class="btn btn-primary" ng-click="openNewBikeForm()">Add Bikes</button>
+  <button type="button" class="btn btn-success" ng-click="openNewBikeForm()">Add Bikes</button>
 </div>
 <uib-accordion close-others="oneAtATime">
   <uib-accordion-group ng-repeat="bikesPost in bikesPosts.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))| orderBy: 'created_at':true">
     <uib-accordion-heading>
-      {{bikesPost.created_at | date : 'dd/M/yyyy - hh:mm a' : timezone}} &nbsp&nbsp - &nbsp&nbsp <b>{{bikesPost.title}}</b><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
+      {{bikesPost.created_at | date : 'M/dd/yyyy - hh:mm a' : timezone}} &nbsp&nbsp - &nbsp&nbsp <b>{{bikesPost.title}}</b><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
     </uib-accordion-heading>
     <div class="form-group">
       <label>Title:</label>
@@ -38,4 +38,4 @@
 
   </uib-accordion-group>
 </uib-accordion>
-<uib-pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" class="pagination-sm" items-per-page="itemsPerPage"></uib-pagination>
+<uib-pagination class="pagination" total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" class="pagination-sm" items-per-page="itemsPerPage"></uib-pagination>
