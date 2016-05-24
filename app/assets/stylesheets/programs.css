@@ -1,8 +1,8 @@
 #thumb {
-    width: 150px;
-    height: 150px;
+    width: 5em;
+    height: 5em;
     float: none;
     position: relative;
-    top: 7px;
-    margin-bottom:10px;
+    top: 0.5em;
+    margin-bottom:0.5em;
 }
