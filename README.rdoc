@@ -18,6 +18,8 @@ Controllers
 
 Steps Needed to Run Project:
 <tt>bundle install</tt>
+<tt>bundle exec figaro install</tt>
+* Put secret keys, access id, and s3bucket location in application.yml
 * Start PostgreSQL server
 * Create the database
 <tt>rake db:create</tt>

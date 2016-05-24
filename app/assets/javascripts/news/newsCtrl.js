@@ -29,19 +29,18 @@ function($scope,$state,DataService, ModalService, $uibModal){
           console.log(Upload)
 
           file.upload = Upload.upload({
-            //this needs to change 
-            url: '/contents/create',
-            // url: "https://angular-file-upload-cors-srv.appspot.com/upload",
+            url: '/contents/images',
             data: {
-            file: file, title: $scope.newsPost.title, section: "news", text: $scope.newsPost.text
-             }
-            }).then(function (response){
+              file: file
+            }
+          }).then(function (response){
               //$timeout() function in AngularJS returns a promise a
               $timeout(function () {
                 
                 $scope.result = response.data 
 
             })
+              $uibModalInstance.close($scope.newsPost);
           }, function(response){
               console.log('accepted', Date.now())
 

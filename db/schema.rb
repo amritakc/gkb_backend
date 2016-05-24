@@ -53,11 +53,16 @@ ActiveRecord::Schema.define(version: 20160510043932) do
   add_index "bikes", ["status_id"], name: "index_bikes_on_status_id", using: :btree
 
   create_table "contents", force: :cascade do |t|
-    t.string   "title"
-    t.string   "text"
+    t.string   "title",      default: "none"
+    t.string   "text",       default: "none"
+    t.string   "caption",    default: "none"
+    t.string   "color",      default: "none"
+    t.string   "brand",      default: "none"
+    t.float    "price",      default: 0.0
+    t.string   "url",        default: "none"
     t.integer  "section_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   add_index "contents", ["section_id"], name: "index_contents_on_section_id", using: :btree
