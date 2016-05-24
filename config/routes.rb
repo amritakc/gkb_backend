@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   devise_for :users#, :controllers => {sessions: 'sessions'} 
   # devise_for :admins
   # root to: 'admins#index'
-  root to: 'application#angular'
+  
+  get '/admin' => 'application#angular'
+  # root to: 'application#angular'
 
   get 'sections/:section' => 'sections#show'
 
