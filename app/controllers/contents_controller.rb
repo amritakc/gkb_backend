@@ -32,10 +32,6 @@ class ContentsController < ApplicationController
     render :json =>@inform
   end
 
-  def edit
-    
-  end
-
   def destroy
     # destroy the content
     @deleted = Content.destroy(params[:id])
@@ -43,9 +39,6 @@ class ContentsController < ApplicationController
     render :json =>{content:@deleted} 
   end
 
-  def new
-   
-  end
 
   
 end
