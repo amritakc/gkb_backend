@@ -11,28 +11,48 @@ function($scope,$state,DataService, ModalService, $uibModal){
   $scope.oneAtATime = true;
   var self = $scope
   DataService.getBikes('bikes',function(result){
-    $scope.bikesPosts = result;
-    $scope.totalItems = $scope.bikesPosts.length;
+    $scope.allBikes = result;
+    $scope.totalItems = $scope.allBikes.length;
   })
 
 
   $scope.openNewBikeForm = function(){
     
     var modalInstance = $uibModal.open({
-      templateUrl: 'modals/_addBikeModal.html',
+      templateUrl: 'admin_site/modals/_addBikeModal.html',
       controller: [
-        '$scope', '$uibModalInstance',  function($scope, $uibModalInstance) {
-        
-          // added data to change the dynamic html 
-          $scope.data = {title: "Bikes" };
-          $scope.ok = function() {
-            $uibModalInstance.close($scope.bikesPost);
-          };
+        '$scope', '$uibModalInstance', 'Upload',  function($scope, $uibModalInstance, Upload) {
+          
+          $scope.upload = function(file, callback) {
+            console.log("hit upload")
+            file.upload = Upload.upload({
+              url: '/contents/images',
+              data: {
+                file: file
+              }
+            }).progress(function(evt){
+              $scope.progress = Math.min(100, parseInt(100.0 *evt.loaded / evt.total));
+
+            }).success(function(response){
+              $scope.result = response.data 
+              callback(response.data )
+            })
+          }
+
           $scope.cancel = function () {                
             $uibModalInstance.dismiss();
           }
-          $scope.accept = function(){
-            $uibModalInstance.close();
+          
+          $scope.ok = function(file){
+            if(file){
+              $scope.upload(file, function(result) {
+                console.log(result, "result")
+                $scope.bikesPost.url = result
+                $uibModalInstance.close($scope.bikesPost);
+              })
+            } else {
+               $uibModalInstance.close($scope.bikesPost);
+            }
           }
         }
       ]
@@ -41,7 +61,8 @@ function($scope,$state,DataService, ModalService, $uibModal){
     modalInstance.result.then(function (contentInfo) {
       contentInfo.section = 'bikes';
       DataService.create(contentInfo, function(result){
-        self.bikesPosts.unshift(result['newContent']);
+        console.log(result)
+        self.allBikes.unshift(result['newContent']);
       });
     });
   };
@@ -51,7 +72,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
     $scope.data = selected 
 
     var modalInstance = $uibModal.open({
-      templateUrl:'modals/_removeModal.html',
+      templateUrl:'admin_site/modals/_removeModal.html',
       controller: [
         '$scope', '$uibModalInstance','ModalService', function($scope, $uibModalInstance, ModalService) {
           
@@ -74,12 +95,12 @@ function($scope,$state,DataService, ModalService, $uibModal){
       DataService.remove(selected.id, function(result){
 
 
-       for(var i in  self.bikesPosts){
-          console.log(self.bikesPosts[i])
-          if( self.bikesPosts[i].id=== result['content'].id){
+       for(var i in  self.allBikes){
+          console.log(self.allBikes[i])
+          if( self.allBikes[i].id=== result['content'].id){
             
             console.log('found', result['content'].id)            
-            self.bikesPosts.splice(i,1);
+            self.allBikes.splice(i,1);
           }
        }
 
@@ -92,12 +113,12 @@ function($scope,$state,DataService, ModalService, $uibModal){
     DataService.change(title, price, caption, color, brand, section, contentId, function(result){
       console.log(result['content'])
        
-       for(var i in  $scope.bikesPosts){
-          console.log($scope.bikesPosts[i])
-          if( $scope.bikesPosts[i].id === result['content'].id){
+       for(var i in  $scope.allBikes){
+          console.log($scope.allBikes[i])
+          if( $scope.allBikes[i].id === result['content'].id){
             
             console.log('found', result['content'].id)            
-            $scope.bikesPosts[i] = result['content']
+            $scope.allBikes[i] = result['content']
 
           }
        }

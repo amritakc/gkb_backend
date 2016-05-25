@@ -5,7 +5,7 @@
     </div>
     <div class="modal-body">
       <!-- file upload here, added picture preview -->
-      <input type="file" ngf-select ng-model="picFile" name="file" required> 
+      <input type="file" ngf-select ng-model="file" name="file" required> 
       <img id="thumb" ng-show="myForm.file.$valid" ngf-thumbnail="picFile">
 
       <div class="form-group">
@@ -26,7 +26,7 @@
             <button type="button" class="btn btn-danger btn-lg" ng-click='cancel()'>Cancel</button>
           </div>
           <div class="col-sm-1 col-sm-offset-1">
-            <button type="button" class="btn btn-success btn-lg" ng-disabled="myForm.$invalid"  ng-click="ok()">Save</button>
+            <button type="button" class="btn btn-success btn-lg" ng-disabled="myForm.$invalid"  ng-click="ok(file)">Save</button>
           </div>
         </form>
       </div>
