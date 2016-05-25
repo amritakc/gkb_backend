@@ -1,5 +1,8 @@
-myApp.controller('communityCtrl', communityCtrl);
+myApp.controller('communityCtrl',function($scope, communityFactory){
 
-function communityCtrl($scope) {
-	var vm = this;
-}
+	communityFactory.programs(function(programs){
+		console.log("in controller", programs);
+		$scope.programs = programs;
+	})
+
+});
