@@ -153,25 +153,25 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 .arrow.prev {
     opacity: 0.2;
     left: 20px;
-    background-image: url(http://www.thechildrensplayground.com/resources/images/carousel/left-arrow.png);
+    background-image: url('http://www.thechildrensplayground.com/resources/images/carousel/left-arrow.png');
     transition: 0.2s linear all;
 }
 
 .arrow.next {
     opacity: 0.2;
     right: 20px;
-    background-image: url(http://www.thechildrensplayground.com/resources/images/carousel/right-arrow.png);
+    background-image: url('http://www.thechildrensplayground.com/resources/images/carousel/right-arrow.png');
     transition: 0.2s linear all;
 }
 
 .arrow.prev:hover {
     opacity: 1;
-    background-image: url(http://www.thechildrensplayground.com/resources/images/carousel/left-arrow.png);
+    background-image: url('http://www.thechildrensplayground.com/resources/images/carousel/left-arrow.png');
 }
 
 .arrow.next:hover {
     opacity: 1;
-    background-image: url(http://www.thechildrensplayground.com/resources/images/carousel/right-arrow.png);
+    background-image: url('http://www.thechildrensplayground.com/resources/images/carousel/right-arrow.png');
 }
 
 
@@ -255,7 +255,7 @@ NAV
   color: white;
   padding: 2.5em;
   border-top: 2px solid black;
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("/static/img/handlebars.jpg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/handlebars.jpg") center center no-repeat;
   background-size: cover; }
 
 /* This is the styling for the 'subscribe to mailing list' section */
@@ -381,7 +381,7 @@ header p {
 .bike-image {
   width: 100%;
   max-height: 60%;
-  background: linear-gradient(rgba(0, 0, 128, 0.35), rgba(0, 0, 128, 0.35)), url("/static/img/bike-friends.jpeg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 128, 0.35), rgba(0, 0, 128, 0.35)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/bike-friends.jpeg") center center no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -394,7 +394,7 @@ header p {
   width: 100%;
   max-height: 40em;
   padding: 2em;
-  background: linear-gradient(rgba(0, 0, 128, 0.35), rgba(0, 0, 128, 0.35)), url("/static/img/thankyou.jpg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 128, 0.35), rgba(0, 0, 128, 0.35)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg") center center no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -497,7 +497,7 @@ hr {
   width: 100%;
   height: 100%;
   padding-bottom: 20%;
-  background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("/static/img/row_of_bikes.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/row_of_bikes.jpg");
   background-size: cover;
   position: relative;
   color: white;
@@ -673,36 +673,36 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 #transport {
-  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("/static/img/commute.jpeg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/commute.jpeg") center center no-repeat;
   background-size: auto 100%;
   
 }
 
 #work4bikes {
-  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("/static/img/smile.jpeg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/smile.jpeg") center center no-repeat;
   background-size: auto 100%;
 
 }
 
 #sponsor-bike {
-  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("/static/img/bike5.jpg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("/https://s3-us-west-1.amazonaws.com/gkbimages//client/bike5.jpg") center center no-repeat;
   background-size: auto 100%;
 }
 
 #saturday-clinic {
-  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("/static/img/gears.jpeg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/gears.jpeg") center center no-repeat;
   background-size: auto 100%;
 
 }
 
 #tools {
-  background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url("/static/img/tools.jpg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/tools.jpg") center center no-repeat;
   background-size: auto 100%;
 
 }
 
 #karmakids {
-  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("/static/img/kids.jpg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/kids.jpg") center center no-repeat;
 
 }
 
@@ -723,7 +723,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   width: 100%;
   height: 100%;
   padding: 3em 2em;
-  background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("/static/img/thankyou.jpg") center center no-repeat;
+  background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg") center center no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -732,7 +732,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 .community-header {
   width: 100%;
   height: 40em;
-  background: linear-gradient(rgba(41, 52, 88, 0.75), rgba(41, 52, 88, 0.75)), url("/static/img/cyclists.jpg") center center no-repeat;
+  background: linear-gradient(rgba(41, 52, 88, 0.75), rgba(41, 52, 88, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/cyclists.jpg") center center no-repeat;
 }
 
 .community-header h1 {
@@ -921,7 +921,7 @@ d-expand-collapse {
     height: 100%;
     padding-top: 10%;
     padding-bottom: 10%;
-    background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("/static/img/row_of_bikes.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/row_of_bikes.jpg");
     background-size: cover;
     position: relative;
     color: white;
@@ -1052,7 +1052,7 @@ display: inline-block;
 
 #warranty{
 height: 4em;
-background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("/static/img/pricebike.jpg");
+background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/pricebike.jpg");
 background-size: auto 100%;
 background-size: cover;
 overflow: hidden;
@@ -1104,7 +1104,7 @@ display: inline-block;
 .classes {
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("/static/img/thankyou.jpg") center center no-repeat;
+  background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg") center center no-repeat;
   background-size: cover;
   position: relative;
   text-align: center;
@@ -1121,7 +1121,7 @@ display: inline-block;
   width: 50%;
   height: 25em;
   margin-left: 25%;
-  background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url("/static/img/tools.jpg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/tools.jpg") center center no-repeat;
   background-size: auto 100%;
   background-size:cover;
   margin-bottom: 5em;
@@ -1323,7 +1323,7 @@ margin-left: 3.5em;
 
   }
   #donor_decides {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/static/img/happykid.jpeg");
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/happykid.jpeg");
     background-size: auto 100%;
     background-size: cover;
     overflow: hidden;
@@ -1332,7 +1332,7 @@ margin-left: 3.5em;
   }
 
   #sponsor_bicycle {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/static/img/bike5.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/bike5.jpg");
     background-size: auto 100%;
     background-size: cover;
     overflow: hidden;
@@ -1342,7 +1342,7 @@ margin-left: 3.5em;
 
   #sponsor_workstation {
     
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/img/mechanic.jpeg");
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/mechanic.jpeg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -1350,7 +1350,7 @@ margin-left: 3.5em;
 
   #sponsor_mechanic {
 
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/static/img/thankyou.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg");
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -1395,7 +1395,7 @@ margin-left: 3.5em;
     width: 40%;
     height: auto;
     margin: auto;
-    background: url(/static/img/amazon-banner.png) center center no-repeat;
+    background: url('https://s3-us-west-1.amazonaws.com/gkbimages//client//amazon-banner.png') center center no-repeat;
     padding: 2em;
   }
 
