@@ -17,6 +17,7 @@
 *= require font-awesome
 */
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,300,300italic,900italic');
+
 html, body {
   margin: 0;
   padding: 0;
