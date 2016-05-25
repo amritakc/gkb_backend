@@ -21,43 +21,38 @@ function($scope,$state,DataService, ModalService, $uibModal){
     var modalInstance = $uibModal.open({
       templateUrl: 'modals/_addNewsModal.html',
       controller: [
-        '$scope', '$uibModalInstance','Upload', '$timeout',  function($scope, $uibModalInstance, Upload, $timeout) {
+        '$scope', '$uibModalInstance','Upload', function($scope, $uibModalInstance, Upload) {
       
-         $scope.ok = function(file) {
-          console.log($scope.newsPost, file)
-          $scope.file = file 
-          console.log(Upload)
-
+         $scope.upload = function(file, callback) {
+          
           file.upload = Upload.upload({
             url: '/contents/images',
             data: {
               file: file
             }
-          }).then(function (response){
-              //$timeout() function in AngularJS returns a promise a
-              $timeout(function () {
-                
-                $scope.result = response.data 
+            }).progress(function(evt){
+              $scope.progress = Math.min(100, parseInt(100.0 *evt.loaded / evt.total));
 
+            }).success(function(response){
+              $scope.result = response.data 
+              callback(response.data )
             })
-              $uibModalInstance.close($scope.newsPost);
-          }, function(response){
-              console.log('accepted', Date.now())
-
-              if(response.status > 0){
-                $scope.errorMsg = response.status + ':' + response.data;
-              }
-          }, function (evt){
-               $scope.progress = Math.min(100, parseInt(100.0 *evt.loaded / evt.total));
-                console.log($scope.progress)
-              })
-           };
+          }
 
           $scope.cancel = function () {                
             $uibModalInstance.dismiss();
           }
-          $scope.accept = function(){
-            $uibModalInstance.close();
+          $scope.ok = function(file){
+            if(file){
+              $scope.upload(file, function(result) {
+                console.log(result, "result")
+                $scope.newsPost.url = result
+                $uibModalInstance.close($scope.newsPost);
+              })
+            } else {
+               $uibModalInstance.close($scope.newsPost);
+            }
+
           }
         }
       ]
@@ -65,8 +60,10 @@ function($scope,$state,DataService, ModalService, $uibModal){
 
     modalInstance.result.then(function (contentInfo) {
       contentInfo.section = 'news';
+      console.log('contentInfo', contentInfo)
       DataService.create(contentInfo, function(result){
-        self.newsPosts.unshift(result['newContent']);
+        console.log("result", result)
+        self.newsPosts.unshift(result['content']);
       });
     });
   };

@@ -10,6 +10,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
   //Accordian config
   $scope.oneAtATime = true;
   var self = $scope
+  
   DataService.getNews('announcements',function(result){
     $scope.newsPosts = result;
     $scope.totalItems = $scope.newsPosts.length;
@@ -21,37 +22,43 @@ function($scope,$state,DataService, ModalService, $uibModal){
   var modalInstance = $uibModal.open({
     templateUrl: 'modals/_addAnnouncementsModal.html',
     controller: [
-      '$scope', '$uibModalInstance', 'Upload', '$timeout',   function($scope, $uibModalInstance, Upload, $timeout) {
+      '$scope', '$uibModalInstance', 'Upload',   function($scope, $uibModalInstance, Upload) {
 
         // added data to change the dynamic html 
         $scope.test =0
 
-        $scope.ok = function(file) {
-          console.log($scope.newsPost, file)
-          $scope.file = file 
+         $scope.upload = function(file, callback) {
+          console.log("hit upload")
           file.upload = Upload.upload({
-            //this needs to change 
-            url: "https://angular-file-upload-cors-srv.appspot.com/upload",
+            url: '/contents/images',
             data: {
-            file: file, title: $scope.newsPost.title, section: "annoucements"
-          }
-        }).then(function (response){
-            console.log(response.data)
-            //$timeout() function in AngularJS returns a promise a
-            $timeout(function () {
-            $scope.result = response.data 
-          })
-        }, function(response){
-            console.log('accepted', Date.now())
+              file: file
+            }
+            }).progress(function(evt){
+              $scope.progress = Math.min(100, parseInt(100.0 *evt.loaded / evt.total));
 
-            if(response.status > 0){
-            $scope.errorMsg = response.status + ':' + response.data;
+            }).success(function(response){
+              $scope.result = response.data 
+              callback(response.data )
+            })
           }
-        }, function (evt){
-            $scope.progress = Math.min(100, parseInt(100.0 *evt.loaded / evt.total));
-            console.log($scope.progress)
-          })
-        };
+
+          $scope.cancel = function () {                
+            $uibModalInstance.dismiss();
+          }
+          
+          $scope.ok = function(file){
+            if(file){
+              $scope.upload(file, function(result) {
+                console.log(result, "result")
+                $scope.newsPost.url = result
+                $uibModalInstance.close($scope.newsPost);
+              })
+            } else {
+               $uibModalInstance.close($scope.newsPost);
+            }
+
+          }
         
         $scope.cancel = function () {                
             $uibModalInstance.dismiss();
@@ -65,7 +72,8 @@ function($scope,$state,DataService, ModalService, $uibModal){
 modalInstance.result.then(function (contentInfo) {
   contentInfo.section = 'announcements';
   DataService.create(contentInfo, function(result){
-    self.newsPosts.unshift(result['newContent']);
+    console.log(result)
+    self.newsPosts.unshift(result['content']);
       });
     });
   };

@@ -19,7 +19,9 @@ class ContentsController < ApplicationController
   def create
 
     # creating new content in the database and find the section by name
-    content = Content.new(title:params[:title],text:params[:text],url: params[:url],section:Section.find_by_name(params[:section]))
+    content = Content.new(title:params[:title],text:params[:text], url: params[:url],section:Section.find_by_name(params[:section]))
+
+
     if content.save
       render :json => {content: Section.find_by_name(params[:section]).contents.last}
     else
