@@ -10,6 +10,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
   //Accordian config
   $scope.oneAtATime = true;
   var self = $scope
+  
   DataService.getNews('announcements',function(result){
     $scope.newsPosts = result;
     $scope.totalItems = $scope.newsPosts.length;
@@ -59,8 +60,10 @@ function($scope,$state,DataService, ModalService, $uibModal){
 
 modalInstance.result.then(function (contentInfo) {
   contentInfo.section = 'announcements';
+  console.log("contentInfo:", contentInfo)
   DataService.create(contentInfo, function(result){
-    self.newsPosts.unshift(result['newContent']);
+    console.log(result, "result ")
+    self.newsPosts.unshift(result['content']);
       });
     });
   };
