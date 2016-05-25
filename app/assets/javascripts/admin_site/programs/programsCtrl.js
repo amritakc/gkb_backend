@@ -19,7 +19,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
   $scope.openNewProgramsForm = function(){
     
     var modalInstance = $uibModal.open({
-      templateUrl: 'modals/_addProgramModal.html',
+      templateUrl: 'admin_site/modals/_addProgramModal.html',
       controller: [
         '$scope', '$uibModalInstance',  function($scope, $uibModalInstance) {
       
@@ -28,7 +28,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
           $scope.ok = function() {
             $uibModalInstance.close($scope.programsPost);
           };
-          $scope.cancel = function () {                
+          $scope.cancel = function () {
             $uibModalInstance.dismiss();
           }
           $scope.accept = function(){
@@ -51,7 +51,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
     ModalService.setProperty(selected); 
 
     var modalInstance = $uibModal.open({
-      templateUrl:'modals/_removeModal.html',
+      templateUrl:'admin_site/modals/_removeModal.html',
       controller: [
         '$scope', '$uibModalInstance','ModalService', function($scope, $uibModalInstance, ModalService) {
           
