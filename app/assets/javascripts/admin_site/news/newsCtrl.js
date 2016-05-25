@@ -5,6 +5,7 @@ angular.module('adminApp')
 'DataService',
 'ModalService',
 '$uibModal',
+'Upload',
 //injected the modal service  into controller 
 function($scope,$state,DataService, ModalService, $uibModal){
   //Accordian config
@@ -20,17 +21,15 @@ function($scope,$state,DataService, ModalService, $uibModal){
      var modalInstance = $uibModal.open({
       templateUrl: 'admin_site/modals/_addNewsModal.html',
       controller: [
-        '$scope', '$uibModalInstance', 'Upload',  function($scope, $uibModalInstance, Upload) {
+        '$scope', '$uibModalInstance','Upload', function($scope, $uibModalInstance, Upload) {
+      
+         $scope.upload = function(file, callback) {
           
-        
-
-          $scope.upload = function(file, callback) {
-            console.log("hit upload")
-            file.upload = Upload.upload({
-              url: '/contents/images',
-              data: {
-                file: file
-              }
+          file.upload = Upload.upload({
+            url: '/contents/images',
+            data: {
+              file: file
+            }
             }).progress(function(evt){
               $scope.progress = Math.min(100, parseInt(100.0 *evt.loaded / evt.total));
 
@@ -52,7 +51,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
                 $uibModalInstance.close($scope.newsPost);
               })
             } else {
-                console.log("something went wrong")
+               $uibModalInstance.close($scope.newsPost);
             }
           }
         }
@@ -61,8 +60,10 @@ function($scope,$state,DataService, ModalService, $uibModal){
 
     modalInstance.result.then(function (contentInfo) {
       contentInfo.section = 'news';
+      console.log('contentInfo', contentInfo)
       DataService.create(contentInfo, function(result){
-        self.newsPosts.unshift(result['newContent']);
+        console.log("result", result)
+        self.newsPosts.unshift(result['content']);
       });
     });
   };
