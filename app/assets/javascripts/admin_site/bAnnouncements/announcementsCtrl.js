@@ -19,7 +19,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
   $scope.openNewContentForm = function(){
 
   var modalInstance = $uibModal.open({
-    templateUrl: 'modals/_addAnnouncementsModal.html',
+    templateUrl: 'admin_site/modals/_addAnnouncementsModal.html',
     controller: [
       '$scope', '$uibModalInstance', 'Upload', '$timeout',   function($scope, $uibModalInstance, Upload, $timeout) {
 

@@ -19,7 +19,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
   $scope.openNewBikeForm = function(){
     
     var modalInstance = $uibModal.open({
-      templateUrl: 'modals/_addBikeModal.html',
+      templateUrl: 'admin_site/modals/_addBikeModal.html',
       controller: [
         '$scope', '$uibModalInstance',  function($scope, $uibModalInstance) {
         
