@@ -7,11 +7,13 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  def angular
-    render 'layouts/application'
+  def angular_admin
+    render 'layouts/admin_application'
   end
 
-
+  def angular
+    render 'layouts/client_application'
+  end
 
 
   private
