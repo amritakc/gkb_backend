@@ -16,6 +16,7 @@ Section.create(:name => 'news')
 Section.create(:name => 'bikes')
 Section.create(:name => 'programs')
 
+<<<<<<< HEAD
 # Starting content for bikes
 Content.create(:title =>"Raleigh Lightweight", :color=> "Purple", :brand=>"Road Bike", :price=>300.00, :section=>Section.find_by_name("bikes"),:url => "https://s3-us-west-1.amazonaws.com/gkbimages/client/bike1b.jpg")
 Content.create(:title =>"Raleigh Lightweight", :color=> "Purple", :brand=>"Road Bike", :price=>300.00, :section=>Section.find_by_name("bikes"),:url => "https://s3-us-west-1.amazonaws.com/gkbimages/client/bike1e.jpg")
@@ -35,3 +36,15 @@ Content.create(:title => "Work-4-Bike", :text=>"Targeted toward low-income indiv
 Content.create(:title => "Saturday Clinic", :text=>"A free, weekly bicycle repair clinic led by a group of dedicated volunteers, in which unsafe bicycles are repaired for community members.", :section=>Section.find_by_name("programs"),:url=>"http://s3-us-west-1.amazonaws.com/gkbimages/client/gears.jpeg")
 Content.create(:title => "Park Tool School", :text=>"A one-month certification course in which participants learn cycling and bicycle mechanics.", :section=>Section.find_by_name("programs"),:url =>"http://s3-us-west-1.amazonaws.com/gkbimages/client/tools.jpg")
 Content.create(:title => "Good Karma Kids", :text=>"Targeted toward at-risk youth, this program pairs youth with adult volunteers to learn cycling and bicycle mechanics, in addition to learning the value of philanthropy.", :section=>Section.find_by_name("programs"),:url=>"http://s3-us-west-1.amazonaws.com/gkbimages/client/kids.jpg")
+=======
+# Starting content for site
+Content.create(:title =>"Raleigh Lightweight", :color=> "Purple", :brand=>"Road Bike", :price=>300.00, :section=>Section.find_by_name("bikes"))
+Content.create(:title =>"Raleigh Lightweight", :color=> "Purple", :brand=>"Road Bike", :price=>300.00, :section=>Section.find_by_name("bikes"))
+Content.create(:title =>"Mongoose", :color=> "Navy Blue", :brand=>"Mountain Bike", :price=>100.00, :section=>Section.find_by_name("bikes"))
+Content.create(:title =>"Repco Challenger", :color=> "Blue and Orange", :brand=>"Mountain Bike", :price=>110.00, :section=>Section.find_by_name("bikes"))
+Content.create(:title =>"Funky Bike", :color=> "Zebra Stripe", :brand=>"RoadBike", :price=>300.00, :section=>Section.find_by_name("bikes"))
+Content.create(:title =>"Abeni 10 Speed", :color=> "Yellow", :brand=>"RoadBike", :price=>210.00, :section=>Section.find_by_name("bikes"))
+Content.create(:title =>"Yellow Bike", :color=> "Yellow", :brand=>"Bicycle", :price=>200.00, :section=>Section.find_by_name("bikes"))
+Content.create(:title =>"Morrison Freeway", :color=> "Blue", :brand=>"RoadBike", :price=>170.00, :section=>Section.find_by_name("bikes"))
+Content.create(:title =>"Raleigh Lightweight", :color=> "Purple", :brand=>"Road Bike", :price=>300.00, :section=>Section.find_by_name("bikes"))
+>>>>>>> 8e23e6ac248c56476484d2e517ba8d5738cced7d

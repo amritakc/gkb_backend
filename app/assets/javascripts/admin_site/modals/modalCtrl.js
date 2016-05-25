@@ -4,9 +4,14 @@ angular.module('adminApp')
 '$state',
 'DataService',
 '$uiModal',
+// 'Upload'
 function($scope){
-   $scope.ok = function () {
-
+   $scope.ok = function() {
+   		// Upload.upload({
+   		// 	url: '/contents/create',
+   		// 	data: {file: $scope.bikesPost}
+   		// 	img: 
+   		// })
     console.log("hi from modal ctrl")
     }
     $scope.cancel = function () {

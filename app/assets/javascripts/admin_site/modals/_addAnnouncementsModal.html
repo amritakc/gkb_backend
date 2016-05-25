@@ -1,83 +1,40 @@
-<div>
-  <div class="modal-content">
-    <div class="modal-header">
-        <h4>Announcements</h4>
-    </div>
-    <div class="modal-body">
-       Please Select:
-       <form class='btn-group' ng-init="checkOption = 'text'">
-         <label><input type="radio" class='radio-inline' ng-model="checkOption" value="text"> Text</label>
-         <label><input type="radio" class='radio-inline' ng-model="checkOption" value="image"> Image</label>
-       </form>
+<div class="modal-content">
+  <div class="modal-header">
+    <h4>Announcements</h4>
+  </div>
+  <div class="modal-body">
+    Please Select:
+    <form class='btn-group' ng-init="checkOption = 'text'">
+      <label><input type="radio" class='radio-inline' ng-model="checkOption" value="text"> Text</label>
+      <label><input type="radio" class='radio-inline' ng-model="checkOption" value="image"> Image</label>
+  </form>
+  <!-- Image -->
+  <span ng-show="checkOption == 'image'">
+    <form name="myForm">        
+        <label>Title:
+        <input class='form-control' name="newsPost" ng-model="newsPost.title" required></label>
+        
+        <span class="error" ng-show="myForm.newsPost.$error.required">*** required</span>
 
+      <div class="fileUpload">
+        <input type="file" ngf-select ng-model="file" name="file" required> 
+        <img id="thumb" ng-show="myForm.file.$valid" ngf-thumbnail="file">
 
-       <span ng-show="checkOption == 'image'">
-
-        <form name="myForm">
-
-        <div class="form-group">
-          <label>Title:</label>
-          <input class='form-control' name="newsPost" ng-model="newsPost.title" required>
-
-          <i  ng-show='form-control.newsPost.$error.required'>Tilte is required </i>
-        </div>
-
-        <div>
-
-
-
-        <input type="file" ngf-select ng-model="picFile" name="file" required> 
-        <img id="thumb" ng-show="myForm.file.$valid" ngf-thumbnail="picFile">
-          <!-- {{progress}} -->
-          <!-- <span class="progress" ng-show="progress >= 0"> -->
-          <!-- Home grown progress bar -->
-          <!-- <div style='width 100%; border: 1px solid black; border-radius: 10px; margin-bottom: 5px;'>
-            <div style="width:{{progress}}%; border-radius: 10px; background-color: green; text-align: center;" ng-bind="progress +'%' ">
-              <span ng-show="file.result">Upload Successful</span>
-              <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
-
-            </div>
-
-          </div>
-
-        </span> -->
-        <!-- Bootstrap ui progress bar -->
         <span class="progress" ng-show="progress >= 0">
-          <!-- <div style='width 100%; border: 1px solid black; border-radius: 10px; margin-bottom: 5px;'> -->
-            <!-- <div style="width:{{progress}}%; border-radius: 10px; background-color: green; text-align: center;" ng-bind="progress +'%' "> -->
-            <uib-progressbar class="progress-striped active" style='border: 2px solid black;' value="progress" type="warning">{{progress}}%</uib-progressbar>
-              <span ng-show="file.result">Upload Successful</span>
-              <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
-
-            <!-- </div> -->
-
-          <!-- </div> -->
-
-      </span>
-
-
-      <div id="annsubmit">
-        <button class='btn btn-warning' ng-disabled="!myForm.$valid" ng-click="ok(file)">Submit</button>
+          <uib-progressbar class="progress-striped active" style='border: 2px solid black;' value="progress" type="warning">{{progress}}%</uib-progressbar>
+        </span>
+        <div id="annsubmit">
+          <button class='btn btn-warning' ng-disabled="!myForm.$valid" ng-click="ok(file)">Submit</button>
+        </div>
       </div>
-
-      <br>
-      <br>
-      <br>
-      </div>
-      </form>
-    </div>
-    </span>
-
-
-
-      <div ng-show="checkOption == 'text'">
-      <div class="form-group">
-        <label>Title:</label>
-        <input type="text" class="input form-control" ng-model='newsPost.title' required>
-      </div>
-
+    </form>
+  </span>
+  
+  <!-- text -->
+  <span ng-show="checkOption == 'text'">
+    <form name="myForm">
+      <label>Title:<input type="text" class="input form-control" ng-model='newsPost.title' required></label>
       <text-angular ng-model="newsPost.text"></text-angular>
-
       <div class="btn-container row">
         <div class="col-sm-7 col-sm-offset-1">
           <button type="button" class="btn btn-danger btn-lg" ng-click='cancel()'>Cancel</button>
@@ -85,16 +42,6 @@
         <div class="col-sm-1 col-sm-offset-1">
           <button type="button" class="btn btn-success btn-lg" ng-click="ok()">Save</button>
         </div>
-       </span>
-
-
-
-
-
-
-
-
       </div>
-    </div>
-  </div>
-</div>
+    </form>
+  </span>
