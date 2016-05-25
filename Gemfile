@@ -32,8 +32,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
  gem 'bcrypt', '~> 3.1.7'
 
+# Use hirb to view records nicely in rails c
  gem 'hirb'
+
+ # Use figaro for keeping secret keys 
  gem 'figaro'
+ # Amazon Web Services gem used for connection to S3 bucket
+ gem 'aws-sdk'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
