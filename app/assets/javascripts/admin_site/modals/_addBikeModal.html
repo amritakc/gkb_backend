@@ -1,30 +1,25 @@
-<div>
+<div id="myForm">
   <div class="modal-content">
     <div class="modal-header">
         <h4>Bike</h4>
     </div>
     <div class="modal-body">
-      <form name="myForm">
-        <div class="form-group">
-          <label>Title:</label>
-          <input class="form-control" name="bikesPost" ng-model='bikesPost.title' required>
-        </div>
-        <div class="form-group">
-          <label>Price:</label>
-          <input type="text" class="input form-control" ng-model='bikesPost.price' required>
-        </div>
-        <div class="form-group">
-          <label>Caption:</label>
-          <input type="text" class="input form-control" ng-model='bikesPost.caption' required>
-        </div>
-        <div class="form-group">
-          <label>Color:</label>
-          <input type="text" class="input form-control" ng-model='bikesPost.color' required>
-        </div>
-        <div class="form-group">
-          <label>Brand:</label>
-          <input type="text" class="input form-control" ng-model='bikesPost.brand'>
-        </div>
+      <!-- file upload here, added picture preview -->
+      <input type="file" ngf-select ng-model="picFile" name="file" required> 
+      <img id="thumb" ng-show="myForm.file.$valid" ngf-thumbnail="picFile">
+
+      <div class="form-group">
+        <label>Title:</label>
+        <input type="text" class="input form-control" ng-model='bikesPost.title'>
+        <label>Price:</label>
+        <input type="text" class="input form-control" ng-model='bikesPost.price'>
+        <label>Caption:</label>
+        <input type="text" class="input form-control" ng-model='bikesPost.caption'>
+        <label>Color:</label>
+        <input type="text" class="input form-control" ng-model='bikesPost.color'>
+        <label>Brand:</label>
+        <input type="text" class="input form-control" ng-model='bikesPost.brand'>
+      </div>
 
         <div class="btn-container row">
           <div class="col-sm-7 col-sm-offset-1">

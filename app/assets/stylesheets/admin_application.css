@@ -97,6 +97,10 @@ html, body {
   box-shadow: 2px 2px 4px 1px;
 }
 
+#annsubmit {
+  margin-top:1em;
+}
+
 /*Logos!!!!!!!!! - Stephen*/
 
 
@@ -288,6 +292,15 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
   margin-bottom: 1em;
 }
 
+#thumb {
+    width: 5em;
+    height: 5em;
+    float: none;
+    position: relative;
+    top: 0.5em;
+    margin-bottom:0.5em;
+}
+
 /*toast for login*/
 .ng-toast__list {
   list-style: none;
@@ -328,3 +341,4 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
   margin-left: 140px;
 }
 /*end change password*/
+>>>>>>> development-admin

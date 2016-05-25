@@ -26,7 +26,8 @@
 
 
 
-        <input class='btn btn-default' type="file" ngf-select ng-model='file' name="file" required>
+        <input type="file" ngf-select ng-model="picFile" name="file" required> 
+        <img id="thumb" ng-show="myForm.file.$valid" ngf-thumbnail="picFile">
           <!-- {{progress}} -->
           <!-- <span class="progress" ng-show="progress >= 0"> -->
           <!-- Home grown progress bar -->
@@ -55,9 +56,9 @@
       </span>
 
 
-
+      <div id="annsubmit">
         <button class='btn btn-warning' ng-disabled="!myForm.$valid" ng-click="ok(file)">Submit</button>
-
+      </div>
 
       <br>
       <br>
