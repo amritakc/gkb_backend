@@ -8,13 +8,14 @@
 	<h3>Good Karma Bikes rehabilitates bicycles destined for landfill and transforms them into reliable and clean transportation. These same bicycles set the foundation for our community programming include:</h3>
 
 	<div class="communitycontent">
-		<div class="communityboxes">
-			<div class="img-community" id="transport"></div>
-				<h3>Transportation for Transformation</h3>
-				<p>We reinvest the money we make in our full-service bike shop into our programs that support our community.
+		<div ng-repeat ="program in programs" class="communityboxes">
+			<div class="img-community"></div>
+				<img src={{program.url}} style="width:100px;height:100px">
+				<h3>{{program.title}}</h3>
+				<p>{{program.text}}
 				</p>
 		</div>
-		<div class="communityboxes">
+		<!-- <div class="communityboxes">
 			<div class="img-community" id="work4bikes"></div>
 			<h3>Work-4-Bike</h3>
 			<p>Targeted toward low-income individuals who cannot afford a bicycle, this provide provides a free bicycle in exchange for six volunteer hours.
@@ -43,5 +44,5 @@
 			<h3>Good Karma Kids</h3>
 			<p>Targeted toward at-risk youth, this program pairs youth with adult volunteers to learn cycling and bicycle mechanics, in addition to learning the value of philanthropy. 
 			</p>
-		</div>
+		</div> -->
 	</div>
