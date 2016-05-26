@@ -15,23 +15,22 @@
 </head>
 <body ng-app="myApp" ng-controller="mainCtrl">
   <div class="container-fluid">
-    <nav class="navigation-bar" ng-controller="navCtrl">
-      <ul class="topnav" ng-class="{ 'responsive': small }">
-        <li class="icon">
-          <a href="javascript:void(0);" ng-click="showLinks()">&#9776;</a>
-        </li>
-        <li ng-click="changePage('/')"><a href="#/">HOME</a></li>
-        <li ng-click="changePage('/shop')"><a href="#/shop">SHOP</a></li>
-        <li ng-click="changePage('/donations')"><a href="#/donations">DONATE</a></li>
-        <li ng-click="changePage('/volunteers')"><a href="#/volunteers">VOLUNTEER</a></li>
-        <li ng-click="changePage('/community')"><a href="#/community">COMMUNITY</a></li>
-        <li ng-click="changePage('/news')"><a href="#/news">NEWS</a></li>
-      </ul>
-    </nav>
-
-    <div class="header-wrapper" ng-controller="headerCtrl">
-
-      <header class="bike-image" ng-if="currentUrl == '/'">
+    <div class="header-wrapper" ng-controller="navCtrl">
+      <nav class="navigation-bar">
+        <ul class="topnav" ng-class="{ 'responsive': small }">
+          <li class="icon">
+            <a href="javascript:void(0);" ng-click="showLinks()">&#9776;</a>
+          </li>
+          <li ng-click="changePage('/')"><a href="#/">HOME</a></li>
+          <li ng-click="changePage('/shop')"><a href="#/shop">SHOP</a></li>
+          <li ng-click="changePage('/donations')"><a href="#/donations">DONATE</a></li>
+          <li ng-click="changePage('/volunteers')"><a href="#/volunteers">VOLUNTEER</a></li>
+          <li ng-click="changePage('/community')"><a href="#/community">COMMUNITY</a></li>
+          <li ng-click="changePage('/news')"><a href="#/news">NEWS</a></li>
+        </ul>
+      </nav>
+    
+      <header class="bike-image" ng-if="changePage('/')">
         <div class="container slider">
           <img ng-repeat="slide in slides" class="slide slide-animation" ng-hide="!isCurrentSlideIdx($index)" ng-src="{{ slide.image }}" alt="slide image">
           <a class="arrow prev" href="javascript: void(0);" ng-click="prevSlide()"></a>
@@ -46,18 +45,16 @@
             </div>
           </nav>
         </div>
-        <div class="triangle-up" id="tri-index"></div>
-      
       </header>
 
-      <header ng-if="currentUrl == '/shop'" class="bike-image">
+      <header ng-if="changePage('/shop')" class="bike-image">
       </header>
-      <header ng-if="currentUrl == '/donations'" class="thankyou-image">
+      <header ng-if="changePage('/donations')" class="thankyou-image">
       </header>
-      <header ng-if="currentUrl == '/volunteers'" class="bike-image">
+      <header ng-if="changePage('/volunteers')" class="bike-image">
 
       </header>
-      <header ng-if="currentUrl == '/news'" class="bike-image">
+      <header ng-if="changePage('/news')" class="bike-image">
 
       </header>
     </div>
