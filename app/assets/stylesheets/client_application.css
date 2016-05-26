@@ -749,22 +749,16 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 /* End Community Section */
 
 /* Volunteer  Start */
-.volgilistcs {
-  display: inline;
-  padding-right: 11%;
-  padding-left: 11%;
-  padding-top: 1%;
-  padding-bottom: 3%;
-  float: right;
+.volgistics {
+  display: inline-block;
 }
 
 d-expand-collapse {
   display: inline-block;
   vertical-align: top;
-  padding: 2%;
   word-wrap: break-word;
-  width: 45%;
 }
+
 .exp_col_title {
   text-align: center;
 }
