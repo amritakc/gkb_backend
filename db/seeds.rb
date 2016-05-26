@@ -18,15 +18,15 @@ Section.create(:name => 'bikes')
 Section.create(:name => 'programs')
 
 # Starting content for bikes
-Content.create(:title =>"Raleigh Lightweight", :color=> "Purple", :brand=>"Road Bike", :price=>300.00, :section=>Section.find_by_name("bikes"),:url => "https://s3-us-west-1.amazonaws.com/gkbimages/client/bike1b.jpg")
-Content.create(:title =>"Raleigh Lightweight", :color=> "Purple", :brand=>"Road Bike", :price=>300.00, :section=>Section.find_by_name("bikes"),:url => "https://s3-us-west-1.amazonaws.com/gkbimages/client/bike1e.jpg")
-Content.create(:title =>"Mongoose", :color=> "Navy Blue", :brand=>"Mountain Bike", :price=>100.00, :section=>Section.find_by_name("bikes"),:url => "https://s3-us-west-1.amazonaws.com/gkbimages/client/bike1c.jpg")
-Content.create(:title =>"Repco Challenger", :color=> "Blue and Orange", :brand=>"Mountain Bike", :price=>110.00, :section=>Section.find_by_name("bikes"),:url => "https://s3-us-west-1.amazonaws.com/gkbimages/client/bike1d.jpg")
-Content.create(:title =>"Funky Bike", :color=> "Zebra Stripe", :brand=>"RoadBike", :price=>300.00, :section=>Section.find_by_name("bikes"),:url => "https://s3-us-west-1.amazonaws.com/gkbimages/client/bike1h.jpg")
-Content.create(:title =>"Abeni 10 Speed", :color=> "Yellow", :brand=>"RoadBike", :price=>210.00, :section=>Section.find_by_name("bikes"),:url => "https://s3-us-west-1.amazonaws.com/gkbimages/client/bike1f.jpg")
-Content.create(:title =>"Yellow Bike", :color=> "Yellow", :brand=>"Bicycle", :price=>200.00, :section=>Section.find_by_name("bikes"),:url =>"https://s3-us-west-1.amazonaws.com/gkbimages/client/bike1a.jpg")
-Content.create(:title =>"Morrison Freeway", :color=> "Blue", :brand=>"RoadBike", :price=>170.00, :section=>Section.find_by_name("bikes"),:url => "https://s3-us-west-1.amazonaws.com/gkbimages/client/bike1f.jpg")
-Content.create(:title =>"Raleigh Lightweight", :color=> "Purple", :brand=>"Road Bike", :price=>300.00, :section=>Section.find_by_name("bikes"),:url => "https://s3-us-west-1.amazonaws.com/gkbimages/client/bike1b.jpg")
+Content.create(:title =>"Raleigh Lightweight", :color=> "Purple", :brand=>"Road Bike", :price=>300.00, :section=>Section.find_by_name("bikes"),:url => "https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1b.jpg")
+Content.create(:title =>"Raleigh Lightweight", :color=> "Purple", :brand=>"Road Bike", :price=>300.00, :section=>Section.find_by_name("bikes"),:url => "https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1e.jpg")
+Content.create(:title =>"Mongoose", :color=> "Navy Blue", :brand=>"Mountain Bike", :price=>100.00, :section=>Section.find_by_name("bikes"),:url => "https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1c.jpg")
+Content.create(:title =>"Repco Challenger", :color=> "Blue and Orange", :brand=>"Mountain Bike", :price=>110.00, :section=>Section.find_by_name("bikes"),:url => "https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1d.jpg")
+Content.create(:title =>"Funky Bike", :color=> "Zebra Stripe", :brand=>"RoadBike", :price=>300.00, :section=>Section.find_by_name("bikes"),:url => "https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1h.jpg")
+Content.create(:title =>"Abeni 10 Speed", :color=> "Yellow", :brand=>"RoadBike", :price=>210.00, :section=>Section.find_by_name("bikes"),:url => "https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1f.jpg")
+Content.create(:title =>"Yellow Bike", :color=> "Yellow", :brand=>"Bicycle", :price=>200.00, :section=>Section.find_by_name("bikes"),:url =>"https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1a.jpg")
+Content.create(:title =>"Morrison Freeway", :color=> "Blue", :brand=>"RoadBike", :price=>170.00, :section=>Section.find_by_name("bikes"),:url => "https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1f.jpg")
+Content.create(:title =>"Raleigh Lightweight", :color=> "Purple", :brand=>"Road Bike", :price=>300.00, :section=>Section.find_by_name("bikes"),:url => "https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1b.jpg")
 
 
 #Default values for programs

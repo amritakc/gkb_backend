@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,8 +14,9 @@
   <%= javascript_include_tag 'client_javascript' %>
   <%= csrf_meta_tags %>
 </head>
-<body ng-app="myApp" ng-controller="mainCtrl">
+<body ng-app="myApp">
   <div class="container-fluid">
+<<<<<<< HEAD
     <nav class="navigation-bar" ng-controller="navCtrl">
       <ul class="topnav" ng-class="{ 'responsive': small }">
         <li class="icon">
@@ -51,16 +51,35 @@
 
       <div class="triangle-up" id="tri-index"></div>
       
+=======
+    <div class="header-wrapper" ng-controller="navCtrl">
+      <nav class="navigation-bar">
+        <ul class="topnav" ng-class="{ 'responsive': small }">
+          <li class="icon">
+            <a href="javascript:void(0);" ng-click="showLinks()">&#9776;</a>
+          </li>
+          <li ng-click="changePage('/')"><a href="#/">HOME</a></li>
+          <li ng-click="changePage('/shop')"><a href="#/shop">SHOP</a></li>
+          <li ng-click="changePage('/donations')"><a href="#/donations">DONATE</a></li>
+          <li ng-click="changePage('/volunteers')"><a href="#/volunteers">VOLUNTEER</a></li>
+          <li ng-click="changePage('/community')"><a href="#/community">COMMUNITY</a></li>
+          <li ng-click="changePage('/news')"><a href="#/news">NEWS</a></li>
+        </ul>
+      </nav>
+    
+      <header class="bike-image" ng-if="changePage('/')">
+        
+>>>>>>> 2ee3eb286f9d0b60463a913ab682c8898cc498a4
       </header>
 
-      <header ng-if="currentUrl == '/shop'" class="bike-image">
+      <header ng-if="changePage('/shop')" class="bike-image">
       </header>
-      <header ng-if="currentUrl == '/donations'" class="thankyou-image">
+      <header ng-if="changePage('/donations')" class="thankyou-image">
       </header>
-      <header ng-if="currentUrl == '/volunteers'" class="bike-image">
+      <header ng-if="changePage('/volunteers')" class="bike-image">
 
       </header>
-      <header ng-if="currentUrl == '/news'" class="bike-image">
+      <header ng-if="changePage('/news')" class="bike-image">
 
       </header>
     </div>
@@ -103,14 +122,16 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12" id="subscribe">
-          <h4><strong>SUBSCRIBE TO OUR MAILING LIST</strong></h4>
-          <form role="form">
-              <div class="form-group">
-                  <input type="email" class="form-control footer-email-input" ng-model="newSubscriber.email" placeholder="Email Address">
-                  <button class="btn btn-subscribe" ng-click="create()">Submit</button>
-              </div>
-          </form>
+        <div class="col-xs-12">
+          <div id="subscribe">
+            <h4><strong>SUBSCRIBE TO OUR MAILING LIST</strong></h4>
+            <form role="form">
+                <div class="form-group">
+                    <input type="email" class="form-control footer-email-input" ng-model="newSubscriber.email" placeholder="Email Address">
+                    <button class="btn btn-subscribe" ng-click="create()">Submit</button>
+                </div>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
