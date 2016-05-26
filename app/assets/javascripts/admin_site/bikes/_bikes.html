@@ -6,25 +6,32 @@
     <uib-accordion-heading>
       {{bikesPost.created_at | date : 'M/dd/yyyy - hh:mm a' : timezone}} &nbsp&nbsp - &nbsp&nbsp <b>{{bikesPost.title}}</b><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
     </uib-accordion-heading>
-    <div class="form-group">
-      <label>Title:</label>
-      <input type="text" class="input form-control" ng-model='bikesPost.title'>
-    </div>
-    <div class="form-group">
-      <label>Price:</label>
-      <input type="text" class="input form-control" ng-model='bikesPost.price'>
-    </div>
-    <div class="form-group">
-      <label>Caption:</label>
-      <input type="text" class="input form-control" ng-model='bikesPost.caption'>
-    </div>
-    <div class="form-group">
-      <label>Color:</label>
-      <input type="text" class="input form-control" ng-model='bikesPost.color'>
-    </div>
-    <div class="form-group">
-      <label>Brand:</label>
-      <input type="text" class="input form-control" ng-model='bikesPost.brand'>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>Title:</label>
+          <input type="text" class="input form-control" ng-model='bikesPost.title'>
+        </div>
+        <div class="form-group">
+          <label>Price:</label>
+          <input type="text" class="input form-control" ng-model='bikesPost.price'>
+        </div>
+        <div class="form-group">
+          <label>Caption:</label>
+          <input type="text" class="input form-control" ng-model='bikesPost.caption'>
+        </div>
+        <div class="form-group">
+          <label>Color:</label>
+          <input type="text" class="input form-control" ng-model='bikesPost.color'>
+        </div>
+        <div class="form-group">
+          <label>Brand:</label>
+          <input type="text" class="input form-control" ng-model='bikesPost.brand'>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="{{bikesPost.url}}" alt="">
+      </div>
     </div>
 
     <div class="btn-container row">
