@@ -6,8 +6,18 @@ class ContentsController < ApplicationController
   end
 
   def img
-    # Create an object for S3 to send over the image    
-    obj = S3_BUCKET.object('/admin/'+params[:file].original_filename)
+    puts '9999999999999999999'
+    puts params[:file].tempfile.path
+    puts '999999999'
+
+    image = MiniMagick::Image.open(params[:file].tempfile.path)
+    image.format 'png'
+    image.write 'output.png'
+    puts '******************'
+    puts image.path
+    # Create an object for S3 to send over the image
+    obj = S3_BUCKET.object('/admin/'+ 'output.png')    
+    # obj = S3_BUCKET.object('/admin/'+params[:file].original_filename)
 
     if obj.upload_file(params[:file].path, acl: 'public-read')
       render :json => {status: 0, data: obj.public_url}
