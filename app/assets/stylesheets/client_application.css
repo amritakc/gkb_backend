@@ -754,10 +754,13 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
 /* Volunteer  Start */
 .volgistics {
-  display: inline-block;
+  text-align: center;
+
 }
 
 d-expand-collapse {
+  font-size: 2em;
+
   display: inline-block;
   vertical-align: top;
   word-wrap: break-word;
@@ -767,6 +770,10 @@ d-expand-collapse {
   text-align: center;
 }
 
+.voldetails {
+  font-size: 16px;
+  text-align: center;
+}
 /* Volunteer  End*/
 
 
