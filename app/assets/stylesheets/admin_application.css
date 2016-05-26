@@ -17,6 +17,7 @@
 *= require font-awesome
 */
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,300,300italic,900italic');
+
 html, body {
   margin: 0;
   padding: 0;
@@ -112,11 +113,10 @@ html, body {
 }
 
 input.ng-invalid{
-  background-color: lightred;
-  border: 1px solid red;
+  border: 1px solid;
 }
 input.ng-valid{
-  /*border: 1px solid green;*/
+
 }
 /*Panels!!!!!! -Stephen*/
 
@@ -312,8 +312,8 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 }
 /*Pagination*/
 .pagination {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  bottom: 25px;
 }
 
 .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {

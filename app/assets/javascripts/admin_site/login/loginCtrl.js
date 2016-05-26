@@ -4,7 +4,9 @@ angular.module('adminApp')
 '$state',
 'Auth',
 'ngToast',
-function ($scope, $state,Auth,ngToast) {
+'ModalService',
+'$uibModal',
+function ($scope, $state,Auth,ngToast,ModalService,$uibModal) {
   $scope.login = function() {
     Auth.login($scope.user).then(function(){
       $state.go('dashboard');
@@ -21,17 +23,27 @@ function ($scope, $state,Auth,ngToast) {
   //create an instance of the modal 
     var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
-      templateUrl: 'login/_forgotPasswordModal.html',
-      controller: 'ModalInstanceCtrl',
-      resolve: {
-        items: function () {
-          return $scope.items;
+      templateUrl: 'admin_site/login/_forgotPasswordModal.html',
+      controller: [
+        '$scope',
+        '$uibModalInstance',
+        'ModalService',
+        function($scope, $uibModalInstance, ModalService) {
+          
+          $scope.ok = function() {
+            $uibModalInstance.close($scope.user);
+          };
+          $scope.cancel = function () {                
+            $uibModalInstance.dismiss();
+          }
         }
-      }
+      ]
     });
 
-    modalInstance.result.then(function (selectedItem) {
-      $scope.selected = selectedItem;
+    modalInstance.result.then(function (email) {
+        Auth.sendResetPasswordInstructions(email).then(function() {
+            // Sended email if user found otherwise email not sended...
+        });
     }, function () {
       $log.info('Modal dismissed at: ' + new Date());
     });
