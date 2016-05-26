@@ -4,41 +4,57 @@
 		<h1>SHOP NOW</h1>
 		<h2>Seek. Find. Enjoy.</h2>
 		<h3>"Grab those handlebars and LIVE life to the max. An adventure begins every time you get on the bike and out the door. GO!"</h3>
-		<div class="shopboxes">
+		<div ng-repeat = "bike in bikes" class="shopboxes">
+			<img src="{{bike.url}}">
+			<h4>{{bike.title}}</h4>
+			<h5>Color: {{bike.color}}</h5>
+			<h5>Type: {{bike.brand}}</h5>
+			<h5>Frame-size: {{bike.caption}}</h5>
+			<h5>${{bike.price}}</h5>			
+		</div>
+		<!-- <div class="shopboxes">
 			<img src="https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1a.jpg">
 			<h4>Yellow Bike</h4>
 			<h5>Color: Yellow</h5>
 			<h5>Type: Bicycle</h5>
 			<h5>Frame Size: 13"-14"</h5>
 			<h5>$ 200.00</h5>			
-		</div>
-		<div class="shopboxes">
+		</div> -->
+		<!-- <div class="shopboxes">
 			<img src="https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1b.jpg">
 			<h4>Raleigh Lightweight</h4>
 			<h5>Color: Purple</h5>
 			<h5>Type: Road bike</h5>
 			<h5>Frame Size: 49cm-50cm</h5>
 			<h5>$ 300.00</h5>	
-		</div>
-		<div class="shopboxes">
+		</div> -->
+		<!-- <div class="shopboxes">
 			<img src="https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1c.jpg">
 			<h4>Mongoose</h4>
 			<h5>Color: Navy Blue</h5>
 			<h5>Type: Mountain bike</h5>
 			<h5>Frame Size: 13"-14"</h5>
 			<h5>$ 100.00</h5>
-		</div>
-		<div class="shopboxes">
+		</div> -->
+		<!-- <div class="shopboxes">
 			<img src="https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1d.jpg">
 			<h4>Repco Challenger</h4>
 			<h5>Color: Blue and Orange</h5>
 			<h5>Type: Mountain bike</h5>
 			<h5>Frame Size: 14"-17"</h5>
 			<h5>$ 110.00</h5>		
-		</div>
+		</div> -->
 	</div>
-	<div class="shopgroup">
+<!-- 	<div class="shopgroup">
 		<div class="shopboxes">
+			<img src="https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1f.jpg">
+			<h4>Morrison Freeway</h4>
+			<h5>Color: Blue</h5>
+			<h5>Type: Roadbike</h5>
+			<h5>Frame Size: 56cm-58cm</h5>
+			<h5>$ 170.00</h5>		
+		</div> -->
+<!-- 		<div class="shopboxes">
 			<img src="https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1e.jpg">
 			<h4>Raleigh Lightweight</h4>
 			<h5>Color: Purple</h5>
@@ -69,8 +85,8 @@
 			<h5>Type: Roadbike</h5>
 			<h5>Frame Size: 58cm-60cm</h5>
 			<h5>$ 300.00</h5>			
-		</div>
-	</div>
+		</div> -->
+<!-- 	</div> -->
 	<div class="shopgroup">
 		<h3>For more of our amazing bikes please visit eBay and craigslist!</h3>
 		<h4>All the bikes you see on eBay and craigslist are displayed in our shop. 
