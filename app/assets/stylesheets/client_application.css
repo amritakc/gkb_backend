@@ -1,4 +1,1596 @@
 
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+/*
+*= require font-awesome
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,700italic,900,300,300italic,900italic');
+/* Styling for html, body */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  overflow: auto; 
+}
+
+/* This is styling for the navigation bar */
+ul.topnav {
+  list-style-type: none;
+  float: right;
+}
+
+ul.topnav li.icon {
+  display: none; }
+
+ul.topnav li {
+  float: left; 
+}
+
+ul.topnav li a {
+  display: inline-block;
+  font-size: 1.2em;
+  padding: 0.825em;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  transition: 0.3s; 
+
+}
+
+/* Here we have code for the different anchor tag states, this complete removes all instances of text-decoration */
+ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li a:active {
+  text-decoration: none;
+  color: white; 
+
+}
+
+/* These are stylings for the footer */
+.footer-links-wrapper {
+  text-align: right; 
+}
+
+.footer-email-input {
+  width: 88%;
+  display: inline-block;
+  margin-right: 0.40em;
+}
+
+.social-media-bubble {
+  margin-bottom: 1em;
+  margin-right: -0.3em; 
+}
+
+.social-media-bubble .social-media-icons {
+  margin: 0 0.3em;
+  width: 3em;
+  height: 3em;
+  display: inline-block !important; 
+  margin-right: -0.3em; }
+  
+.social-media-bubble .social-media-icons {
+  margin: 0 0.3em;
+  width: 3em;
+  height: 3em;
+  display: inline-block !important; 
+}
+
+.social-media-icons:hover {
+  transform: rotate(360deg);
+}
+
+.rotate {
+  transition: all 0.5s ease-in-out;
+}
+
+.rotate:hover {
+  transition: all 0.8s ease-in-out;
+}
+
+.footer-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: right; 
+}
+
+.footer-list li.footer-links {
+  line-height: 2em; }
+
+.footer-list li.footer-links a {
+  color: white; }
+
+.footer-list li.footer-links a:link, .footer-list li.footer-links a:visited, .footer-list li.footer-links a:hover, .footer-list li.footer-links a:active {
+  text-decoration: none; }
+
+/*  All of the styling for the carousel  */
+.slider {
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    background: #e6e6e6;
+    border: 10px solid #FFF;
+}
+
+.slider > a {
+  height: 30%;
+  width: 10%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.arrow {
+    position: absolute;
+    z-index: 1002;
+    display: block;
+    top: 50%;
+    margin-top: -35px;
+    width: 36px;
+    height: 71px;
+    outline: none;
+    cursor: pointer;
+    background: no-repeat;
+}
+
+.arrow.prev {
+    opacity: 0.2;
+    left: 20px;
+    background-image: url('http://www.thechildrensplayground.com/resources/images/carousel/left-arrow.png');
+    transition: 0.2s linear all;
+}
+
+.arrow.next {
+    opacity: 0.2;
+    right: 20px;
+    background-image: url('http://www.thechildrensplayground.com/resources/images/carousel/right-arrow.png');
+    transition: 0.2s linear all;
+}
+
+.arrow.prev:hover {
+    opacity: 1;
+    background-image: url('http://www.thechildrensplayground.com/resources/images/carousel/left-arrow.png');
+}
+
+.arrow.next:hover {
+    opacity: 1;
+    background-image: url('http://www.thechildrensplayground.com/resources/images/carousel/right-arrow.png');
+}
+
+
+
+/*---------------------------------------------------------
+NAV
+---------------------------------------------------------*/
+
+.nav {
+    text-align: center;
+    display: block;
+    position: absolute;
+    z-index: 1002;
+    left: 0;
+    bottom: -4px;
+    right: 0;
+    height: 48px;
+}
+
+.nonDraggableImage{
+    -webkit-user-drag: none;
+}
+
+.nav .wrapper {
+    margin: 0 auto;
+    width: 100%;
+    padding: 1em 0 .8em;
+}
+
+.nav ul {
+    margin: 0;
+    width: 100%;
+}
+
+.nav .dot, .nav .dot a {
+    display: inline-block;
+    zoom: 1;
+}
+
+.dots .dot {
+    position: relative;
+    margin: 0 8px;
+    width: 12px;
+    height: 12px;
+}
+
+.dots .dot a {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 6px;
+    height: 6px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background: #FFF;
+    border: 1px solid transparent;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.25s, border-color 0.25s;
+    -moz-transition: background-color 0.25s, border-color 0.25s;
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+.dots .dot a.active {
+    border-color: #FFF;
+    background-color: transparent;
+}
+
+/* This is the styling for the wrapper around the footer section */
+#footer {
+  position: relative;
+  clear: both;
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 2.5em;
+  border-top: 2px solid black;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/handlebars.jpg") center center no-repeat;
+  background-size: cover; }
+
+/* This is the styling for the 'subscribe to mailing list' section */
+#subscribe {
+  display: block;
+  float: none;
+  padding: 1em;
+  border-radius: 1em;
+  width: 60%;
+  margin: 0 auto;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+}
+
+.btn-subscribe {
+  color: #fff;
+  background-color: #179F59;
+  border-color: #189f59;
+}
+/* End Subscribe To Mailing List Stylings */
+
+/* Stylings for the navigation bar, including a class meant for making the bar 
+   solid. However, JavaScript is refusing to cooperate. */
+.navigation-bar {
+  width: 100%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  z-index: 9999;
+}
+
+/* End Navigation Bar Stylings */
+
+/* This is styling for the header and the navigation icons for the 'Learn How To' section */
+.logo {
+display: inline;
+width: 8em;
+height: auto;
+margin-top: 1%;
+margin-left: 5%;
+}
+
+.iam {
+  height: 7em;
+  width: 10em;
+  display: inline-block;
+  font-size: 0.6em;
+  vertical-align: top;
+}
+
+#iamh1 {
+  color: #000035; 
+  padding-top: 5%;
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 2em;
+  font-weight: 300;
+}
+
+.iam a {
+  text-decoration: none;
+  color: #000035; 
+  font-weight: 300;
+}
+
+.iam:not(:first-of-type) {
+  border-left: 1.em solid #000035;
+}
+
+#iamgroup {
+  height: 10%;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+
+.iam img {
+  padding-bottom: .5em;
+  width: 5em;
+}
+
+.clear {
+  clear: both; 
+}
+
+header h3 {
+  margin: 0;
+  color: #000035;
+  margin-top: 1em;
+  text-align: center;
+  
+}
+
+header p {
+  width: 60%;
+  color: #000035;
+  font-size: 1.3em;
+  margin: 1em auto;
+  padding-bottom: 2em;
+  text-align: justify;
+}
+
+.header-wrapper {
+  width: 100%;
+  height: 100%;
+}
+/* End Header Section */
+
+/*  Some overrides for bootstrap stylings */
+.row {
+  width: 100%;
+  margin: 0 auto; 
+}
+
+.container-fluid {
+  padding: 0;
+  width: 100%;
+  min-height: 100%; 
+}
+/* End Bootstrap Overrides */
+
+/* Stylings for the mission statement */
+.bike-image {
+  width: 100%;
+  max-height: 60%;
+  background: linear-gradient(rgba(0, 0, 128, 0.35), rgba(0, 0, 128, 0.35)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/bike-friends.jpeg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.bike-image h3 {
+  font-weight: 200;
+}
+
+.thankyou-image {
+  width: 100%;
+  max-height: 40em;
+  padding: 2em;
+  background: linear-gradient(rgba(0, 0, 128, 0.35), rgba(0, 0, 128, 0.35)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.test-flyer {
+  width: 30em;
+  height: auto;
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-bottom: 15%;
+}
+
+/*Begin Mission Statement Styling*/
+#tagline {
+  margin-left: 10%;
+}
+
+hr {
+    width: 20%;
+    display: inline-block;
+}
+
+#tagline h3 {
+  font-style: italic;
+  color: #000035;
+  margin-bottom: 7%;
+  font-size: 3em;
+  font: Normal 400 italic;
+}
+
+
+.mission-wrapper {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  color: #000035;
+  height: 100%;
+  width: 100%;
+}
+
+.mission-wrapper .mission-text > h3 {
+  margin: 0 auto;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.mission-wrapper .mission-text > p {
+  text-align: justify;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+
+.mission-text {
+  margin: 0 auto;
+  text-align: center;
+
+  width: 80%;
+  font-style: italic;
+  font-weight: 100;
+
+  width: 80%;
+  font-style: italic;
+  font-weight: 100;
+  text-align: justify;
+  padding-bottom: 1.5em;
+}
+
+/* End Mission Statement Styling */
+
+
+
+/* Styling for the little triangles on the homepage */
+.triangle-up {
+  padding-top: 5em;
+  width: 0;
+  height: 0;
+  border-left: 4.5em solid transparent;
+  border-right: 4.5em solid transparent;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+#tri-index {
+  border-bottom: 5em solid white;
+}
+
+#tri-community {
+  border-bottom: 5em solid #3bb172;
+}
+
+
+/* End Triangle Styling */
+
+/* Stylings for the announcements section */
+.announcements {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20%;
+  background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/row_of_bikes.jpg");
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+
+.announcements-paragraph {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.announcements-paragraph h1 {
+  padding-bottom: 5%;
+  font-size: 2em;
+  font-weight: 200;
+  letter-spacing: .16em;
+  text-align: center;
+}
+
+.announcements-paragraph p {
+  font-size: 1.5em;
+  text-align: justify;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+/* End Announcements Section */
+
+/* Styling for the news section on the homepage */
+#news-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.newsgroup {
+  height: 50%;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  padding-top: 2em;
+}
+
+.newsgroup h1 {
+  text-align: center;
+  margin-bottom: 0.5em;
+  margin-top: 2em;
+}
+
+.all-news {
+  margin-bottom: 2em !important;
+  margin-top: 0.5em !important;
+}
+
+.newsboxes:nth-of-type(2) {
+  margin-left: 5em;
+}
+
+.newsboxes {
+width: 35%;
+height: 50%;
+display: inline-block;
+margin-bottom: 5%;
+}
+
+.newsboxes h4 {
+  margin-top: 0.5em;
+}
+
+.newsboxes img {
+width: 100%;
+height: 21.5em;
+display: inline-block;
+-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+/* End News Section */
+
+/* Styling for the community programs section--shown on homepage and community page */
+.community {
+  width: 100%;
+  height: 100%;
+}
+
+.community h4 {
+  font-weight: 200;
+/*  font-style: italic;*/
+  color: white;
+  width: 75%;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  text-transform: uppercase;
+
+}
+
+.community h3 {
+  color: white;
+  font-weight: 200;
+  margin-top: 2%;
+  text-align: center;
+  font-size: 1.5em;
+
+
+}
+.community h1 {
+  font-size: 3em;
+  color: white;
+  font-weight: 200;
+  letter-spacing: .16em;
+  text-align: center;
+  margin-bottom: 5%;
+
+}
+
+.community h2 {
+  color: white;
+  text-align: center;
+  font-weight: 200;
+
+}
+
+.communitycontent {
+
+  width: 90%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 1%;
+
+
+}
+
+.communityboxes {
+  width: 20em;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  color: white; 
+  margin-left: 6%;
+  margin-right: 3%;
+  margin-bottom: 2%;
+
+
+}
+
+.img-community h3 {
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-top: 40%;
+  font-size: 1.7em;
+}
+
+.communityboxes p {
+  width: 80%;
+  margin: auto;
+  font-weight: 200;
+  text-align: justify;
+  margin-bottom: 4%;
+  margin-top: 2%;
+}
+
+/*.communityboxes:nth-child(2n) {
+  margin-left: 5.52em;
+}
+*/
+
+.img-community {
+  width: 20em;
+  height: 20em;
+  margin: auto;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+
+}
+
+#transport {
+  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/commute.jpeg") center center no-repeat;
+  background-size: auto 100%;
+  
+}
+
+#work4bikes {
+  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/smile.jpeg") center center no-repeat;
+  background-size: auto 100%;
+
+}
+
+#sponsor-bike {
+  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("/https://s3-us-west-1.amazonaws.com/gkbimages//client/bike5.jpg") center center no-repeat;
+  background-size: auto 100%;
+}
+
+#saturday-clinic {
+  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/gears.jpeg") center center no-repeat;
+  background-size: auto 100%;
+
+}
+
+#tools {
+  background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/tools.jpg") center center no-repeat;
+  background-size: auto 100%;
+
+}
+
+#karmakids {
+  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/kids.jpg") center center no-repeat;
+
+}
+
+.community > p {
+  margin: 0.5em auto;
+  color: white;
+  width: 50%;
+  text-align: center;
+}
+
+.community > h3 {
+  margin: 0.5em 0;
+  color: white;
+  text-align: center;
+}
+
+.community {
+  width: 100%;
+  height: 100%;
+  padding: 3em 2em;
+  background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/*THIS SECTION SPECIFIC TO COMMUNITY PARTIAL*/
+.community-header {
+  width: 100%;
+  height: 40em;
+  background: linear-gradient(rgba(41, 52, 88, 0.75), rgba(41, 52, 88, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/cyclists.jpg") center center no-repeat;
+}
+
+.community-header h1 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  font-size: 3em;
+  font-weight: 200;
+  font-style: italic;
+  padding-top: 20%;
+  padding-left: 20%;
+}
+
+/* End Community Section */
+
+/* Volunteer  Start */
+.volgistics {
+  display: inline-block;
+}
+
+d-expand-collapse {
+  display: inline-block;
+  vertical-align: top;
+  word-wrap: break-word;
+}
+
+.exp_col_title {
+  text-align: center;
+}
+
+/* Volunteer  End*/
+
+
+#wrapper {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  min-width: 100%;
+  position: relative; }
+
+/* For when the screen is between 586 and 870px, this should be changed at a later date.
+   It's not the best range. */
+@media only screen and (min-width: 586px) and (max-width: 870px) {
+  .iam {
+    height: 7em;
+    width: 10em;
+    display: inline-block;
+    font-size: 0.7em;
+  }
+
+  .newsboxes:nth-of-type(2) {
+    margin-left: 0;
+  }
+
+  .newsboxes {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  ul.topnav li {
+    display: none; }
+  
+  ul.topnav li.icon {
+    text-align: center;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+  }
+  
+  ul.topnav li.icon > a {
+    width: 100%;
+  }
+
+  ul.topnav {
+    width: 100%;
+    margin: 0;
+  }
+
+  ul.topnav.responsive li.icon {
+    float: right;
+    width: 100%;
+    display: block;
+  }
+  ul.topnav.responsive li.icon > a {
+    float: right;
+    color: white;
+  }
+
+  ul.topnav.responsive li {
+    float: none;
+    display: block;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    width: 100%;
+    text-align: center; 
+    float: left;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  nav.navigation-bar {
+    padding: 0;
+    margin: 0;
+  }
+
+  .announcements-paragraph {
+    width: 100%;
+  }
+
+  .announcements-paragraph h1, .newsgroup h1 {
+    padding-bottom: 5%;
+    font-size: 1.4em;
+    font-weight: 200;
+    letter-spacing: .16em;
+  }
+
+  .announcements-paragraph > p {
+    font-size: 1.5em;
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 200;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 2.5em;
+  }
+
+  .community h1 {
+    font-size: 0.9em;
+  }
+
+  .communityboxes {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: left;
+    vertical-align: top;
+    color: white;
+  }
+
+  .communityboxes:nth-child(2n) {
+    margin-left: 0;
+  }
+
+  .communityboxes img {
+    width: 100%;
+    height: 18em;
+  }
+
+  .community > p {
+    margin: 0.5em auto;
+    color: white;
+    width: 80%;
+    text-align: center;
+  }
+
+  .footer-list {
+    text-align: left; 
+  }
+
+  .social-media-bubble {
+    margin-top: 1em;
+    text-align: left;
+  }
+
+}
+
+/* When screen is 1000px or more */
+@media screen and (min-width: 1000px) {
+  .iam {
+    height: 7em;
+    width: 10em;
+    display: inline-block;
+    font-size: 1.7em;
+  }
+
+  .announcements {
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/row_of_bikes.jpg");
+    background-size: cover;
+    position: relative;
+    color: white;
+  }
+
+  .announcements-paragraph {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .announcements-paragraph h1, .newsgroup h1 {
+    padding-bottom: 5%;
+    font-size: 3.2em;
+    font-weight: 200;
+    letter-spacing: .16em;
+  }
+
+  .announcements-paragraph p {
+    font-size: 2em;
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+
+  .announcements-paragraph img {
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+  }
+
+/* Shop  page Starts*/
+
+
+.shop-wrapper {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.shopgroup {
+  height: 50%;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  padding-top: 2em;
+  padding-bottom: 2em;
+ /* background-color: grey;*/
+}
+
+.shopgroup h1 {
+  text-align: center;
+  margin-bottom: 0.5em;
+  margin-top: 2em;
+}
+.shopgroup h3 {
+  text-align: center;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+.shopgroup h4 {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+.shopboxes:nth-of-type(2) {
+  margin-left: 5em;
+
+}
+.shopboxes:nth-of-type(3) {
+  margin-left: 5em;
+  margin-right: 5em;
+}
+
+.shopboxes {
+width: 20%;  /*changing  45%*/
+height: 50%;
+display: inline-block;
+}
+
+.shopboxes h4 {
+  margin-top: 0.5em;
+}
+
+.shopboxes img {
+width: 100%;
+height: 12.5em;  /*changing from 21.5, 15.5%*/
+display: inline-block;
+}
+
+/*  start boxes for logos*/
+
+.shopboxeslogo:nth-of-type(2) {
+  margin-left: 5em;
+}
+
+.shopboxeslogo {
+width: 45%;
+height: 50%;  /*height 50%*/
+text-align: center;
+display: inline-block;
+}
+
+
+.shopboxeslogo img{
+width: 100%;
+height: auto; /*height 15.5em*/
+display: inline-block;
+
+
+}
+
+#ebaylogo {
+padding:0em 7em 0em 7em;
+text-align: center;
+}
+
+#craigslistlogo img{
+width: auto;
+height: 11em; /* height 15.5em*/
+text-align: center;
+
+display: inline-block;
+}
+
+/*end boxes for logos*/
+
+#warranty{
+height: 4em;
+background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/pricebike.jpg");
+background-size: auto 100%;
+background-size: cover;
+overflow: hidden;
+background-repeat: no-repeat;
+background-position: center;
+}
+#warranty h1{
+    border: 0;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font-size: 2.5em;
+    font-weight: 200;
+    margin-top:.3em; /*needed. to override previously set margin*/
+}
+
+#policy img{
+height: 5em;
+}
+.shopboxesinfo {
+width: 45%;
+height: 50%;
+display: inline-block;
+}
+
+.shopboxesinfo h3 {
+  text-align: center;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+.shopboxesinfo img {
+  text-align: center;
+  margin-top: 0.2em;
+}
+
+.shopboxesinfo:nth-of-type(2) {
+  margin-left: 5em;
+}
+
+
+.shopboxesinfo img {
+width: 100%;
+height: 15.5em;
+display: inline-block;
+}
+/*CLASSES section starts*/
+.classes {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+.classes h1 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  font-size: 3em;
+  font-weight: 200;
+  margin-bottom: 2em;
+}
+.parktool {
+  width: 50%;
+  height: 25em;
+  margin-left: 25%;
+  background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/tools.jpg") center center no-repeat;
+  background-size: auto 100%;
+  background-size:cover;
+  margin-bottom: 5em;
+}
+.parktool h2{
+  color: white;
+  font-weight: 200;
+  padding-top: 1em;
+  font-size: 3em;
+  font-weight: 200;
+}
+.parktool img{
+width: auto;
+height: 13em;
+text-align: center;
+display: inline-block;
+margin-top: 1.5em;
+}
+/*CLASSES section ends*/
+/* Shop Page Ends*/
+
+/*GKB warranty and Policy page starts*/
+#gkbwarranty h3{
+    color: #38812d;
+    font-size: 3.3em;
+    font-weight: 50;
+    text-transform: uppercase;
+    padding-top: .7em;
+    text-align: center;
+    vertical-align: middle;
+}
+#gkbwarranty img{
+  padding-bottom: .7em;
+  margin-left: 11em;
+}
+#gkbwarranty h5{
+  font-size:  1.8em;
+}
+#gkbwarranty h4{
+  color: #38812d;
+  padding-top: 2em;
+  font-size:  2.7em;
+  text-align: center;
+}
+#gkbwarranty p{
+  padding-top: 2em;
+  font-size:  1.7em;
+  text-align: center;
+}
+#gkbwarranty ul{
+font-size:  1.5em;
+display: inline-block;
+vertical-align: top;
+padding-left: 2em;
+margin-left: 3.5em;
+}
+
+#gkbpolicy h3{
+    color: #38812d;
+    font-size:  3.3em;
+    font-weight: 50;
+    text-transform: uppercase;
+    padding-top: .7em;
+    text-align: center;
+    vertical-align: middle;
+}
+#gkbpolicy img{
+  padding-bottom: .7em;
+  margin-left: 11em;
+}
+#gkbpolicy h5{
+  color: #38812d;
+  padding-top: 2em;
+  font-size:  1.8em;
+  font-weight: bold;
+}
+#gkbpolicy p{
+  font-size:  1.7em;
+
+}
+#gkbpolicy ol{
+font-size:  1.5em;
+display: inline-block;
+vertical-align: top;
+padding-left: 2em;
+margin-left: 3.5em;
+}
+
+/*GKB warranty and Policy page ends*/
+
+
+/*Styling for Donation Page*/
+
+  #donate-tiers {
+    width: 95%;
+    margin-left: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .donate_tier {
+    width: 20em;
+    height: 20em;
+    margin: 3em;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 1em;
+    padding-left: 1em;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    margin: auto;
+    margin-left: 5%;
+
+  }
+
+  .donate_tier h3 {
+    color: white;
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-left: 0%;
+    margin-top: 30%;
+
+  }
+
+  .donate-tier p {
+    margin: auto;
+    font-style: italic;
+    color: white;
+  }
+
+  #bronze {
+    background: linear-gradient(rgba(205, 127, 50, 40), rgba(205, 127, 50, 40)), url("");
+    background-size: auto 100%;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #silver {
+    background: linear-gradient(rgba(192, 192, 192, 255), rgba(0, 0, 0, 255)), url("");
+    background-size: auto 100%;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #gold {
+    background: linear-gradient(rgba(218, 165, 32, 255), rgba(0, 0, 0, 255)), url("");
+    background-size: auto 100%;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+  #box-section {
+    width: 95%;
+    margin-left: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .donateboxes {
+    width: 15em;
+    height: 15em;
+    margin: 1.5em;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 1em;
+    padding-left: 1em;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+
+  }
+
+  .donateboxes h3 {
+    font-size:  2.1em;
+    color: #fff;
+    font-weight: 00;
+    padding-top: .5em;
+    margin-top: 19%;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .donateboxes p {
+    font-size: 1em;
+    font-style: italic;
+    color: #fff;
+    font-weight: 200;
+     text-align: center;
+    vertical-align: middle;
+    overflow-wrap: normal;
+    margin-top: 20%;
+
+  }
+  #donor_decides {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/happykid.jpeg");
+    background-size: auto 100%;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #sponsor_bicycle {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/bike5.jpg");
+    background-size: auto 100%;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #sponsor_workstation {
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/mechanic.jpeg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #sponsor_mechanic {
+
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .donations_accepted h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.2em;
+    margin-bottom: 2%;
+
+  }
+
+  .donations_accepted ul {
+    margin-left: 24%;
+    margin-bottom: 2%;
+  }
+
+  .donations_accepted li {
+    font-size: 1.5em;
+    margin-top: 1%;
+  }
+
+  #btn-donate {
+    margin-bottom: 5em;
+    margin-top: 3em;
+    width: 13em;
+    height: 4em;
+    border-radius: 1em;
+    background-color: #189e56;
+    border: none;
+    margin-left: 42.2%;
+
+
+  }
+
+  #btn-donate a {
+    color: #fff;
+  }
+
+  .amazon-section {
+    width: 40%;
+    height: auto;
+    margin: auto;
+    background: url('https://s3-us-west-1.amazonaws.com/gkbimages//client/amazon-banner.png') center center no-repeat;
+    padding: 2em;
+  }
+
+
+  .amazon-textarea {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 15%;
+  }
+
+  .amazon-textarea h3 {
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+  }
+
+  .amazon-textarea a {
+    text-decoration: none;
+    margin-top: 5em;
+  }
+
+  .amazon-textarea p {
+    overflow-wrap: normal;
+    width: 80%; 
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 2em;
+
+    padding: 1em;
+  }
+  
+  .bold {
+    font-weight: 
+  }
+/*End styling for Donation Page*/
+}
+
+/* When screen is 1210px or less, this should be changed too. */
+@media screen and (max-width: 1210px) {
+  .footer-email-input {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1em;
+
+  }
+
+  #subscribe {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* When the screen is less than 430 pixels wide and 300px or greater, apply these stylings.
+   Honestly, this range could be changed to something better. */
+@media only screen and (min-width: 300px) and (max-width: 430px) {
+  .iam {
+    height: 7em;
+    width: 10em;
+    display: inline-block;
+    font-size: 0.5em;
+  }
+
+  #iamh1 {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+  }
+
+  .newsboxes {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  .newsboxes h4 {
+    margin-top: 1.5em;
+  }
+
+  .newsboxes p {
+    height: 10em;
+    font-size: 1.1em;
+  }
+
+  .newsboxes img {
+    width: 100%;
+    height: 11em;
+    display: block;
+  }
+
+  .newsboxes:nth-of-type(2) {
+    margin-left: 0;
+  }
+
+  ul.topnav li {
+    display: none; }
+  
+  ul.topnav li.icon {
+    text-align: center;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+  }
+  
+  ul.topnav li.icon > a {
+    width: 100%;
+  }
+
+  ul.topnav {
+    width: 100%;
+    margin: 0;
+  }
+
+  ul.topnav.responsive li.icon {
+    float: right;
+    width: 100%;
+    display: block;
+  }
+  ul.topnav.responsive li.icon > a {
+    float: right;
+    color: white;
+  }
+
+  ul.topnav.responsive li {
+    float: none;
+    display: block;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    width: 100%;
+    text-align: center; 
+    float: left;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .announcements-paragraph {
+    width: 100%;
+  }
+
+  .announcements-paragraph h1, .newsgroup h1 {
+    padding-bottom: 5%;
+    font-size: 1.4em;
+    font-weight: 200;
+    letter-spacing: .16em;
+  }
+
+  .announcements-paragraph > p {
+    font-size: 1.5em;
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 200;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 2.5em;
+  }
+
+  .community h1 {
+    font-size: 0.9em;
+  }
+
+  .communityboxes {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: left;
+    vertical-align: top;
+    color: white;
+  }
+
+  .communityboxes:nth-child(2n) {
+    margin-left: 0;
+  }
+
+  .communityboxes img {
+    width: 100%;
+    height: 18em;
+  }
+
+  .community > p {
+    margin: 0.5em auto;
+    color: white;
+    width: 80%;
+    text-align: center;
+  }
+
+  .footer-list {
+    text-align: left; 
+  }
+
+  .social-media-bubble {
+    margin-top: 1em;
+    text-align: left;
+  }
+
+}
+
+=======
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -1593,4 +3185,3 @@ margin-left: 3.5em;
   }
 
 }
-

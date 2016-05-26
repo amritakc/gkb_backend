@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +21,6 @@
           <a href="javascript:void(0);" ng-click="showLinks()">&#9776;</a>
         </li>
         <li ng-click="changePage('/')"><a href="#/">HOME</a></li>
-        <li ng-clikc="changePage('/about')"><a href="#/about">ABOUT</a></li>
         <li ng-click="changePage('/shop')"><a href="#/shop">SHOP</a></li>
         <li ng-click="changePage('/donations')"><a href="#/donations">DONATE</a></li>
         <li ng-click="changePage('/volunteers')"><a href="#/volunteers">VOLUNTEER</a></li>
@@ -47,12 +47,10 @@
           </nav>
         </div>
         <div class="triangle-up" id="tri-index"></div>
-
+      
       </header>
 
       <header ng-if="currentUrl == '/shop'" class="bike-image">
-      </header>
-      <header ng-if="currentUrl == '/about'" class="bike-image">
       </header>
       <header ng-if="currentUrl == '/donations'" class="thankyou-image">
       </header>
@@ -87,9 +85,9 @@
         </div>
         <div class="col-md-6 footer-links-wrapper">
           <section class="social-media-bubble">
-            <a href="#"><img class="social-media-icons rotate" src="/static/img/facebook.png" alt="facebook icon"></a>
-            <a href="#"><img class="social-media-icons rotate" src="/static/img/twitter.png" alt="twitter icon"></a>
-            <a href="#"><img class="social-media-icons rotate" src="/static/img/email.png" alt="email icon"></a>
+            <a href="#"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/facebook.png" alt="facebook icon"></a>
+            <a href="#"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/twitter.png" alt="twitter icon"></a>
+            <a href="#"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/email.png" alt="email icon"></a>
           </section>
           <ul class="footer-list">
             <li class="footer-links"><a href="#/">ABOUT US</a></li>
@@ -114,3 +112,4 @@
   </div>
 </body>
 </html>
+
