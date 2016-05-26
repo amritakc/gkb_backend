@@ -9,6 +9,7 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
   <script>
+
   //for google analytics
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -21,6 +22,7 @@
     'clientId' : ''
   });
   ga('send', 'pageview');
+
 
 </script>
   <%= stylesheet_link_tag    'admin_application', media: 'all' %>
@@ -46,5 +48,12 @@
 
   </ui-view>
 
+  <script type="text/javascript">
+
+    if (screen.width <= 699) {
+    document.location = "9001.html";
+    }
+
+  </script>
 </body>
 </html>
