@@ -14,5 +14,13 @@ function newFactory($http) {
 
 	}
 
+	// Will call an individual article
+	factory.show = function(id, callback){
+		$http.get('contents/show/'+id).success(function(article){
+			console.log(article, "in newFactory show method")
+			callback(article);
+		})
+	}
+
 	return factory;
 }
