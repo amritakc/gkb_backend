@@ -12,12 +12,13 @@ angular.module('adminApp')
     });
   }
 
-  factory.update = function(title, text, section,contentId, callback){
+  factory.update = function(title, text, author, section, contentId, callback){
     content = {
       title: title,
       text: text,
       section: section,
-      contentId: contentId
+      contentId: contentId,
+      author: author
     }
     $http.patch('/contents/update/' + contentId, content).success(function(output){
       console.log(output, "patch")
