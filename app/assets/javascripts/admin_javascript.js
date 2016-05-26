@@ -11,6 +11,7 @@
 // about supported directives.
 //
 
+//= require please-wait 
 //= require angular
 //= require angular-rails-templates
 //= require angular-ui-router
