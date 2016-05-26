@@ -1,0 +1,6 @@
+<div class="container">
+	<h1>{{article.title}}</h1>
+	<h5>Author: {{article.author}}</h5>
+	<h5>Date: {{article.created_at  | date: format:timezone}} </h5>
+	<h3>{{article.text}}</h3>
+</div>
