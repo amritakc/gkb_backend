@@ -1,13 +1,12 @@
 myApp.controller('newsCtrl', function($scope, newFactory, $location) {
 
 	newFactory.news(function(news){
-		console.log("in controller", news);
 		$scope.news = news;
-	})
+	});
+	// Will go partial for one article
 	$scope.toArticle = function(id){
-		console.log(id, "in toArticle method in controller");
-		$location.path("/article/"+id);
-	}	
+		$location.path('/article/'+id);
+	};
 
 });
 
