@@ -1157,6 +1157,26 @@ margin-top: 1.5em;
 #parktooltext p{
   color: white;
 }
+#parktoolcourses {
+  width: 30%;
+  height: 25em;
+  text-align: center;;
+/*  margin-left: %;*/
+  background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("/static/img/row_of_bikes.jpg");
+  background-size: auto 100%;
+  background-size:cover;
+  margin-bottom: 5em;
+}
+
+#parktoolcourses ul{
+/*  text-align: left;*/
+  font-size: 140%;
+  text-align: left; 
+  color: white;
+}
+#parktoolcourses h3{
+color: white;
+}
 
 /*CLASSES section ends*/
 /* Shop Page Ends*/
