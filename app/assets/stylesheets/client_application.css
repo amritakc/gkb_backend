@@ -1135,6 +1135,26 @@ text-align: center;
 display: inline-block;
 margin-top: 1.5em;
 }
+#parktooltext {
+  width: 70%;
+  height: auto;
+}
+#parktooltext h3{
+  color: white;
+  margin: 0 auto;
+}
+#parktooltext h2{
+  color: white;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+#parktooltext h4{
+  color: white;
+}
+#parktooltext p{
+  color: white;
+}
+
 /*CLASSES section ends*/
 /* Shop Page Ends*/
 
