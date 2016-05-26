@@ -6,7 +6,8 @@ angular.module('adminApp')
 'ngToast',
 'ModalService',
 '$uibModal',
-function ($scope, $state,Auth,ngToast,ModalService,$uibModal) {
+'$log',
+function ($scope, $state,Auth,ngToast,ModalService,$uibModal, $log) {
   $scope.login = function() {
     Auth.login($scope.user).then(function(){
       $state.go('dashboard');

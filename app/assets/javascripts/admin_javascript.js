@@ -11,6 +11,7 @@
 // about supported directives.
 //
 
+//= require please-wait 
 //= require angular
 //= require angular-rails-templates
 //= require angular-ui-router
@@ -24,4 +25,5 @@
 //= require ng-file-upload
 //= require ngToast
 //= require angular-resource
+//= require angular-busy
 //= require_tree ./admin_site

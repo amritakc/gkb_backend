@@ -11,6 +11,9 @@
         <label>Title:</label>
         <input type="text" class="input form-control" ng-model='newsPost.title' required>
         <span ng-show="form-group.test.$invalid">Required</span>
+    
+        <label>Author:</label>    
+        <input type="text" class="input form-control" ng-model="newsPost.author">
       </div>
 
       <text-angular ng-model="newsPost.text"></text-angular>

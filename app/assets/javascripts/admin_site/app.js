@@ -9,7 +9,8 @@ angular.module('adminApp', [
 'angularModalService',
 'ngFileUpload',
 'ngToast',
-'ngResource'
+'ngResource',
+'cgBusy',
 ])
 .config(function($stateProvider,$urlRouterProvider) {
 

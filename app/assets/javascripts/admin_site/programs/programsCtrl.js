@@ -41,7 +41,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
     modalInstance.result.then(function (contentInfo) {
       contentInfo.section = 'programs';
       DataService.create(contentInfo, function(result){
-        self.programsPosts.unshift(result['newContent']);
+        self.programsPosts.unshift(result['content']);
       });
     });
   };

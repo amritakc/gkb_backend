@@ -9,6 +9,8 @@ angular.module('adminApp')
 function($scope,$state,DataService, ModalService, $uibModal){
   //Accordian config
   $scope.oneAtATime = true;
+
+  //use this for scope issues 
   var self = $scope
   
   DataService.getNews('announcements',function(result){
@@ -30,15 +32,12 @@ function($scope,$state,DataService, ModalService, $uibModal){
               data: {
                 file: file
               }
-            }).progress(function(evt){
-              $scope.progress = Math.min(100, parseInt(100.0 *evt.loaded / evt.total));
-
             }).success(function(response){
               $scope.result = response.data 
               callback(response.data )
             })
           }
-
+          
           $scope.cancel = function () {                
             $uibModalInstance.dismiss();
           }
@@ -48,6 +47,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
               $scope.upload(file, function(result) {
                 console.log(result, "result")
                 $scope.newsPost.url = result
+                $scope.progress = 100
                 $uibModalInstance.close($scope.newsPost);
               })
             } else {
