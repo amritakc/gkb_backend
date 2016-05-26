@@ -38,6 +38,10 @@ var myApp = angular.module('myApp', ['ngRoute','templates', 'ngAnimate']);
         templateUrl: 'client_site/partials/news.html',
         controller: 'newsCtrl'
       })
+      .when('/article/:id', {
+        templateUrl: 'client_site/partials/article.html',
+        controller: 'articlesCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

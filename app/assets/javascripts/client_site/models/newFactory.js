@@ -7,11 +7,17 @@ function newFactory($http) {
 
 	factory.news = function(callback){
 		$http.get('sections/news').success(function(cInfo){
-			console.log(cInfo)
 			newsContent = cInfo;
 			callback(newsContent);
 		})
 
+	}
+
+	// Will call an individual article
+	factory.show = function(id, callback){
+		$http.get('contents/show/'+id).success(function(article){
+			callback(article);
+		});
 	}
 
 	return factory;

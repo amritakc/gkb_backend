@@ -4,41 +4,57 @@
 		<h1>SHOP NOW</h1>
 		<h2>Seek. Find. Enjoy.</h2>
 		<h3>"Grab those handlebars and LIVE life to the max. An adventure begins every time you get on the bike and out the door. GO!"</h3>
-		<div class="shopboxes">
+		<div ng-repeat = "bike in bikes" class="shopboxes">
+			<img src="{{bike.url}}">
+			<h4>{{bike.title}}</h4>
+			<h5>Color: {{bike.color}}</h5>
+			<h5>Type: {{bike.brand}}</h5>
+			<h5>Frame-size: {{bike.caption}}</h5>
+			<h5>${{bike.price}}</h5>			
+		</div>
+		<!-- <div class="shopboxes">
 			<img src="https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1a.jpg">
 			<h4>Yellow Bike</h4>
 			<h5>Color: Yellow</h5>
 			<h5>Type: Bicycle</h5>
 			<h5>Frame Size: 13"-14"</h5>
 			<h5>$ 200.00</h5>			
-		</div>
-		<div class="shopboxes">
+		</div> -->
+		<!-- <div class="shopboxes">
 			<img src="https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1b.jpg">
 			<h4>Raleigh Lightweight</h4>
 			<h5>Color: Purple</h5>
 			<h5>Type: Road bike</h5>
 			<h5>Frame Size: 49cm-50cm</h5>
 			<h5>$ 300.00</h5>	
-		</div>
-		<div class="shopboxes">
+		</div> -->
+		<!-- <div class="shopboxes">
 			<img src="https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1c.jpg">
 			<h4>Mongoose</h4>
 			<h5>Color: Navy Blue</h5>
 			<h5>Type: Mountain bike</h5>
 			<h5>Frame Size: 13"-14"</h5>
 			<h5>$ 100.00</h5>
-		</div>
-		<div class="shopboxes">
+		</div> -->
+		<!-- <div class="shopboxes">
 			<img src="https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1d.jpg">
 			<h4>Repco Challenger</h4>
 			<h5>Color: Blue and Orange</h5>
 			<h5>Type: Mountain bike</h5>
 			<h5>Frame Size: 14"-17"</h5>
 			<h5>$ 110.00</h5>		
-		</div>
+		</div> -->
 	</div>
-	<div class="shopgroup">
+<!-- 	<div class="shopgroup">
 		<div class="shopboxes">
+			<img src="https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1f.jpg">
+			<h4>Morrison Freeway</h4>
+			<h5>Color: Blue</h5>
+			<h5>Type: Roadbike</h5>
+			<h5>Frame Size: 56cm-58cm</h5>
+			<h5>$ 170.00</h5>		
+		</div> -->
+<!-- 		<div class="shopboxes">
 			<img src="https://s3-us-west-1.amazonaws.com/gkbimages//client/bike1e.jpg">
 			<h4>Raleigh Lightweight</h4>
 			<h5>Color: Purple</h5>
@@ -69,8 +85,8 @@
 			<h5>Type: Roadbike</h5>
 			<h5>Frame Size: 58cm-60cm</h5>
 			<h5>$ 300.00</h5>			
-		</div>
-	</div>
+		</div> -->
+<!-- 	</div> -->
 	<div class="shopgroup">
 		<h3>For more of our amazing bikes please visit eBay and craigslist!</h3>
 		<h4>All the bikes you see on eBay and craigslist are displayed in our shop. 
@@ -133,7 +149,63 @@
 	</div>
 <!-- 	<div class="shopgroup" style="background-color:grey;">
 	</div> -->
+
+
 </div>
+	<div class="shopgroup" id="parktooltext">
+		<h3>Thank you for your interest in Park Tool School.</h3>
+		<h3>Our next session begins June 7, 2016.</h3>
+		<h4>I highly recommend it for anyone who’s wanted to, but has been intimidated about maintaining or upgrading parts of their bike. - Michael. K.</h4>
+		<h2>Park Tool is the largest manufacturer of bicycle tools in America.</h2>
+		<p>Whether you are looking to develop skills to maintain your family’s bikes or you are a home mechanic looking to maintain, upgrade or add to the stable of your favorite rides, this is the class for you. <br>Experienced and novice mechanics, alike, will gain valuable skills. Bring your own bike to learn and work on or use one of ours. </p>
+	</div>
+	<div class="shopgroup" id="parktoolcourses">
+		<!-- <div class="parktool"> -->
+		<h3>Your $250.00 course includes: </h3>
+		<ul>
+			<li>18 hours of hands-on instruction </li>
+			<li>20% discount for any purchases made during month of session</li>
+			<li>Park Tool School Big Blue Book of Bicycle Repairs</li>
+			<li>Certification of Completion​</li>
+			<li>GKB T-shirt</li>
+		</ul>
+	<!-- </div> -->
+	</div>
+<div class="shopgroup">
+	<div class="shopboxesinfo" id= "parktooltable">
+		<h3>Park Tool School Schedule</h3>
+			<table>
+				<tr>
+					<td>June 7</td>
+					<td>6pm-9pm</td>
+				</tr>
+				<tr>
+					<td>June 9</td>
+					<td>6pm-9pm</td>
+				</tr>
+				<tr>
+					<td>June 11</td>
+					<td>9am-4pm (lunch served)</td>
+				</tr>
+				<tr>
+					<td>June 14</td>
+					<td>6pm-9pm</td>
+				</tr>
+				<tr>
+					<td>June 16</td>
+					<td>6pm-9pm</td>
+				</tr>				
+			</table>
+
+	</div>
+
+	<div class="shopboxesinfo" >
+		<iframe src="https://app.acuityscheduling.com/schedule.php?owner=12008021" width="100%" height="800" frameBorder="0"></iframe>
+<script src="https://d3gxy7nm8y4yjr.cloudfront.net/js/embed.js" type="text/javascript"></script>
+		
+	</div>
+</div>
+
 </div>
 
 
