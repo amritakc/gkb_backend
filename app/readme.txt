@@ -10,3 +10,4 @@ Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
 
 Basically in news it had (news), announcements (announcements), but when I tried to use bikes (bikes), it kept giving me that
 error. 
+RESOLVED
