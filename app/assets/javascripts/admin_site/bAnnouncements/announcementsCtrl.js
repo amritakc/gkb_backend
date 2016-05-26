@@ -8,12 +8,18 @@ angular.module('adminApp')
 //injected the modal service  into controller 
 function($scope,$state,DataService, ModalService, $uibModal){
   //Accordian config
+  $scope.delay = 0;
+  $scope.minDuration = 0;
+  $scope.message = 'Please Wait...';
+  $scope.backdrop = true;
+  $scope.prom = null;
   $scope.oneAtATime = true;
   var self = $scope
   
   DataService.getNews('announcements',function(result){
     $scope.newsPosts = result;
     $scope.totalItems = $scope.newsPosts.length;
+    $scope.prom = console.log('Hit promise')
   })
 
 

@@ -1,6 +1,9 @@
+
 <div class="col-sm-offset-9 new-content-btn">
   <button type="button" class="btn btn-success" ng-click="openNewContentForm()">Add Announcements</button>
 </div>
+
+<div cg-busy="{promise:prom,templateUrl:templateUrl,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}">
 <uib-accordion close-others="oneAtATime">
   <uib-accordion-group ng-repeat="newsPost in newsPosts.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))| orderBy: 'created_at':true">
     <uib-accordion-heading>
@@ -25,3 +28,4 @@
   </uib-accordion-group>
 </uib-accordion>
 <uib-pagination class="pagination" total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" class="pagination-sm" items-per-page="itemsPerPage"></uib-pagination>
+</div>
