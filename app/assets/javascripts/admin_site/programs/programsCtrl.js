@@ -76,7 +76,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
   
   $scope.openRemoveConfirm = function(selected){
     // used a serivce to pass selected data into remove modal controller
-    ModalService.setProperty(selected); 
+    $scope.deletedData = selected;
 
     var modalInstance = $uibModal.open({
       templateUrl:'admin_site/modals/_removeModal.html',
@@ -87,10 +87,10 @@ function($scope,$state,DataService, ModalService, $uibModal){
         function($scope, $uibModalInstance, ModalService) {
           
           //call it here 
-          $scope.data = ModalService.getProperty();
+          $scope.data = self.deletedData
               
           $scope.ok = function() {
-            $uibModalInstance.close($scope.programsPost);
+            $uibModalInstance.close();
           };
           $scope.cancel = function () {                
             $uibModalInstance.dismiss();
@@ -99,7 +99,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
       ]
     })
     modalInstance.result.then(function () { 
-      DataService.create(selected.id, function(result){
+      DataService.remove(selected.id, function(result){
        for(var i in  self.programsPosts){
           console.log(self.programsPosts[i])
           if( self.programsPosts[i].id=== result['content'].id){
@@ -121,9 +121,6 @@ function($scope,$state,DataService, ModalService, $uibModal){
       contentId: contentId
     }
     DataService.updatePrograms(title, caption, section, contentId, function(result){
-
-      console.log(result)
-
        for(var i in  $scope.programsPosts){
           console.log($scope.programsPosts[i])
           if( $scope.programsPosts[i].id === result['content'].id){

@@ -4,13 +4,13 @@
   </div>
 
 
-<<<<<<< HEAD
 <div cg-busy="{promise:prom ,message:message,backdrop:backdrop,delay:delay,minDuration:minDuration}">
 <uib-accordion close-others="oneAtATime">
   <uib-accordion-group ng-repeat="newsPost in newsPosts.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))| orderBy: 'created_at':true">
     <uib-accordion-heading>
       {{newsPost.created_at | date : 'M/dd/yyyy - hh:mm a' : timezone}} &nbsp&nbsp - &nbsp&nbsp <b>{{newsPost.title}}</b><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
     </uib-accordion-heading>
+    {{newsPost}}
     <div class="form-group">
       <label>Title:</label>
       <input type="text" class="input form-control " ng-model='newsPost.title'>
@@ -29,29 +29,6 @@
         <button type="button" class="btn btn-success" ng-click="update(newsPost.title,newsPost.text,'news',newsPost.id)">Save</button>
       </div>
     </div>
-=======
-  <uib-accordion close-others="oneAtATime">
-    <uib-accordion-group ng-repeat="newsPost in newsPosts.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))| orderBy: 'created_at':true">
-      <uib-accordion-heading>
-        {{newsPost.created_at | date : 'M/dd/yyyy - hh:mm a' : timezone}} &nbsp&nbsp - &nbsp&nbsp <b>{{newsPost.title}}</b><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
-      </uib-accordion-heading>
-      <div class="form-group">
-        <label>Title:</label>
-        <input type="text" class="input form-control " ng-model='newsPost.title'>
-      </div>
-
-      <text-angular ng-model="newsPost.text"></text-angular>
-
-      <div class="btn-container row">
-        <div class="col-sm-7 col-sm-offset-1">
-          <button type="button" class="btn btn-danger" ng-click='openRemoveConfirm(newsPost)'>Remove</button>
-        </div>
-        <div class="col-sm-1 col-sm-offset-1">
-          <button type="button" class="btn btn-success" ng-click="update(newsPost.title,newsPost.text,'news',newsPost.id)">Save</button>
-        </div>
-      </div>
-
->>>>>>> 437c7083b850bb2a605b6fb18782a310b72483ec
 
     </uib-accordion-group>
   </uib-accordion>

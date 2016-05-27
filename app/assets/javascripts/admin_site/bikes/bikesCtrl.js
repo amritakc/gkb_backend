@@ -79,7 +79,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
           $scope.data = self.data
               
           $scope.ok = function() {
-            $uibModalInstance.close($scope.bikesPost);
+            $uibModalInstance.close();
           };
           $scope.cancel = function () {                
             $uibModalInstance.dismiss();
