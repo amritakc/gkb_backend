@@ -167,7 +167,7 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
   width: 70%;
   margin: auto;
   overflow: hidden;
-  margin-bottom: 8%;
+  margin-bottom: 5%;
 
 }
 
@@ -177,6 +177,11 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 
 }
 
+.carousel h1{
+  font-style: italic;
+  font-weight: 700;
+  color: white;
+}
 /*End Carousel Section */
 
 /* This is styling for the header and the navigation icons for the 'Learn How To' section on the Home Page*/
@@ -285,7 +290,7 @@ header p {
 .bike-image {
   width: 100%;
   max-height: 60%;
-  background: linear-gradient(rgba(0, 0, 128, 0.35), rgba(0, 0, 128, 0.35)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/bike-friends.jpeg") center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 128, 0.35), rgba(0, 0, 128, 0.35)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/onabike.jpg") center center no-repeat;
   background-size: cover;
   position: relative;
 }
