@@ -162,6 +162,23 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 
 /* End Navigation Bar Stylings */
 
+/*Begin Carousel Section */
+.carousel {
+  width: 70%;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 8%;
+
+}
+
+.carousel img {
+  width: auto;
+   max-height: 30em;
+
+}
+
+/*End Carousel Section */
+
 /* This is styling for the header and the navigation icons for the 'Learn How To' section on the Home Page*/
 .logo {
 display: inline;
