@@ -667,20 +667,11 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
 /* Volunteer  Start */
 .rita {
-  /*-webkit-clip-path: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%);*/
-  width: 45%;
-  height: 100px;
-  background: red;
+  width: 200px;
+  height: 200px;
   -moz-border-radius: 100px;
-  -webkit-border-radius: 50px;
-  border-radius: 50px;
-}
-
-.quang{
-  width: 100px;
-  height: 100px;
-
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
 }
 
 .volgistics {
@@ -688,12 +679,21 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   margin-top: 100px;
 }
 
+.bubbles {
+  width: 100%;
+  text-align: center;
+}
+
 d-expand-collapse {
   font-size: 2em;
-
   display: inline-block;
   vertical-align: top;
   word-wrap: break-word;
+}
+
+.quang {
+  display: inline-block;
+  text-align: center;
 }
 
 .exp_col_title {
