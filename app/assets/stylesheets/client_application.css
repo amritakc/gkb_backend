@@ -697,55 +697,7 @@ d-expand-collapse {
   min-width: 100%;
   position: relative; }
 
-/* When screen is from 768px to 1024px */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  body {
-    font-size: 1.5em;
-  }
-  
-  .iam img {
-    min-height: 150px;
-  }
-
-  .announcements {
-    width: 100%;
-    height: 100%;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/row_of_bikes.jpg");
-    background-size: cover;
-    position: relative;
-    color: white;
-  }
-
-  .announcements-paragraph {
-    margin: 0 auto;
-    width: 50%;
-  }
-
-  .announcements-paragraph h1, .newsgroup h1 {
-    padding-bottom: 5%;
-    font-size: 3.2em;
-    font-weight: 200;
-    letter-spacing: .16em;
-  }
-
-  .announcements-paragraph p {
-    font-size: 2em;
-    text-align: justify;
-    text-transform: uppercase;
-    font-weight: 200;
-  }
-
-  .announcements-paragraph img {
-    width: 50%;
-    height: auto;
-    margin-left: 25%;
-  }
-
-/* Shop  page Starts*/
-
-
+/* Shop page starts here */
 .shop-wrapper {
   height: 100%;
   width: 100%;
@@ -799,11 +751,15 @@ display: inline-block;
 }
 
 .shopboxes img {
-width: 100%;
+width: 30%;
 height: 12.5em;  /*changing from 21.5, 15.5%*/
 display: inline-block;
 }
+.shopimage {
+  width: 7em;
+  height: 5em;
 
+}
 /*  start boxes for logos*/
 
 .shopboxeslogo:nth-of-type(2) {
@@ -812,7 +768,7 @@ display: inline-block;
 
 .shopboxeslogo {
 width: 45%;
-height: 50%;  /*height 50%*/
+height: 50%; 
 text-align: center;
 display: inline-block;
 }
@@ -833,7 +789,7 @@ text-align: center;
 
 #craigslistlogo img{
 width: auto;
-height: 11em; /* height 15.5em*/
+height: 11em;  /*height 15.5em*/
 text-align: center;
 
 display: inline-block;
@@ -956,7 +912,7 @@ margin-top: 1.5em;
   height: 25em;
   text-align: center;;
 /*  margin-left: %;*/
-  background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("/static/img/row_of_bikes.jpg");
+/*  background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("/static/img/row_of_bikes.jpg");*/
   background-size: auto 100%;
   background-size:cover;
   margin-bottom: 5em;
@@ -986,7 +942,6 @@ color: white;
   color:white;
 }
 .classes .shopboxesinfo th, td{
-  border: 1px solid white;
   color:white;
 }
 #parktooltable h3 {
@@ -1082,6 +1037,56 @@ margin-left: 3.5em;
 }
 
 /*GKB warranty and Policy page ends*/
+
+/* When screen is from 768px to 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 1.5em;
+  }
+  
+  .iam img {
+    min-height: 150px;
+  }
+
+  .announcements {
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/row_of_bikes.jpg");
+    background-size: cover;
+    position: relative;
+    color: white;
+  }
+
+  .announcements-paragraph {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .announcements-paragraph h1, .newsgroup h1 {
+    padding-bottom: 5%;
+    font-size: 3.2em;
+    font-weight: 200;
+    letter-spacing: .16em;
+  }
+
+  .announcements-paragraph p {
+    font-size: 2em;
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+
+  .announcements-paragraph img {
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+  }
+
+/* Shop  page Starts*/
+
+
 
 
 /*Styling for Donation Page*/
