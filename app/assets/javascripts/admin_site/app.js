@@ -22,9 +22,9 @@ angular.module('adminApp', [
       onEnter: ['$state', 'Auth', function($state, Auth) {
         if(Auth.isAuthenticated()){
           if ($state.current.url != '/'){
-            $state.go('dashboard');
-          } else {
             $state.go('newsPage');
+          } else {
+            $state.go('announcementsPage');
           }
         }
         }]

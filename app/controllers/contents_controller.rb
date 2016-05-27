@@ -31,6 +31,7 @@ class ContentsController < ApplicationController
                           price: params[:price],
                           brand: params[:brand],
                           caption: params[:caption],
+                          author: params[:author],
                           color: params[:color],
                           section:Section.find_by_name(params[:section]))
 
@@ -53,8 +54,9 @@ class ContentsController < ApplicationController
                    price: params[:price],
                    brand: params[:brand],
                    caption: params[:caption],
+                   author: params[:author],
                    color: params[:color],
-                   section:Section.find_by_name(params[:section]))
+                   section: Section.find_by_name(params[:section]))
     
     render :json => {content: content}
   end

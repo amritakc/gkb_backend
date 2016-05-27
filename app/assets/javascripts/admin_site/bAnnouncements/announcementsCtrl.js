@@ -109,17 +109,11 @@ modalInstance.result.then(function (contentInfo) {
   };
 
 
-  $scope.update = function(title, text, section,contentId) {
-    DataService.update(title, text, section,contentId, function(result){
-      console.log(result['content'])
-       
+  $scope.update = function(content) {
+    DataService.update(content, function(result){
        for(var i in  $scope.newsPosts){
-          console.log($scope.newsPosts[i])
           if( $scope.newsPosts[i].id === result['content'].id){
-            
-            console.log('found', result['content'].id)            
             $scope.newsPosts[i] = result['content']
-
           }
        }
     })

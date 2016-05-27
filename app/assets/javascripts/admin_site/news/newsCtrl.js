@@ -98,29 +98,23 @@ function($scope,$state,DataService, ModalService, $uibModal){
 
     modalInstance.result.then(function () { 
       DataService.remove(selected.id, function(result){
-
-       for(var i in  self.newsPosts){
-          console.log(self.newsPosts[i])
-          if( self.newsPosts[i].id=== result['content'].id){
-            
-            console.log('found', result['content'].id)            
-            self.newsPosts.splice(i,1);
-          }
-       }
-
+        for(var i in  self.newsPosts){
+            console.log(self.newsPosts[i])
+            if( self.newsPosts[i].id=== result['content'].id){
+              
+              console.log('found', result['content'].id)            
+              self.newsPosts.splice(i,1);
+            }
+        }
       });
     });
   };
 
-  $scope.update = function(title, text, section,contentId) {
-    DataService.update(title, text, section,contentId, function(result){
-      console.log(result['content'])
-       
+  $scope.update = function(content) {
+    content.section = "news"
+    DataService.update(content, function(result){
        for(var i in  $scope.newsPosts){
-          console.log($scope.newsPosts[i])
           if( $scope.newsPosts[i].id === result['content'].id){
-            
-            console.log('found', result['content'].id)            
             $scope.newsPosts[i] = result['content']
             
           }

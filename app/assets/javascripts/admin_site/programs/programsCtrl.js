@@ -106,27 +106,18 @@ function($scope,$state,DataService, ModalService, $uibModal){
     });
   };
 
-
-  $scope.updatePrograms = function(title, text, section, contentId) {
-    var result = {
-      title: title,
-      text: text,
-      section: section,
-      contentId: contentId
-    }
-    DataService.updatePrograms(title, caption, section, contentId, function(result){
-       for(var i in  $scope.programsPosts){
-          console.log($scope.programsPosts[i])
-          if( $scope.programsPosts[i].id === result['content'].id){
+  $scope.update = function(content) {
+    console.log(content)
+    content.section = "programs";
+    DataService.update(content, function(result){
+       for(var i in  $scope.newsPosts){
+          if( $scope.newsPosts[i].id === result['content'].id){
+            $scope.newsPosts[i] = result['content']
             
-            console.log('found', result['content'].id)            
-            $scope.programsPosts[i] = result['content']
-
           }
        }
     })
   }
-
 
   //Pagination 
   $scope.viewby = 15;
