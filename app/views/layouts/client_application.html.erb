@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+ 
+
 
   <%= stylesheet_link_tag    'client_application', media: 'all' %>
   <%= javascript_include_tag 'client_javascript' %>
@@ -14,6 +16,7 @@
 </head>
 <body ng-app="myApp">
   <div class="container-fluid">
+
     <div class="header-wrapper" ng-controller="navCtrl">
       <nav class="navigation-bar">
         <ul class="topnav" ng-class="{ 'responsive': small }">
@@ -30,7 +33,17 @@
       </nav>
     
       <header class="bike-image" ng-if="changePage('/')">
-        
+
+      </header>
+
+      <header class="community-page" ng-if="changePage('/community')">
+        <div id="community-head">
+          <img id="cty-headerimage" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/cyclists.jpg">
+        </div> 
+        <h1 id="events">Events</h1>
+        <div id="calendar">
+          <script data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script><div data-tockify-component="calendar" data-tockify-calendar="goodkarmabikes"></div>
+        </div>
       </header>
 
       <header ng-if="changePage('/shop')" class="bike-image">
@@ -47,7 +60,7 @@
     <div ng-view autoscroll="true"></div>
     <footer id="footer" ng-controller="footerCtrl">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-6">
           <h4><strong>LOCATION</strong></h4>
           <br>
           <p>460 LINCOLN AVENUE</p>
@@ -66,13 +79,13 @@
           <p><b>SUNDAY</b></p>
           <p>11AM - 3PM</p>
         </div>
-        <div class="col-md-6 footer-links-wrapper">
+        <div class="col-md-6 col-sm-6 footer-links-wrapper">
           <section class="social-media-bubble">
-            <a href="#"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/yelp.png" alt="yelp icon"></a>
-            <a href="#"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/facebook.png" alt="facebook icon"></a>
-            <a href="#"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/instragram.png"></a>
-            <a href="#"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/twitter.png" alt="twitter icon"></a>
-            <a href="#"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/email.png" alt="email icon"></a>
+            <a target="_blank" href="http://www.yelp.com/biz/good-karma-bikes-san-jose-2"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/yelp.png" alt="yelp icon"></a>
+            <a target="_blank" href="https://www.facebook.com/GoodKarmaBikes/"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/facebook.png" alt="facebook icon"></a>
+            <a target="_blank" href="http://www.instagram.com/good_karma_bikes"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/instragram.png"></a>
+            <a target="_blank" href="https://twitter.com/GoodKarmaBikes"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/twitter.png" alt="twitter icon"></a>
+            <a href="mailto:cindy@goodkarmabikes.org" target="_top"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/email.png" alt="email icon"></a>
           </section>
           <ul class="footer-list">
             <li class="footer-links"><a href="#/">ABOUT US</a></li>

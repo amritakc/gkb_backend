@@ -1,7 +1,8 @@
 
-<div class="community-header">
+
+<!-- <div class="community-header"> -->
 	<!-- <h1>community</h1> -->
-</div>
+<!-- </div> -->
 <div class="community">
 	<h1>COMMUNITY PROGRAMS</h1>
 	<h4>1:1</h4>
@@ -10,8 +11,9 @@
 
 	<div class="communitycontent">
 		<div ng-repeat ="program in programs" class="communityboxes">
-			<div class="img-community"></div>
-				<img src={{program.url}} style="width:100px;height:100px">
+			<div class="img-community">
+				<img src={{program.url}}>
+			</div>		
 				<h3>{{program.title}}</h3>
 				<p>{{program.text}}
 				</p>
