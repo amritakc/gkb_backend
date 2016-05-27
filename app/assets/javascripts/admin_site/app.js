@@ -29,27 +29,27 @@ angular.module('adminApp', [
         }
         }]
       })
-    .state('dashboard', {
-      url: '/',
-      views: {
-        '@': {
-         templateUrl:'admin_site/views/dashboardLayout.html'
-        },
-        'header@dashboard' : {
-          templateUrl: 'admin_site/header/_header.html',
-          controller: 'headerCtrl'
-        },
-        'main@dashboard' : {
-          templateUrl: 'admin_site/dashboard/_dashboard.html'
-        }
-      },
-      onEnter: ['$state','Auth', function($state, Auth) {
-        Auth.currentUser().then(function(){
-        }, function(){
-          $state.go('login')
-        })
-      }]
-    })
+    //.state('dashboard', {
+      //url: '/',
+      //views: {
+        //'@': {
+         //templateUrl:'admin_site/views/dashboardLayout.html'
+        //},
+        //'header@dashboard' : {
+          //templateUrl: 'admin_site/header/_header.html',
+          //controller: 'headerCtrl'
+        //},
+        //'main@dashboard' : {
+          //templateUrl: 'admin_site/dashboard/_dashboard.html'
+        //}
+      //},
+      //onEnter: ['$state','Auth', function($state, Auth) {
+        //Auth.currentUser().then(function(){
+        //}, function(){
+          //$state.go('login')
+        //})
+      //}]
+    //})
     .state('newsPage', {
       url:'/news',
       views: {
@@ -161,7 +161,7 @@ angular.module('adminApp', [
       }]
     })
 
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/announcements');
 
 
 });

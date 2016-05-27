@@ -18,12 +18,17 @@ function($scope,$state,DataService, ModalService, $uibModal){
 
 
   $scope.openNewContentForm = function(){
-     var modalInstance = $uibModal.open({
-      templateUrl: 'admin_site/modals/_addNewsModal.html',
-      controller: [
-        '$scope', '$uibModalInstance','Upload', function($scope, $uibModalInstance, Upload) {
-      
-         $scope.upload = function(file, callback) {
+    var modalInstance = $uibModal.open({
+    templateUrl: 'admin_site/modals/_addNewsModal.html',
+    controller: [
+      '$scope',
+      '$uibModalInstance',
+      'Upload',
+      function($scope,
+                $uibModalInstance,
+                Upload) {
+    
+        $scope.upload = function(file, callback) {
           
           file.upload = Upload.upload({
             url: '/contents/images',
@@ -50,7 +55,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
                 $uibModalInstance.close($scope.newsPost);
               })
             } else {
-               $uibModalInstance.close($scope.newsPost);
+              $uibModalInstance.close($scope.newsPost);
             }
           }
         }
@@ -59,9 +64,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
 
     modalInstance.result.then(function (contentInfo) {
       contentInfo.section = 'news';
-      console.log('contentInfo', contentInfo)
       DataService.create(contentInfo, function(result){
-        console.log("result", result)
         self.newsPosts.unshift(result['content']);
       });
     });
@@ -73,7 +76,10 @@ function($scope,$state,DataService, ModalService, $uibModal){
     var modalInstance = $uibModal.open({
       templateUrl:'admin_site/modals/_removeModal.html',
       controller: [
-        '$scope', '$uibModalInstance','ModalService', function($scope, $uibModalInstance, ModalService) {
+        '$scope',
+        '$uibModalInstance',
+        'ModalService',
+        function($scope, $uibModalInstance, ModalService) {
           
           $scope.data = self.data
             

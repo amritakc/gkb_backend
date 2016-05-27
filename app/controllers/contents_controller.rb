@@ -42,7 +42,14 @@ class ContentsController < ApplicationController
   def update
     # finding content by :id and updating content
     content = Content.find(params[:id])
-    content.update(title:params[:title],text:params[:text],section:Section.find_by_name(params[:section]))
+    content.update(title:params[:title],
+                   text:params[:text],
+                   url: params[:url],
+                   price: params[:price],
+                   brand: params[:brand],
+                   caption: params[:caption],
+                   color: params[:color],
+                   section:Section.find_by_name(params[:section]))
     
     render :json => {content: content}
   end
