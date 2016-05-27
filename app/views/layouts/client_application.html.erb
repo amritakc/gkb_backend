@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +12,7 @@
   <%= javascript_include_tag 'client_javascript' %>
   <%= csrf_meta_tags %>
 </head>
-<body ng-app="myApp" ng-controller="mainCtrl">
+<body ng-app="myApp">
   <div class="container-fluid">
     <div class="header-wrapper" ng-controller="navCtrl">
       <nav class="navigation-bar">
@@ -31,20 +30,7 @@
       </nav>
     
       <header class="bike-image" ng-if="changePage('/')">
-        <div class="container slider">
-          <img ng-repeat="slide in slides" class="slide slide-animation" ng-hide="!isCurrentSlideIdx($index)" ng-src="{{ slide.image }}" alt="slide image">
-          <a class="arrow prev" href="javascript: void(0);" ng-click="prevSlide()"></a>
-          <a class="arrow next" href="javascript: void(0);" ng-click="nextSlide()"></a>
-          <nav class="nav">
-            <div class="wrapper">
-              <ul class="dots">
-                <li class="dot" ng-repeat="slide in slides">
-                  <a href="javascript: void(0);" ng-class="{ 'active-slide' : isCurrentSlideIdx($index) }" ng-click="setCurrentSlideIdx($index)">{{ slide.description }}</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
+        
       </header>
 
       <header ng-if="changePage('/shop')" class="bike-image">
@@ -82,11 +68,11 @@
         </div>
         <div class="col-md-6 footer-links-wrapper">
           <section class="social-media-bubble">
-            <a href="#"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/yelp.png" alt="yelp icon"></a>
-            <a href="#"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/facebook.png" alt="facebook icon"></a>
-            <a href="#"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/instragram.png"></a>
-            <a href="#"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/twitter.png" alt="twitter icon"></a>
-            <a href="#"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/email.png" alt="email icon"></a>
+            <a target="_blank" href="http://www.yelp.com/biz/good-karma-bikes-san-jose-2"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/yelp.png" alt="yelp icon"></a>
+            <a target="_blank" href="https://www.facebook.com/GoodKarmaBikes/"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/facebook.png" alt="facebook icon"></a>
+            <a target="_blank" href="http://www.instagram.com/good_karma_bikes"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/instragram.png"></a>
+            <a target="_blank" href="https://twitter.com/GoodKarmaBikes"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/twitter.png" alt="twitter icon"></a>
+            <a href="mailto:cindy@goodkarmabikes.org" target="_top"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/email.png" alt="email icon"></a>
           </section>
           <ul class="footer-list">
             <li class="footer-links"><a href="#/">ABOUT US</a></li>
@@ -97,14 +83,16 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12" id="subscribe">
-          <h4><strong>SUBSCRIBE TO OUR MAILING LIST</strong></h4>
-          <form role="form">
-              <div class="form-group">
-                  <input type="email" class="form-control footer-email-input" ng-model="newSubscriber.email" placeholder="Email Address">
-                  <button class="btn btn-subscribe" ng-click="create()">Submit</button>
-              </div>
-          </form>
+        <div class="col-xs-12">
+          <div id="subscribe">
+            <h4><strong>SUBSCRIBE TO OUR MAILING LIST</strong></h4>
+            <form role="form">
+                <div class="form-group">
+                    <input type="email" class="form-control footer-email-input" ng-model="newSubscriber.email" placeholder="Email Address">
+                    <button class="btn btn-subscribe" ng-click="create()">Submit</button>
+                </div>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
