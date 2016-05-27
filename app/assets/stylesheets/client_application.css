@@ -787,66 +787,6 @@ d-expand-collapse {
   min-width: 100%;
   position: relative; }
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-/* When screen is from 768px to 1024px */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  body {
-    font-size: 1.5em;
-  }
-  
-  .iam img {
-    min-height: 150px;
-  }
-
-  .announcements {
-    width: 100%;
-    height: 100%;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/row_of_bikes.jpg");
-    background-size: cover;
-    position: relative;
-    color: white;
-  }
-
-  .announcements-paragraph {
-    margin: 0 auto;
-    width: 50%;
-  }
-
-  .announcements-paragraph h1, .newsgroup h1 {
-    padding-bottom: 5%;
-    font-size: 3.2em;
-    font-weight: 200;
-    letter-spacing: .16em;
-  }
-
-  .announcements-paragraph p {
-    font-size: 2em;
-    text-align: justify;
-    text-transform: uppercase;
-    font-weight: 200;
-  }
-
-  .announcements-paragraph img {
-    width: 50%;
-    height: auto;
-    margin-left: 25%;
-  }
-
 /* Shop  page Starts*/
 
 
@@ -1215,8 +1155,6 @@ margin-left: 3.5em;
 
 /*GKB warranty and Policy page ends*/
 
-<<<<<<< HEAD
-=======
 /* About us page stylings */
 header.about-header-image {
   min-height: 60vh;
@@ -1232,6 +1170,16 @@ header.about-header-image {
 
 h2.about-header {
   text-align: center;
+}
+
+p.about-history-headline {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+h3.about-section-titles {
+  text-align: center;
+  font-size: 2em;
 }
 
 h3.retail-hours-header {
@@ -1265,9 +1213,13 @@ div.hours {
   font-size: 1.3em;
 }
 
+h4.questions {
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
 div.hours-container {
   color: white;
-  margin: 0 auto;
   width: 90%;
   margin: 0 auto;
 }
@@ -1705,6 +1657,13 @@ div.hours-container {
   .social-media-bubble {
     margin-top: 1em;
     text-align: left;
+  }
+
+  div.hours-container {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
   }
 
 }
