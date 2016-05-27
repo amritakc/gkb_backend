@@ -709,23 +709,6 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 /* End Community Section */
 
 /* Volunteer  Start */
-<<<<<<< HEAD
-.vol-image {
-  /*-webkit-clip-path: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%);*/
-  width: 45%;
-  height: 100px;
-  background: red;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 50px;
-  border-radius: 50px;
-}
-
-.vol-circle{
-  width: 100px;
-  height: 100px;
-
-}
 
 .volpics1 {
   width: 15em;
