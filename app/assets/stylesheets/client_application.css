@@ -678,20 +678,31 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 /* End Community Section */
 
 /* Volunteer  Start */
-.rita {
-  width: 200px;
-  height: 200px;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 100px;
-  border-radius: 100px;
+
+.volpics1 {
+  width: 15em;
+  height: 15em;
+  -moz-border-radius: 10em;
+  -webkit-border-radius: 10em;
+  border-radius: 10em;
+}
+
+.volpics2 {
+  width: 15em;
+  height: 15em;
+  -moz-border-radius: 10em;
+  -webkit-border-radius: 10em;
+  border-radius: 10em;
+  margin-left: 10em;
 }
 
 .volgistics {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 10em;
 }
 
 .bubbles {
+  margin-top: 5em;
   width: 100%;
   text-align: center;
 }
@@ -703,7 +714,7 @@ d-expand-collapse {
   word-wrap: break-word;
 }
 
-.quang {
+.volbubbles {
   display: inline-block;
   text-align: center;
 }
@@ -713,7 +724,7 @@ d-expand-collapse {
 }
 
 .voldetails {
-  font-size: 16px;
+  font-size: .6em;
   text-align: center;
 }
 /* Volunteer  End*/
