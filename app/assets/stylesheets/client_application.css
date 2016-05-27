@@ -1271,6 +1271,11 @@ div.hours-container {
   width: 90%;
   margin: 0 auto;
 }
+/* End about us page stylings */
+
+/* -------------------------------------------------------------
+        ----  M E D I A ----  ||||  ---- Q U E R I E S ----
+---------------------------------------------------------------- */
 
 /* When screen is from 768px to 1024px */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
