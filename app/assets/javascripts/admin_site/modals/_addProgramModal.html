@@ -10,10 +10,13 @@
       <img ngf-src="file" id="thumb">
 
       <div class="form-group">
-        <label>Title:</label>
-        <input type="text" class="input form-control" ng-model='programsPost.title'>
-        <label>Text:</label>
-        <input type="text" class="input form-control" ng-model='programsPost.text'> 
+        <form name="myForm" action="#sent" method="post">
+          <label>Title:</label>
+          <input type="text" name="myText" class="input form-control" ng-model='programsPost.title' required><span ng-show="myForm.myText.$error.required">*required</span>
+          <br><br>
+          <label>Caption:</label>
+          <input type="text" name="myText2" class="input form-control" ng-model='programsPost.text' required><span ng-show="myForm.myText2.$error.required">*required</span> 
+        </form>
       </div>
 
         <div class="btn-container row">
@@ -21,7 +24,7 @@
             <button type="button" class="btn btn-danger btn-lg" ng-click='cancel()'>Cancel</button>
           </div>
           <div class="col-sm-1 col-sm-offset-1">
-            <button type="button" class="btn btn-success btn-lg" ng-disabled="myForm.$invalid" ng-click="ok(file)">Save</button>
+            <button type="button" class="btn btn-success btn-lg" ng-click="ok(file)" ng-disabled="myForm.$invalid">Save</button>
           </div>
         </div>
        </form>
