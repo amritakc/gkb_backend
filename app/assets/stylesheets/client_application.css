@@ -1072,6 +1072,18 @@ margin-left: 3.5em;
 /*GKB warranty and Policy page ends*/
 
 /* About us page stylings */
+header.about-header-image {
+  min-height: 60vh;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('https://s3-us-west-1.amazonaws.com/gkbimages//client/onabike.jpeg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 10%;
+  color: white;
+}
+
 h2.about-header {
   text-align: center;
 }
@@ -1079,10 +1091,31 @@ h2.about-header {
 h3.retail-hours-header {
   text-align: center;
   font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+div.hours {
+  color: white;
+  width: calc(33.3% - 5px);
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.hours > p {
+  color: white;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 0.9em;
 }
 
 div.hours-container {
-  border: 3px solid black;
+  color: white;
+  margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
 /* When screen is from 768px to 1024px */
