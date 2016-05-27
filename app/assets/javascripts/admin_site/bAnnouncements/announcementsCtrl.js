@@ -23,7 +23,7 @@ function($scope,$state,DataService, ModalService, $uibModal, usSpinnerService){
     var modalInstance = $uibModal.open({
       templateUrl: 'admin_site/modals/_addAnnouncementsModal.html',
       controller: [
-        '$scope', '$uibModalInstance', 'Upload',  function($scope, $uibModalInstance, Upload) {
+        '$scope', '$uibModalInstance', 'Upload',  'usSpinnerService',  function($scope, $uibModalInstance, Upload, usSpinnerService) {
           
           $scope.upload = function(file, callback) {
             console.log("hit upload")
@@ -44,6 +44,7 @@ function($scope,$state,DataService, ModalService, $uibModal, usSpinnerService){
           }
           
           $scope.ok = function(file){
+            $scope.showSpinner = true; 
             if(file){
               $scope.upload(file, function(result) {
                 

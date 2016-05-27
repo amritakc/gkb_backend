@@ -6,6 +6,7 @@
     <div class="modal-body">
 
       <!-- file upload here, added picture preview -->
+      <span us-spinner="{radius:30, width:8, length: 16}" spinner-on="showSpinner"></span>
       <input type="file" ngf-select="" ng-model="file" name="file" ngf-accept="'image/*'" required="">
       <img ngf-src="file" id="thumb">
 

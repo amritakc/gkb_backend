@@ -44,6 +44,8 @@ function($scope,$state,DataService, ModalService, $uibModal){
           }
           
           $scope.ok = function(file){
+            $scope.showSpinner = true; 
+            
             if(file){
               $scope.upload(file, function(result) {
                 $scope.bikesPost.url = result
