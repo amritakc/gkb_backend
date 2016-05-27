@@ -293,8 +293,8 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 }
 
 #thumb {
-    width: 5em;
-    height: 5em;
+    /*width: 5em;*/
+    height: 10em;
     float: none;
     position: relative;
     top: 0.5em;
