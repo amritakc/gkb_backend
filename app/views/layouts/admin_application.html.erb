@@ -3,10 +3,13 @@
 <head>
   <title>Good Karma Bikes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-
   <script>
+
   //for google analytics
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -20,14 +23,34 @@
   });
   ga('send', 'pageview');
 
+
 </script>
   <%= stylesheet_link_tag    'admin_application', media: 'all' %>
   <%= javascript_include_tag 'admin_javascript' %>
   <%= csrf_meta_tags %>
+  
 </head>
+
 <body ng-app="adminApp">
+  <ui-view>
+  <script type="text/javascript">
+      window.loading_screen = window.pleaseWait({
+        logo: "<%= image_url("LogoSmall.png") %>",
+        backgroundColor: '#00A950',
+        loadingHtml: "<div class='spinner'> <div class='rect1'></div> <div class='rect2'></div> <div class='rect3'></div> <div class='rect4'></div> <div class='rect5'></div></div> <style> .spinner { margin: 100px auto; width: 50px; height: 40px; text-align: center; font-size: 10px;}.spinner > div { background-color: #ffffff; height: 100%; width: 6px; display: inline-block; -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out; animation: sk-stretchdelay 1.2s infinite ease-in-out;}.spinner .rect2 { -webkit-animation-delay: -1.1s; animation-delay: -1.1s;}.spinner .rect3 { -webkit-animation-delay: -1.0s; animation-delay: -1.0s;}.spinner .rect4 { -webkit-animation-delay: -0.9s; animation-delay: -0.9s;}.spinner .rect5 { -webkit-animation-delay: -0.8s; animation-delay: -0.8s;}@-webkit-keyframes sk-stretchdelay { 0%, 40%, 100% { -webkit-transform: scaleY(0.4) } 20% { -webkit-transform: scaleY(1.0) }}@keyframes sk-stretchdelay { 0%, 40%, 100% { transform: scaleY(0.4); -webkit-transform: scaleY(0.4); } 20% { transform: scaleY(1.0); -webkit-transform: scaleY(1.0); }} </style>"
+      });
 
-  <ui-view></ui-view>
+      window.loading_screen.finish();
+    </script>    
+    
+  </ui-view>
 
+  <script type="text/javascript">
+
+    if (screen.width <= 699) {
+    document.location = "9001.html";
+    }
+
+  </script>
 </body>
 </html>

@@ -6,7 +6,6 @@ class CreateContents < ActiveRecord::Migration
       t.string :caption  ,default: "none"
       t.string :color  ,default: "none"
       t.string :brand  ,default: "none"
-      t.string :author  ,default: "GoodKarmaBikes"
       t.float  :price  ,default: 0.0
       t.string :url  ,default: "none"
       t.references :section, index: true

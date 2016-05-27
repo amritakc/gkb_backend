@@ -31,6 +31,7 @@
     "ngToast": "ngtoast#^2.0.0",
     "angular-resource": "^1.5.5",
     "angular-route": "^1.5.5",
-    "gsap": "^1.18.4"
+    "gsap": "^1.18.4",
+    "angular-spinner": "^0.8.1"
   }
 }
