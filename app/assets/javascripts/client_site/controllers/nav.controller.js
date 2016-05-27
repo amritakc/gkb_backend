@@ -13,7 +13,7 @@ myApp.controller('navCtrl', function($rootScope, $scope, $location, $window, loc
 
     slideFactory.getSlides(function(res) {
     	for(var i = 0; i<res.data.length;i++){
-    		$scope.slides.push({id:i , url: res.data[i].url })
+    		$scope.slides.push({id:i , url: res.data[i].url , text: res.data[i].text})
     	}
   		console.log($scope.slides)
     });

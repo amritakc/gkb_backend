@@ -45,11 +45,22 @@
           <uib-carousel active="active" no-wrap="noWrapSlides">
             <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
               <!-- {{slides}} -->
-              <img src="{{slide.url}}">
-              <!-- <img ng-src={{slide.url}} style="margin:auto;"> -->
-              <div class="carousel-caption">
-             <!--    <p>{{slide.text}}</p> -->
+              <div ng-if = "slide.url !='none'">
+                <img src="{{slide.url}}">
+                <!-- <img ng-src={{slide.url}} style="margin:auto;"> -->
+                <div ng-if = "slide.text != 'none'">
+                  <div class="carousel-caption">
+                    <h1>{{slide.text}}</h1>
+                  </div>
+                </div>
               </div>
+
+              <div ng-if = "slide.url =='none'">
+      <!--           <div class="carousel-caption"> -->
+                   <h1>{{slide.text}}</h1>
+                <!-- </div> -->
+              </div>
+
             </uib-slide>
           </uib-carousel>
 <!--           <div ng-repeat = "slide in slides">

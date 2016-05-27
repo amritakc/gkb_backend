@@ -1,11 +1,11 @@
 
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# # This file should contain all the record creation needed to seed the database with its default values.
+# # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+# #
+# # Examples:
+# #
+# #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+# #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # User.create(email:'user@gmail.com', encrypted_password:'#$taawktljasktlw4aaglj')
 User.create(:email => 'user@gmail.com', :password => 'password', :password_confirmation => 'password')
@@ -49,4 +49,5 @@ Content.create(:title => "Good Karma Kids", :text=>"Targeted toward at-risk yout
 Content.create(:section=>Section.find_by_name("announcements"),:url=>"http://s3-us-west-1.amazonaws.com/gkbimages//client/kids.jpg")
 Content.create(:section=>Section.find_by_name("announcements"),:url=>"http://s3-us-west-1.amazonaws.com/gkbimages//client/gears.jpeg")
 Content.create(:section=>Section.find_by_name("announcements"),:url =>"http://s3-us-west-1.amazonaws.com/gkbimages//client/tools.jpg")
-Content.create(:section=>Section.find_by_name("announcements"),:url=>"http://s3-us-west-1.amazonaws.com/gkbimages//client/kids.jpg")
+Content.create(:section=>Section.find_by_name("announcements"),:text => "Volunteer Party this Friday!")
+Content.create(:section=>Section.find_by_name("announcements"),:url=>"http://s3-us-west-1.amazonaws.com/gkbimages//client/kids.jpg", :text => "Bike Sale!")
