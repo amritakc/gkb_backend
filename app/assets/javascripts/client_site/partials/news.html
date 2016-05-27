@@ -1,7 +1,17 @@
 <div id="news-wrapper">
 	<div class="newsgroup">
 		<h1>RECENT NEWS</h1>
-	<div class="newsgroup">
+	<div ng-repeat = "new in news" class="newsgroup">
+		<div class="newsboxes">
+			<img src="{{new.url}}">
+			<h3>{{new.title}}</h3>
+			<h4>{{new.created_at|date:"MMMM dd, yyyy"}}</h4>
+			<p>{{new.text}}
+			</p>
+			<h4><a ng-click="toArticle(new.id)">Link to news article</a></h4>
+		</div>
+	</div>
+	<!-- <div class="newsgroup">
 		<div class="newsboxes">
 			<img src="https://s3-us-west-1.amazonaws.com/gkbimages//client/cray.jpg">
 			<h3>Future Bikes of the Past</h3>
@@ -135,6 +145,6 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed euismod augue. Ut sit amet quam diam. Duis auctor turpis sit amet nulla porta congue. Quisque a consequat dolor. Nam urna leo, efficitur sed eleifend vel, malesuada vitae felis. Sed in pulvinar arcu. Etiam sit amet augue nunc. Fusce accumsan sed dui id hendrerit.
 			</p>
 			<h4><a href="">Link to news article</a></h4>
-		</div>
+		</div> -->
 	</div>
 </div>

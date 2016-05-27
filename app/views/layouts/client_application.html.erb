@@ -3,67 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Client Front End</title>
+  <title>Good Karma Bikes</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+ <!--  // <script src="../../javascripts/client_sitejs/ui-bootstrap-tpls-1.3.2.min.js"></script> -->
+ <script src="/ui-bootstrap-tpls-1.3.2.min.js"></script>
+
 
   <%= stylesheet_link_tag    'client_application', media: 'all' %>
   <%= javascript_include_tag 'client_javascript' %>
   <%= csrf_meta_tags %>
+<link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAAAAAAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAP8AAAAAAAAAAAAAAP8AAAAAAAAAAAAAAAA2OTkEAAAA/wAAAP8AAAAAAAAA/wAAAABAREQOQEREDgAAAAAAAAD/AAAAAAAAAAAAAAD/AAAAAEBERA4AAAAAAAAAAAAAAP8AAAD/AAAAAAAAAP8AAAAAAAAAAEBERA4AAAAAAAAA/wAAAAAAAAAAAAAA/wAAAAAAAAAAQEREDgAAAAAAAAD/AAAA/wAAAP8AAAD/AAAAAAAAAABAREQOAAAAAAAAAP8AAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBERA4AAAAAAAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/0BERA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/QEREDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/0BERA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAREQOQEREDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AADDwwAAvb0AALy9AAC8vQAAvD0AAMIDAAD/HwAAwx8AAPw/AADwfwAA8f8AAPH/AAD//wAA//8AAA==" rel="icon" type="image/x-icon" />
 </head>
-<body ng-app="myApp" ng-controller="mainCtrl">
+<body ng-app="myApp">
   <div class="container-fluid">
-    <nav class="navigation-bar" ng-controller="navCtrl">
-      <ul class="topnav" ng-class="{ 'responsive': small }">
-        <li class="icon">
-          <a href="javascript:void(0);" ng-click="showLinks()">&#9776;</a>
-        </li>
-        <li ng-click="changePage('/')"><a href="#/">HOME</a></li>
-        <li ng-click="changePage('/shop')"><a href="#/shop">SHOP</a></li>
-        <li ng-click="changePage('/donations')"><a href="#/donations">DONATE</a></li>
-        <li ng-click="changePage('/volunteers')"><a href="#/volunteers">VOLUNTEER</a></li>
-        <li ng-click="changePage('/community')"><a href="#/community">COMMUNITY</a></li>
-        <li ng-click="changePage('/news')"><a href="#/news">NEWS</a></li>
-      </ul>
-    </nav>
 
-    <div class="header-wrapper" ng-controller="headerCtrl">
+    <div class="header-wrapper" ng-controller="navCtrl">
+      <nav class="navigation-bar">
+        <ul class="gkb-name">
+          <li>Good Karma Bikes</li>
+        </ul>
+        <ul class="topnav" ng-class="{ 'responsive': small }">
+          <li class="icon">
+            <a href="javascript:void(0);" ng-click="showLinks()">&#9776;</a>
+          </li>
+          <li><a href="#/">HOME</a></li>
+          <li><a href="#/shop">SHOP</a></li>
+          <li><a href="#/donations">DONATE</a></li>
+          <li><a href="#/volunteers">VOLUNTEER</a></li>
+          <li><a href="#/community">COMMUNITY</a></li>
+          <li><a href="#/about">ABOUT US</a></li>
+          <li><a href="#/news">NEWS</a></li>
+        </ul>
+      </nav>
+    
 
-      <header class="bike-image" ng-if="currentUrl == '/'">
-        <div class="container slider">
-          <img ng-repeat="slide in slides" class="slide slide-animation" ng-hide="!isCurrentSlideIdx($index)" ng-src="{{ slide.image }}" alt="slide image">
-          <a class="arrow prev" href="javascript: void(0);" ng-click="prevSlide()"></a>
-          <a class="arrow next" href="javascript: void(0);" ng-click="nextSlide()"></a>
-          <nav class="nav">
-            <div class="wrapper">
-              <ul class="dots">
-                <li class="dot" ng-repeat="slide in slides">
-                  <a href="javascript: void(0);" ng-class="{ 'active-slide' : isCurrentSlideIdx($index) }" ng-click="setCurrentSlideIdx($index)">{{ slide.description }}</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+      <header class="bike-image" ng-if="changePage('/')">
+        <br>
+        <br>
+        <br>
+        <br>
+         <div class="carousel">
+          <uib-carousel active="active" no-wrap="noWrapSlides">
+            <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+              <!-- {{slides}} -->
+              <div ng-if = "slide.url !='none'">
+                <img src="{{slide.url}}">
+                <!-- <img ng-src={{slide.url}} style="margin:auto;"> -->
+                <div ng-if = "slide.text != 'none'">
+                  <div>
+                    <h1 id="carousel-text">{{slide.text}}</h1>
+                  </div>
+                </div>
+              </div>
+
+              <div ng-if = "slide.url =='none'">
+      <!--           <div class="carousel-caption"> -->
+                   <h1>{{slide.text}}</h1>
+                <!-- </div> -->
+              </div>
+
+            </uib-slide>
+          </uib-carousel>
+<!--           <div ng-repeat = "slide in slides">
+            <h1>{{slide.url}}</h1>
+          </div> -->
         </div>
-        <div class="triangle-up" id="tri-index"></div>
-      
       </header>
 
-      <header ng-if="currentUrl == '/shop'" class="bike-image">
+      <header class="community-page" ng-if="changePage('/community')">
+        <div id="community-head">
+          <img id="cty-headerimage" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/cyclists.jpg">
+        </div> 
+        <h1 id="events">Events</h1>
+        <div id="calendar">
+          <script data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script><div data-tockify-component="calendar" data-tockify-calendar="goodkarmabikes"></div>
+        </div>
       </header>
-      <header ng-if="currentUrl == '/donations'" class="thankyou-image">
+
+      <header ng-if="changePage('/shop')" class="bike-image">
       </header>
-      <header ng-if="currentUrl == '/volunteers'" class="bike-image">
+      <header ng-if="changePage('/donations')" class="thankyou-image">
+      </header>
+      <header ng-if="changePage('/volunteers')" class="bike-image">
 
       </header>
-      <header ng-if="currentUrl == '/news'" class="bike-image">
+      <header ng-if="changePage('/news')" class="bike-image">
+      </header>
 
+      <header ng-if="changePage('/about')" class="about-header-image">
+        <div class="hours-container">
+          <h3 class="retail-hours-header">RETAIL HOURS</h3>
+          <div class="hours">
+              <h2><em><strong>Mon - Fri</strong></em></h2>
+              <h4>2 PM - 6 PM</h4>
+          </div>
+          <div class="hours">
+              <h2><em><strong>Saturday</strong></em></h2>
+              <h4>10 AM - 5 PM</h4>
+              <p><small>Service closes at 4 PM</small></p>  
+          </div>
+          <div class="hours">
+              <h2><em><strong>Sunday</strong></em></h2>
+              <h4>11 AM - 3PM</h4>
+          </div>
+        </div>
       </header>
     </div>
-    <div ng-view autoscroll="true"></div>
+    <div ng-view></div>
     <footer id="footer" ng-controller="footerCtrl">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-6">
           <h4><strong>LOCATION</strong></h4>
           <br>
           <p>460 LINCOLN AVENUE</p>
@@ -82,11 +133,13 @@
           <p><b>SUNDAY</b></p>
           <p>11AM - 3PM</p>
         </div>
-        <div class="col-md-6 footer-links-wrapper">
+        <div class="col-md-6 col-sm-6 footer-links-wrapper">
           <section class="social-media-bubble">
-            <a href="#"><img class="social-media-icons rotate" src="/static/img/facebook.png" alt="facebook icon"></a>
-            <a href="#"><img class="social-media-icons rotate" src="/static/img/twitter.png" alt="twitter icon"></a>
-            <a href="#"><img class="social-media-icons rotate" src="/static/img/email.png" alt="email icon"></a>
+            <a target="_blank" href="http://www.yelp.com/biz/good-karma-bikes-san-jose-2"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/yelp.png" alt="yelp icon"></a>
+            <a target="_blank" href="https://www.facebook.com/GoodKarmaBikes/"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/facebook.png" alt="facebook icon"></a>
+            <a target="_blank" href="http://www.instagram.com/good_karma_bikes"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/instragram.png"></a>
+            <a target="_blank" href="https://twitter.com/GoodKarmaBikes"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/twitter.png" alt="twitter icon"></a>
+            <a href="mailto:cindy@goodkarmabikes.org" target="_top"><img class="social-media-icons rotate" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/email.png" alt="email icon"></a>
           </section>
           <ul class="footer-list">
             <li class="footer-links"><a href="#/">ABOUT US</a></li>
@@ -94,20 +147,26 @@
             <li class="footer-links"><a href="#/news">NEWS</a></li>
             <li class="footer-links"><a href="#/faq">FAQ</a></li>
           </ul>
+          <img src="https://s3-us-west-1.amazonaws.com/gkbimages//client/logo.jpg" alt="good karma bikes logo" class="gkb-logo-footer">
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12" id="subscribe">
-          <h4><strong>SUBSCRIBE TO OUR MAILING LIST</strong></h4>
-          <form role="form">
-              <div class="form-group">
-                  <input type="email" class="form-control footer-email-input" ng-model="newSubscriber.email" placeholder="Email Address">
-                  <button class="btn btn-subscribe" ng-click="create()">Submit</button>
-              </div>
-          </form>
+        <div class="col-xs-12">
+          <div id="subscribe">
+            <h4><strong>SUBSCRIBE TO OUR MAILING LIST</strong></h4>
+            <form role="form">
+                <div class="form-group">
+                    <input type="email" class="form-control footer-email-input" ng-model="newSubscriber.email" placeholder="Email Address">
+                    <button class="btn btn-subscribe" ng-click="create()">Submit</button>
+                </div>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
   </div>
+
+<!--   // <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap.min.js"></script> -->
 </body>
 </html>
+

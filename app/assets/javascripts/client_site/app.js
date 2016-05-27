@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute','templates', 'ngAnimate']);
+var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap', 'templates', 'ngAnimate']);
   
   myApp.config(function($routeProvider) {
     $routeProvider
@@ -22,6 +22,10 @@ var myApp = angular.module('myApp', ['ngRoute','templates', 'ngAnimate']);
         templateUrl: 'client_site/partials/shop.html',
         controller: 'storeCtrl'
       })
+      .when('/about', {
+        templateUrl: 'client_site/partials/about.html',
+        controller: 'aboutCtrl'
+      })
       .when('/gkbwarranty', {
         templateUrl: 'client_site/partials/gkbwarranty.html',
         controller: 'warrantyCtrl'
@@ -37,6 +41,10 @@ var myApp = angular.module('myApp', ['ngRoute','templates', 'ngAnimate']);
       .when('/faq', {
         templateUrl: 'client_site/partials/news.html',
         controller: 'newsCtrl'
+      })
+      .when('/article/:id', {
+        templateUrl: 'client_site/partials/article.html',
+        controller: 'articlesCtrl'
       })
       .otherwise({
         redirectTo: '/'

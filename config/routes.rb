@@ -1,3 +1,4 @@
+
 Rails.application.routes.draw do
   patch 'users/edit/:id' => 'admins#change_password'
 
@@ -33,3 +34,4 @@ Rails.application.routes.draw do
   get '*path' => redirect('/#/home')
   
 end
+

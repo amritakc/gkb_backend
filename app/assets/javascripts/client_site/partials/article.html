@@ -1,0 +1,9 @@
+<div class="article-container">
+	<div class="article-section">
+		<img src={{article.url}}>
+		<h1>{{article.title}}</h1>
+		<h5 id="author">Author: {{article.author}}</h5>
+		<h5>Date: {{article.created_at  | date: format:timezone}} </h5>
+		<p>{{article.text}}</p>
+	</div>	
+</div>

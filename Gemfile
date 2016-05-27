@@ -1,3 +1,4 @@
+
 source 'https://rubygems.org'
 
 gem 'text-angular-rails'
@@ -34,6 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use hirb to view records nicely in rails c
  gem 'hirb'
+
  # Use figaro for keeping secret keys 
  gem 'figaro'
  # Amazon Web Services gem used for connection to S3 bucket
@@ -59,4 +61,5 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
 
