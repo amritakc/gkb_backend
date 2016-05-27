@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Client Front End</title>
+  <title>Good Karma Bikes</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -14,6 +14,7 @@
   <%= stylesheet_link_tag    'client_application', media: 'all' %>
   <%= javascript_include_tag 'client_javascript' %>
   <%= csrf_meta_tags %>
+<link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAA/wAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAAAAAAAAAAD/AAAAAAAAAAAAAAAAAAAAAAAAAP8AAAAAAAAAAAAAAP8AAAAAAAAAAAAAAAA2OTkEAAAA/wAAAP8AAAAAAAAA/wAAAABAREQOQEREDgAAAAAAAAD/AAAAAAAAAAAAAAD/AAAAAEBERA4AAAAAAAAAAAAAAP8AAAD/AAAAAAAAAP8AAAAAAAAAAEBERA4AAAAAAAAA/wAAAAAAAAAAAAAA/wAAAAAAAAAAQEREDgAAAAAAAAD/AAAA/wAAAP8AAAD/AAAAAAAAAABAREQOAAAAAAAAAP8AAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAAAAAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBERA4AAAAAAAAA/wAAAP8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAAAP8AAAD/AAAA/0BERA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/QEREDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/0BERA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAREQOQEREDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AADDwwAAvb0AALy9AAC8vQAAvD0AAMIDAAD/HwAAwx8AAPw/AADwfwAA8f8AAPH/AAD//wAA//8AAA==" rel="icon" type="image/x-icon" />
 </head>
 <body ng-app="myApp">
   <div class="container-fluid">
@@ -75,7 +76,25 @@
 
       </header>
       <header ng-if="changePage('/news')" class="bike-image">
+      </header>
 
+      <header ng-if="changePage('/about')" class="about-header-image">
+        <div class="hours-container">
+          <h3 class="retail-hours-header">RETAIL HOURS</h3>
+          <div class="hours">
+              <h2><em><strong>Mon - Fri</strong></em></h2>
+              <h4>2 PM - 6 PM</h4>
+          </div>
+          <div class="hours">
+              <h2><em><strong>Saturday</strong></em></h2>
+              <h4>10 AM - 5 PM</h4>
+              <p><small>Service closes at 4 PM</small></p>  
+          </div>
+          <div class="hours">
+              <h2><em><strong>Sunday</strong></em></h2>
+              <h4>11 AM - 3PM</h4>
+          </div>
+        </div>
       </header>
     </div>
     <div ng-view></div>

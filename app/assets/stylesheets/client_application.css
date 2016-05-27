@@ -27,6 +27,10 @@ html, body {
   overflow: auto; 
 }
 
+textarea {
+  resize: none;
+}
+
 /* This is styling for the navigation bar */
 ul.topnav {
   list-style-type: none;
@@ -453,7 +457,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 #community-head {
   overflow: hidden;
   width: 100%;
-  height: 70vh;
+  height: 80vh;
 }
 
 #cty-headerimage {
@@ -475,33 +479,40 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   height: auto;
   margin: auto;
 }
-
+/*
 .community {
   width: 90%;
   height: 100%;
-}
+  margin: auto;
+}*/
 
 .events {
   width: 90%;
 }
 
-.community h3 {
+.community-top {
+  width: 90%;
+  margin: auto;
+}
+
+.community-top h3 {
   font-weight: 200;
 /*  font-style: italic;*/
   color: white;
   width: 75%;
   text-align: center;
   margin: auto;
+ /* margin-left: 35%;*/
   margin-top: 5%;
   text-transform: uppercase;
   
 
 }
 
-.community h4 {
+.community-top h4 {
   color: white;
   font-weight: 200;
-  margin-top: 2%;
+  margin-top: 3%;
   text-align: center;
   font-size: 1.5em;
   font-style: italic;
@@ -524,12 +535,17 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 .communitycontent {
 
   width: 90%;
-  margin: auto;
+  margin-left: 10%;
   margin-top: 5%;
   margin-bottom: 5%;
   padding: 1%;
 
+}
 
+.communitycontent h3 {
+  margin: auto;
+  font-weight: 300;
+  text-align: center;
 }
 
 .communityboxes {
@@ -568,6 +584,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
    -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
   position: relative;
+  margin-bottom: 5%;
   /*position: absolute;*/
 }
 
@@ -576,6 +593,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   height: auto;
   margin: auto;
   position: absolute;
+
 
 }
 
@@ -664,34 +682,45 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 /* End Community Section */
 
 /* Volunteer  Start */
-.rita {
-  /*-webkit-clip-path: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%);*/
-  width: 45%;
-  height: 100px;
-  background: red;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 50px;
-  border-radius: 50px;
+
+.volpics1 {
+  width: 15em;
+  height: 15em;
+  -moz-border-radius: 10em;
+  -webkit-border-radius: 10em;
+  border-radius: 10em;
 }
 
-.quang{
-  width: 100px;
-  height: 100px;
-
+.volpics2 {
+  width: 15em;
+  height: 15em;
+  -moz-border-radius: 10em;
+  -webkit-border-radius: 10em;
+  border-radius: 10em;
+  margin-left: 10em;
 }
 
 .volgistics {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 10em;
+}
+
+.bubbles {
+  margin-top: 5em;
+  width: 100%;
+  text-align: center;
 }
 
 d-expand-collapse {
   font-size: 2em;
-
   display: inline-block;
   vertical-align: top;
   word-wrap: break-word;
+}
+
+.volbubbles {
+  display: inline-block;
+  text-align: center;
 }
 
 .exp_col_title {
@@ -699,7 +728,7 @@ d-expand-collapse {
 }
 
 .voldetails {
-  font-size: 16px;
+  font-size: .6em;
   text-align: center;
 }
 /* Volunteer  End*/
@@ -712,55 +741,7 @@ d-expand-collapse {
   min-width: 100%;
   position: relative; }
 
-/* When screen is from 768px to 1024px */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  body {
-    font-size: 1.5em;
-  }
-  
-  .iam img {
-    min-height: 150px;
-  }
-
-  .announcements {
-    width: 100%;
-    height: 100%;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/row_of_bikes.jpg");
-    background-size: cover;
-    position: relative;
-    color: white;
-  }
-
-  .announcements-paragraph {
-    margin: 0 auto;
-    width: 50%;
-  }
-
-  .announcements-paragraph h1, .newsgroup h1 {
-    padding-bottom: 5%;
-    font-size: 3.2em;
-    font-weight: 200;
-    letter-spacing: .16em;
-  }
-
-  .announcements-paragraph p {
-    font-size: 2em;
-    text-align: justify;
-    text-transform: uppercase;
-    font-weight: 200;
-  }
-
-  .announcements-paragraph img {
-    width: 50%;
-    height: auto;
-    margin-left: 25%;
-  }
-
-/* Shop  page Starts*/
-
-
+/* Shop page starts here */
 .shop-wrapper {
   height: 100%;
   width: 100%;
@@ -774,7 +755,6 @@ d-expand-collapse {
   display: inline-block;
   padding-top: 2em;
   padding-bottom: 2em;
- /* background-color: grey;*/
 }
 
 .shopgroup h1 {
@@ -818,7 +798,11 @@ width: 100%;
 height: 12.5em;  /*changing from 21.5, 15.5%*/
 display: inline-block;
 }
+.shopimage {
+  width: 7em;
+  height: 5em;
 
+}
 /*  start boxes for logos*/
 
 .shopboxeslogo:nth-of-type(2) {
@@ -827,7 +811,7 @@ display: inline-block;
 
 .shopboxeslogo {
 width: 45%;
-height: 50%;  /*height 50%*/
+height: 50%; 
 text-align: center;
 display: inline-block;
 }
@@ -848,7 +832,7 @@ text-align: center;
 
 #craigslistlogo img{
 width: auto;
-height: 11em; /* height 15.5em*/
+height: 11em;  /*height 15.5em*/
 text-align: center;
 
 display: inline-block;
@@ -971,7 +955,7 @@ margin-top: 1.5em;
   height: 25em;
   text-align: center;;
 /*  margin-left: %;*/
-  background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("/static/img/row_of_bikes.jpg");
+/*  background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("/static/img/row_of_bikes.jpg");*/
   background-size: auto 100%;
   background-size:cover;
   margin-bottom: 5em;
@@ -986,10 +970,7 @@ margin-top: 1.5em;
 #parktoolcourses h3{
 color: white;
 }
-.classes .shopgroup{
-/*  height: 30em;*/
-/*height: 30%;*/
-}
+
 .classes .shopboxesinfo {
   width: 30%;
   height: 100%;
@@ -1001,7 +982,6 @@ color: white;
   color:white;
 }
 .classes .shopboxesinfo th, td{
-  border: 1px solid white;
   color:white;
 }
 #parktooltable h3 {
@@ -1014,17 +994,49 @@ display: inline-block;
 }
 /*CLASSES section ends*/
 /*RENTALS section starts*/
-/*#aquity {
-  height: 21em;*/
+
 
 }
 .rentals {
   width: 100%;
   height: 100%;
-/*  background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg") center center no-repeat;*/
-/*  background-size: cover;*/
   position: relative;
   text-align: center;
+}
+/*.rentals p{
+  margin-top: 1.5em;
+  font-size: 1.5em;
+}*/
+.rentals h1{
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  font-size: 5em;
+  font-weight: 200;
+  margin-bottom: 2em;
+}
+.rentals img{
+  width: 100%;
+  height: 40em;
+}
+#rentalimage {
+  background: url("https://s3-us-west-1.amazonaws.com/gkbimages//client/gkb-rental.jpeg");
+  background-size: auto 100%;
+  background-size:cover;
+  width: 100%;
+  height: 40em;
+}
+#rentaltext {
+  text-align: center;
+/*  margin: 0 auto;*/
+  width: 70%;
+  height: auto;
+}
+#rentaltext p{
+  margin-top: 1.5em;
+  font-size: 1.5em;
+}
+#rentaltext a {
+  color: #27ae90;
 }
 /*RENTALS section ends*/
 /* Shop Page Ends*/
@@ -1097,6 +1109,103 @@ margin-left: 3.5em;
 }
 
 /*GKB warranty and Policy page ends*/
+
+/* About us page stylings */
+header.about-header-image {
+  min-height: 60vh;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('https://s3-us-west-1.amazonaws.com/gkbimages//client/onabike.jpeg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 10%;
+  color: white;
+}
+
+h2.about-header {
+  text-align: center;
+}
+
+h3.retail-hours-header {
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+div.hours {
+  color: white;
+  width: calc(33.3% - 5px);
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.hours > p {
+  color: white;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+div.hours-container {
+  color: white;
+  margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* When screen is from 768px to 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 1.5em;
+  }
+  
+  .iam img {
+    min-height: 150px;
+  }
+
+  .announcements {
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/row_of_bikes.jpg");
+    background-size: cover;
+    position: relative;
+    color: white;
+  }
+
+  .announcements-paragraph {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .announcements-paragraph h1, .newsgroup h1 {
+    padding-bottom: 5%;
+    font-size: 3.2em;
+    font-weight: 200;
+    letter-spacing: .16em;
+  }
+
+  .announcements-paragraph p {
+    font-size: 2em;
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+
+  .announcements-paragraph img {
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+  }
+
+/* Shop  page Starts*/
+
+
 
 
 /*Styling for Donation Page*/
