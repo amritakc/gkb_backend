@@ -124,7 +124,7 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
   width: 100%;
   height: 100%;
   color: white;
-  padding: 2.5em;
+  padding: 6.5em;
   border-top: 2px solid black;
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/handlebars.jpg") center center no-repeat;
   background-size: cover; }
@@ -169,12 +169,10 @@ margin-left: 5%;
 }
 
 .iam {
-  height: 100%;
-  max-height: 200px;
-  max-width: 200px;
-  display: inline-block;
-  font-size: 0.6em;
+  width: calc(23% - 5px);
+  font-size: 1em;
   vertical-align: top;
+  display: inline-block;
 }
 
 #iamh1 {
@@ -187,19 +185,26 @@ margin-left: 5%;
 }
 
 .iam a {
+  display: block;
+  width: 100%;
+  height: 100%;
   text-decoration: none;
   color: #000035; 
   font-weight: 300;
 }
 
-.iam:not(:first-of-type) {
-  border-left: 1.em solid #000035;
+.iam a:hover {
+  text-decoration: none;
 }
 
-#iamgroup {
+.iam span {
+  color: #000035;
+}
+
+.iamgroup {
   height: 100%;
   min-height: 20vh;
-  width: 100%;
+  margin: 0 auto;
   text-align: center;
   display: block;
 }
@@ -207,12 +212,10 @@ margin-left: 5%;
 
 .iam img {
   display: block;
-  height: 5em;
-  width: 5em;
-  max-height: 150px;
-  min-height: 80px;
-  max-width: 150px;
-  min-width: 80px;
+  height: 100%;
+  width: 100%;
+  max-width: 130px;
+  max-height: 130px;
   padding-bottom: .5em;
   margin: 0 auto;
 }
@@ -294,8 +297,8 @@ header p {
   color: #000035;
   text-align: center;
   margin-bottom: 7%;
-  font-size: 3em;
-  font: Normal 400 italic;
+  font-size: 4.5em;
+  letter-spacing: 0.08em;
 }
 
 .mission-wrapper {
@@ -324,11 +327,7 @@ header p {
   margin: 0 auto;
   text-align: center;
 
-  width: 80%;
-  font-style: italic;
-  font-weight: 100;
-
-  width: 80%;
+  width: 100%;
   font-style: italic;
   font-weight: 100;
   text-align: justify;
@@ -446,9 +445,45 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 /* End News Section */
 
 /* Styling for the community programs section--shown on homepage and community page */
-.community {
+
+.community-page {
   width: 100%;
   height: 100%;
+}
+
+#community-head {
+  overflow: hidden;
+  width: 100%;
+  height: 70vh;
+}
+
+#cty-headerimage {
+  width: 100%;
+  height: auto;
+}
+
+#events {
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  margin-bottom: 10%
+  margin-top: 10%;
+  font-size: 4em;
+
+}
+
+#calendar {
+  width: 50%;
+  height: auto;
+  margin: auto;
+}
+
+.community {
+  width: 90%;
+  height: 100%;
+}
+
+.events {
+  width: 90%;
 }
 
 .community h4 {
@@ -508,8 +543,41 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   color: white; 
   margin-left: 6%;
   margin-right: 3%;
-  margin-bottom: 2%;
+  margin-bottom: 10%;
 
+
+}
+
+.communityboxes p {
+  width: 80%;
+  margin: auto;
+  font-weight: 200;
+  text-align: justify;
+  margin-bottom: 4%;
+  margin-top: 2%;
+
+}
+
+/*.communityboxes:nth-child(2n) {
+  margin-left: 5.52em;
+}
+*/
+
+
+.img-community {
+  width: 80%;
+
+}
+
+.img-community > img {
+  width: 20em;
+  height: auto;
+  margin: auto;
+  /*-webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);*/
+  position: absolute;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 40% 50%);
 
 }
 
@@ -521,30 +589,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   font-size: 1.7em;
 }
 
-.communityboxes p {
-  width: 80%;
-  margin: auto;
-  font-weight: 200;
-  text-align: justify;
-  margin-bottom: 4%;
-  margin-top: 2%;
-}
-
-/*.communityboxes:nth-child(2n) {
-  margin-left: 5.52em;
-}
-*/
-
-.img-community {
-  width: 20em;
-  height: 20em;
-  margin: auto;
-  -webkit-clip-path: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%);
-
-}
-
-#transport {
+/*#transport {
   background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/commute.jpeg") center center no-repeat;
   background-size: auto 100%;
   
@@ -576,7 +621,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 #karmakids {
   background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/kids.jpg") center center no-repeat;
 
-}
+}*/
 
 .community > p {
   margin: 0.5em auto;
@@ -669,141 +714,14 @@ d-expand-collapse {
   min-width: 100%;
   position: relative; }
 
-/* For when the screen is between 586 and 870px, this should be changed at a later date.
-   It's not the best range. */
-@media only screen and (min-width: 586px) and (max-width: 870px) {
-  .iam {
-    height: 7em;
-    width: 10em;
-    display: inline-block;
-    font-size: 0.7em;
-  }
-
-  .newsboxes:nth-of-type(2) {
-    margin-left: 0;
-  }
-
-  .newsboxes {
-    width: 100%;
-    height: 100%;
-    display: block;
-    margin-bottom: 1em;
-  }
-
-  ul.topnav li {
-    display: none; }
-  
-  ul.topnav li.icon {
-    text-align: center;
-    display: inline-block;
-    background: rgba(0, 0, 0, 0.6);
-    width: 100%;
-  }
-  
-  ul.topnav li.icon > a {
-    width: 100%;
-  }
-
-  ul.topnav {
-    width: 100%;
-    margin: 0;
-  }
-
-  ul.topnav.responsive li.icon {
-    float: right;
-    width: 100%;
-    display: block;
-  }
-  ul.topnav.responsive li.icon > a {
-    float: right;
-    color: white;
-  }
-
-  ul.topnav.responsive li {
-    float: none;
-    display: block;
-  }
-  ul.topnav.responsive li a {
-    display: block;
-    width: 100%;
-    text-align: center; 
-    float: left;
-    color: white;
-    background: rgba(0, 0, 0, 0.6);
-  }
-  nav.navigation-bar {
-    padding: 0;
-    margin: 0;
-  }
-
-  .announcements-paragraph {
-    width: 100%;
-  }
-
-  .announcements-paragraph h1, .newsgroup h1 {
-    padding-bottom: 5%;
-    font-size: 1.4em;
-    font-weight: 200;
-    letter-spacing: .16em;
-  }
-
-  .announcements-paragraph > p {
+/* When screen is from 768px to 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
     font-size: 1.5em;
-    text-align: justify;
-    text-transform: uppercase;
-    font-weight: 200;
-    width: 80%;
-    margin: 0 auto;
-    padding-bottom: 2.5em;
   }
-
-  .community h1 {
-    font-size: 0.9em;
-  }
-
-  .communityboxes {
-    width: 100%;
-    height: 100%;
-    display: block;
-    text-align: left;
-    vertical-align: top;
-    color: white;
-  }
-
-  .communityboxes:nth-child(2n) {
-    margin-left: 0;
-  }
-
-  .communityboxes img {
-    width: 100%;
-    height: 18em;
-  }
-
-  .community > p {
-    margin: 0.5em auto;
-    color: white;
-    width: 80%;
-    text-align: center;
-  }
-
-  .footer-list {
-    text-align: left; 
-  }
-
-  .social-media-bubble {
-    margin-top: 1em;
-    text-align: left;
-  }
-
-}
-
-/* When screen is 1000px or more */
-@media screen and (min-width: 1000px) {
-  .iam {
-    height: 7em;
-    width: 10em;
-    display: inline-block;
-    font-size: 1.7em;
+  
+  .iam img {
+    min-height: 150px;
   }
 
   .announcements {
@@ -993,7 +911,7 @@ display: inline-block;
 /*CLASSES section starts*/
 .classes {
   width: 100%;
-  height: 100%;
+  height: auto;
   background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg") center center no-repeat;
   background-size: cover;
   position: relative;
@@ -1003,7 +921,7 @@ display: inline-block;
   color: white;
   text-transform: uppercase;
   letter-spacing: .3em;
-  font-size: 3em;
+  font-size: 5em;
   font-weight: 200;
   margin-bottom: 2em;
 }
@@ -1047,6 +965,7 @@ margin-top: 1.5em;
   color: white;
 }
 #parktooltext p{
+  font-size: 1.5em;
   color: white;
 }
 #parktoolcourses {
@@ -1069,9 +988,13 @@ margin-top: 1.5em;
 #parktoolcourses h3{
 color: white;
 }
+.classes .shopgroup{
+/*  height: 30em;*/
+/*height: 30%;*/
+}
 .classes .shopboxesinfo {
   width: 30%;
-  height: 50%;
+  height: 100%;
   vertical-align: top;
 }
 .classes .shopboxesinfo table{
@@ -1086,8 +1009,17 @@ color: white;
 #parktooltable h3 {
   color: white;
 }
+.shopclasses {
+width: 40%;
+height: 50%;
+display: inline-block;
+}
 /*CLASSES section ends*/
 /*RENTALS section starts*/
+/*#aquity {
+  height: 21em;*/
+
+}
 .rentals {
   width: 100%;
   height: 100%;
@@ -1388,16 +1320,26 @@ margin-left: 3.5em;
     font-weight: 
   }
 /*End styling for Donation Page*/
+  .tagline {
+    font-size: 5em;
+  }
+
 }
 
-/* When the screen is less than 430 pixels wide and 300px or greater, apply these stylings.
+/* When the screen is less than 760 pixels wide and 300px or greater, apply these stylings.
    Honestly, this range could be changed to something better. */
-@media only screen and (min-width: 300px) and (max-width: 430px) {
-  .iam {
-    height: 7em;
-    width: 10em;
-    display: inline-block;
-    font-size: 0.5em;
+@media only screen and (min-width: 320px) and (max-width: 760px) {
+  body {
+    font-size: 1em;
+  }
+  .iam img {
+    max-width: 100px;
+    max-height: 100px;
+    height: 100px;
+  }
+
+  .tagline {
+    font-size: 5em;
   }
 
   #iamh1 {
@@ -1444,6 +1386,8 @@ margin-left: 3.5em;
   
   ul.topnav li.icon > a {
     width: 100%;
+    height: 50px;
+    line-height: 35px;
   }
 
   ul.topnav {
