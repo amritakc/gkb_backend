@@ -10,10 +10,10 @@
       <div class="form-group">
         <form name="myForm" action="#sent" method="post">
           <label>Title:</label>
-          <input type="text" class="input form-control" ng-model='newsPost.title' name="myText" ng-model="myText" required><span ng-show="myForm.myText.$error.required">*required</span>
+          <input type="text" class="input form-control" ng-model='newsPost.title' name="myText" required><span ng-show="myForm.myText.$error.required">*required</span>
           <br><br>
           <label>Author:</label>    
-          <input type="text" name="myText2" class="input form-control" ng-model="myText2" required><span ng-show="myForm.myText2.$error.required">*required</span>
+          <input type="text" name="myText2" class="input form-control" ng-model='newsPost.author' required><span ng-show="myForm.myText2.$error.required">*required</span>
         </form>
       </div>
 

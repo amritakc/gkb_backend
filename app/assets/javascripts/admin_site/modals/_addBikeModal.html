@@ -11,19 +11,19 @@
       <div class="form-group">
         <form name="myForm" action="#sent" method="post">
           <label>Title:</label>
-          <input type="text" name="myText" class="input form-control" ng-model='bikesPost.title' ng-model="myText" required><span ng-show="myForm.myText.$error.required">*required</span>
+          <input type="text" name="myText" class="input form-control" ng-model='bikesPost.title' required><span ng-show="myForm.myText.$error.required">*required</span>
           <br><br>
           <label>Price:</label>
-          <input type="text" name="myText2" class="input form-control" ng-model='bikesPost.price' ng-model="myText2" required><span ng-show="myForm.myText2.$error.required">*required</span>
+          <input type="text" name="myText2" class="input form-control" ng-model='bikesPost.price' required><span ng-show="myForm.myText2.$error.required">*required</span>
           <br><br>
           <label>Caption:</label>
-          <input type="text" name="myText3" class="input form-control" ng-model='bikesPost.caption' ng-model="myText3" required><span ng-show="myForm.myText3.$error.required">*required</span>
+          <input type="text" name="myText3" class="input form-control" ng-model='bikesPost.caption' required><span ng-show="myForm.myText3.$error.required">*required</span>
           <br><br>
           <label>Color:</label>
-          <input type="text" name="myText4" class="input form-control" ng-model='bikesPost.color' ng-model="myText4" required><span ng-show="myForm.myText4.$error.required">*required</span>
+          <input type="text" name="myText4" class="input form-control" ng-model='bikesPost.color' required><span ng-show="myForm.myText4.$error.required">*required</span>
           <br><br>
           <label>Brand:</label>
-          <input type="text" name="myText5" class="input form-control" ng-model='bikesPost.brand' ng-model="myText5" required><span ng-show="myForm.myText5.$error.required">*required</span>
+          <input type="text" name="myText5" class="input form-control" ng-model='bikesPost.brand' required><span ng-show="myForm.myText5.$error.required">*required</span>
         </form>
       </div>
 
@@ -32,7 +32,7 @@
             <button type="button" class="btn btn-danger btn-lg" ng-click='cancel()'>Cancel</button>
           </div>
           <div class="col-sm-1 col-sm-offset-1">
-            <button type="button" class="btn btn-success btn-lg" ng-disabled="myForm.$invalid"  ng-click="ok(file)" ng-disabled="myForm.$invalid">Save</button>
+            <button type="button" class="btn btn-success btn-lg" ng-click="ok(file)" ng-disabled="myForm.$invalid">Save</button>
           </div>
       </div>
     </div>
