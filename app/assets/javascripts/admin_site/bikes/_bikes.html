@@ -8,7 +8,7 @@
         {{bikesPost.created_at | date : 'M/dd/yyyy - hh:mm a' : timezone}} &nbsp&nbsp - &nbsp&nbsp <b>{{bikesPost.title}}</b><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
       </uib-accordion-heading>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-6">
         <div class="form-group">
           <label>Title:</label>
           <input type="text" class="input form-control" ng-model='bikesPost.title'>
@@ -30,6 +30,13 @@
           <input type="text" class="input form-control" ng-model='bikesPost.brand'>
         </div>
       </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Picture:</label>
+          <a href="{{bikesPost.url}}">{{bikesPost.url}}</a>
+        </div>
+      </div>
+    </div>
 
       <div class="btn-container row">
         <div class="col-sm-7 col-sm-offset-1">
@@ -43,7 +50,6 @@
 
     </uib-accordion-group>
   </uib-accordion>
-</div>
 <div>
   <uib-pagination class="pagination" total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" class="pagination-sm" items-per-page="itemsPerPage"></uib-pagination>
 </div>
