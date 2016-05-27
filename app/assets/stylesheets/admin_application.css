@@ -216,6 +216,7 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 }
 
 .login-container {
+  background-color: #ecf0f1;
   min-width: 90em;
 }
 
