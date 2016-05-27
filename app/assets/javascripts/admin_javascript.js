@@ -25,5 +25,6 @@
 //= require ng-file-upload
 //= require ngToast
 //= require angular-resource
-//= require angular-busy
+//= require spin
+//= require angular-spinner
 //= require_tree ./admin_site
