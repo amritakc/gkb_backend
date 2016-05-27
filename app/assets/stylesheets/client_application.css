@@ -486,7 +486,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   width: 90%;
 }
 
-.community h4 {
+.community h3 {
   font-weight: 200;
 /*  font-style: italic;*/
   color: white;
@@ -499,7 +499,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
 }
 
-.community h5 {
+.community h4 {
   color: white;
   font-weight: 200;
   margin-top: 2%;
@@ -521,12 +521,6 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
 }
 
-.community h2 {
-  color: white;
-  text-align: center;
-  font-weight: 200;
-
-}
 
 .communitycontent {
 
@@ -574,6 +568,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   overflow: hidden;
    -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
+  position: relative;
   /*position: absolute;*/
 }
 
@@ -581,11 +576,11 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   width: 200%;
   height: auto;
   margin: auto;
-
+  position: absolute;
 
 }
 
-.img-community h3 {
+.img-community > h3 {
   text-align: center;
   font-weight: 400;
   text-transform: uppercase;
