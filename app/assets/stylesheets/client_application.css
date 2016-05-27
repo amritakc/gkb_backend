@@ -453,7 +453,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 #community-head {
   overflow: hidden;
   width: 100%;
-  height: 70vh;
+  height: 80vh;
 }
 
 #cty-headerimage {
@@ -475,33 +475,40 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   height: auto;
   margin: auto;
 }
-
+/*
 .community {
   width: 90%;
   height: 100%;
-}
+  margin: auto;
+}*/
 
 .events {
   width: 90%;
 }
 
-.community h3 {
+.community-top {
+  width: 90%;
+  margin: auto;
+}
+
+.community-top h3 {
   font-weight: 200;
 /*  font-style: italic;*/
   color: white;
   width: 75%;
   text-align: center;
   margin: auto;
+ /* margin-left: 35%;*/
   margin-top: 5%;
   text-transform: uppercase;
   
 
 }
 
-.community h4 {
+.community-top h4 {
   color: white;
   font-weight: 200;
-  margin-top: 2%;
+  margin-top: 3%;
   text-align: center;
   font-size: 1.5em;
   font-style: italic;
@@ -524,12 +531,17 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 .communitycontent {
 
   width: 90%;
-  margin: auto;
+  margin-left: 10%;
   margin-top: 5%;
   margin-bottom: 5%;
   padding: 1%;
 
+}
 
+.communitycontent h3 {
+  margin: auto;
+  font-weight: 300;
+  text-align: center;
 }
 
 .communityboxes {
@@ -568,6 +580,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
    -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
   position: relative;
+  margin-bottom: 5%;
   /*position: absolute;*/
 }
 
@@ -576,6 +589,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   height: auto;
   margin: auto;
   position: absolute;
+
 
 }
 
