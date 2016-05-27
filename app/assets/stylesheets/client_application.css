@@ -27,6 +27,10 @@ html, body {
   overflow: auto; 
 }
 
+textarea {
+  resize: none;
+}
+
 /* This is styling for the navigation bar */
 ul.topnav {
   list-style-type: none;
@@ -705,6 +709,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 /* End Community Section */
 
 /* Volunteer  Start */
+<<<<<<< HEAD
 .vol-image {
   /*-webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);*/
@@ -722,7 +727,31 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
 }
 
+.volpics1 {
+  width: 15em;
+  height: 15em;
+  -moz-border-radius: 10em;
+  -webkit-border-radius: 10em;
+  border-radius: 10em;
+}
+
+.volpics2 {
+  width: 15em;
+  height: 15em;
+  -moz-border-radius: 10em;
+  -webkit-border-radius: 10em;
+  border-radius: 10em;
+  margin-left: 10em;
+}
+
 .volgistics {
+  text-align: center;
+  margin-top: 10em;
+}
+
+.bubbles {
+  margin-top: 5em;
+  width: 100%;
   text-align: center;
   margin-top: 100px;
 }
@@ -735,12 +764,17 @@ d-expand-collapse {
   word-wrap: break-word;
 }
 
+.volbubbles {
+  display: inline-block;
+  text-align: center;
+}
+
 .exp_col_title {
   text-align: center;
 }
 
 .voldetails {
-  font-size: 16px;
+  font-size: .6em;
   text-align: center;
 }
 /* Volunteer  End*/
@@ -829,7 +863,6 @@ d-expand-collapse {
   display: inline-block;
   padding-top: 2em;
   padding-bottom: 2em;
- /* background-color: grey;*/
 }
 
 .shopgroup h1 {
@@ -1041,10 +1074,7 @@ margin-top: 1.5em;
 #parktoolcourses h3{
 color: white;
 }
-.classes .shopgroup{
-/*  height: 30em;*/
-/*height: 30%;*/
-}
+
 .classes .shopboxesinfo {
   width: 30%;
   height: 100%;
@@ -1069,17 +1099,49 @@ display: inline-block;
 }
 /*CLASSES section ends*/
 /*RENTALS section starts*/
-/*#aquity {
-  height: 21em;*/
+
 
 }
 .rentals {
   width: 100%;
   height: 100%;
-/*  background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg") center center no-repeat;*/
-/*  background-size: cover;*/
   position: relative;
   text-align: center;
+}
+/*.rentals p{
+  margin-top: 1.5em;
+  font-size: 1.5em;
+}*/
+.rentals h1{
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  font-size: 5em;
+  font-weight: 200;
+  margin-bottom: 2em;
+}
+.rentals img{
+  width: 100%;
+  height: 40em;
+}
+#rentalimage {
+  background: url("https://s3-us-west-1.amazonaws.com/gkbimages//client/gkb-rental.jpeg");
+  background-size: auto 100%;
+  background-size:cover;
+  width: 100%;
+  height: 40em;
+}
+#rentaltext {
+  text-align: center;
+/*  margin: 0 auto;*/
+  width: 70%;
+  height: auto;
+}
+#rentaltext p{
+  margin-top: 1.5em;
+  font-size: 1.5em;
+}
+#rentaltext a {
+  color: #27ae90;
 }
 /*RENTALS section ends*/
 /* Shop Page Ends*/
@@ -1152,6 +1214,111 @@ margin-left: 3.5em;
 }
 
 /*GKB warranty and Policy page ends*/
+
+<<<<<<< HEAD
+=======
+/* About us page stylings */
+header.about-header-image {
+  min-height: 60vh;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('https://s3-us-west-1.amazonaws.com/gkbimages//client/onabike.jpeg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 10%;
+  color: white;
+}
+
+h2.about-header {
+  text-align: center;
+}
+
+h3.retail-hours-header {
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+div.hours {
+  color: white;
+  width: calc(33.3% - 5px);
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.hours > p {
+  color: white;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 1em;
+}
+
+.hours h2 {
+  font-size: 1.8em;
+}
+
+.hours h4 {
+  font-size: 1.3em;
+}
+
+div.hours-container {
+  color: white;
+  margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* When screen is from 768px to 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 1.5em;
+  }
+  
+  .iam img {
+    min-height: 150px;
+  }
+
+  .announcements {
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/row_of_bikes.jpg");
+    background-size: cover;
+    position: relative;
+    color: white;
+  }
+
+  .announcements-paragraph {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .announcements-paragraph h1, .newsgroup h1 {
+    padding-bottom: 5%;
+    font-size: 3.2em;
+    font-weight: 200;
+    letter-spacing: .16em;
+  }
+
+  .announcements-paragraph p {
+    font-size: 2em;
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+
+  .announcements-paragraph img {
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+  }
+
+/* Shop  page Starts*/
 
 
 /*Styling for Donation Page*/

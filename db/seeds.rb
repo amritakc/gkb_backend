@@ -7,7 +7,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-#User.create(email:'user@gmail.com', encrypted_password:'#$taawktljasktlw4aaglj')
+# User.create(email:'user@gmail.com', encrypted_password:'#$taawktljasktlw4aaglj')
 User.create(:email => 'user@gmail.com', :password => 'password', :password_confirmation => 'password')
 
 
@@ -43,3 +43,10 @@ Content.create(:title => "Good Karma Kids", :text=>"Targeted toward at-risk yout
 Content.create(:title => "Saturday Clinic", :text=>"A free, weekly bicycle repair clinic led by a group of dedicated volunteers, in which unsafe bicycles are repaired for community members.", :section=>Section.find_by_name("news"),:url=>"http://s3-us-west-1.amazonaws.com/gkbimages//client/gears.jpeg")
 Content.create(:title => "Park Tool School", :text=>"A one-month certification course in which participants learn cycling and bicycle mechanics.", :section=>Section.find_by_name("news"),:url =>"http://s3-us-west-1.amazonaws.com/gkbimages//client/tools.jpg")
 Content.create(:title => "Good Karma Kids", :text=>"Targeted toward at-risk youth, this program pairs youth with adult volunteers to learn cycling and bicycle mechanics, in addition to learning the value of philanthropy.", :section=>Section.find_by_name("news"),:url=>"http://s3-us-west-1.amazonaws.com/gkbimages//client/kids.jpg")
+
+
+#Default values for announcements
+Content.create(:section=>Section.find_by_name("announcements"),:url=>"http://s3-us-west-1.amazonaws.com/gkbimages//client/kids.jpg")
+Content.create(:section=>Section.find_by_name("announcements"),:url=>"http://s3-us-west-1.amazonaws.com/gkbimages//client/gears.jpeg")
+Content.create(:section=>Section.find_by_name("announcements"),:url =>"http://s3-us-west-1.amazonaws.com/gkbimages//client/tools.jpg")
+Content.create(:section=>Section.find_by_name("announcements"),:url=>"http://s3-us-west-1.amazonaws.com/gkbimages//client/kids.jpg")
