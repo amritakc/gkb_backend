@@ -969,7 +969,7 @@ display: inline-block;
 /*CLASSES section starts*/
 .classes {
   width: 100%;
-  height: 100%;
+  height: auto;
   background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg") center center no-repeat;
   background-size: cover;
   position: relative;
@@ -979,7 +979,7 @@ display: inline-block;
   color: white;
   text-transform: uppercase;
   letter-spacing: .3em;
-  font-size: 3em;
+  font-size: 5em;
   font-weight: 200;
   margin-bottom: 2em;
 }
@@ -1023,6 +1023,7 @@ margin-top: 1.5em;
   color: white;
 }
 #parktooltext p{
+  font-size: 1.5em;
   color: white;
 }
 #parktoolcourses {
@@ -1045,9 +1046,13 @@ margin-top: 1.5em;
 #parktoolcourses h3{
 color: white;
 }
+.classes .shopgroup{
+/*  height: 30em;*/
+/*height: 30%;*/
+}
 .classes .shopboxesinfo {
   width: 30%;
-  height: 50%;
+  height: 100%;
   vertical-align: top;
 }
 .classes .shopboxesinfo table{
@@ -1062,8 +1067,17 @@ color: white;
 #parktooltable h3 {
   color: white;
 }
+.shopclasses {
+width: 40%;
+height: 50%;
+display: inline-block;
+}
 /*CLASSES section ends*/
 /*RENTALS section starts*/
+/*#aquity {
+  height: 21em;*/
+
+}
 .rentals {
   width: 100%;
   height: 100%;
