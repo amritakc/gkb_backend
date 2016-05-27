@@ -9,7 +9,6 @@ angular.module('adminApp')
 function($scope,$state,DataService, ModalService, $uibModal){
   //Accordian config
   $scope.oneAtATime = true;
-
   //use this for scope issues 
   var self = $scope
   
@@ -17,6 +16,8 @@ function($scope,$state,DataService, ModalService, $uibModal){
     $scope.newsPosts = result;
     $scope.totalItems = $scope.newsPosts.length;
   })
+
+
 
 
   $scope.openNewContentForm = function(){

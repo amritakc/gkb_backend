@@ -10,11 +10,14 @@ function($scope,$state,DataService, ModalService, $uibModal){
   //Accordian config
   $scope.oneAtATime = true;
   var self = $scope
+  
+
   DataService.getPrograms('programs',function(result){
-    $scope.programsPosts = result;
+     $scope.programsPosts = result;
     $scope.totalItems = $scope.programsPosts.length;
   })
 
+    
 
   $scope.openNewProgramsForm = function(){
     
