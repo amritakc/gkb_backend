@@ -29,6 +29,84 @@ html, body {
   background-color: #FEFDFB;
 }
 
+
+/*Login*/
+  .form-signin
+{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox
+{
+    margin-bottom: 10px;
+}
+.form-signin .checkbox
+{
+    font-weight: normal;
+}
+.form-signin .form-control
+{
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin .form-control:focus
+{
+    z-index: 2;
+}
+.form-signin input[type="text"]
+{
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"]
+{
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.account-wall
+{
+    margin-top: 20px;
+    padding: 40px 0px 20px 0px;
+    background-color: #f7f7f7;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.login-title
+{
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+.profile-img
+{
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.need-help
+{
+    margin-top: 10px;
+}
+.new-account
+{
+    display: block;
+    margin-top: 10px;
+}
+/*Login*/
 .navbar{
   width: 100%;
   height: 50px;
@@ -207,65 +285,7 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
   display: flex;
   align-items: center;
 }
-/*LOGIN!!!!!!! -Stephen*/
 
-.login{
-  border-color: rgb(24, 158, 86);
-  border-radius: 0px;
-  border: 1px;
-}
-
-.login-container {
-  background-color: #ecf0f1;
-  min-width: 90em;
-}
-
-.login h2 {
-  font-size:3em;
-  text-align:center;
-  margin-bottom: 30px;
-  margin-top:0px;
-}
-
-.login h2, .login label {
-  text-shadow: .5px .5px grey;
-  color:white;
-}
-
-.login-btn-group {
-  margin-top: 50px;
-  text-align: center;
-}
-
-.login-btn-group button, .login-btn-group input[type="submit"] {
-  min-width:10em;
-}
-
-.form-group {
-  text-align: left;
-}
-
-.jumbotron {
-  background-color: #26A349;
-  box-shadow: 10px 10px 5px 3px #888888;
-
-}
-.login input:focus {
-    /*background-color: #eafeea;*/
-}
-
-.login input:active:focus, .login input:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-  outline-color: #5cb85c;
-}
-
-.help-block {
-  color: white;
-}
-
-/*LOGIN!!!!!!! -Stephen*/
 
 .toolbar {
   border-bottom: 1px solid black;
