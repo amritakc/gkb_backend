@@ -157,16 +157,12 @@ html, body {
   background-color: #169b4d;
 }
 
-/*Navbar!!!!!!!!! - Stephen*/
+/*Navbar*/
 
-/*Logos!!!!!!!!! - Stephen*/
+/*Logos*/
 #minilogo{
   height: 50px;
   padding-right: 3px;
-}
-
-#minilogo:hover {
-  cursor:pointer;
 }
 
 #login_logo{
@@ -179,10 +175,10 @@ html, body {
   margin-top:1em;
 }
 
-/*Logos!!!!!!!!! - Stephen*/
+/*Logos*/
 
 
-/*Panels!!!!!! -Stephen*/
+/*Panels*/
 
 .panel-default{
   border-width: 2px;
@@ -196,9 +192,9 @@ input.ng-invalid{
 input.ng-valid{
 
 }
-/*Panels!!!!!! -Stephen*/
+/*Panels*/
 
-/*Buttons !!!!!! -Stephen*/
+/*Buttons*/
 .btn {
   border-width: 2px;
   /*border-color: rgb(24, 158, 86);*/
@@ -226,7 +222,7 @@ input.ng-valid{
   outline-color: #5cb85c;
 }
 
-/*Buttons !!!!!! -Stephen*/
+/*Buttons */
 
 
 .row {
