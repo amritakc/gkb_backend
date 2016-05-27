@@ -1284,6 +1284,10 @@ div.hours-container {
   width: 90%;
   margin: 0 auto;
 }
+
+.carousel-indicators {
+  display: none;
+}
 /* End about us page stylings */
 
 /* -------------------------------------------------------------
