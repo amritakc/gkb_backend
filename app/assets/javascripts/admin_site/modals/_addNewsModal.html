@@ -8,12 +8,13 @@
       <input type="file" ngf-select="" ng-model="picFile" name="file" ngf-accept="'image/*'" required="">
       <img ngf-src="picFile" id="thumb">
       <div class="form-group">
-        <label>Title:</label>
-        <input type="text" class="input form-control" ng-model='newsPost.title' required>
-        <span ng-show="form-group.test.$invalid">Required</span>
-    
-        <label>Author:</label>    
-        <input type="text" class="input form-control" ng-model="newsPost.author">
+        <form name="myForm" action="#sent" method="post">
+          <label>Title:</label>
+          <input type="text" class="input form-control" ng-model='newsPost.title' name="myText" ng-model="myText" required><span ng-show="myForm.myText.$error.required">*required</span>
+          <br><br>
+          <label>Author:</label>    
+          <input type="text" name="myText2" class="input form-control" ng-model="myText2" required><span ng-show="myForm.myText2.$error.required">*required</span>
+        </form>
       </div>
 
       <text-angular ng-model="newsPost.text"></text-angular>
@@ -23,7 +24,7 @@
           <button type="button" class="btn btn-danger btn-lg" ng-click='cancel()'>Cancel</button>
         </div>
         <div class="col-sm-1 col-sm-offset-1">
-          <button type="button" class="btn btn-success btn-lg" ng-click="ok(file)">Save</button>
+          <button type="button" class="btn btn-success btn-lg" ng-click="ok(file)" ng-disabled="myForm.$invalid">Save</button>
         </div>
       </div>
     </div>

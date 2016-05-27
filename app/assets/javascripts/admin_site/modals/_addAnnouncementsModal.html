@@ -10,24 +10,24 @@
   </form>
   <!-- Image -->
   <span ng-show="checkOption == 'image'">
-    <form name="myForm">        
-        <label>Title:
-        <input class='form-control' name="newsPost" ng-model="newsPost.title" required></label>
-        
-        <span class="error" ng-show="myForm.newsPost.$error.required">*** required</span>
-
-      <div class="fileUpload">
-        <input type="file" ngf-select="" ng-model="picFile" name="file" ngf-accept="'image/*'" required="">
-        <img ngf-src="picFile" id="thumb">
-
-        <span class="progress" ng-show="progress >= 0">
-          <uib-progressbar class="progress-striped active" style='border: 2px solid black;' value="progress" type="warning">{{progress}}%</uib-progressbar>
-        </span>
-        <div id="annsubmit">
-          <button class='btn btn-warning' ng-disabled="!myForm.$valid" ng-click="ok(file)">Submit</button>
-        </div>
-      </div>
+    <form name="myForm" action="#sent" method="post">        
+      <label>Title:</label>
+      <input type="text" name="goTitle" class='input form-control' ng-model="newsPost.title" ng-model="goTitle" required><span ng-show="myForm.goTitle.$error.required">*required</span>
+      <br>
+      
+      <!-- <span class="error" ng-show="myForm.newsPost.$error.required">*** required</span> -->
     </form>
+    <div class="fileUpload">
+      <input type="file" ngf-select="" ng-model="picFile" name="file" ngf-accept="'image/*'" required="">
+      <img ngf-src="picFile" id="thumb">
+
+      <span class="progress" ng-show="progress >= 0">
+        <uib-progressbar class="progress-striped active" style='border: 2px solid black;' value="progress" type="warning">{{progress}}%</uib-progressbar>
+      </span>
+      <div id="annsubmit">
+        <button class='btn btn-warning' ng-disabled="!myForm.$valid" ng-click="ok(file)">Submit</button>
+      </div>
+    </div>
   </span>
   
   <!-- text -->
@@ -40,7 +40,7 @@
           <button type="button" class="btn btn-danger btn-lg" ng-click='cancel()'>Cancel</button>
         </div>
         <div class="col-sm-1 col-sm-offset-1">
-          <button type="button" class="btn btn-success btn-lg" ng-click="ok()">Save</button>
+          <button type="button" class="btn btn-success btn-lg" ng-click="ok()" ng-disabled="myForm.$invalid">Save</button>
         </div>
       </div>
     </form>
