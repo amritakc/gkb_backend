@@ -162,7 +162,24 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 
 /* End Navigation Bar Stylings */
 
-/* This is styling for the header and the navigation icons for the 'Learn How To' section */
+/*Begin Carousel Section */
+.carousel {
+  width: 70%;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 8%;
+
+}
+
+.carousel img {
+  width: auto;
+   max-height: 30em;
+
+}
+
+/*End Carousel Section */
+
+/* This is styling for the header and the navigation icons for the 'Learn How To' section on the Home Page*/
 .logo {
 display: inline;
 width: 8em;
@@ -709,7 +726,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 /* End Community Section */
 
 /* Volunteer  Start */
-<<<<<<< HEAD
+
 .vol-image {
   /*-webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);*/
@@ -786,55 +803,6 @@ d-expand-collapse {
   min-height: 100%;
   min-width: 100%;
   position: relative; }
-
-
-
-
-/* When screen is from 768px to 1024px */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  body {
-    font-size: 1.5em;
-  }
-  
-  .iam img {
-    min-height: 150px;
-  }
-
-  .announcements {
-    width: 100%;
-    height: 100%;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/row_of_bikes.jpg");
-    background-size: cover;
-    position: relative;
-    color: white;
-  }
-
-  .announcements-paragraph {
-    margin: 0 auto;
-    width: 50%;
-  }
-
-  .announcements-paragraph h1, .newsgroup h1 {
-    padding-bottom: 5%;
-    font-size: 3.2em;
-    font-weight: 200;
-    letter-spacing: .16em;
-  }
-
-  .announcements-paragraph p {
-    font-size: 2em;
-    text-align: justify;
-    text-transform: uppercase;
-    font-weight: 200;
-  }
-
-  .announcements-paragraph img {
-    width: 50%;
-    height: auto;
-    margin-left: 25%;
-  }
 
 /* Shop  page Starts*/
 
@@ -1086,10 +1054,10 @@ width: 40%;
 height: 50%;
 display: inline-block;
 }
+
 /*CLASSES section ends*/
+
 /*RENTALS section starts*/
-
-
 }
 .rentals {
   width: 100%;
@@ -1097,10 +1065,6 @@ display: inline-block;
   position: relative;
   text-align: center;
 }
-/*.rentals p{
-  margin-top: 1.5em;
-  font-size: 1.5em;
-}*/
 .rentals h1{
   text-transform: uppercase;
   letter-spacing: .3em;
@@ -1121,7 +1085,7 @@ display: inline-block;
 }
 #rentaltext {
   text-align: center;
-/*  margin: 0 auto;*/
+  margin-left: 18em;
   width: 70%;
   height: auto;
 }
@@ -1133,6 +1097,53 @@ display: inline-block;
   color: #27ae90;
 }
 /*RENTALS section ends*/
+
+/*REPAIR section starts*/
+.repair{
+  width: 100%;
+  height: auto;
+  background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+.repair h1{
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+/*  letter-spacing: .3em;*/
+  font-size: 5em;
+  font-weight: 200;
+  margin-bottom: 2em;
+}
+#repairimage {
+  background: url("https://s3-us-west-1.amazonaws.com/gkbimages//client/gkb-rental.jpeg");
+  background-size: auto 100%;
+  background-size:cover;
+  width: 100%;
+  height: 40em;
+}
+#repairtext {
+/*  text-align: center;*/
+  color: white;
+/*  margin-left: 18em;*/
+  width: 70%;
+  height: auto;
+}
+#repairtext p{
+  margin-top: 1.5em;
+  font-size: 1.5em;
+}
+#repairtext a {
+  color: #27ae90;
+}
+.repair .shopboxesinfo{
+  width: 30%;
+  height: 100%;
+  vertical-align: top;
+}
+
+/*REPAIR section ends*/
 /* Shop Page Ends*/
 
 /*GKB warranty and Policy page starts*/
@@ -1204,8 +1215,6 @@ margin-left: 3.5em;
 
 /*GKB warranty and Policy page ends*/
 
-<<<<<<< HEAD
-=======
 /* About us page stylings */
 header.about-header-image {
   min-height: 60vh;
@@ -1221,6 +1230,17 @@ header.about-header-image {
 
 h2.about-header {
   text-align: center;
+}
+
+p.about-history-headline {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+h3.about-section-titles {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 5%;
 }
 
 h3.retail-hours-header {
@@ -1254,11 +1274,19 @@ div.hours {
   font-size: 1.3em;
 }
 
+h4.questions {
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
 div.hours-container {
   color: white;
-  margin: 0 auto;
   width: 90%;
   margin: 0 auto;
+}
+
+.carousel-indicators {
+  display: none;
 }
 /* End about us page stylings */
 
@@ -1694,6 +1722,17 @@ div.hours-container {
   .social-media-bubble {
     margin-top: 1em;
     text-align: left;
+  }
+
+  div.hours-container {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+  }
+
+  #footer {
+    padding: 1em;
   }
 
 }
