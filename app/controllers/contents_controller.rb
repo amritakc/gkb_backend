@@ -15,7 +15,7 @@ class ContentsController < ApplicationController
       region: 'us-west-1',
       path: 'gkbimages//client/'+params[:file].original_filename
       )
-      render :json => {status: 0, data: 'https://s3-us-west-1.amazonaws.com/gkbimages//admin/'+params[:file].original_filename}
+      render :json => {status: 0, data: 'https://s3-us-west-1.amazonaws.com/gkbimages//client/'+params[:file].original_filename}
     else 
       render :json => {status: 404, data: "Something went wrong with image upload"}
     end
