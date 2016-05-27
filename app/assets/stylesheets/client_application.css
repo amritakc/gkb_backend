@@ -709,7 +709,6 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 /* End Community Section */
 
 /* Volunteer  Start */
-<<<<<<< HEAD
 .vol-image {
   /*-webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);*/
@@ -1180,6 +1179,7 @@ p.about-history-headline {
 h3.about-section-titles {
   text-align: center;
   font-size: 2em;
+  margin-bottom: 5%;
 }
 
 h3.retail-hours-header {
@@ -1664,6 +1664,10 @@ div.hours-container {
     top: 40%;
     left: 0;
     right: 0;
+  }
+
+  #footer {
+    padding: 1em;
   }
 
 }
