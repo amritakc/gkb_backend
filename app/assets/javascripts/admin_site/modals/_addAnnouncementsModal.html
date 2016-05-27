@@ -18,8 +18,8 @@
       <!-- <span class="error" ng-show="myForm.newsPost.$error.required">*** required</span> -->
     </form>
     <div class="fileUpload">
-      <input type="file" ngf-select="" ng-model="picFile" name="file" ngf-accept="'image/*'" required="">
-      <img ngf-src="picFile" id="thumb">
+      <input type="file" ngf-select="" ng-model="file" name="file" ngf-accept="'image/*'" required="">
+      <img ngf-src="file" id="thumb">
 
       <span class="progress" ng-show="progress >= 0">
         <uib-progressbar class="progress-striped active" style='border: 2px solid black;' value="progress" type="warning">{{progress}}%</uib-progressbar>
