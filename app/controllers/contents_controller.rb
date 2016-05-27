@@ -19,7 +19,15 @@ class ContentsController < ApplicationController
   def create
 
     # creating new content in the database and find the section by name
-    content = Content.new(title:params[:title],text:params[:text], url: params[:url],section:Section.find_by_name(params[:section]))
+    p params
+    content = Content.new(title:params[:title],
+                          text:params[:text],
+                          url: params[:url],
+                          price: params[:price],
+                          brand: params[:brand],
+                          caption: params[:caption],
+                          color: params[:color],
+                          section:Section.find_by_name(params[:section]))
 
 
     if content.save

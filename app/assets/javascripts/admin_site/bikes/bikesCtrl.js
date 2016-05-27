@@ -43,14 +43,16 @@ function($scope,$state,DataService, ModalService, $uibModal){
           }
           
           $scope.ok = function(file){
+            console.log($scope.bikesPost)
             if(file){
               $scope.upload(file, function(result) {
                 console.log(result, "result")
                 $scope.bikesPost.url = result
+                console.log($scope.bikesPost)
                 $uibModalInstance.close($scope.bikesPost);
               })
             } else {
-               $uibModalInstance.close($scope.bikesPost);
+               $uibModalInstance.dismiss();
             }
           }
         }
@@ -59,6 +61,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
     
     modalInstance.result.then(function (contentInfo) {
       contentInfo.section = 'bikes';
+      console.log(contentInfo)
       DataService.create(contentInfo, function(result){
         console.log(result, "bikes result")
         self.allBikes.unshift(result['content']);
