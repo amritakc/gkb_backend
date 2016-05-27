@@ -724,7 +724,225 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 /* End Community Section */
+/*Styling for Donation Page*/
 
+  #donate-tiers {
+    width: 95%;
+    margin-left: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .donate_tier {
+    width: 20em;
+    height: 20em;
+    margin: 3em;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 1em;
+    padding-left: 1em;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    margin: auto;
+    margin-left: 5%;
+
+  }
+
+  .donate_tier h3 {
+    color: white;
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-left: 0%;
+    margin-top: 30%;
+
+  }
+
+  .donate-tier p {
+    margin: auto;
+    font-style: italic;
+    color: white;
+  }
+
+  #bronze {
+    background: linear-gradient(rgba(205, 127, 50, 40), rgba(205, 127, 50, 40)), url("");
+    background-size: auto 100%;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #silver {
+    background: linear-gradient(rgba(192, 192, 192, 255), rgba(0, 0, 0, 255)), url("");
+    background-size: auto 100%;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #gold {
+    background: linear-gradient(rgba(218, 165, 32, 255), rgba(0, 0, 0, 255)), url("");
+    background-size: auto 100%;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+  #box-section {
+    width: 95%;
+    margin-left: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .donateboxes {
+    width: 15em;
+    height: 15em;
+    margin: 1.5em;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 1em;
+    padding-left: 1em;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+
+  }
+
+  .donateboxes h3 {
+    font-size:  2.1em;
+    color: #fff;
+    font-weight: 00;
+    padding-top: .5em;
+    margin-top: 19%;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .donateboxes p {
+    font-size: 1em;
+    font-style: italic;
+    color: #fff;
+    font-weight: 200;
+     text-align: center;
+    vertical-align: middle;
+    overflow-wrap: normal;
+    margin-top: 20%;
+
+  }
+  #donor_decides {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/happykid.jpeg");
+    background-size: auto 100%;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #sponsor_bicycle {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/bike5.jpg");
+    background-size: auto 100%;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #sponsor_workstation {
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/mechanic.jpeg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #sponsor_mechanic {
+
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .donations_accepted h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.2em;
+    margin-bottom: 2%;
+
+  }
+
+  .donations_accepted ul {
+    margin-left: 24%;
+    margin-bottom: 2%;
+  }
+
+  .donations_accepted li {
+    font-size: 1.5em;
+    margin-top: 1%;
+  }
+
+  #btn-donate {
+    margin-bottom: 5em;
+    margin-top: 3em;
+    width: 13em;
+    height: 4em;
+    border-radius: 1em;
+    background-color: #189e56;
+    border: none;
+    margin-left: 42.2%;
+
+
+  }
+
+  #btn-donate a {
+    color: #fff;
+  }
+
+  .amazon-section {
+    width: 40%;
+    height: auto;
+    margin: auto;
+    background: url('https://s3-us-west-1.amazonaws.com/gkbimages//client/amazon-banner.png') center center no-repeat;
+    padding: 2em;
+  }
+
+
+  .amazon-textarea {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 15%;
+  }
+
+  .amazon-textarea h3 {
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+  }
+
+  .amazon-textarea a {
+    text-decoration: none;
+    margin-top: 5em;
+  }
+
+  .amazon-textarea p {
+    overflow-wrap: normal;
+    width: 80%; 
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 2em;
+
+    padding: 1em;
+  }
+  
+  .bold {
+    font-weight: 
+  }
+/*End styling for Donation Page*/
 /* Volunteer  Start */
 
 .vol-image {
@@ -1335,6 +1553,10 @@ div.hours-container {
   width: 90%;
   margin: 0 auto;
 }
+
+.carousel-indicators {
+  display: none;
+}
 /* End about us page stylings */
 
 /* -------------------------------------------------------------
@@ -1390,225 +1612,7 @@ div.hours-container {
 /* Shop  page Starts*/
 
 
-/*Styling for Donation Page*/
 
-  #donate-tiers {
-    width: 95%;
-    margin-left: 2%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
-
-  .donate_tier {
-    width: 20em;
-    height: 20em;
-    margin: 3em;
-    display: inline-block;
-    vertical-align: top;
-    padding-right: 1em;
-    padding-left: 1em;
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-    margin: auto;
-    margin-left: 5%;
-
-  }
-
-  .donate_tier h3 {
-    color: white;
-    font-size: 3em;
-    text-transform: uppercase;
-    margin-left: 0%;
-    margin-top: 30%;
-
-  }
-
-  .donate-tier p {
-    margin: auto;
-    font-style: italic;
-    color: white;
-  }
-
-  #bronze {
-    background: linear-gradient(rgba(205, 127, 50, 40), rgba(205, 127, 50, 40)), url("");
-    background-size: auto 100%;
-    background-size: cover;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  #silver {
-    background: linear-gradient(rgba(192, 192, 192, 255), rgba(0, 0, 0, 255)), url("");
-    background-size: auto 100%;
-    background-size: cover;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  #gold {
-    background: linear-gradient(rgba(218, 165, 32, 255), rgba(0, 0, 0, 255)), url("");
-    background-size: auto 100%;
-    background-size: cover;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-
-  #box-section {
-    width: 95%;
-    margin-left: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
-
-  .donateboxes {
-    width: 15em;
-    height: 15em;
-    margin: 1.5em;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-    display: inline-block;
-    vertical-align: top;
-    padding-right: 1em;
-    padding-left: 1em;
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-
-  }
-
-  .donateboxes h3 {
-    font-size:  2.1em;
-    color: #fff;
-    font-weight: 00;
-    padding-top: .5em;
-    margin-top: 19%;
-    text-align: center;
-    vertical-align: middle;
-  }
-
-  .donateboxes p {
-    font-size: 1em;
-    font-style: italic;
-    color: #fff;
-    font-weight: 200;
-     text-align: center;
-    vertical-align: middle;
-    overflow-wrap: normal;
-    margin-top: 20%;
-
-  }
-  #donor_decides {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/happykid.jpeg");
-    background-size: auto 100%;
-    background-size: cover;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  #sponsor_bicycle {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/bike5.jpg");
-    background-size: auto 100%;
-    background-size: cover;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  #sponsor_workstation {
-    
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/mechanic.jpeg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  #sponsor_mechanic {
-
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg");
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .donations_accepted h3 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 2.2em;
-    margin-bottom: 2%;
-
-  }
-
-  .donations_accepted ul {
-    margin-left: 24%;
-    margin-bottom: 2%;
-  }
-
-  .donations_accepted li {
-    font-size: 1.5em;
-    margin-top: 1%;
-  }
-
-  #btn-donate {
-    margin-bottom: 5em;
-    margin-top: 3em;
-    width: 13em;
-    height: 4em;
-    border-radius: 1em;
-    background-color: #189e56;
-    border: none;
-    margin-left: 42.2%;
-
-
-  }
-
-  #btn-donate a {
-    color: #fff;
-  }
-
-  .amazon-section {
-    width: 40%;
-    height: auto;
-    margin: auto;
-    background: url('https://s3-us-west-1.amazonaws.com/gkbimages//client/amazon-banner.png') center center no-repeat;
-    padding: 2em;
-  }
-
-
-  .amazon-textarea {
-    width: 100%;
-    margin: 0 auto;
-    padding-bottom: 15%;
-  }
-
-  .amazon-textarea h3 {
-    text-align: center;
-    margin: auto;
-    margin-top: 5%;
-  }
-
-  .amazon-textarea a {
-    text-decoration: none;
-    margin-top: 5em;
-  }
-
-  .amazon-textarea p {
-    overflow-wrap: normal;
-    width: 80%; 
-    text-align: center;
-    margin: auto;
-    margin-top: 5%;
-    margin-bottom: 2em;
-
-    padding: 1em;
-  }
-  
-  .bold {
-    font-weight: 
-  }
-/*End styling for Donation Page*/
   .tagline {
     font-size: 5em;
   }

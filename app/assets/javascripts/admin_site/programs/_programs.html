@@ -1,29 +1,37 @@
-<div class="col-sm-offset-9 new-content-btn">
-  <button type="button" class="btn btn-success" ng-click="openNewProgramsForm()">Add Programs</button>
-</div>
-<uib-accordion close-others="oneAtATime">
-  <uib-accordion-group ng-repeat="programsPost in programsPosts.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))| orderBy: 'created_at':true">
-    <uib-accordion-heading>
-      {{programsPost.created_at | date : 'M/dd/yyyy - hh:mm a' : timezone}} &nbsp&nbsp - &nbsp&nbsp <b>{{programsPost.title}}</b><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
-    </uib-accordion-heading>
-    <div class="form-group">
-      <label>Title:</label>
-      <input type="text" class="input form-control" ng-model='programsPost.title' required>
-    </div>
-    <div class="form-group">
-      <label>Text:</label>
-      <input type="text" class="input form-control" ng-model='programsPost.caption'>
-    </div>
+<div class="content-container">
+  <div class="col-sm-offset-9 new-content-btn">
+    <button type="button" class="btn btn-success" ng-click="openNewProgramsForm()">Add Programs</button>
+  </div>
+  <uib-accordion close-others="oneAtATime">
+    <uib-accordion-group ng-repeat="programsPost in programsPosts.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))| orderBy: 'created_at':true">
+      <uib-accordion-heading>
+        {{programsPost.created_at | date : 'M/dd/yyyy - hh:mm a' : timezone}} &nbsp&nbsp - &nbsp&nbsp <b>{{programsPost.title}}</b><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
+      </uib-accordion-heading>
+      <div class="form-group">
+        <label>Title:</label>
+        <input type="text" class="input form-control" ng-model='programsPost.title' required>
+      </div>
+      <div class="form-group">
+        <label>Text:</label>
+        <input type="text" class="input form-control" ng-model='programsPost.text'>
+      </div>
+      <div class="form-group">
+        <label>Picture:</label>
+        <a href="{{programsPost.url}}">{{programsPost.url}}</a>
+      </div>
 
-    <div class="btn-container row">
+      <div class="btn-container row">
         <div class="col-sm-7 col-sm-offset-1">
           <button type="button" class="btn btn-danger" ng-click='openRemoveConfirm(programsPost)'>Remove</button>
         </div>
         <div class="col-sm-1 col-sm-offset-1">
-          <button type="button" class="btn btn-success" ng-click="updatePrograms(programsPost.title,programsPost.caption,'programs',programsPost.id)">Save</button>
+          <button type="button" class="btn btn-success" ng-click="update(programsPost)">Save</button>
         </div>
-    </div>
+      </div>
 
-  </uib-accordion-group>
-</uib-accordion>
-<uib-pagination class="pagination" total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" class="pagination-sm" items-per-page="itemsPerPage"></uib-pagination>
+    </uib-accordion-group>
+  </uib-accordion>
+</div>
+<div>
+  <uib-pagination class="pagination" total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" class="pagination-sm" items-per-page="itemsPerPage"></uib-pagination>
+</div>

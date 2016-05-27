@@ -5,20 +5,28 @@
     </div>
     <div class="modal-body">
       <!-- file upload here, added picture preview -->
-      <input type="file" ngf-select ng-model="file" name="file" required> 
-      <img id="thumb" ng-show="myForm.file.$valid" ngf-thumbnail="picFile">
-
+      
+      <span us-spinner="{radius:30, width:8, length: 16}" spinner-on="showSpinner"></span>
+      
+      <input type="file" ngf-select="" ng-model="file" name="file" ngf-accept="'image/*'" required="">
+      <img ngf-src="file" id="thumb">
       <div class="form-group">
-        <label>Title:</label>
-        <input type="text" class="input form-control" ng-model='bikesPost.title'>
-        <label>Price:</label>
-        <input type="text" class="input form-control" ng-model='bikesPost.price'>
-        <label>Caption:</label>
-        <input type="text" class="input form-control" ng-model='bikesPost.caption'>
-        <label>Color:</label>
-        <input type="text" class="input form-control" ng-model='bikesPost.color'>
-        <label>Brand:</label>
-        <input type="text" class="input form-control" ng-model='bikesPost.brand'>
+        <form name="myForm" action="#sent" method="post">
+          <label>Title:</label>
+          <input type="text" name="myText" class="input form-control" ng-model='bikesPost.title' required><span ng-show="myForm.myText.$error.required">*required</span>
+          <br><br>
+          <label>Price:</label>
+          <input type="text" name="myText2" class="input form-control" ng-model='bikesPost.price' required><span ng-show="myForm.myText2.$error.required">*required</span>
+          <br><br>
+          <label>Caption:</label>
+          <input type="text" name="myText3" class="input form-control" ng-model='bikesPost.caption' required><span ng-show="myForm.myText3.$error.required">*required</span>
+          <br><br>
+          <label>Color:</label>
+          <input type="text" name="myText4" class="input form-control" ng-model='bikesPost.color' required><span ng-show="myForm.myText4.$error.required">*required</span>
+          <br><br>
+          <label>Brand:</label>
+          <input type="text" name="myText5" class="input form-control" ng-model='bikesPost.brand' required><span ng-show="myForm.myText5.$error.required">*required</span>
+        </form>
       </div>
 
         <div class="btn-container row">
@@ -26,9 +34,8 @@
             <button type="button" class="btn btn-danger btn-lg" ng-click='cancel()'>Cancel</button>
           </div>
           <div class="col-sm-1 col-sm-offset-1">
-            <button type="button" class="btn btn-success btn-lg" ng-disabled="myForm.$invalid"  ng-click="ok(file)">Save</button>
+            <button type="button" class="btn btn-success btn-lg" ng-click="ok(file)" ng-disabled="myForm.$invalid">Save</button>
           </div>
-        </form>
       </div>
     </div>
   </div>

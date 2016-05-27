@@ -9,7 +9,8 @@ angular.module('adminApp', [
 'angularModalService',
 'ngFileUpload',
 'ngToast',
-'ngResource'
+'ngResource',
+'angularSpinner',
 ])
 .config(function($stateProvider,$urlRouterProvider) {
 
@@ -21,34 +22,13 @@ angular.module('adminApp', [
       onEnter: ['$state', 'Auth', function($state, Auth) {
         if(Auth.isAuthenticated()){
           if ($state.current.url != '/'){
-            $state.go('dashboard');
-          } else {
             $state.go('newsPage');
+          } else {
+            $state.go('announcementsPage');
           }
         }
         }]
       })
-    .state('dashboard', {
-      url: '/',
-      views: {
-        '@': {
-         templateUrl:'admin_site/views/dashboardLayout.html'
-        },
-        'header@dashboard' : {
-          templateUrl: 'admin_site/header/_header.html',
-          controller: 'headerCtrl'
-        },
-        'main@dashboard' : {
-          templateUrl: 'admin_site/dashboard/_dashboard.html'
-        }
-      },
-      onEnter: ['$state','Auth', function($state, Auth) {
-        Auth.currentUser().then(function(){
-        }, function(){
-          $state.go('login')
-        })
-      }]
-    })
     .state('newsPage', {
       url:'/news',
       views: {
@@ -160,7 +140,14 @@ angular.module('adminApp', [
       }]
     })
 
-  $urlRouterProvider.otherwise('/');
-
+  $urlRouterProvider.otherwise('/announcements');
 
 });
+
+angular
+  .module('adminApp')
+  .config(['ngToastProvider', function(ngToast) {
+    ngToast.configure({
+      maxNumber: 1
+    });
+  }]);
