@@ -21,23 +21,24 @@ function($scope,$state,DataService, ModalService, $uibModal){
     var modalInstance = $uibModal.open({
       templateUrl: 'admin_site/modals/_addBikeModal.html',
       controller: [
-        '$scope', '$uibModalInstance', 'Upload',  function($scope, $uibModalInstance, Upload) {
+        '$scope',
+        '$uibModalInstance',
+        'Upload',
+        function($scope, $uibModalInstance, Upload) {
           
           $scope.upload = function(file, callback) {
-          file.upload = Upload.upload({
-            url: '/contents/images',
-            data: {
-              file: file
-            }
-            }).progress(function(evt){
-              $scope.progress = Math.min(100, parseInt(100.0 *evt.loaded / evt.total));
-
+            console.log("hit upload")
+            file.upload = Upload.upload({
+              url: '/contents/images',
+              data: {
+                file: file
+              }
             }).success(function(response){
+              console.log("uploaded")
               $scope.result = response.data 
               callback(response.data )
             })
           }
-
           $scope.cancel = function () {                
             $uibModalInstance.dismiss();
           }
@@ -45,12 +46,11 @@ function($scope,$state,DataService, ModalService, $uibModal){
           $scope.ok = function(file){
             if(file){
               $scope.upload(file, function(result) {
-                console.log(result, "result")
                 $scope.bikesPost.url = result
                 $uibModalInstance.close($scope.bikesPost);
               })
             } else {
-               $uibModalInstance.close($scope.bikesPost);
+               $uibModalInstance.dismiss();
             }
           }
         }
@@ -59,8 +59,9 @@ function($scope,$state,DataService, ModalService, $uibModal){
     
     modalInstance.result.then(function (contentInfo) {
       contentInfo.section = 'bikes';
+      console.log(contentInfo)
       DataService.create(contentInfo, function(result){
-        console.log(result, "bikes result")
+        console.log(result, "result")
         self.allBikes.unshift(result['content']);
       });
     });
@@ -79,7 +80,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
           $scope.data = self.data
               
           $scope.ok = function() {
-            $uibModalInstance.close($scope.bikesPost);
+            $uibModalInstance.close();
           };
           $scope.cancel = function () {                
             $uibModalInstance.dismiss();

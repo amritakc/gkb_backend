@@ -5,8 +5,9 @@ angular.module('adminApp')
 'DataService',
 'ModalService',
 '$uibModal',
+'usSpinnerService',
 //injected the modal service  into controller 
-function($scope,$state,DataService, ModalService, $uibModal){
+function($scope,$state,DataService, ModalService, $uibModal, usSpinnerService){
   //Accordian config
   $scope.oneAtATime = true;
   //use this for scope issues 
@@ -16,8 +17,6 @@ function($scope,$state,DataService, ModalService, $uibModal){
     $scope.newsPosts = result;
     $scope.totalItems = $scope.newsPosts.length;
   })
-
-
 
 
   $scope.openNewContentForm = function(){
@@ -34,6 +33,7 @@ function($scope,$state,DataService, ModalService, $uibModal){
                 file: file
               }
             }).success(function(response){
+              console.log("uploaded")
               $scope.result = response.data 
               callback(response.data )
             })
@@ -46,9 +46,9 @@ function($scope,$state,DataService, ModalService, $uibModal){
           $scope.ok = function(file){
             if(file){
               $scope.upload(file, function(result) {
-                console.log(result, "result")
+                
+                console.log(result, "url")
                 $scope.newsPost.url = result
-                $scope.progress = 100
                 $uibModalInstance.close($scope.newsPost);
               })
             } else {
@@ -63,7 +63,6 @@ modalInstance.result.then(function (contentInfo) {
   contentInfo.section = 'announcements';
   console.log("contentInfo:", contentInfo)
   DataService.create(contentInfo, function(result){
-    console.log(result, "result ")
     self.newsPosts.unshift(result['content']);
       });
     });
@@ -83,7 +82,7 @@ modalInstance.result.then(function (contentInfo) {
           $scope.data = self.data; 
               
           $scope.ok = function() {
-            $uibModalInstance.close($scope.newsPost);
+            $uibModalInstance.close();
           };
           $scope.cancel = function () {                
             $uibModalInstance.dismiss();
@@ -110,17 +109,11 @@ modalInstance.result.then(function (contentInfo) {
   };
 
 
-  $scope.update = function(title, text, section,contentId) {
-    DataService.update(title, text, section,contentId, function(result){
-      console.log(result['content'])
-       
+  $scope.update = function(content) {
+    DataService.update(content, function(result){
        for(var i in  $scope.newsPosts){
-          console.log($scope.newsPosts[i])
           if( $scope.newsPosts[i].id === result['content'].id){
-            
-            console.log('found', result['content'].id)            
             $scope.newsPosts[i] = result['content']
-
           }
        }
     })

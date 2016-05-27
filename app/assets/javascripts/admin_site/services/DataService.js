@@ -12,16 +12,8 @@ angular.module('adminApp')
     });
   }
 
-  factory.update = function(title, text, author, section, contentId, callback){
-    content = {
-      title: title,
-      text: text,
-      section: section,
-      contentId: contentId,
-      author: author
-    }
-    $http.patch('/contents/update/' + contentId, content).success(function(output){
-      console.log(output, "patch")
+  factory.update = function(content, callback){
+    $http.patch('/contents/update/' + content.id, content).success(function(output){
       callback(output)
     });
   }

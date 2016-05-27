@@ -38,7 +38,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
  gem 'figaro'
  # Amazon Web Services gem used for connection to S3 bucket
  gem 'aws-sdk'
-
+ 
+ # gem 'mini_magick'
+ gem 'tinify'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

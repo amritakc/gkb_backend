@@ -14,28 +14,47 @@ function($scope,$state,DataService, ModalService, $uibModal){
 
   DataService.getPrograms('programs',function(result){
      $scope.programsPosts = result;
-    $scope.totalItems = $scope.newsPosts.length;
+    $scope.totalItems = $scope.programsPosts.length;
   })
 
     
 
   $scope.openNewProgramsForm = function(){
     
-    var modalInstance = $uibModal.open({
+       var modalInstance = $uibModal.open({
       templateUrl: 'admin_site/modals/_addProgramModal.html',
       controller: [
-        '$scope', '$uibModalInstance',  function($scope, $uibModalInstance) {
-      
-          // added data to change the dynamic html 
-          $scope.data = {title: "Programs" };
-          $scope.ok = function() {
-            $uibModalInstance.close($scope.programsPost);
-          };
-          $scope.cancel = function () {
+        '$scope', '$uibModalInstance', 'Upload',  function($scope, $uibModalInstance, Upload) {
+          
+          $scope.upload = function(file, callback) {
+            console.log("hit upload")
+            file.upload = Upload.upload({
+              url: '/contents/images',
+              data: {
+                file: file
+              }
+            }).success(function(response){
+              console.log(response)
+              callback(response.data )
+            })
+          }
+          
+          $scope.cancel = function () {                
             $uibModalInstance.dismiss();
           }
-          $scope.accept = function(){
-            $uibModalInstance.close();
+          
+          $scope.ok = function(file){
+            if(file){
+
+              console.log('file')
+              $scope.upload(file, function(result) {
+                
+                $scope.programsPost.url = result
+                $uibModalInstance.close($scope.programsPost);
+              })
+            } else {
+                $uibModalInstance.close($scope.programsPost);
+            }
           }
         }
       ]
@@ -51,36 +70,33 @@ function($scope,$state,DataService, ModalService, $uibModal){
   
   $scope.openRemoveConfirm = function(selected){
     // used a serivce to pass selected data into remove modal controller
-    ModalService.setProperty(selected); 
+    $scope.deletedData = selected;
 
     var modalInstance = $uibModal.open({
       templateUrl:'admin_site/modals/_removeModal.html',
       controller: [
-        '$scope', '$uibModalInstance','ModalService', function($scope, $uibModalInstance, ModalService) {
+        '$scope',
+        '$uibModalInstance',
+        'ModalService',
+        function($scope, $uibModalInstance, ModalService) {
           
           //call it here 
-          $scope.data = ModalService.getProperty();
+          $scope.data = self.deletedData
               
           $scope.ok = function() {
-            $uibModalInstance.close($scope.programsPost);
+            $uibModalInstance.close();
           };
           $scope.cancel = function () {                
             $uibModalInstance.dismiss();
-          }
-          $scope.accept = function(){
-            $uibModalInstance.close();
           }
         }
       ]
     })
     modalInstance.result.then(function () { 
       DataService.remove(selected.id, function(result){
-
-
        for(var i in  self.programsPosts){
           console.log(self.programsPosts[i])
           if( self.programsPosts[i].id=== result['content'].id){
-            
             console.log('found', result['content'].id)            
             self.programsPosts.splice(i,1);
           }
@@ -90,23 +106,18 @@ function($scope,$state,DataService, ModalService, $uibModal){
     });
   };
 
-
-  $scope.updatePrograms = function(title, caption, section, contentId) {
-    DataService.updatePrograms(title, caption, section, contentId, function(result){
-      console.log(result['content'])
-       
-       for(var i in  $scope.programsPosts){
-          console.log($scope.programsPosts[i])
-          if( $scope.programsPosts[i].id === result['content'].id){
+  $scope.update = function(content) {
+    console.log(content)
+    content.section = "programs";
+    DataService.update(content, function(result){
+       for(var i in  $scope.newsPosts){
+          if( $scope.newsPosts[i].id === result['content'].id){
+            $scope.newsPosts[i] = result['content']
             
-            console.log('found', result['content'].id)            
-            $scope.programsPosts[i] = result['content']
-
           }
        }
     })
   }
-
 
   //Pagination 
   $scope.viewby = 15;

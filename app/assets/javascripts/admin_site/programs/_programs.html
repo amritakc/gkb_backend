@@ -13,7 +13,7 @@
       </div>
       <div class="form-group">
         <label>Text:</label>
-        <input type="text" class="input form-control" ng-model='programsPost.caption'>
+        <input type="text" class="input form-control" ng-model='programsPost.text'>
       </div>
 
       <div class="btn-container row">
@@ -21,7 +21,7 @@
           <button type="button" class="btn btn-danger" ng-click='openRemoveConfirm(programsPost)'>Remove</button>
         </div>
         <div class="col-sm-1 col-sm-offset-1">
-          <button type="button" class="btn btn-success" ng-click="updatePrograms(programsPost.title,programsPost.caption,'programs',programsPost.id)">Save</button>
+          <button type="button" class="btn btn-success" ng-click="update(programsPost)">Save</button>
         </div>
       </div>
 

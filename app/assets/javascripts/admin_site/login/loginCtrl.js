@@ -10,7 +10,7 @@ angular.module('adminApp')
 function ($scope, $state,Auth,ngToast,ModalService,$uibModal, $log) {
   $scope.login = function() {
     Auth.login($scope.user).then(function(){
-      $state.go('dashboard');
+      $state.go('newsPage');
       location.reload()
     },function(err){
       ngToast.danger(err.data.error)

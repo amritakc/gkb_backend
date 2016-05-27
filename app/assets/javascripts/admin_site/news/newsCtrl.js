@@ -18,12 +18,17 @@ function($scope,$state,DataService, ModalService, $uibModal){
 
 
   $scope.openNewContentForm = function(){
-     var modalInstance = $uibModal.open({
-      templateUrl: 'admin_site/modals/_addNewsModal.html',
-      controller: [
-        '$scope', '$uibModalInstance','Upload', function($scope, $uibModalInstance, Upload) {
-      
-         $scope.upload = function(file, callback) {
+    var modalInstance = $uibModal.open({
+    templateUrl: 'admin_site/modals/_addNewsModal.html',
+    controller: [
+      '$scope',
+      '$uibModalInstance',
+      'Upload',
+      function($scope,
+                $uibModalInstance,
+                Upload) {
+    
+        $scope.upload = function(file, callback) {
           
           file.upload = Upload.upload({
             url: '/contents/images',
@@ -46,12 +51,11 @@ function($scope,$state,DataService, ModalService, $uibModal){
           $scope.ok = function(file){
             if(file){
               $scope.upload(file, function(result) {
-                console.log(result, "result")
                 $scope.newsPost.url = result
                 $uibModalInstance.close($scope.newsPost);
               })
             } else {
-               $uibModalInstance.close($scope.newsPost);
+              $uibModalInstance.close($scope.newsPost);
             }
           }
         }
@@ -60,14 +64,11 @@ function($scope,$state,DataService, ModalService, $uibModal){
 
     modalInstance.result.then(function (contentInfo) {
       contentInfo.section = 'news';
-      console.log('contentInfo', contentInfo)
       DataService.create(contentInfo, function(result){
-        console.log("result", result)
         self.newsPosts.unshift(result['content']);
       });
     });
   };
-
 
   $scope.openRemoveConfirm = function(selected){
 
@@ -75,7 +76,10 @@ function($scope,$state,DataService, ModalService, $uibModal){
     var modalInstance = $uibModal.open({
       templateUrl:'admin_site/modals/_removeModal.html',
       controller: [
-        '$scope', '$uibModalInstance','ModalService', function($scope, $uibModalInstance, ModalService) {
+        '$scope',
+        '$uibModalInstance',
+        'ModalService',
+        function($scope, $uibModalInstance, ModalService) {
           
           $scope.data = self.data
             
@@ -94,30 +98,23 @@ function($scope,$state,DataService, ModalService, $uibModal){
 
     modalInstance.result.then(function () { 
       DataService.remove(selected.id, function(result){
-
-
-       for(var i in  self.newsPosts){
-          console.log(self.newsPosts[i])
-          if( self.newsPosts[i].id=== result['content'].id){
-            
-            console.log('found', result['content'].id)            
-            self.newsPosts.splice(i,1);
-          }
-       }
-
+        for(var i in  self.newsPosts){
+            console.log(self.newsPosts[i])
+            if( self.newsPosts[i].id=== result['content'].id){
+              
+              console.log('found', result['content'].id)            
+              self.newsPosts.splice(i,1);
+            }
+        }
       });
     });
   };
 
-  $scope.update = function(title, text, section,contentId) {
-    DataService.update(title, text, section,contentId, function(result){
-      console.log(result['content'])
-       
+  $scope.update = function(content) {
+    content.section = "news"
+    DataService.update(content, function(result){
        for(var i in  $scope.newsPosts){
-          console.log($scope.newsPosts[i])
           if( $scope.newsPosts[i].id === result['content'].id){
-            
-            console.log('found', result['content'].id)            
             $scope.newsPosts[i] = result['content']
             
           }
