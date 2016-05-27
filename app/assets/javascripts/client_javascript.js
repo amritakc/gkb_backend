@@ -13,6 +13,7 @@
 
 //= require angular
 //= require angular-rails-templates
+//= require angular-bootstrap
 //= require angular-route
 //= require angular-animate
 //= require gsap

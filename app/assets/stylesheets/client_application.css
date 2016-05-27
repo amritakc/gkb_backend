@@ -162,7 +162,24 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 
 /* End Navigation Bar Stylings */
 
-/* This is styling for the header and the navigation icons for the 'Learn How To' section */
+/*Begin Carousel Section */
+.carousel {
+  width: 70%;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 8%;
+
+}
+
+.carousel img {
+  width: auto;
+   max-height: 30em;
+
+}
+
+/*End Carousel Section */
+
+/* This is styling for the header and the navigation icons for the 'Learn How To' section on the Home Page*/
 .logo {
 display: inline;
 width: 8em;
@@ -445,7 +462,34 @@ display: inline-block;
 -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
+
 /* End News Section */
+
+/* Begin Article Section */
+
+.article-container {
+  width: 80%;
+  margin: auto;
+}
+
+.article-section {
+  margin-top: 10%;
+  width: 100%;
+}
+
+.article-section img {
+  margin: auto;
+  width: 60%;
+
+}
+
+.article-section p {
+  margin-top: 2%;
+}
+
+
+/* End Article Section */
+
 
 /* Styling for the community programs section--shown on homepage and community page */
 
@@ -683,6 +727,23 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
 /* Volunteer  Start */
 
+.vol-image {
+  /*-webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);*/
+  width: 45%;
+  height: 100px;
+  background: red;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.vol-circle{
+  width: 100px;
+  height: 100px;
+
+}
+
 .volpics1 {
   width: 15em;
   height: 15em;
@@ -709,10 +770,12 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   margin-top: 5em;
   width: 100%;
   text-align: center;
+  margin-top: 100px;
 }
 
 d-expand-collapse {
   font-size: 2em;
+
   display: inline-block;
   vertical-align: top;
   word-wrap: break-word;
@@ -741,7 +804,9 @@ d-expand-collapse {
   min-width: 100%;
   position: relative; }
 
-/* Shop page starts here */
+/* Shop  page Starts*/
+
+
 .shop-wrapper {
   height: 100%;
   width: 100%;
@@ -798,11 +863,7 @@ width: 100%;
 height: 12.5em;  /*changing from 21.5, 15.5%*/
 display: inline-block;
 }
-.shopimage {
-  width: 7em;
-  height: 5em;
 
-}
 /*  start boxes for logos*/
 
 .shopboxeslogo:nth-of-type(2) {
@@ -811,7 +872,7 @@ display: inline-block;
 
 .shopboxeslogo {
 width: 45%;
-height: 50%; 
+height: 50%;  /*height 50%*/
 text-align: center;
 display: inline-block;
 }
@@ -832,7 +893,7 @@ text-align: center;
 
 #craigslistlogo img{
 width: auto;
-height: 11em;  /*height 15.5em*/
+height: 11em; /* height 15.5em*/
 text-align: center;
 
 display: inline-block;
@@ -955,7 +1016,7 @@ margin-top: 1.5em;
   height: 25em;
   text-align: center;;
 /*  margin-left: %;*/
-/*  background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("/static/img/row_of_bikes.jpg");*/
+  background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("/static/img/row_of_bikes.jpg");
   background-size: auto 100%;
   background-size:cover;
   margin-bottom: 5em;
@@ -982,6 +1043,7 @@ color: white;
   color:white;
 }
 .classes .shopboxesinfo th, td{
+  border: 1px solid white;
   color:white;
 }
 #parktooltable h3 {
@@ -1170,6 +1232,17 @@ h2.about-header {
   text-align: center;
 }
 
+p.about-history-headline {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+h3.about-section-titles {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 5%;
+}
+
 h3.retail-hours-header {
   text-align: center;
   font-weight: bold;
@@ -1190,15 +1263,32 @@ div.hours {
   width: 100%;
   margin: 0;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 1em;
+}
+
+.hours h2 {
+  font-size: 1.8em;
+}
+
+.hours h4 {
+  font-size: 1.3em;
+}
+
+h4.questions {
+  font-size: 1.4em;
+  font-weight: 700;
 }
 
 div.hours-container {
   color: white;
-  margin: 0 auto;
   width: 90%;
   margin: 0 auto;
 }
+/* End about us page stylings */
+
+/* -------------------------------------------------------------
+        ----  M E D I A ----  ||||  ---- Q U E R I E S ----
+---------------------------------------------------------------- */
 
 /* When screen is from 768px to 1024px */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -1247,8 +1337,6 @@ div.hours-container {
   }
 
 /* Shop  page Starts*/
-
-
 
 
 /*Styling for Donation Page*/
@@ -1630,6 +1718,17 @@ div.hours-container {
   .social-media-bubble {
     margin-top: 1em;
     text-align: left;
+  }
+
+  div.hours-container {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+  }
+
+  #footer {
+    padding: 1em;
   }
 
 }

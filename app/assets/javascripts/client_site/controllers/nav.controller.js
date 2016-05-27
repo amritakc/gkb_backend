@@ -4,17 +4,18 @@ myApp.controller('navCtrl', function($rootScope, $scope, $location, $window, loc
 	$scope.changePage = changePage;
 	$scope.myInterval = 5000;
 	$scope.active = 0;
-	$scope.noWrapSlides = false;
-	$scope.slides = [];
+	$scope.slides = []
 
 	// Scrolls page to top on route change
 	$rootScope.$on('$routeChangeSuccess', function() {
 		document.body.scrollTop = document.documentElement.scrollTop = 0;
     });
 
-    // Gets the slides
     slideFactory.getSlides(function(res) {
-    	$scope.slides = res;
+    	for(var i = 0; i<res.data.length;i++){
+    		$scope.slides.push({id:i , url: res.data[i].url , text: res.data[i].text})
+    	}
+  		console.log($scope.slides)
     });
 
 	function changePage(place) {
