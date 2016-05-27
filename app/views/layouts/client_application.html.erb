@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+ 
+
 
   <%= stylesheet_link_tag    'client_application', media: 'all' %>
   <%= javascript_include_tag 'client_javascript' %>
@@ -14,6 +16,7 @@
 </head>
 <body ng-app="myApp">
   <div class="container-fluid">
+
     <div class="header-wrapper" ng-controller="navCtrl">
       <nav class="navigation-bar">
         <ul class="topnav" ng-class="{ 'responsive': small }">
@@ -30,7 +33,17 @@
       </nav>
     
       <header class="bike-image" ng-if="changePage('/')">
-        
+
+      </header>
+
+      <header class="community-page" ng-if="changePage('/community')">
+        <div id="community-head">
+          <img id="cty-headerimage" src="https://s3-us-west-1.amazonaws.com/gkbimages//client/cyclists.jpg">
+        </div> 
+        <h1 id="events">Events</h1>
+        <div id="calendar">
+          <script data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script><div data-tockify-component="calendar" data-tockify-calendar="goodkarmabikes"></div>
+        </div>
       </header>
 
       <header ng-if="changePage('/shop')" class="bike-image">
