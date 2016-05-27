@@ -447,7 +447,20 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
 /* Styling for the community programs section--shown on homepage and community page */
 
+#community-header {
+  width: 100%;
+}
 
+#community-header-crop {
+  height: 70%;
+  overflow: hidden;
+}
+
+#calendar {
+  width: 80%;
+  height: auto;
+  margin: auto;
+}
 
 .community {
   width: 90%;
