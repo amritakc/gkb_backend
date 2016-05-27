@@ -13,7 +13,7 @@ class ContentsController < ApplicationController
       aws_access_key_id: ENV['AWS_Access_Key_ID'],
       aws_secret_access_key: ENV['AWS_Secret_Access_Key'],
       region: 'us-west-1',
-      path: 'gkbimages//admin/'+params[:file].original_filename
+      path: 'gkbimages//client/'+params[:file].original_filename
       )
       render :json => {status: 0, data: 'https://s3-us-west-1.amazonaws.com/gkbimages//admin/'+params[:file].original_filename}
     else 
