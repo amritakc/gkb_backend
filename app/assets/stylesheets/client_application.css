@@ -162,7 +162,24 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 
 /* End Navigation Bar Stylings */
 
-/* This is styling for the header and the navigation icons for the 'Learn How To' section */
+/*Begin Carousel Section */
+.carousel {
+  width: 70%;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 8%;
+
+}
+
+.carousel img {
+  width: auto;
+   max-height: 30em;
+
+}
+
+/*End Carousel Section */
+
+/* This is styling for the header and the navigation icons for the 'Learn How To' section on the Home Page*/
 .logo {
 display: inline;
 width: 8em;
@@ -709,6 +726,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 /* End Community Section */
 
 /* Volunteer  Start */
+
 .vol-image {
   /*-webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);*/
