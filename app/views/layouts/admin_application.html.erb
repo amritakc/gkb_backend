@@ -29,12 +29,9 @@
   <%= javascript_include_tag 'admin_javascript' %>
   <%= csrf_meta_tags %>
   
-
-  
 </head>
 
 <body ng-app="adminApp">
-
   <ui-view>
   <script type="text/javascript">
       window.loading_screen = window.pleaseWait({
@@ -44,8 +41,8 @@
       });
 
       window.loading_screen.finish();
-    </script>
-
+    </script>    
+    
   </ui-view>
 
   <script type="text/javascript">

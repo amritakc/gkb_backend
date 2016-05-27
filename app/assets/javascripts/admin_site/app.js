@@ -10,7 +10,7 @@ angular.module('adminApp', [
 'ngFileUpload',
 'ngToast',
 'ngResource',
-'cgBusy',
+'angularSpinner',
 ])
 .config(function($stateProvider,$urlRouterProvider) {
 
