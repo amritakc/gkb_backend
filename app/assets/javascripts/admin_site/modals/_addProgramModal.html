@@ -12,8 +12,8 @@
       <div class="form-group">
         <label>Title:</label>
         <input type="text" class="input form-control" ng-model='programsPost.title'>
-        <label>Caption:</label>
-        <input type="text" class="input form-control" ng-model='programsPost.caption'> 
+        <label>Text:</label>
+        <input type="text" class="input form-control" ng-model='programsPost.text'> 
       </div>
 
         <div class="btn-container row">
@@ -21,7 +21,7 @@
             <button type="button" class="btn btn-danger btn-lg" ng-click='cancel()'>Cancel</button>
           </div>
           <div class="col-sm-1 col-sm-offset-1">
-            <button type="button" class="btn btn-success btn-lg" ng-disabled="myForm.$invalid" ng-click="ok()">Save</button>
+            <button type="button" class="btn btn-success btn-lg" ng-disabled="myForm.$invalid" ng-click="ok(picFile)">Save</button>
           </div>
         </div>
        </form>

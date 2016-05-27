@@ -46,7 +46,6 @@ function($scope,$state,DataService, ModalService, $uibModal){
           $scope.ok = function(file){
             if(file){
               $scope.upload(file, function(result) {
-                console.log(result, "result")
                 $scope.newsPost.url = result
                 $uibModalInstance.close($scope.newsPost);
               })
@@ -67,7 +66,6 @@ function($scope,$state,DataService, ModalService, $uibModal){
       });
     });
   };
-
 
   $scope.openRemoveConfirm = function(selected){
 
@@ -94,7 +92,6 @@ function($scope,$state,DataService, ModalService, $uibModal){
 
     modalInstance.result.then(function () { 
       DataService.remove(selected.id, function(result){
-
 
        for(var i in  self.newsPosts){
           console.log(self.newsPosts[i])
