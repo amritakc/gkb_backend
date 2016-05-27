@@ -28,12 +28,22 @@
           <li><a href="#/donations">DONATE</a></li>
           <li><a href="#/volunteers">VOLUNTEER</a></li>
           <li><a href="#/community">COMMUNITY</a></li>
+          <li><a href="#/about">ABOUT US</a></li>
           <li><a href="#/news">NEWS</a></li>
         </ul>
       </nav>
     
       <header class="bike-image" ng-if="changePage('/')">
-
+         <div>
+          <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+            <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+              <img ng-src="{{slide.image}}" style="margin:auto;">
+              <div class="carousel-caption">
+                <p>{{slide.text}}</p>
+              </div>
+            </uib-slide>
+          </uib-carousel>
+        </div>
       </header>
 
       <header class="community-page" ng-if="changePage('/community')">
@@ -54,7 +64,8 @@
 
       </header>
       <header ng-if="changePage('/news')" class="bike-image">
-
+      </header>
+       <header ng-if="changePage('/about')" class="bike-image">
       </header>
     </div>
     <div ng-view></div>

@@ -1,5 +1,3 @@
-
-
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -152,6 +150,7 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 .navigation-bar {
   width: 100%;
   height: 50px;
+  padding-right: 6em;
   background: rgba(0, 0, 0, 0.4);
   position: fixed;
   z-index: 9999;
@@ -297,8 +296,8 @@ header p {
   color: #000035;
   text-align: center;
   margin-bottom: 7%;
-  font-size: 4.5em;
-  letter-spacing: 0.08em;
+  font-size: 3em;
+  letter-spacing: 0.06em;
 }
 
 .mission-wrapper {
@@ -454,7 +453,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 #community-head {
   overflow: hidden;
   width: 100%;
-  height: 70vh;
+  height: 80vh;
 }
 
 #cty-headerimage {
@@ -476,34 +475,45 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   height: auto;
   margin: auto;
 }
-
+/*
 .community {
   width: 90%;
   height: 100%;
-}
+  margin: auto;
+}*/
 
 .events {
   width: 90%;
 }
 
-.community h4 {
+.community-top {
+  width: 90%;
+  margin: auto;
+}
+
+.community-top h3 {
   font-weight: 200;
 /*  font-style: italic;*/
   color: white;
   width: 75%;
   text-align: center;
   margin: auto;
+ /* margin-left: 35%;*/
   margin-top: 5%;
   text-transform: uppercase;
+  
 
 }
 
-.community h3 {
+.community-top h4 {
   color: white;
   font-weight: 200;
-  margin-top: 2%;
+  margin-top: 3%;
   text-align: center;
   font-size: 1.5em;
+  font-style: italic;
+  margin: auto;
+  width: 75%;
 
 
 }
@@ -517,22 +527,21 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
 }
 
-.community h2 {
-  color: white;
-  text-align: center;
-  font-weight: 200;
-
-}
 
 .communitycontent {
 
   width: 90%;
-  margin: auto;
+  margin-left: 10%;
   margin-top: 5%;
   margin-bottom: 5%;
   padding: 1%;
 
+}
 
+.communitycontent h3 {
+  margin: auto;
+  font-weight: 300;
+  text-align: center;
 }
 
 .communityboxes {
@@ -565,23 +574,26 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
 
 .img-community {
-  width: 80%;
-
+  width: 20em;
+  height: 20em;
+  overflow: hidden;
+   -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  position: relative;
+  margin-bottom: 5%;
+  /*position: absolute;*/
 }
 
-.img-community > img {
-  width: 20em;
+.com-image {
+  width: 200%;
   height: auto;
   margin: auto;
-  /*-webkit-clip-path: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%);*/
   position: absolute;
-  -webkit-clip-path: circle(50% at 50% 50%);
-  clip-path: circle(50% at 40% 50%);
+
 
 }
 
-.img-community h3 {
+.img-community > h3 {
   text-align: center;
   font-weight: 400;
   text-transform: uppercase;
@@ -714,55 +726,7 @@ d-expand-collapse {
   min-width: 100%;
   position: relative; }
 
-/* When screen is from 768px to 1024px */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  body {
-    font-size: 1.5em;
-  }
-  
-  .iam img {
-    min-height: 150px;
-  }
-
-  .announcements {
-    width: 100%;
-    height: 100%;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/row_of_bikes.jpg");
-    background-size: cover;
-    position: relative;
-    color: white;
-  }
-
-  .announcements-paragraph {
-    margin: 0 auto;
-    width: 50%;
-  }
-
-  .announcements-paragraph h1, .newsgroup h1 {
-    padding-bottom: 5%;
-    font-size: 3.2em;
-    font-weight: 200;
-    letter-spacing: .16em;
-  }
-
-  .announcements-paragraph p {
-    font-size: 2em;
-    text-align: justify;
-    text-transform: uppercase;
-    font-weight: 200;
-  }
-
-  .announcements-paragraph img {
-    width: 50%;
-    height: auto;
-    margin-left: 25%;
-  }
-
-/* Shop  page Starts*/
-
-
+/* Shop page starts here */
 .shop-wrapper {
   height: 100%;
   width: 100%;
@@ -816,11 +780,15 @@ display: inline-block;
 }
 
 .shopboxes img {
-width: 100%;
+width: 30%;
 height: 12.5em;  /*changing from 21.5, 15.5%*/
 display: inline-block;
 }
+.shopimage {
+  width: 7em;
+  height: 5em;
 
+}
 /*  start boxes for logos*/
 
 .shopboxeslogo:nth-of-type(2) {
@@ -829,7 +797,7 @@ display: inline-block;
 
 .shopboxeslogo {
 width: 45%;
-height: 50%;  /*height 50%*/
+height: 50%; 
 text-align: center;
 display: inline-block;
 }
@@ -850,7 +818,7 @@ text-align: center;
 
 #craigslistlogo img{
 width: auto;
-height: 11em; /* height 15.5em*/
+height: 11em;  /*height 15.5em*/
 text-align: center;
 
 display: inline-block;
@@ -973,7 +941,7 @@ margin-top: 1.5em;
   height: 25em;
   text-align: center;;
 /*  margin-left: %;*/
-  background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("/static/img/row_of_bikes.jpg");
+/*  background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("/static/img/row_of_bikes.jpg");*/
   background-size: auto 100%;
   background-size:cover;
   margin-bottom: 5em;
@@ -1003,7 +971,6 @@ color: white;
   color:white;
 }
 .classes .shopboxesinfo th, td{
-  border: 1px solid white;
   color:white;
 }
 #parktooltable h3 {
@@ -1099,6 +1066,56 @@ margin-left: 3.5em;
 }
 
 /*GKB warranty and Policy page ends*/
+
+/* When screen is from 768px to 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 1.5em;
+  }
+  
+  .iam img {
+    min-height: 150px;
+  }
+
+  .announcements {
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/row_of_bikes.jpg");
+    background-size: cover;
+    position: relative;
+    color: white;
+  }
+
+  .announcements-paragraph {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .announcements-paragraph h1, .newsgroup h1 {
+    padding-bottom: 5%;
+    font-size: 3.2em;
+    font-weight: 200;
+    letter-spacing: .16em;
+  }
+
+  .announcements-paragraph p {
+    font-size: 2em;
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+
+  .announcements-paragraph img {
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+  }
+
+/* Shop  page Starts*/
+
+
 
 
 /*Styling for Donation Page*/
@@ -1332,6 +1349,11 @@ margin-left: 3.5em;
   body {
     font-size: 1em;
   }
+
+  .navigation-bar {
+    padding: 0;
+  }
+
   .iam img {
     max-width: 100px;
     max-height: 100px;

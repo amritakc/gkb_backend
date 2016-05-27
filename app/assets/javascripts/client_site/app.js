@@ -22,6 +22,10 @@ var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap', 'templates', 'ng
         templateUrl: 'client_site/partials/shop.html',
         controller: 'storeCtrl'
       })
+      .when('/about', {
+        templateUrl: 'client_site/partials/about.html',
+        controller: 'aboutCtrl'
+      })
       .when('/gkbwarranty', {
         templateUrl: 'client_site/partials/gkbwarranty.html',
         controller: 'warrantyCtrl'
