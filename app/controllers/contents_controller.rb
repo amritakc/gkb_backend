@@ -47,6 +47,15 @@ class ContentsController < ApplicationController
   end
 
   def destroy
+    # get url from content to delete in S3
+    location = Content.find(params[:id]).url
+
+    # delete the image from S3 bucket
+    obj = S3_BUCKET.object(location[44..-1])
+    if obj.delete
+      puts "Deleted img from S3 bucket"
+    end
+
     # destroy the content
     @deleted = Content.destroy(params[:id])
 
