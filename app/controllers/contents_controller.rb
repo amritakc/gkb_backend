@@ -5,12 +5,17 @@ class ContentsController < ApplicationController
     render :json => contents
   end
 
+# compresses and uploads image to s3 bucket
   def img
-    # Create an object for S3 to send over the image    
-    obj = S3_BUCKET.object('/admin/'+params[:file].original_filename)
-
-    if obj.upload_file(params[:file].path, acl: 'public-read')
-      render :json => {status: 0, data: obj.public_url}
+    source = Tinify.from_file(params[:file].tempfile.path)
+    if source.store(
+      service: 's3',
+      aws_access_key_id: ENV['AWS_Access_Key_ID'],
+      aws_secret_access_key: ENV['AWS_Secret_Access_Key'],
+      region: 'us-west-1',
+      path: 'gkbimages//client/'+params[:file].original_filename
+      )
+      render :json => {status: 0, data: 'https://s3-us-west-1.amazonaws.com/gkbimages//client/'+params[:file].original_filename}
     else 
       render :json => {status: 404, data: "Something went wrong with image upload"}
     end

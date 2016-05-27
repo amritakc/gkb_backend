@@ -5,8 +5,8 @@
     <div class="modal-body">
       <!-- file upload here, added picture preview -->
       
-      <input type="file" ngf-select="" ng-model="picFile" name="file" ngf-accept="'image/*'" required="">
-      <img ngf-src="picFile" id="thumb">
+      <input type="file" ngf-select="" ng-model="file" name="file" ngf-accept="'image/*'" required="">
+      <img ngf-src="file" id="thumb">
       <div class="form-group">
         <label>Title:</label>
         <input type="text" class="input form-control" ng-model='newsPost.title' required>
