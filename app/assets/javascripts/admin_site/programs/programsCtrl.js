@@ -21,46 +21,40 @@ function($scope,$state,DataService, ModalService, $uibModal){
 
   $scope.openNewProgramsForm = function(){
     
-    var modalInstance = $uibModal.open({
+       var modalInstance = $uibModal.open({
       templateUrl: 'admin_site/modals/_addProgramModal.html',
       controller: [
-        '$scope',
-        '$uibModalInstance',
-        'Upload',
-        function($scope, $uibModalInstance,Upload) {
-      
+        '$scope', '$uibModalInstance', 'Upload',  function($scope, $uibModalInstance, Upload) {
+          
           $scope.upload = function(file, callback) {
-            
+            console.log("hit upload")
             file.upload = Upload.upload({
               url: '/contents/images',
               data: {
                 file: file
               }
-              }).progress(function(evt){
-                $scope.progress = Math.min(100, parseInt(100.0 *evt.loaded / evt.total));
-
-              }).success(function(response){
-                $scope.result = response.data 
-                callback(response.data )
-              })
-            }
-
-          // added data to change the dynamic html 
-          $scope.data = {title: "Programs" };
+            }).success(function(response){
+              console.log(response)
+              callback(response.data )
+            })
+          }
+          
+          $scope.cancel = function () {                
+            $uibModalInstance.dismiss();
+          }
+          
           $scope.ok = function(file){
-            console.log(file)
             if(file){
+
+              console.log('file')
               $scope.upload(file, function(result) {
-                $scope.programsPost.url = result;
-                $scope.programsPost.section = "programs"
+                
+                $scope.programsPost.url = result
                 $uibModalInstance.close($scope.programsPost);
               })
             } else {
-               $uibModalInstance.dismiss();
+                $uibModalInstance.close($scope.programsPost);
             }
-          }
-          $scope.cancel = function () {
-            $uibModalInstance.dismiss();
           }
         }
       ]

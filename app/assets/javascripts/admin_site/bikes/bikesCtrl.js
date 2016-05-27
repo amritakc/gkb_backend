@@ -27,21 +27,18 @@ function($scope,$state,DataService, ModalService, $uibModal){
         function($scope, $uibModalInstance, Upload) {
           
           $scope.upload = function(file, callback) {
-            console.log('clicked save')
-          file.upload = Upload.upload({
-            url: '/contents/images',
-            data: {
-              file: file
-            }
-            }).progress(function(evt){
-              $scope.progress = Math.min(100, parseInt(100.0 *evt.loaded / evt.total));
-
+            console.log("hit upload")
+            file.upload = Upload.upload({
+              url: '/contents/images',
+              data: {
+                file: file
+              }
             }).success(function(response){
+              console.log("uploaded")
               $scope.result = response.data 
               callback(response.data )
             })
           }
-
           $scope.cancel = function () {                
             $uibModalInstance.dismiss();
           }
@@ -62,7 +59,9 @@ function($scope,$state,DataService, ModalService, $uibModal){
     
     modalInstance.result.then(function (contentInfo) {
       contentInfo.section = 'bikes';
+      console.log(contentInfo)
       DataService.create(contentInfo, function(result){
+        console.log(result, "result")
         self.allBikes.unshift(result['content']);
       });
     });
