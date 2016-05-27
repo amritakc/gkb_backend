@@ -163,5 +163,12 @@ angular.module('adminApp', [
 
   $urlRouterProvider.otherwise('/announcements');
 
-
 });
+
+angular
+  .module('adminApp')
+  .config(['ngToastProvider', function(ngToast) {
+    ngToast.configure({
+      maxNumber: 1
+    });
+  }]);
