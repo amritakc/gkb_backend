@@ -162,7 +162,7 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 
 /* End Navigation Bar Stylings */
 
-/* This is styling for the header and the navigation icons for the 'Learn How To' section */
+/* This is styling for the header and the navigation icons for the 'Learn How To' section on the Home Page*/
 .logo {
 display: inline;
 width: 8em;
@@ -1215,8 +1215,6 @@ margin-left: 3.5em;
 
 /*GKB warranty and Policy page ends*/
 
-<<<<<<< HEAD
-=======
 /* About us page stylings */
 header.about-header-image {
   min-height: 60vh;
