@@ -32,6 +32,18 @@ textarea {
 }
 
 /* This is styling for the navigation bar */
+.gkb-name {
+  float: left;
+  list-style-type: none;
+  padding: 0;
+  color: white;
+}
+
+.gkb-name > li {
+  height: 50px;
+  line-height: 50px;
+}
+
 ul.topnav {
   list-style-type: none;
   float: right;
@@ -47,7 +59,9 @@ ul.topnav li {
 
 ul.topnav li a {
   display: inline-block;
-  font-size: 1.2em;
+  font-size: 1em;
+  height: 50px;
+  line-height: 30px;
   padding: 0.825em;
   text-decoration: none;
   color: white;
@@ -118,6 +132,12 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 .footer-list li.footer-links a:link, .footer-list li.footer-links a:visited, .footer-list li.footer-links a:hover, .footer-list li.footer-links a:active {
   text-decoration: none; }
 
+.gkb-logo-footer {
+  height: 150px;
+  width: 150px;
+  margin-top: 1.5em;
+}
+
 
 /* This is the styling for the wrapper around the footer section */
 #footer {
@@ -154,7 +174,8 @@ ul.topnav li a:link, ul.topnav li a:visited, ul.topnav li a:hover, ul.topnav li 
 .navigation-bar {
   width: 100%;
   height: 50px;
-  padding-right: 6em;
+  padding-right: 3em;
+  padding-left: 3em;
   background: rgba(0, 0, 0, 0.4);
   position: fixed;
   z-index: 9999;
@@ -512,7 +533,7 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 #events {
   text-transform: uppercase;
   letter-spacing: .5em;
-  margin-bottom: 10%
+  margin-bottom: 10%;
   margin-top: 10%;
   font-size: 4em;
 
@@ -724,625 +745,6 @@ clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 /* End Community Section */
-
-/* Volunteer  Start */
-
-.vol-image {
-  /*-webkit-clip-path: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%);*/
-  width: 45%;
-  height: 100px;
-  background: red;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 50px;
-  border-radius: 50px;
-}
-
-.vol-circle{
-  width: 100px;
-  height: 100px;
-
-}
-
-.volpics1 {
-  width: 15em;
-  height: 15em;
-  -moz-border-radius: 10em;
-  -webkit-border-radius: 10em;
-  border-radius: 10em;
-}
-
-.volpics2 {
-  width: 15em;
-  height: 15em;
-  -moz-border-radius: 10em;
-  -webkit-border-radius: 10em;
-  border-radius: 10em;
-  margin-left: 10em;
-}
-
-.volgistics {
-  text-align: center;
-  margin-top: 10em;
-}
-
-.bubbles {
-  margin-top: 5em;
-  width: 100%;
-  text-align: center;
-  margin-top: 100px;
-}
-
-d-expand-collapse {
-  font-size: 2em;
-
-  display: inline-block;
-  vertical-align: top;
-  word-wrap: break-word;
-}
-
-.volbubbles {
-  display: inline-block;
-  text-align: center;
-}
-
-.exp_col_title {
-  text-align: center;
-}
-
-.voldetails {
-  font-size: .6em;
-  text-align: center;
-}
-/* Volunteer  End*/
-
-
-#wrapper {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-  min-width: 100%;
-  position: relative; }
-
-/* Shop  page Starts*/
-
-
-.shop-wrapper {
-  height: 100%;
-  width: 100%;
-  margin-bottom: 5%;
-}
-
-.shopgroup {
-  height: 50%;
-  width: 100%;
-  text-align: center;
-  display: inline-block;
-  padding-top: 2em;
-  padding-bottom: 2em;
-}
-
-.shopgroup h1 {
-  text-align: center;
-  margin-bottom: 0.5em;
-  margin-top: 2em;
-}
-.shopgroup h3 {
-  text-align: center;
-  margin-bottom: 2em;
-  margin-top: 2em;
-}
-.shopgroup h4 {
-  font-style: italic;
-  text-align: center;
-  margin-bottom: 2em;
-  margin-top: 2em;
-}
-
-.shopboxes:nth-of-type(2) {
-  margin-left: 5em;
-
-}
-.shopboxes:nth-of-type(3) {
-  margin-left: 5em;
-  margin-right: 5em;
-}
-
-.shopboxes {
-width: 20%;  /*changing  45%*/
-height: 50%;
-display: inline-block;
-}
-
-.shopboxes h4 {
-  margin-top: 0.5em;
-}
-
-.shopboxes img {
-width: 100%;
-height: 12.5em;  /*changing from 21.5, 15.5%*/
-display: inline-block;
-}
-
-/*  start boxes for logos*/
-
-.shopboxeslogo:nth-of-type(2) {
-  margin-left: 5em;
-}
-
-.shopboxeslogo {
-width: 45%;
-height: 50%;  /*height 50%*/
-text-align: center;
-display: inline-block;
-}
-
-
-.shopboxeslogo img{
-width: 100%;
-height: auto; /*height 15.5em*/
-display: inline-block;
-
-
-}
-
-#ebaylogo {
-padding:0em 7em 0em 7em;
-text-align: center;
-}
-
-#craigslistlogo img{
-width: auto;
-height: 11em; /* height 15.5em*/
-text-align: center;
-
-display: inline-block;
-}
-
-/*end boxes for logos*/
-
-#warranty{
-height: 4em;
-background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/pricebike.jpg");
-background-size: auto 100%;
-background-size: cover;
-overflow: hidden;
-background-repeat: no-repeat;
-background-position: center;
-}
-#warranty h1{
-    border: 0;
-    color: #FFF;
-    cursor: pointer;
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    font-size: 2.5em;
-    font-weight: 200;
-    margin-top:.3em; /*needed. to override previously set margin*/
-}
-
-#policy img{
-height: 5em;
-}
-.shopboxesinfo {
-width: 45%;
-height: 50%;
-display: inline-block;
-}
-
-.shopboxesinfo h3 {
-  text-align: center;
-  margin-bottom: 2em;
-  margin-top: 2em;
-}
-.shopboxesinfo img {
-  text-align: center;
-  margin-top: 0.2em;
-}
-
-.shopboxesinfo:nth-of-type(2) {
-  margin-left: 5em;
-}
-
-
-.shopboxesinfo img {
-width: 100%;
-height: 15.5em;
-display: inline-block;
-}
-/*CLASSES section starts*/
-.classes {
-  width: 100%;
-  height: auto;
-  background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg") center center no-repeat;
-  background-size: cover;
-  position: relative;
-  text-align: center;
-}
-.classes h1 {
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: .3em;
-  font-size: 5em;
-  font-weight: 200;
-  margin-bottom: 2em;
-}
-.parktool {
-  width: 50%;
-  height: 25em;
-  margin-left: 25%;
-  background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/tools.jpg") center center no-repeat;
-  background-size: auto 100%;
-  background-size:cover;
-  margin-bottom: 5em;
-}
-.parktool h2{
-  color: white;
-  font-weight: 200;
-  padding-top: 1em;
-  font-size: 3em;
-  font-weight: 200;
-}
-.parktool img{
-width: auto;
-height: 13em;
-text-align: center;
-display: inline-block;
-margin-top: 1.5em;
-}
-#parktooltext {
-  width: 70%;
-  height: auto;
-}
-#parktooltext h3{
-  color: white;
-  margin: 0 auto;
-}
-#parktooltext h2{
-  color: white;
-  margin: 0 auto;
-  padding-bottom: 2em;
-}
-#parktooltext h4{
-  color: white;
-}
-#parktooltext p{
-  font-size: 1.5em;
-  color: white;
-}
-#parktoolcourses {
-  width: 30%;
-  height: 25em;
-  text-align: center;;
-/*  margin-left: %;*/
-  background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("/static/img/row_of_bikes.jpg");
-  background-size: auto 100%;
-  background-size:cover;
-  margin-bottom: 5em;
-}
-
-#parktoolcourses ul{
-/*  text-align: left;*/
-  font-size: 140%;
-  text-align: left; 
-  color: white;
-}
-#parktoolcourses h3{
-color: white;
-}
-
-.classes .shopboxesinfo {
-  width: 30%;
-  height: 100%;
-  vertical-align: top;
-}
-.classes .shopboxesinfo table{
-  font-size: 170%;
-  width: 100%;  
-  color:white;
-}
-.classes .shopboxesinfo th, td{
-  border: 1px solid white;
-  color:white;
-}
-#parktooltable h3 {
-  color: white;
-}
-.shopclasses {
-width: 40%;
-height: 50%;
-display: inline-block;
-}
-
-/*CLASSES section ends*/
-
-/*RENTALS section starts*/
-}
-.rentals {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  text-align: center;
-}
-.rentals h1{
-  text-transform: uppercase;
-  letter-spacing: .3em;
-  font-size: 5em;
-  font-weight: 200;
-  margin-bottom: 2em;
-}
-.rentals img{
-  width: 100%;
-  height: 40em;
-}
-#rentalimage {
-  background: url("https://s3-us-west-1.amazonaws.com/gkbimages//client/gkb-rental.jpeg");
-  background-size: auto 100%;
-  background-size:cover;
-  width: 100%;
-  height: 40em;
-}
-#rentaltext {
-  text-align: center;
-  margin-left: 18em;
-  width: 70%;
-  height: auto;
-}
-#rentaltext p{
-  margin-top: 1.5em;
-  font-size: 1.5em;
-}
-#rentaltext a {
-  color: #27ae90;
-}
-/*RENTALS section ends*/
-
-/*REPAIR section starts*/
-.repair{
-  width: 100%;
-  height: auto;
-  background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg") center center no-repeat;
-  background-size: cover;
-  position: relative;
-  text-align: center;
-}
-.repair h1{
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-/*  letter-spacing: .3em;*/
-  font-size: 5em;
-  font-weight: 200;
-  margin-bottom: 2em;
-}
-#repairimage {
-  background: url("https://s3-us-west-1.amazonaws.com/gkbimages//client/gkb-rental.jpeg");
-  background-size: auto 100%;
-  background-size:cover;
-  width: 100%;
-  height: 40em;
-}
-#repairtext {
-/*  text-align: center;*/
-  color: white;
-/*  margin-left: 18em;*/
-  width: 70%;
-  height: auto;
-}
-#repairtext p{
-  margin-top: 1.5em;
-  font-size: 1.5em;
-}
-#repairtext a {
-  color: #27ae90;
-}
-.repair .shopboxesinfo{
-  width: 30%;
-  height: 100%;
-  vertical-align: top;
-}
-
-/*REPAIR section ends*/
-/* Shop Page Ends*/
-
-/*GKB warranty and Policy page starts*/
-#gkbwarranty h3{
-    color: #38812d;
-    font-size: 3.3em;
-    font-weight: 50;
-    text-transform: uppercase;
-    padding-top: .7em;
-    text-align: center;
-    vertical-align: middle;
-}
-#gkbwarranty img{
-  padding-bottom: .7em;
-  margin-left: 11em;
-}
-#gkbwarranty h5{
-  font-size:  1.8em;
-}
-#gkbwarranty h4{
-  color: #38812d;
-  padding-top: 2em;
-  font-size:  2.7em;
-  text-align: center;
-}
-#gkbwarranty p{
-  padding-top: 2em;
-  font-size:  1.7em;
-  text-align: center;
-}
-#gkbwarranty ul{
-font-size:  1.5em;
-display: inline-block;
-vertical-align: top;
-padding-left: 2em;
-margin-left: 3.5em;
-}
-
-#gkbpolicy h3{
-    color: #38812d;
-    font-size:  3.3em;
-    font-weight: 50;
-    text-transform: uppercase;
-    padding-top: .7em;
-    text-align: center;
-    vertical-align: middle;
-}
-#gkbpolicy img{
-  padding-bottom: .7em;
-  margin-left: 11em;
-}
-#gkbpolicy h5{
-  color: #38812d;
-  padding-top: 2em;
-  font-size:  1.8em;
-  font-weight: bold;
-}
-#gkbpolicy p{
-  font-size:  1.7em;
-
-}
-#gkbpolicy ol{
-font-size:  1.5em;
-display: inline-block;
-vertical-align: top;
-padding-left: 2em;
-margin-left: 3.5em;
-}
-
-/*GKB warranty and Policy page ends*/
-
-/* About us page stylings */
-header.about-header-image {
-  min-height: 60vh;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-              url('https://s3-us-west-1.amazonaws.com/gkbimages//client/onabike.jpeg') center center no-repeat;
-  background-size: cover;
-  position: relative;
-  padding-top: 10%;
-  color: white;
-}
-
-h2.about-header {
-  text-align: center;
-}
-
-p.about-history-headline {
-  text-align: center;
-  font-size: 1.2em;
-}
-
-h3.about-section-titles {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 5%;
-}
-
-h3.retail-hours-header {
-  text-align: center;
-  font-weight: bold;
-  margin: 0;
-  color: white;
-}
-
-div.hours {
-  color: white;
-  width: calc(33.3% - 5px);
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-}
-
-.hours > p {
-  color: white;
-  width: 100%;
-  margin: 0;
-  text-align: center;
-  font-size: 1em;
-}
-
-.hours h2 {
-  font-size: 1.8em;
-}
-
-.hours h4 {
-  font-size: 1.3em;
-}
-
-h4.questions {
-  font-size: 1.4em;
-  font-weight: 700;
-}
-
-div.hours-container {
-  color: white;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.carousel-indicators {
-  display: none;
-}
-/* End about us page stylings */
-
-/* -------------------------------------------------------------
-        ----  M E D I A ----  ||||  ---- Q U E R I E S ----
----------------------------------------------------------------- */
-
-/* When screen is from 768px to 1024px */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  body {
-    font-size: 1.5em;
-  }
-  
-  .iam img {
-    min-height: 150px;
-  }
-
-  .announcements {
-    width: 100%;
-    height: 100%;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/row_of_bikes.jpg");
-    background-size: cover;
-    position: relative;
-    color: white;
-  }
-
-  .announcements-paragraph {
-    margin: 0 auto;
-    width: 50%;
-  }
-
-  .announcements-paragraph h1, .newsgroup h1 {
-    padding-bottom: 5%;
-    font-size: 3.2em;
-    font-weight: 200;
-    letter-spacing: .16em;
-  }
-
-  .announcements-paragraph p {
-    font-size: 2em;
-    text-align: justify;
-    text-transform: uppercase;
-    font-weight: 200;
-  }
-
-  .announcements-paragraph img {
-    width: 50%;
-    height: auto;
-    margin-left: 25%;
-  }
-
-/* Shop  page Starts*/
-
-
 /*Styling for Donation Page*/
 
   #donate-tiers {
@@ -1562,6 +964,676 @@ div.hours-container {
     font-weight: 
   }
 /*End styling for Donation Page*/
+/* Volunteer  Start */
+
+.vol-image {
+  /*-webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);*/
+  width: 45%;
+  height: 100px;
+  background: red;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.vol-circle{
+  width: 100px;
+  height: 100px;
+
+}
+
+.volpics1 {
+  width: 15em;
+  height: 15em;
+  -moz-border-radius: 10em;
+  -webkit-border-radius: 10em;
+  border-radius: 10em;
+}
+
+.volpics2 {
+  width: 15em;
+  height: 15em;
+  -moz-border-radius: 10em;
+  -webkit-border-radius: 10em;
+  border-radius: 10em;
+  margin-left: 10em;
+}
+
+.volgistics {
+  text-align: center;
+  margin-top: 10em;
+}
+
+.bubbles {
+  margin-top: 5em;
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+}
+
+d-expand-collapse {
+  font-size: 2em;
+
+  display: inline-block;
+  vertical-align: top;
+  word-wrap: break-word;
+}
+
+.volbubbles {
+  display: inline-block;
+  text-align: center;
+}
+
+.exp_col_title {
+  text-align: center;
+}
+
+.voldetails {
+  font-size: .6em;
+  text-align: center;
+}
+/* Volunteer  End*/
+
+
+#wrapper {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  min-width: 100%;
+  position: relative; }
+
+/* SHOP PAGE Starts*/
+
+
+.shop-wrapper {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 5%;
+}
+#shoptext h1{
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: 5em;
+  font-weight: 200;
+  margin-bottom: 1em;
+}
+
+.shopgroup {
+  height: 50%;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.shopgroup h1 {
+  text-align: center;
+  margin-bottom: 0.5em;
+  margin-top: 2em;
+}
+
+.shopgroup h3 {
+  text-align: center;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+.shopgroup h4 {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+.shopboxes {
+/*  width: 20%;*/ 
+  height: auto;
+  display: inline-block;
+  padding: 1%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.shopboxes h4 {
+  margin-top: 0.5em;
+}
+
+.shopboxes img {
+  width: 100%;
+/*  height: auto;*/
+  height: 13em;
+  display: inline-block;
+/*  text-align: center;*/
+}
+
+/* Divs for logos starts*/
+
+.shopboxeslogo:nth-of-type(2) {
+  margin-left: 5%;
+}
+
+.shopboxeslogo {
+  width: 45%;
+  height: 50%; 
+  text-align: center;
+  display: inline-block;
+}
+
+.shopboxeslogo img{
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+#ebaylogo {
+  padding:0em 7em 0em 7em;
+  text-align: center;
+}
+
+#craigslistlogo img{
+  width: auto;
+  height: 11em;
+  text-align: center;
+  display: inline-block;
+}
+
+/*Divs for logos ends*/
+
+#warranty{
+  height: 4em;
+  background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/pricebike.jpg");
+  background-size: auto 100%;
+  background-size: cover;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.shopboxesinfo {
+  width: 45%;
+  height: 50%;
+  display: inline-block;
+}
+
+.shopboxesinfo h3 {
+  text-align: center;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+.shopboxesinfo img {
+  text-align: center;
+  margin-top: 0.2em;
+}
+
+.shopboxesinfo:nth-of-type(2) {
+  margin-left: 5em;
+}
+
+.shopboxesinfo img {
+width: 100%;
+height: 15.5em;
+display: inline-block;
+}
+
+#warranty h1{
+  border: 0;
+  color: #FFF;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  font-size: 2.5em;
+  font-weight: 200;
+  margin-top:.3em; /*overrides previously set margin*/
+}
+
+#policy img{
+  height: 5em;
+}
+/*CLASSES section starts*/
+.classes {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+.classes h1 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  font-size: 5em;
+  font-weight: 200;
+  margin-bottom: 2em;
+}
+.parktool {
+  width: 50%;
+  height: 25em;
+  margin-left: 25%;
+  background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/tools.jpg") center center no-repeat;
+  background-size: auto 100%;
+  background-size:cover;
+  margin-bottom: 5em;
+}
+
+.parktool h2{
+  color: white;
+  font-weight: 200;
+  padding-top: 1em;
+  font-size: 3em;
+  font-weight: 200;
+}
+
+.parktool img{
+  width: auto;
+  height: 13em;
+  text-align: center;
+  display: inline-block;
+  margin-top: 1.5em;
+}
+
+#parktooltext {
+  width: 70%;
+  height: auto;
+}
+
+#parktooltext h3{
+  color: white;
+  margin: 0 auto;
+}
+
+#parktooltext h2{
+  color: white;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+#parktooltext h4{
+  color: white;
+}
+
+#parktooltext p{
+  font-size: 1.5em;
+  color: white;
+}
+
+#parktoolcourses {
+  width: 30%;
+  height: 25em;
+  text-align: center;
+  margin-bottom: 5em;
+}
+
+#parktoolcourses ul{
+  font-size: 140%;
+  text-align: left; 
+  color: white;
+}
+
+#parktoolcourses h3{
+  color: white;
+}
+
+.classes .shopboxesinfo {
+  width: 30%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.classes .shopboxesinfo table{
+  font-size: 170%;
+  width: 100%;  
+  color:white;
+}
+
+.classes .shopboxesinfo th, td{
+  color:white;
+}
+
+#parktooltable h3 {
+  color: white;
+}
+
+.shopclasses {
+  width: 40%;
+  height: 50%;
+  display: inline-block;
+}
+
+/*CLASSES section ends*/
+
+/*RENTALS section starts*/
+}
+.rentals {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+.rentals h1{
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  font-size: 5em;
+  font-weight: 200;
+  margin-bottom: 2em;
+}
+.rentals img{
+  width: 100%;
+  height: 40em;
+}
+#rentalimage {
+  background: url("https://s3-us-west-1.amazonaws.com/gkbimages//client/gkb-rental.jpeg");
+  background-size: auto 100%;
+  background-size:cover;
+  width: 100%;
+  height: 40em;
+}
+#rentaltext {
+  text-align: center;
+  margin-left: 15%;
+  width: 70%;
+  height: auto;
+}
+#rentaltext p{
+  margin-top: 1.5em;
+  font-size: 1.5em;
+}
+#rentaltext a {
+  color: #27ae90;
+}
+/*RENTALS section ends*/
+
+/*REPAIR section starts*/
+.repair{
+  width: 100%;
+  height: auto;
+  background: linear-gradient(rgba(0, 158, 73, 0.75), rgba(0, 158, 73, 0.75)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/thankyou.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+.repairimage {
+  width: 50%;
+  height: 25em;
+  margin-left: 25%;
+  background: url("https://s3-us-west-1.amazonaws.com/gkbimages//client/cruiser.jpeg ") center center no-repeat;
+  background-size: auto 100%;
+  background-size:cover;
+  margin-bottom: 5em;
+}
+/*.repairimage img{
+  width: auto;
+  height: 13em;
+  text-align: center;
+  display: inline-block;
+  margin-top: 1.5em;
+}*/
+.repair h1{
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 5em;
+  font-weight: 200;
+  margin-bottom: 2em;
+}
+#repairimage {
+  background: url("https://s3-us-west-1.amazonaws.com/gkbimages//client/gkb-rental.jpeg");
+  background-size: auto 100%;
+  background-size:cover;
+  width: 100%;
+  height: 40em;
+}
+#repairtext {
+  color: white;
+  text-align: center;
+  width: 70%;
+  height: auto;
+}
+#repairtext a{
+  color: white;
+  text-decoration: underline;
+}
+/*#repairtext h2 h3{
+  text-align: center;
+  margin-left: 18em;
+  width: 70%;
+  height: auto;
+}*/
+#repairIBM {
+  text-align: left;
+  color: white;
+}
+#repairIBM p{
+  margin-top: 1.5em;
+  font-size: 1.4em;
+}
+#repairIBM ol li{
+  margin-top: 1.5em;
+  font-size: 1.4em;
+}
+#repairIBM a {
+  color: white;
+  text-decoration: underline;
+}
+.repair .shopboxesinfo{
+  width: 30%;
+  height: 100%;
+  vertical-align: top;
+}
+
+/*REPAIR section ends*/
+/* SHOP PAGE Ends*/
+
+/*GKB warranty and Policy page starts*/
+#gkbwarranty h3{
+  color: #38812d;
+  font-size: 3.3em;
+  font-weight: 50;
+  text-transform: uppercase;
+  padding-top: .7em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#gkbwarranty img{
+  padding-bottom: .7em;
+  margin-left: 11em;
+}
+
+#gkbwarranty h5{
+  font-size:  1.8em;
+}
+
+#gkbwarranty h4{
+  color: #38812d;
+  padding-top: 2em;
+  font-size:  2.7em;
+  text-align: center;
+}
+
+#gkbwarranty p{
+  padding-top: 2em;
+  font-size:  1.7em;
+  text-align: center;
+}
+
+#gkbwarranty ul{
+font-size:  1.5em;
+display: inline-block;
+vertical-align: top;
+padding-left: 2em;
+margin-left: 3.5em;
+}
+
+#gkbpolicy h3{
+  color: #38812d;
+  font-size:  3.3em;
+  font-weight: 50;
+  text-transform: uppercase;
+  padding-top: .7em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#gkbpolicy img{
+  padding-bottom: .7em;
+  margin-left: 11em;
+}
+
+#gkbpolicy h5{
+  color: #38812d;
+  padding-top: 2em;
+  font-size:  1.8em;
+  font-weight: bold;
+}
+
+#gkbpolicy p{
+  font-size:  1.7em;
+}
+
+#gkbpolicy ol{
+font-size:  1.5em;
+display: inline-block;
+vertical-align: top;
+padding-left: 2em;
+margin-left: 3.5em;
+}
+
+/*GKB warranty and Policy page ends*/
+
+/* About us page stylings */
+header.about-header-image {
+  min-height: 60vh;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('https://s3-us-west-1.amazonaws.com/gkbimages//client/onabike.jpeg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 10%;
+  color: white;
+}
+
+h2.about-header {
+  text-align: center;
+}
+
+p.about-history-headline {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+h3.about-section-titles {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 5%;
+}
+
+h3.retail-hours-header {
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+div.hours {
+  color: white;
+  width: calc(33.3% - 5px);
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.hours > p {
+  color: white;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 1em;
+}
+
+.hours h2 {
+  font-size: 1.8em;
+}
+
+.hours h4 {
+  font-size: 1.3em;
+}
+
+h4.questions {
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+div.hours-container {
+  color: white;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.carousel-indicators {
+  display: none;
+}
+/* End about us page stylings */
+
+/* -------------------------------------------------------------
+        ----  M E D I A ----  ||||  ---- Q U E R I E S ----
+---------------------------------------------------------------- */
+
+/* When screen is from 768px to 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 1.5em;
+  }
+  
+  .iam img {
+    min-height: 150px;
+  }
+
+  .announcements {
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background: linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url("https://s3-us-west-1.amazonaws.com/gkbimages//client/row_of_bikes.jpg");
+    background-size: cover;
+    position: relative;
+    color: white;
+  }
+
+  .announcements-paragraph {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .announcements-paragraph h1, .newsgroup h1 {
+    padding-bottom: 5%;
+    font-size: 3.2em;
+    font-weight: 200;
+    letter-spacing: .16em;
+  }
+
+  .announcements-paragraph p {
+    font-size: 2em;
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+
+  .announcements-paragraph img {
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+  }
+
+/* Shop  page Starts*/
+
+
+
   .tagline {
     font-size: 5em;
   }
@@ -1619,6 +1691,13 @@ div.hours-container {
 
   .newsboxes:nth-of-type(2) {
     margin-left: 0;
+  }
+  
+  /* Navbar stylings for mobile view */
+
+  /* Hide gkb name */
+  .gkb-name {
+    display: none;
   }
 
   ul.topnav li {
@@ -1736,3 +1815,4 @@ div.hours-container {
   }
 
 }
+
