@@ -10,7 +10,6 @@ class BikesController < ApplicationController
   def create
     bike = Bike.new(donor:params[:donor],model:params[:model],brand:params[:brand],value:params[:value],barcode:params[:barcode],buyer:params[:buyer],ebay:params[:ebay])
     if bike.save
-
     else
       flash[:errors] = bike.errors.full_messages
       @errors = flash[:errors]
